@@ -11,15 +11,15 @@ Later on, we&rsquo;ll see a simple Twig template example that displays a Welcome
 Let&rsquo;s take it one step at a time.
 Installation The Twig template can be installed using Composer, Git, or PEAR.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link rel="canonical" href="https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/">
+<link crossorigin="anonymous" href="/zainabed-blog/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/zainabed-blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://localhost:8080/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:8080/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:8080/safari-pinned-tab.svg">
+<link rel="icon" href="https://zainabed.github.io/zainabed-blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.github.io/zainabed-blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.github.io/zainabed-blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zainabed.github.io/zainabed-blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zainabed.github.io/zainabed-blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -64,13 +64,13 @@ Later on, we&rsquo;ll see a simple Twig template example that displays a Welcome
 Let&rsquo;s take it one step at a time.
 Installation The Twig template can be installed using Composer, Git, or PEAR." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/" />
-<meta property="og:image" content="http://localhost:8080/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/" />
+<meta property="og:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2014-10-16T05:30:27-04:00" />
 <meta property="article:modified_time" content="2014-10-16T05:30:27-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:8080/image/cover.png" />
+<meta name="twitter:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" />
 <meta name="twitter:title" content="Twig Tutorials Install and Configure"/>
 <meta name="twitter:description" content="Introdcution In this tutorial, we&rsquo;ll look at how to install Twig within your PHP project and thereafter configure it so that we can create and use a Twig template inside our PHP web application.
 Later on, we&rsquo;ll see a simple Twig template example that displays a Welcome to Twig template message.
@@ -87,13 +87,13 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "http://localhost:8080/blogs/"
+      "item": "https://zainabed.github.io/zainabed-blog/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Twig Tutorials Install and Configure",
-      "item": "http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/"
+      "item": "https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/"
     }
   ]
 }
@@ -111,23 +111,23 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
   "articleBody": "Introdcution In this tutorial, we’ll look at how to install Twig within your PHP project and thereafter configure it so that we can create and use a Twig template inside our PHP web application.\nLater on, we’ll see a simple Twig template example that displays a Welcome to Twig template message.\nLet’s take it one step at a time.\nInstallation The Twig template can be installed using Composer, Git, or PEAR.\nIn this tutorial, we will use Composer to install Twig.\nTo do so, we’ll need to make a “composer.json” file.\n{ \"require\": { \"twig/twig\": \"1.*\" } } From the console, run the following command.\nphp composer.phar install This command will install Twig library.\nConfiguration To use the Twig template, we should first configure it. To achieve this, we will write an index.php file which will configure the Twig autoloader and generate the Twig environment.\nWe will render the Twig template using this Twig environment.\nphp include __DIR__ . \"/vendor/twig/twig/lib/Twig/Autoloader.php\"; //register autoloader Twig_Autoloader::register(); //loader for template files $loader = new Twig_Loader_Filesystem('templates'); //twig instance $twig = new Twig_Environment($loader, array('cache' = 'cache')); //load template file $template = $twig-loadTemplate('index.html'); //render a template echo $template-render(array('title' = 'Welcome to Twig template')); Next, we will create a “template.html” file inside template folder.\nhtml headhead body h1{{ title }}h1 body html As a result, you will get the following output when you run the index.php file on localhost.\nThat’s it. We are done with the Twig installation and configuration process.\nSource Code Download source code from this Github.\n",
   "wordCount" : "251",
   "inLanguage": "en",
-  "image":"http://localhost:8080/image/cover.png","datePublished": "2014-10-16T05:30:27-04:00",
+  "image":"https://zainabed.github.io/zainabed-blog/image/cover.png","datePublished": "2014-10-16T05:30:27-04:00",
   "dateModified": "2014-10-16T05:30:27-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/"
+    "@id": "https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:8080/favicon.ico"
+      "url": "https://zainabed.github.io/zainabed-blog/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://zainabed.github.io/zainabed-blog/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -145,8 +145,8 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:8080/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="http://localhost:8080/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://zainabed.github.io/zainabed-blog/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://zainabed.github.io/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -172,22 +172,22 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:8080/archives/" title="Archives">
+                <a href="https://zainabed.github.io/zainabed-blog/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/blogs/" title="Blogs">
+                <a href="https://zainabed.github.io/zainabed-blog/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/categories/" title="Categories">
+                <a href="https://zainabed.github.io/zainabed-blog/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://zainabed.github.io/zainabed-blog/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -209,8 +209,8 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/image/cover_huf5458d64c678f16e6095c697f33ef8f0_284024_360x0_resize_box_2.png 360w ,http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/image/cover_huf5458d64c678f16e6095c697f33ef8f0_284024_480x0_resize_box_2.png 480w ,http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/image/cover_huf5458d64c678f16e6095c697f33ef8f0_284024_720x0_resize_box_2.png 720w ,http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/image/cover.png 900w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/image/cover.png" alt="Twig Tutorials Install and Configure" 
+        <img loading="lazy" srcset="https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/image/cover_huf5458d64c678f16e6095c697f33ef8f0_284024_360x0_resize_box_2.png 360w ,https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/image/cover_huf5458d64c678f16e6095c697f33ef8f0_284024_480x0_resize_box_2.png 480w ,https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/image/cover_huf5458d64c678f16e6095c697f33ef8f0_284024_720x0_resize_box_2.png 720w ,https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/image/cover.png 900w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/image/cover.png" alt="Twig Tutorials Install and Configure" 
             width="900" height="450">
         
 </figure>
@@ -287,7 +287,7 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="http://localhost:8080/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://zainabed.github.io/zainabed-blog/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -352,7 +352,7 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
             <div class="card-left">
                 
                     <div class="card card-overlay">
-    <div class="card-content card-content-wrapper" style="background-image: url(/2014/11/php-tutorials-autoload-php-classes.html/image/cover.png); background-size: cover;">
+    <div class="card-content card-content-wrapper" style="background-image: url(/zainabed-blog/2014/11/php-tutorials-autoload-php-classes.html/image/cover.png); background-size: cover;">
         <div class="card-content-overlay">
             
                     <span>PHP</span>
@@ -362,7 +362,7 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
                 
                     <span class="card-author">Zainul</span>
                 
-            <h4><a href="/2014/11/php-tutorials-autoload-php-classes.html/">Php Tutorials Autoload Php Classes</a></h4>
+            <h4><a href="/zainabed-blog/2014/11/php-tutorials-autoload-php-classes.html/">Php Tutorials Autoload Php Classes</a></h4>
         </div>
     </div>
 </div>
@@ -375,13 +375,13 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2014/10/doctrine2-installation-configuration.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2014/10/doctrine2-installation-configuration.html/image/cover.png); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>PHP</label>
             
         
-        <h4><a href="/2014/10/doctrine2-installation-configuration.html/">Doctrine2 Installation Configuration</a></h4>
+        <h4><a href="/zainabed-blog/2014/10/doctrine2-installation-configuration.html/">Doctrine2 Installation Configuration</a></h4>
         <div class="card-date">October 23, 2014 </div>
             
                 <div class="card-author">Zainul</div>
@@ -391,13 +391,13 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2014/10/symfony-tutorials-event-dispatcher.html/image/cover.jpg); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2014/10/symfony-tutorials-event-dispatcher.html/image/cover.jpg); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>PHP</label>
             
         
-        <h4><a href="/2014/10/symfony-tutorials-event-dispatcher.html/">Symfony Tutorials Event Dispatcher</a></h4>
+        <h4><a href="/zainabed-blog/2014/10/symfony-tutorials-event-dispatcher.html/">Symfony Tutorials Event Dispatcher</a></h4>
         <div class="card-date">October 3, 2014 </div>
             
                 <div class="card-author">Zainul</div>
@@ -407,13 +407,13 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2014/09/drupal-8-tutorials-custom-module.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2014/09/drupal-8-tutorials-custom-module.html/image/cover.png); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>PHP</label>
             
         
-        <h4><a href="/2014/09/drupal-8-tutorials-custom-module.html/">Drupal 8 Tutorials Custom Module</a></h4>
+        <h4><a href="/zainabed-blog/2014/09/drupal-8-tutorials-custom-module.html/">Drupal 8 Tutorials Custom Module</a></h4>
         <div class="card-date">September 19, 2014 </div>
             
                 <div class="card-author">Zainul</div>
@@ -471,7 +471,7 @@ Installation The Twig template can be installed using Composer, Git, or PEAR."/>
 
         </div>
         <div class=" center">
-          &copy; 2022 Copyright | <a href="http://localhost:8080/">ZAINABED</a> . All rights reserved
+          &copy; 2022 Copyright | <a href="https://zainabed.github.io/zainabed-blog/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
     </div>

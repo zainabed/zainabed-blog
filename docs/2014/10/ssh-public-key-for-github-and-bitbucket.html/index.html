@@ -9,15 +9,15 @@
 <meta name="description" content="Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.
 But first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link rel="canonical" href="https://zainabed.github.io/zainabed-blog/2014/10/ssh-public-key-for-github-and-bitbucket.html/">
+<link crossorigin="anonymous" href="/zainabed-blog/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/zainabed-blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://localhost:8080/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:8080/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:8080/safari-pinned-tab.svg">
+<link rel="icon" href="https://zainabed.github.io/zainabed-blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.github.io/zainabed-blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.github.io/zainabed-blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zainabed.github.io/zainabed-blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zainabed.github.io/zainabed-blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -60,13 +60,13 @@ But first, why do we require this SSH public key If you want to do any work on a
 <meta property="og:description" content="Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.
 But first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/" />
-<meta property="og:image" content="http://localhost:8080/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://zainabed.github.io/zainabed-blog/2014/10/ssh-public-key-for-github-and-bitbucket.html/" />
+<meta property="og:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2014-10-14T08:31:40-04:00" />
 <meta property="article:modified_time" content="2014-10-14T08:31:40-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:8080/image/cover.png" />
+<meta name="twitter:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" />
 <meta name="twitter:title" content="Ssh Public Key for Github and Bitbucket"/>
 <meta name="twitter:description" content="Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.
 But first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual."/>
@@ -81,13 +81,13 @@ But first, why do we require this SSH public key If you want to do any work on a
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "http://localhost:8080/blogs/"
+      "item": "https://zainabed.github.io/zainabed-blog/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Ssh Public Key for Github and Bitbucket",
-      "item": "http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/"
+      "item": "https://zainabed.github.io/zainabed-blog/2014/10/ssh-public-key-for-github-and-bitbucket.html/"
     }
   ]
 }
@@ -105,23 +105,23 @@ But first, why do we require this SSH public key If you want to do any work on a
   "articleBody": "Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.\nBut first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual.\nHowever, each time you operate, you are prompted to enter your username and password.\nIt appears simple at first, but it quickly becomes a source of frustration.\nTo overcome the above problem, we can use the SSH protocol. SSH connections allow us to authenticate using public and private keys that we generate only once. after that, we don’t need to authenticate because SSH will do so on our behalf.\nBut how does it work SSH authenticates you using an identity, and this identity is made up of a combination of private and public keys.\nA private key is stored on your local machine, while a public key is stored on your GitHub or Bitbucket account. When you perform any operation on a Git repository that requires your authentication, SSH combines these two keys.\nTo use SSH, you must first install it. Please follow the steps given in the following link. http://www.openssh.com\nGenerate private-public keys Follow the steps below to generate a private and public key. Open a terminal and enter the following command.\nssh-keygen It will request the location of key files. To select the default location, press Enter.\nIt will then request a passphrase (password). You can omit it, but it is preferable to include one.\nAfter that, it will prompt you to reenter your password for confirmation.\nAfter that, keys will be generated and saved in the specified location.\nHere’s an example of the ssh-keygen operation’s output.\nNext, add your key to the ssh-agent.\nssh-add ~/.ssh/id_rsa Later, you need to add the public key to your GitHub and Bitbucket accounts. To do so, we need to get content of the public key. This resides inside ~/.ssh path.\ncat ~/.ssh/id_rsa.pub Copy this key and go to GitHub or Bitbucket to add it to your account.\nGitHub Log in to your GitHub account in a browser.\n Select the setting icon from the menu bar’s top right corner. Then select SSH keys from the left side panel. Now add the new public key by selecting the Add SSH key button. It will open a panel to enter a public key. Add a label for the public key and then add the copied public key inside the key area. Now finish this process by clicking the Add key button.  That’s it. The configuration for GitHub is done.\nBitbucket Open a browser and log into your Bitbucket account.\n Select Avatar-Manage Account from the application menu. Under Security section Click SSH keys. Then click Add key button. It will prompt a dialog to add public key. Add label for public key and then add copied public key inside key area. Now finish this process by clicking Add key button.  This will complete the configuration for Bitbucket.\nConclusion If you want your repository to run smoothly, use SSH with public and private key configuration.\n",
   "wordCount" : "557",
   "inLanguage": "en",
-  "image":"http://localhost:8080/image/cover.png","datePublished": "2014-10-14T08:31:40-04:00",
+  "image":"https://zainabed.github.io/zainabed-blog/image/cover.png","datePublished": "2014-10-14T08:31:40-04:00",
   "dateModified": "2014-10-14T08:31:40-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/"
+    "@id": "https://zainabed.github.io/zainabed-blog/2014/10/ssh-public-key-for-github-and-bitbucket.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:8080/favicon.ico"
+      "url": "https://zainabed.github.io/zainabed-blog/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://zainabed.github.io/zainabed-blog/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -139,8 +139,8 @@ But first, why do we require this SSH public key If you want to do any work on a
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:8080/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="http://localhost:8080/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://zainabed.github.io/zainabed-blog/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://zainabed.github.io/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -166,22 +166,22 @@ But first, why do we require this SSH public key If you want to do any work on a
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:8080/archives/" title="Archives">
+                <a href="https://zainabed.github.io/zainabed-blog/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/blogs/" title="Blogs">
+                <a href="https://zainabed.github.io/zainabed-blog/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/categories/" title="Categories">
+                <a href="https://zainabed.github.io/zainabed-blog/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://zainabed.github.io/zainabed-blog/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -203,8 +203,8 @@ But first, why do we require this SSH public key If you want to do any work on a
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover_hu284d939a3cc125d20c5fd77c3e290803_85369_360x0_resize_box_2.png 360w ,http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover_hu284d939a3cc125d20c5fd77c3e290803_85369_480x0_resize_box_2.png 480w ,http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover.png 640w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover.png" alt="Ssh Public Key for Github and Bitbucket" 
+        <img loading="lazy" srcset="https://zainabed.github.io/zainabed-blog/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover_hu284d939a3cc125d20c5fd77c3e290803_85369_360x0_resize_box_2.png 360w ,https://zainabed.github.io/zainabed-blog/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover_hu284d939a3cc125d20c5fd77c3e290803_85369_480x0_resize_box_2.png 480w ,https://zainabed.github.io/zainabed-blog/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover.png 640w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.github.io/zainabed-blog/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover.png" alt="Ssh Public Key for Github and Bitbucket" 
             width="640" height="480">
         
 </figure>
@@ -284,7 +284,7 @@ Open a terminal and enter the following command.</p>
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="http://localhost:8080/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://zainabed.github.io/zainabed-blog/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -383,7 +383,7 @@ Open a terminal and enter the following command.</p>
 
         </div>
         <div class=" center">
-          &copy; 2022 Copyright | <a href="http://localhost:8080/">ZAINABED</a> . All rights reserved
+          &copy; 2022 Copyright | <a href="https://zainabed.github.io/zainabed-blog/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
     </div>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>PHP on ZAINABED</title>
-    <link>http://localhost:8080/categories/php/</link>
+    <link>https://zainabed.github.io/zainabed-blog/categories/php/</link>
     <description>Recent content in PHP on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Nov 2014 05:33:18 -0400</lastBuildDate><atom:link href="http://localhost:8080/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Nov 2014 05:33:18 -0400</lastBuildDate><atom:link href="https://zainabed.github.io/zainabed-blog/categories/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Php Tutorials Autoload Php Classes</title>
-      <link>http://localhost:8080/2014/11/php-tutorials-autoload-php-classes.html/</link>
+      <link>https://zainabed.github.io/zainabed-blog/2014/11/php-tutorials-autoload-php-classes.html/</link>
       <pubDate>Sun, 02 Nov 2014 05:33:18 -0400</pubDate>
       
-      <guid>http://localhost:8080/2014/11/php-tutorials-autoload-php-classes.html/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/2014/11/php-tutorials-autoload-php-classes.html/</guid>
       <description>Introduction With some examples, this tutorial post will teach the PHP autoloader and namespace concepts.
 What is Autoloading in PHP PHP autoload&amp;rsquo;s primary function is to load PHP files into the application context. The import statement is the default method to include PHP file into context.
 However, we may avoid the issue by using the PHP autoload capability to autoload essential PHP files, which keeps your code clean and composable.</description>
@@ -20,10 +20,10 @@ However, we may avoid the issue by using the PHP autoload capability to autoload
     
     <item>
       <title>Doctrine2 Installation Configuration</title>
-      <link>http://localhost:8080/2014/10/doctrine2-installation-configuration.html/</link>
+      <link>https://zainabed.github.io/zainabed-blog/2014/10/doctrine2-installation-configuration.html/</link>
       <pubDate>Thu, 23 Oct 2014 05:31:23 -0400</pubDate>
       
-      <guid>http://localhost:8080/2014/10/doctrine2-installation-configuration.html/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/2014/10/doctrine2-installation-configuration.html/</guid>
       <description>Introduction In this tutorial, we will look at how to install Doctrine2 in your PHP project.
 This post will make use of Doctrine2&amp;rsquo;s Composer tool.
 Installation First, create a directory for your project.
@@ -34,10 +34,10 @@ vi composer.json Then, add the following repository information to it.
     
     <item>
       <title>Twig Tutorials Install and Configure</title>
-      <link>http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/</link>
+      <link>https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/</link>
       <pubDate>Thu, 16 Oct 2014 05:30:27 -0400</pubDate>
       
-      <guid>http://localhost:8080/2014/10/twig-tutorials-install-and-configure.html/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/2014/10/twig-tutorials-install-and-configure.html/</guid>
       <description>Introdcution In this tutorial, we&amp;rsquo;ll look at how to install Twig within your PHP project and thereafter configure it so that we can create and use a Twig template inside our PHP web application.
 Later on, we&amp;rsquo;ll see a simple Twig template example that displays a Welcome to Twig template message.
 Let&amp;rsquo;s take it one step at a time.
@@ -46,10 +46,10 @@ Installation The Twig template can be installed using Composer, Git, or PEAR.</d
     
     <item>
       <title>Symfony Tutorials Event Dispatcher</title>
-      <link>http://localhost:8080/2014/10/symfony-tutorials-event-dispatcher.html/</link>
+      <link>https://zainabed.github.io/zainabed-blog/2014/10/symfony-tutorials-event-dispatcher.html/</link>
       <pubDate>Fri, 03 Oct 2014 05:28:55 -0400</pubDate>
       
-      <guid>http://localhost:8080/2014/10/symfony-tutorials-event-dispatcher.html/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/2014/10/symfony-tutorials-event-dispatcher.html/</guid>
       <description>Introduction Symfony EventDispatcher is object which interacts with different set of objects when certain event happens.
 To illustrate Event Dispatcher definition let’s consider the online shopping website example.
 suppose you want to purchase a mobile from online shopping website , but unfortunately that mobile is out of stock.
@@ -59,10 +59,10 @@ When mobile comes in stock, online shopping website notifies you about mobile ph
     
     <item>
       <title>Drupal 8 Tutorials Custom Module</title>
-      <link>http://localhost:8080/2014/09/drupal-8-tutorials-custom-module.html/</link>
+      <link>https://zainabed.github.io/zainabed-blog/2014/09/drupal-8-tutorials-custom-module.html/</link>
       <pubDate>Fri, 19 Sep 2014 05:28:09 -0400</pubDate>
       
-      <guid>http://localhost:8080/2014/09/drupal-8-tutorials-custom-module.html/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/2014/09/drupal-8-tutorials-custom-module.html/</guid>
       <description>Introduction Custom Module development in Drupal 8 is very simple. It may looks very difficult for developer who has Drupal 7 experience or nothing at all.
 This tutorial will show easy steps and helps you to create custom module within few minutes.
  Note: Content or example of this tutorial may change according to Drupal 8 version and its release.

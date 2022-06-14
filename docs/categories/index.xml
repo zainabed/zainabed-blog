@@ -2,134 +2,134 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on ZAINABED</title>
-    <link>http://localhost:8080/categories/</link>
+    <link>https://zainabed.github.io/zainabed-blog/categories/</link>
     <description>Recent content in Categories on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jun 2022 00:57:18 -0400</lastBuildDate><atom:link href="http://localhost:8080/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 00:57:18 -0400</lastBuildDate><atom:link href="https://zainabed.github.io/zainabed-blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java</title>
-      <link>http://localhost:8080/categories/java/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/java/</link>
       <pubDate>Wed, 01 Jun 2022 00:57:18 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/java/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Maven</title>
-      <link>http://localhost:8080/categories/maven/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/maven/</link>
       <pubDate>Thu, 26 May 2022 08:42:58 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/maven/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/maven/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spring Boot</title>
-      <link>http://localhost:8080/categories/spring-boot/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/spring-boot/</link>
       <pubDate>Fri, 22 Apr 2022 09:42:03 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/spring-boot/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/spring-boot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GIT</title>
-      <link>http://localhost:8080/categories/git/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/git/</link>
       <pubDate>Tue, 19 Apr 2022 10:30:09 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/git/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cucumber</title>
-      <link>http://localhost:8080/categories/cucumber/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/cucumber/</link>
       <pubDate>Tue, 05 Apr 2022 09:56:50 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/cucumber/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/cucumber/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gradle</title>
-      <link>http://localhost:8080/categories/gradle/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/gradle/</link>
       <pubDate>Tue, 05 Apr 2022 09:56:50 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/gradle/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/gradle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Micronaut</title>
-      <link>http://localhost:8080/categories/micronaut/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/micronaut/</link>
       <pubDate>Tue, 15 Mar 2022 10:54:51 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/micronaut/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/micronaut/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Design Pattern</title>
-      <link>http://localhost:8080/categories/design-pattern/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/design-pattern/</link>
       <pubDate>Fri, 24 Apr 2020 11:01:00 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/design-pattern/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/design-pattern/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Angular</title>
-      <link>http://localhost:8080/categories/angular/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/angular/</link>
       <pubDate>Wed, 04 Mar 2015 11:17:01 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/angular/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/angular/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JavaScript</title>
-      <link>http://localhost:8080/categories/javascript/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/javascript/</link>
       <pubDate>Wed, 04 Mar 2015 11:17:01 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/javascript/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MongoDB</title>
-      <link>http://localhost:8080/categories/mongodb/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/mongodb/</link>
       <pubDate>Thu, 27 Nov 2014 08:52:24 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/mongodb/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/mongodb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PHP</title>
-      <link>http://localhost:8080/categories/php/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/php/</link>
       <pubDate>Sun, 02 Nov 2014 05:33:18 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/php/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/php/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jax-Rs</title>
-      <link>http://localhost:8080/categories/jax-rs/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/jax-rs/</link>
       <pubDate>Tue, 29 Jul 2014 05:27:17 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/jax-rs/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/jax-rs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sass</title>
-      <link>http://localhost:8080/categories/sass/</link>
+      <link>https://zainabed.github.io/zainabed-blog/categories/sass/</link>
       <pubDate>Sun, 27 Jul 2014 05:26:34 -0400</pubDate>
       
-      <guid>http://localhost:8080/categories/sass/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/categories/sass/</guid>
       <description></description>
     </item>
     

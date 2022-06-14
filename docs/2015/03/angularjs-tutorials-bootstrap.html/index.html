@@ -11,15 +11,15 @@ AngularJs is not different from other application. It also starts application wi
 Following operation happens inside AngularJs bootstrap process.
  Load application module. Create dependency injector and load dependencies. Compile HTML and create scope for application.  All these steps happens inside angular.js scripting file. therefore we need to include it first.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:8080/2015/03/angularjs-tutorials-bootstrap.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link rel="canonical" href="https://zainabed.github.io/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/">
+<link crossorigin="anonymous" href="/zainabed-blog/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/zainabed-blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://localhost:8080/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:8080/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:8080/safari-pinned-tab.svg">
+<link rel="icon" href="https://zainabed.github.io/zainabed-blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.github.io/zainabed-blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.github.io/zainabed-blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zainabed.github.io/zainabed-blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zainabed.github.io/zainabed-blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -64,13 +64,13 @@ AngularJs is not different from other application. It also starts application wi
 Following operation happens inside AngularJs bootstrap process.
  Load application module. Create dependency injector and load dependencies. Compile HTML and create scope for application.  All these steps happens inside angular.js scripting file. therefore we need to include it first." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:8080/2015/03/angularjs-tutorials-bootstrap.html/" />
-<meta property="og:image" content="http://localhost:8080/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://zainabed.github.io/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/" />
+<meta property="og:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2015-03-04T11:17:01-04:00" />
 <meta property="article:modified_time" content="2015-03-04T11:17:01-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:8080/image/cover.png" />
+<meta name="twitter:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" />
 <meta name="twitter:title" content="Angularjs Tutorials Bootstrap"/>
 <meta name="twitter:description" content="Introduction Every application starts with bootstrap process which initialize application and wire it other with dependencies and configurations.
 AngularJs is not different from other application. It also starts application with bootstrap process.
@@ -87,13 +87,13 @@ Following operation happens inside AngularJs bootstrap process.
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "http://localhost:8080/blogs/"
+      "item": "https://zainabed.github.io/zainabed-blog/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Angularjs Tutorials Bootstrap",
-      "item": "http://localhost:8080/2015/03/angularjs-tutorials-bootstrap.html/"
+      "item": "https://zainabed.github.io/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/"
     }
   ]
 }
@@ -111,23 +111,23 @@ Following operation happens inside AngularJs bootstrap process.
   "articleBody": "Introduction Every application starts with bootstrap process which initialize application and wire it other with dependencies and configurations.\nAngularJs is not different from other application. It also starts application with bootstrap process.\nFollowing operation happens inside AngularJs bootstrap process.\n Load application module. Create dependency injector and load dependencies. Compile HTML and create scope for application.  All these steps happens inside angular.js scripting file. therefore we need to include it first. we can include it inside HEAD tag or at end of BODY tag.\n Note: Adding angular.js file at end of body tag will allow browser to load of HTML elements without any delay and afterwards load angular.js and begin bootstrapping process.\n You can get angular.js source file from https://code.angularjs.org/\nscript src=”https://code.angularjs.org/1.3.0/angular.js” type=”text/javascript” AngularJs bootstrap process happens on document ready event.\nlets see the simple AngularJs example.\nhtml head titleAngular Applicationtitle head body ng-app=\"myApp\" div ng-controller=\"myCtrl\" h3{{title}}h3 div script src=\"https://code.angularjs.org/1.3.0/angular.js\" type=\"text/javascript\"script script type=\"text/javascript\" //angular module  angular.module(\"myApp\",[]) //controller  .controller(\"myCtrl\", [\"$scope\", function($scope){ $scope.title = \"Angular Bootstrap Tutorial!\" }]) script body html Now lets look into AngularJs bootstrap process steps one by one.\nLoad application module AngularJs will look for module name which is associated with ng-app directive inside HTML page.\nhtml ng-app=\"myApp\"  … … Then Angular will load this module from JavaScript snippet.\nangular.module(\"myApp\", []) Create dependency injector and load dependencies After first step AngularJs will create injector and compiler objects. functionality of compiler object is listed in third step.\nHere injector object will look for dependency of application module. In above example we have not specify any dependency.\nFollowing example illustrate module dependency\nangular.module(\"myApp\",[ \"ngResource\"]) These dependencies are nothing but angular modules. injector load this modules and allow them to be used inside angular application.\nServices can also be injected on fly inside application controller or application services.\n.controller(\"myCtrl\", [\"$scope\", function($scope){ $scope.title = \"Angular Bootstrap Tutorial!\" }]) in above example $scope is injected by injector inside controller and we can use it inside controller.\nCompile HTML and create scope for application. Inside last step AngularJs compiles HTML elements using compiler object then creates scope for application and bind rootScope to html element where we have specified ng-app. In above example ng-app is specified inside body tag which means rootScope is attached to body tag and all template logic get applied on this body tag.\nAbove scenario illustrates automatic bootstrapping process. but some time you may require to manually bootstrap AngularJs application where you need to perform some custom JavaScript task before initiating AngularJs application.\nFollowing script snippet shows manual bootstrapping process.\n// document ready event angular.element(document).ready( function() { // bootstrap document with myApp module  angular.bootstrap(document, [\"myApp\"]) }) As stated earlier bootstrap happens on document ready event therefore you need to configure it first. Then call angular.bootstrap function which will accept two parameters.\nFirst parameter is html element e.g. document, html, body or particular div. this process is equivalent as specifying ng-app directive to HTML element.\nSecond parameter is AngularJs module name. in this case we have give myApp.\nNote that you first need to add module scripting code then initiate bootstrap process otherwise bootstrap will throw error that unable to load given module.\nWith automatic or manual bootstrap, you are ready to create beautiful AngularJs application.\n",
   "wordCount" : "535",
   "inLanguage": "en",
-  "image":"http://localhost:8080/image/cover.png","datePublished": "2015-03-04T11:17:01-04:00",
+  "image":"https://zainabed.github.io/zainabed-blog/image/cover.png","datePublished": "2015-03-04T11:17:01-04:00",
   "dateModified": "2015-03-04T11:17:01-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:8080/2015/03/angularjs-tutorials-bootstrap.html/"
+    "@id": "https://zainabed.github.io/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:8080/favicon.ico"
+      "url": "https://zainabed.github.io/zainabed-blog/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://zainabed.github.io/zainabed-blog/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -145,8 +145,8 @@ Following operation happens inside AngularJs bootstrap process.
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:8080/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="http://localhost:8080/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://zainabed.github.io/zainabed-blog/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://zainabed.github.io/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -172,22 +172,22 @@ Following operation happens inside AngularJs bootstrap process.
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:8080/archives/" title="Archives">
+                <a href="https://zainabed.github.io/zainabed-blog/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/blogs/" title="Blogs">
+                <a href="https://zainabed.github.io/zainabed-blog/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/categories/" title="Categories">
+                <a href="https://zainabed.github.io/zainabed-blog/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://zainabed.github.io/zainabed-blog/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -209,8 +209,8 @@ Following operation happens inside AngularJs bootstrap process.
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="http://localhost:8080/2015/03/angularjs-tutorials-bootstrap.html/image/cover_huf96716c0101c53e1d9e6c9f8171df96f_32293_360x0_resize_box_2.png 360w ,http://localhost:8080/2015/03/angularjs-tutorials-bootstrap.html/image/cover_huf96716c0101c53e1d9e6c9f8171df96f_32293_480x0_resize_box_2.png 480w ,http://localhost:8080/2015/03/angularjs-tutorials-bootstrap.html/image/cover_huf96716c0101c53e1d9e6c9f8171df96f_32293_720x0_resize_box_2.png 720w ,http://localhost:8080/2015/03/angularjs-tutorials-bootstrap.html/image/cover.png 900w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:8080/2015/03/angularjs-tutorials-bootstrap.html/image/cover.png" alt="AngularJs Getting Started" 
+        <img loading="lazy" srcset="https://zainabed.github.io/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/image/cover_huf96716c0101c53e1d9e6c9f8171df96f_32293_360x0_resize_box_2.png 360w ,https://zainabed.github.io/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/image/cover_huf96716c0101c53e1d9e6c9f8171df96f_32293_480x0_resize_box_2.png 480w ,https://zainabed.github.io/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/image/cover_huf96716c0101c53e1d9e6c9f8171df96f_32293_720x0_resize_box_2.png 720w ,https://zainabed.github.io/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/image/cover.png 900w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.github.io/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/image/cover.png" alt="AngularJs Getting Started" 
             width="900" height="450">
         
 </figure>
@@ -317,7 +317,7 @@ Then call <strong>angular.bootstrap</strong> function which will accept two para
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="http://localhost:8080/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://zainabed.github.io/zainabed-blog/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -382,7 +382,7 @@ Then call <strong>angular.bootstrap</strong> function which will accept two para
             <div class="card-left">
                 
                     <div class="card card-overlay">
-    <div class="card-content card-content-wrapper" style="background-image: url(/2014/05/angularjs-tutorial-getting-started.html/image/cover.png); background-size: cover;">
+    <div class="card-content card-content-wrapper" style="background-image: url(/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/image/cover.png); background-size: cover;">
         <div class="card-content-overlay">
             
                     <span>Angular</span>
@@ -392,7 +392,7 @@ Then call <strong>angular.bootstrap</strong> function which will accept two para
                 
                     <span class="card-author">Zainu</span>
                 
-            <h4><a href="/2014/05/angularjs-tutorial-getting-started.html/">Angularjs Tutorial Getting Started</a></h4>
+            <h4><a href="/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/">Angularjs Tutorial Getting Started</a></h4>
         </div>
     </div>
 </div>
@@ -405,13 +405,13 @@ Then call <strong>angular.bootstrap</strong> function which will accept two para
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2014/05/angularjs-tutorial-getting-started.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/image/cover.png); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Angular</label>
             
         
-        <h4><a href="/2014/05/angularjs-tutorial-getting-started.html/">Angularjs Tutorial Getting Started</a></h4>
+        <h4><a href="/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/">Angularjs Tutorial Getting Started</a></h4>
         <div class="card-date">May 22, 2014 </div>
             
                 <div class="card-author">Zainu</div>
@@ -469,7 +469,7 @@ Then call <strong>angular.bootstrap</strong> function which will accept two para
 
         </div>
         <div class=" center">
-          &copy; 2022 Copyright | <a href="http://localhost:8080/">ZAINABED</a> . All rights reserved
+          &copy; 2022 Copyright | <a href="https://zainabed.github.io/zainabed-blog/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
     </div>

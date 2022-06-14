@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>MongoDB on ZAINABED</title>
-    <link>http://localhost:8080/categories/mongodb/</link>
+    <link>https://zainabed.github.io/zainabed-blog/categories/mongodb/</link>
     <description>Recent content in MongoDB on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Nov 2014 08:52:24 -0400</lastBuildDate><atom:link href="http://localhost:8080/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Nov 2014 08:52:24 -0400</lastBuildDate><atom:link href="https://zainabed.github.io/zainabed-blog/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mongodb Tutorials Aggregation Framework</title>
-      <link>http://localhost:8080/2014/11/mongodb-tutorials-aggregation-framework.html/</link>
+      <link>https://zainabed.github.io/zainabed-blog/2014/11/mongodb-tutorials-aggregation-framework.html/</link>
       <pubDate>Thu, 27 Nov 2014 08:52:24 -0400</pubDate>
       
-      <guid>http://localhost:8080/2014/11/mongodb-tutorials-aggregation-framework.html/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/2014/11/mongodb-tutorials-aggregation-framework.html/</guid>
       <description>Introduction MongoDB Aggregation Framework groups set of documents together and performs certain operation on this grouped documents and returns results in the form of documents. MongoDB aggregation answer to those query which requires grouping of documents.
 Aggregation framework works on three type of model
  Aggregation pipeline Map Reduce Single Purpose Aggregation Operations  Now let see how MongoDB Aggregation Framework works with simple example.
@@ -21,10 +21,10 @@ Suppose you are MongoDB application developer in a respected company and you hav
     
     <item>
       <title>Mongodb Crud Operations Using Java</title>
-      <link>http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/</link>
+      <link>https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/</link>
       <pubDate>Tue, 03 Jun 2014 05:24:31 -0400</pubDate>
       
-      <guid>http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/</guid>
       <description>Introduction This article will show you how to use Java to perform CRUD operations on MongoDB records.
 If you&amp;rsquo;re new to MongoDB, we recommend starting with the Getting Started With MongoDB tutorial.
 To begin, we&amp;rsquo;ll establish a Person and Person Images table (a collection in MongoDB) to make CRUD operations in MongoDB easier.
@@ -33,10 +33,10 @@ Define Data Structure The following is the data structure of the Person and Pers
     
     <item>
       <title>MongoDb Getting Started With Crud</title>
-      <link>http://localhost:8080/2013/12/mongodb-getting-started-with-crud.html/</link>
+      <link>https://zainabed.github.io/zainabed-blog/2013/12/mongodb-getting-started-with-crud.html/</link>
       <pubDate>Sun, 22 Dec 2013 03:10:58 -0400</pubDate>
       
-      <guid>http://localhost:8080/2013/12/mongodb-getting-started-with-crud.html/</guid>
+      <guid>https://zainabed.github.io/zainabed-blog/2013/12/mongodb-getting-started-with-crud.html/</guid>
       <description>Introduction MongoDB is a No-SQL open source database system that stores information in documents.
 MongoDB was created with excellent performance and accessibility in mind.
 A document is a collection of fields and value pair combinations that are stored in BSON (binary representation of JSON records), which is the native data type in most languages.

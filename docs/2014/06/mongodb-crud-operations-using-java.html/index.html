@@ -11,15 +11,15 @@ If you&rsquo;re new to MongoDB, we recommend starting with the Getting Started W
 To begin, we&rsquo;ll establish a Person and Person Images table (a collection in MongoDB) to make CRUD operations in MongoDB easier.
 Define Data Structure The following is the data structure of the Person and Person Images table (collection in MongoDB).">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link rel="canonical" href="https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/">
+<link crossorigin="anonymous" href="/zainabed-blog/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/zainabed-blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://localhost:8080/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:8080/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:8080/safari-pinned-tab.svg">
+<link rel="icon" href="https://zainabed.github.io/zainabed-blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.github.io/zainabed-blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.github.io/zainabed-blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zainabed.github.io/zainabed-blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zainabed.github.io/zainabed-blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -64,13 +64,13 @@ If you&rsquo;re new to MongoDB, we recommend starting with the Getting Started W
 To begin, we&rsquo;ll establish a Person and Person Images table (a collection in MongoDB) to make CRUD operations in MongoDB easier.
 Define Data Structure The following is the data structure of the Person and Person Images table (collection in MongoDB)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/" />
-<meta property="og:image" content="http://localhost:8080/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/" />
+<meta property="og:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2014-06-03T05:24:31-04:00" />
 <meta property="article:modified_time" content="2014-06-03T05:24:31-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:8080/image/cover.png" />
+<meta name="twitter:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" />
 <meta name="twitter:title" content="Mongodb Crud Operations Using Java"/>
 <meta name="twitter:description" content="Introduction This article will show you how to use Java to perform CRUD operations on MongoDB records.
 If you&rsquo;re new to MongoDB, we recommend starting with the Getting Started With MongoDB tutorial.
@@ -87,13 +87,13 @@ Define Data Structure The following is the data structure of the Person and Pers
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "http://localhost:8080/blogs/"
+      "item": "https://zainabed.github.io/zainabed-blog/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Mongodb Crud Operations Using Java",
-      "item": "http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/"
+      "item": "https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/"
     }
   ]
 }
@@ -111,23 +111,23 @@ Define Data Structure The following is the data structure of the Person and Pers
   "articleBody": "Introduction This article will show you how to use Java to perform CRUD operations on MongoDB records.\nIf you’re new to MongoDB, we recommend starting with the Getting Started With MongoDB tutorial.\nTo begin, we’ll establish a Person and Person Images table (a collection in MongoDB) to make CRUD operations in MongoDB easier.\nDefine Data Structure The following is the data structure of the Person and Person Images table (collection in MongoDB).\nPerson    id Int (primary)     username String   first_name String   last_name String   email String   description String   birthdate Date   country String   state String   city String   lat String   lang String   job String    Person Images    id Int(Primary)     person_id Int   image_path String   width Int   height Int   aspect_ration Double   like Int   dislike Int    We’ll use these data structures and associated records to develop interactive image galleries and search engine systems in later tutorial posts.\nCreate maven project Now, create a new project in eclipse and select\n File - New - Other - Maven Project - Next Select maven-archetype-quickstart Select Next Type Group Id, Artifact Id and Package name And select Finish  This will create Maven based Java project .\n Note: What is Maven’s purpose? Although Maven is not required, it allows us to avoid manually installing external libraries such as the MongoDB Java library. Maven aids in the reduction of time and effort by adding the library and its version.\n Add following snippet inside pom.xml file inside dependencies tag.\n org.mongodb mongo-java-driver 2.12.2   Note: You can find this dependency (java library and drivers) and its version for Maven on http://mvnrepository.com\n MongoDB connection MongoClient mongoClient= new MongoClient(\"localhost\",27017); /** Other methods to create client MongoClient mongoClient= new MongoClient(); MongoClient mongoClient= new MongoClient(\"localhost\"); */ The MongoDb client can be obtained in three ways. One without any contractor parameters, or others with a server address or port number.\nTo create database use following snippet.\nDB zainabedDB = mongoClient.getDB(\"zainabed\"); If “zainabed” database is not present in MongoDB then it get created.\nPrint All Available Database ListString databaseNames = mongoClient.getDatabaseNames(); for (String dbName : databaseNames) { System.out.println(\"Database : \" + dbName); } It will print all database names presents in MongoDB.\nSelect or Create Collection The collection acts as a table (RDBMS) and in this tutorial it will be Person and Person Images.\nUse the following code to create a collection.\nDBCollection personCollection = zainabedDB.getCollection(\"person\"); The code above will either choose the collection or create it if it does not already exist.\nUse the following code to get a list of all available collection names for a given database.\nSetString collectionNames = zainabedDB.getCollectionNames(); for(String collection : collectionNames){ System.out.println(\"collection : \" + collection); } Create Record (Person) BasicDBObject is used to create a row object which get inserted into collection.\nFollowing code inserts a row into Person collection.\nBasicDBObject person = new BasicDBObject() .append(\"username\",\"zainabed\") .append(\"first_name\",\"Zainul\") .append(\"last_name\",\"Shaikh\") .append(\"email\",\"xyz@gmail.com\") .append(\"description\",\"Software Developer\") .append(\"birthdate\",new SimpleDateFormat(\"yyyy-MM-dd\").parse(\"1985-03-13\")) .append(\"country\",\"india\") .append(\"state\",\"maharashtra\") .append(\"city\",\"pune\") .append(\"job\",\"Software Developer\") .append(\"lat\",\"18.526895\") .append(\"long\",\"73.856101\"); personCollection.save(person); Now, we will insert a record inside Person Image collection.\nTo do so, first we need to select or create Person Image collection.\nDBCollection personImagesCollection = zainabedDB.getCollection(\"person_images\"); Later, we will create person image BasicDBobject as,\nBasicDBObject personImage = new BasicDBObject() .append(\"person_id\", person.get(\"_id\")) .append(\"image_path\", \"/23gfd945j4k4.png\") .append(\"width\", 400) .append(\"height\", 400) .append(\"aspect_ration\", 1.0) .append(\"like\", 1000) .append(\"dislike\", 45); Here we have used “_id” field of Person object to create association.\nNow this object is ready for insert into db.\npersonImagesCollection.save(personImage); Read MongoDB Records MongoDB read operation is very simple, we will see possible read operations such as\n Find single record Find all records using cursor object Find records using condition  Find Single Record: To find single record from given collection we will use find() method of collection object.\nDBObject result = personCollection.findOne(); System.out.println(result); It will print single result object.\nFind All Records Using Cursor Object To fetch all person records we will use find() method of collection and it will provide a cursor to iterate through all records.\nDBCursor personCursor = personCollection.find(); while(personCursor.hasNext()){ System.out.println(personCursor.next()); } Find records using condition object We will use condition object (BasicDBObject) to filter out desired results.\nBasicDBObject coditionObject = new BasicDBObject(\"job\",\"Software Developer\"); result = personCollection.findOne(coditionObject); System.out.println(result); To filter that column, we specify a condition object with a field and a value.\nUpdate MongoDB Records The update method of a collection object is used to update a record.\nTwo objects are required for the update method, one to filter out the targeted row and the other to alter the value of a specific column.\nBasicDBObject queryObject = new BasicDBObject(\"username\",\"zainabed\"); BasicDBObject updateObject = new BasicDBObject(\"$set\", new BasicDBObject(\"email\",\"abc@gmail.com\"); personCollection.update(queryObject, updateObject);  Note: Here we used the “$set” option to update a record, otherwise it will replace the entire row with the given update column values.\n Delete MongoDB Records The remove () method of collection is used to remove a record from a collection.\nTo filter records that need to be deleted, we’ll need a query object.\nqueryObject = new BasicDBObject(\"email\",\"abc@gmail.com\"); personCollection.remove(queryObject); Conclusion This post provided a quick overview of how to use MongoDB from Java.\nAll of these samples and code snippets can be found on the Github page.\n",
   "wordCount" : "834",
   "inLanguage": "en",
-  "image":"http://localhost:8080/image/cover.png","datePublished": "2014-06-03T05:24:31-04:00",
+  "image":"https://zainabed.github.io/zainabed-blog/image/cover.png","datePublished": "2014-06-03T05:24:31-04:00",
   "dateModified": "2014-06-03T05:24:31-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/"
+    "@id": "https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:8080/favicon.ico"
+      "url": "https://zainabed.github.io/zainabed-blog/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://zainabed.github.io/zainabed-blog/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -145,8 +145,8 @@ Define Data Structure The following is the data structure of the Person and Pers
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:8080/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="http://localhost:8080/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://zainabed.github.io/zainabed-blog/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://zainabed.github.io/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -172,22 +172,22 @@ Define Data Structure The following is the data structure of the Person and Pers
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:8080/archives/" title="Archives">
+                <a href="https://zainabed.github.io/zainabed-blog/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/blogs/" title="Blogs">
+                <a href="https://zainabed.github.io/zainabed-blog/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/categories/" title="Categories">
+                <a href="https://zainabed.github.io/zainabed-blog/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://zainabed.github.io/zainabed-blog/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -209,8 +209,8 @@ Define Data Structure The following is the data structure of the Person and Pers
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/image/cover_hua0fd8b3860a0f582c94b490809bf4107_72265_360x0_resize_box_2.png 360w ,http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/image/cover_hua0fd8b3860a0f582c94b490809bf4107_72265_480x0_resize_box_2.png 480w ,http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/image/cover_hua0fd8b3860a0f582c94b490809bf4107_72265_720x0_resize_box_2.png 720w ,http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/image/cover.png 900w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:8080/2014/06/mongodb-crud-operations-using-java.html/image/cover.png" alt="Mongodb Crud Operations Using Java" 
+        <img loading="lazy" srcset="https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/image/cover_hua0fd8b3860a0f582c94b490809bf4107_72265_360x0_resize_box_2.png 360w ,https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/image/cover_hua0fd8b3860a0f582c94b490809bf4107_72265_480x0_resize_box_2.png 480w ,https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/image/cover_hua0fd8b3860a0f582c94b490809bf4107_72265_720x0_resize_box_2.png 720w ,https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/image/cover.png 900w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.github.io/zainabed-blog/2014/06/mongodb-crud-operations-using-java.html/image/cover.png" alt="Mongodb Crud Operations Using Java" 
             width="900" height="450">
         
 </figure>
@@ -488,7 +488,7 @@ personCollection<span style="color:#f92672">.</span><span style="color:#a6e22e">
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="http://localhost:8080/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://zainabed.github.io/zainabed-blog/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -553,7 +553,7 @@ personCollection<span style="color:#f92672">.</span><span style="color:#a6e22e">
             <div class="card-left">
                 
                     <div class="card card-overlay">
-    <div class="card-content card-content-wrapper" style="background-image: url(/2014/11/mongodb-tutorials-aggregation-framework.html/image/cover.png); background-size: cover;">
+    <div class="card-content card-content-wrapper" style="background-image: url(/zainabed-blog/2014/11/mongodb-tutorials-aggregation-framework.html/image/cover.png); background-size: cover;">
         <div class="card-content-overlay">
             
                     <span>MongoDB</span>
@@ -563,7 +563,7 @@ personCollection<span style="color:#f92672">.</span><span style="color:#a6e22e">
                 
                     <span class="card-author">Zainul</span>
                 
-            <h4><a href="/2014/11/mongodb-tutorials-aggregation-framework.html/">Mongodb Tutorials Aggregation Framework</a></h4>
+            <h4><a href="/zainabed-blog/2014/11/mongodb-tutorials-aggregation-framework.html/">Mongodb Tutorials Aggregation Framework</a></h4>
         </div>
     </div>
 </div>
@@ -576,13 +576,13 @@ personCollection<span style="color:#f92672">.</span><span style="color:#a6e22e">
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover.png); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Java</label>
             
         
-        <h4><a href="/2014/07/jax-rs-tutorilas-hello-world-example.html/">Jax Rs Tutorilas Hello World Example</a></h4>
+        <h4><a href="/zainabed-blog/2014/07/jax-rs-tutorilas-hello-world-example.html/">Jax Rs Tutorilas Hello World Example</a></h4>
         <div class="card-date">July 29, 2014 </div>
             
                 <div class="card-author">Zainul</div>
@@ -592,13 +592,13 @@ personCollection<span style="color:#f92672">.</span><span style="color:#a6e22e">
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2014/07/jax-rs-tutorial-rest-api-using-java.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2014/07/jax-rs-tutorial-rest-api-using-java.html/image/cover.png); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Java</label>
             
         
-        <h4><a href="/2014/07/jax-rs-tutorial-rest-api-using-java.html/">Jax Rs Tutorial Rest Api Using Java</a></h4>
+        <h4><a href="/zainabed-blog/2014/07/jax-rs-tutorial-rest-api-using-java.html/">Jax Rs Tutorial Rest Api Using Java</a></h4>
         <div class="card-date">July 24, 2014 </div>
             
                 <div class="card-author">Zainul</div>
@@ -608,13 +608,13 @@ personCollection<span style="color:#f92672">.</span><span style="color:#a6e22e">
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2022/06/log4j-how-to-log-message-to-console.html/image/cover.jpg); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2022/06/log4j-how-to-log-message-to-console.html/image/cover.jpg); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Java</label>
             
         
-        <h4><a href="/2022/06/log4j-how-to-log-message-to-console.html/">Log4j How to Log Message to Console</a></h4>
+        <h4><a href="/zainabed-blog/2022/06/log4j-how-to-log-message-to-console.html/">Log4j How to Log Message to Console</a></h4>
         <div class="card-date">June 1, 2022 </div>
             
                 <div class="card-author">Zainul</div>
@@ -672,7 +672,7 @@ personCollection<span style="color:#f92672">.</span><span style="color:#a6e22e">
 
         </div>
         <div class=" center">
-          &copy; 2022 Copyright | <a href="http://localhost:8080/">ZAINABED</a> . All rights reserved
+          &copy; 2022 Copyright | <a href="https://zainabed.github.io/zainabed-blog/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
     </div>

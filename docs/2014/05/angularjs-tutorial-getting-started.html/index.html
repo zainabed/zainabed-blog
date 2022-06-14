@@ -12,15 +12,15 @@ AngularJs follows MVC pattern to separate out model from view and manage it by c
 See this image
 Goal of using AngularJs is to convert static HTML template to dynamic (Angular) template.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link rel="canonical" href="https://zainabed.github.io/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/">
+<link crossorigin="anonymous" href="/zainabed-blog/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/zainabed-blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://localhost:8080/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:8080/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:8080/safari-pinned-tab.svg">
+<link rel="icon" href="https://zainabed.github.io/zainabed-blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.github.io/zainabed-blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.github.io/zainabed-blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zainabed.github.io/zainabed-blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zainabed.github.io/zainabed-blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -66,13 +66,13 @@ AngularJs follows MVC pattern to separate out model from view and manage it by c
 See this image
 Goal of using AngularJs is to convert static HTML template to dynamic (Angular) template." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/" />
-<meta property="og:image" content="http://localhost:8080/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://zainabed.github.io/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/" />
+<meta property="og:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2014-05-22T05:22:13-04:00" />
 <meta property="article:modified_time" content="2014-05-22T05:22:13-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:8080/image/cover.png" />
+<meta name="twitter:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" />
 <meta name="twitter:title" content="Angularjs Tutorial Getting Started"/>
 <meta name="twitter:description" content="Introduction This tutorial will help you to create a dynamic web application using power of AngularJs.
 What is AngularJs AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.
@@ -90,13 +90,13 @@ Goal of using AngularJs is to convert static HTML template to dynamic (Angular) 
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "http://localhost:8080/blogs/"
+      "item": "https://zainabed.github.io/zainabed-blog/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Angularjs Tutorial Getting Started",
-      "item": "http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/"
+      "item": "https://zainabed.github.io/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/"
     }
   ]
 }
@@ -114,23 +114,23 @@ Goal of using AngularJs is to convert static HTML template to dynamic (Angular) 
   "articleBody": "Introduction This tutorial will help you to create a dynamic web application using power of AngularJs.\nWhat is AngularJs AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.\nAngularJs follows MVC pattern to separate out model from view and manage it by controller.\nSee this image\nGoal of using AngularJs is to convert static HTML template to dynamic (Angular) template.\nHow to convert static template to dynamic (Angular) Template Now consider the following static HTML template which contain list of movies title.\nh1Upcoming Moviesh1 ul li spanGodzillaspan li li spanBatman vs Supermanspan li li spanStar Wars Episode VIIspan li ul Now lets convert above static HTML template into AngularJs Template by injecting Model-View-Controller by using following steps.\n Create AngularJS module object in javascript which will be the root scope of the AngularJs template. Using above module object create controller function which will hold the model resource (like JSON objects). Within this controller create or access model object (JSON object) using $scope variable. Now Inject module and controller Angularjs tags into view (static HTML template) and access the model object (JSON object) inside view.  Following is blueprint of steps which we are going to perform inside static template.\n NOTE:\n ng-repeat AngularJS tag is used to iterate JSON array {{}} AngularJS tag is used to output content inside HTML   Now let’s create JavaScript code for AngularJs module and controller. We will create a JavaScript file named app.js\n// create module var firstApp = angular.module(\"firstApp\",[]); // create controller firstApp.controller(\"mainController\", function($scope){ // create model object  $scope.movies = [{title: \"Godzilla\"},{title: \"Batman vs Superman\"},{title: \"Star Wars Episode VII\"}]; }); Now just include this JavaScript file and angular.js file in static HTML template And run the application.\nyou will see the following result\nSource Code You can find source code used in this tutorial on Github page.\n",
   "wordCount" : "323",
   "inLanguage": "en",
-  "image":"http://localhost:8080/image/cover.png","datePublished": "2014-05-22T05:22:13-04:00",
+  "image":"https://zainabed.github.io/zainabed-blog/image/cover.png","datePublished": "2014-05-22T05:22:13-04:00",
   "dateModified": "2014-05-22T05:22:13-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/"
+    "@id": "https://zainabed.github.io/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:8080/favicon.ico"
+      "url": "https://zainabed.github.io/zainabed-blog/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://zainabed.github.io/zainabed-blog/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -148,8 +148,8 @@ Goal of using AngularJs is to convert static HTML template to dynamic (Angular) 
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:8080/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="http://localhost:8080/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://zainabed.github.io/zainabed-blog/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://zainabed.github.io/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -175,22 +175,22 @@ Goal of using AngularJs is to convert static HTML template to dynamic (Angular) 
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:8080/archives/" title="Archives">
+                <a href="https://zainabed.github.io/zainabed-blog/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/blogs/" title="Blogs">
+                <a href="https://zainabed.github.io/zainabed-blog/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/categories/" title="Categories">
+                <a href="https://zainabed.github.io/zainabed-blog/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://zainabed.github.io/zainabed-blog/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -212,8 +212,8 @@ Goal of using AngularJs is to convert static HTML template to dynamic (Angular) 
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/image/cover_hu8bd4c980fdc3ba6eb7254588099abf95_270536_360x0_resize_box_2.png 360w ,http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/image/cover_hu8bd4c980fdc3ba6eb7254588099abf95_270536_480x0_resize_box_2.png 480w ,http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/image/cover_hu8bd4c980fdc3ba6eb7254588099abf95_270536_720x0_resize_box_2.png 720w ,http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/image/cover.png 900w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/image/cover.png" alt="Angularjs Tutorial Getting Started" 
+        <img loading="lazy" srcset="https://zainabed.github.io/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/image/cover_hu8bd4c980fdc3ba6eb7254588099abf95_270536_360x0_resize_box_2.png 360w ,https://zainabed.github.io/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/image/cover_hu8bd4c980fdc3ba6eb7254588099abf95_270536_480x0_resize_box_2.png 480w ,https://zainabed.github.io/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/image/cover_hu8bd4c980fdc3ba6eb7254588099abf95_270536_720x0_resize_box_2.png 720w ,https://zainabed.github.io/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/image/cover.png 900w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.github.io/zainabed-blog/2014/05/angularjs-tutorial-getting-started.html/image/cover.png" alt="Angularjs Tutorial Getting Started" 
             width="900" height="450">
         
 </figure>
@@ -298,7 +298,7 @@ And run the application.</p>
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span></span>  
-          <h3 class="author-title"><a href="http://localhost:8080/authors/zainu/" class="author-title"></a></h3>
+          <h3 class="author-title"><a href="https://zainabed.github.io/zainabed-blog/authors/zainu/" class="author-title"></a></h3>
       </figcaption>
     </figure>
     
@@ -363,7 +363,7 @@ And run the application.</p>
             <div class="card-left">
                 
                     <div class="card card-overlay">
-    <div class="card-content card-content-wrapper" style="background-image: url(/2015/03/angularjs-tutorials-bootstrap.html/image/cover.png); background-size: cover;">
+    <div class="card-content card-content-wrapper" style="background-image: url(/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/image/cover.png); background-size: cover;">
         <div class="card-content-overlay">
             
                     <span>Angular</span>
@@ -373,7 +373,7 @@ And run the application.</p>
                 
                     <span class="card-author">Zainul</span>
                 
-            <h4><a href="/2015/03/angularjs-tutorials-bootstrap.html/">Angularjs Tutorials Bootstrap</a></h4>
+            <h4><a href="/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/">Angularjs Tutorials Bootstrap</a></h4>
         </div>
     </div>
 </div>
@@ -386,13 +386,13 @@ And run the application.</p>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2015/03/angularjs-tutorials-bootstrap.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/image/cover.png); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Angular</label>
             
         
-        <h4><a href="/2015/03/angularjs-tutorials-bootstrap.html/">Angularjs Tutorials Bootstrap</a></h4>
+        <h4><a href="/zainabed-blog/2015/03/angularjs-tutorials-bootstrap.html/">Angularjs Tutorials Bootstrap</a></h4>
         <div class="card-date">March 4, 2015 </div>
             
                 <div class="card-author">Zainul</div>
@@ -450,7 +450,7 @@ And run the application.</p>
 
         </div>
         <div class=" center">
-          &copy; 2022 Copyright | <a href="http://localhost:8080/">ZAINABED</a> . All rights reserved
+          &copy; 2022 Copyright | <a href="https://zainabed.github.io/zainabed-blog/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
     </div>

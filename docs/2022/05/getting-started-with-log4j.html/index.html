@@ -11,15 +11,15 @@ In this tutorial, we&rsquo;ll see how to set up Log4j for a simple Java applicat
 You can find all code related to this tutorial inside GitHub project.
 Why do we need Logging Logging is an important part of the application since it records user actions, input requests and output responses, error messages, and more.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:8080/2022/05/getting-started-with-log4j.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link rel="canonical" href="https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/">
+<link crossorigin="anonymous" href="/zainabed-blog/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/zainabed-blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://localhost:8080/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:8080/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:8080/safari-pinned-tab.svg">
+<link rel="icon" href="https://zainabed.github.io/zainabed-blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.github.io/zainabed-blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.github.io/zainabed-blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zainabed.github.io/zainabed-blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zainabed.github.io/zainabed-blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -64,13 +64,13 @@ In this tutorial, we&rsquo;ll see how to set up Log4j for a simple Java applicat
 You can find all code related to this tutorial inside GitHub project.
 Why do we need Logging Logging is an important part of the application since it records user actions, input requests and output responses, error messages, and more." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:8080/2022/05/getting-started-with-log4j.html/" />
-<meta property="og:image" content="http://localhost:8080/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/" />
+<meta property="og:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2022-05-30T09:30:34-04:00" />
 <meta property="article:modified_time" content="2022-05-30T09:30:34-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:8080/image/cover.png" />
+<meta name="twitter:image" content="https://zainabed.github.io/zainabed-blog/image/cover.png" />
 <meta name="twitter:title" content="Getting Started With Log4j"/>
 <meta name="twitter:description" content="Introduction For Java applications, Log4j is a commonly used and trusted logging tool. When an application is deployed to an application server, logging is a must-have feature.
 In this tutorial, we&rsquo;ll see how to set up Log4j for a simple Java application.
@@ -87,13 +87,13 @@ Why do we need Logging Logging is an important part of the application since it 
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "http://localhost:8080/blogs/"
+      "item": "https://zainabed.github.io/zainabed-blog/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Getting Started With Log4j",
-      "item": "http://localhost:8080/2022/05/getting-started-with-log4j.html/"
+      "item": "https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/"
     }
   ]
 }
@@ -111,23 +111,23 @@ Why do we need Logging Logging is an important part of the application since it 
   "articleBody": "Introduction For Java applications, Log4j is a commonly used and trusted logging tool. When an application is deployed to an application server, logging is a must-have feature.\nIn this tutorial, we’ll see how to set up Log4j for a simple Java application.\nYou can find all code related to this tutorial inside GitHub project.\nWhy do we need Logging Logging is an important part of the application since it records user actions, input requests and output responses, error messages, and more.\nThis information aids in the understanding of the application both inside and outside of it, as well as providing faster feedback or support for any issues that may occur during the application’s execution.\nMaven configuration Add following dependencies into pom.xml\n  org.apache.logging.log4j log4j-api 2.17.2   org.apache.logging.log4j log4j-core 2.17.2    Note : Choose the latest version of Log4J to guard against any unwanted vulnerabilities.\n Sample code Now lets add few log message and see the result.\nimport org.apache.logging.log4j.LogManager; import org.apache.logging.log4j.Logger; public class MainApp { public static void main(String[] args) { Logger logger = LogManager.getLogger(); printLoggingLevels(logger); } private static void printLoggingLevels(Logger logger) { logger.trace(\"logging trace level\"); logger.debug(\"logging debug level\"); logger.info(\"logging info level\"); logger.warn(\"logging warn level\"); logger.error(\"logging error level\"); logger.fatal(\"logging fatal level\"); } } Logging levels All of the logging levels available in the Log4j package are demonstrated in the code sample above.\nLet’s look at what each level does.\n Trace : A fine-grained message that records all traces of the application’s flow. Debug : Messages used to debug an application’s behaviour during development. Info : Common application flow message. Warn : An event that may result in an error. Error : An exception occurred within the application, which may be recovered. Fatal : An application encounters an error that cannot be recovered from.  When we execute the application, Log4J starts logging into the console.\n02:34:02.491 [main] ERROR com.zainabed.tutorials.logging.MainApp - logging error level 02:34:02.504 [main] FATAL com.zainabed.tutorials.logging.MainApp - logging fatal level As we can see it logs only Error \u0026 Fatal level messages only. This happens because of Logging level filtering.\nLogging level filter Log4j has the following filter mechanism.\nAll If the logging level is set to be info, then only info, warning, error, and fatal messages will be logged into the console.\nWhen the logging level is set to “Error” both the Error and Fatal messages are displayed.\nThe default logging level is Error for applications. That is why we see only Error and Fatal log messages.\nTo override the default behavior, we need to add the Log4j2.xml configuration file and provide an appropriate logging level to log relevant messages.\nConclusion Every application requires a logging method to record the flow and behaviour of the application. Log4j is a widely adopted tool to provide such a facility.\nLog4j is extremely configurable, and application-specific parameters are set via Log4j2.xml.\n",
   "wordCount" : "483",
   "inLanguage": "en",
-  "image":"http://localhost:8080/image/cover.png","datePublished": "2022-05-30T09:30:34-04:00",
+  "image":"https://zainabed.github.io/zainabed-blog/image/cover.png","datePublished": "2022-05-30T09:30:34-04:00",
   "dateModified": "2022-05-30T09:30:34-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:8080/2022/05/getting-started-with-log4j.html/"
+    "@id": "https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:8080/favicon.ico"
+      "url": "https://zainabed.github.io/zainabed-blog/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://zainabed.github.io/zainabed-blog/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -145,8 +145,8 @@ Why do we need Logging Logging is an important part of the application since it 
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:8080/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="http://localhost:8080/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://zainabed.github.io/zainabed-blog/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://zainabed.github.io/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -172,22 +172,22 @@ Why do we need Logging Logging is an important part of the application since it 
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:8080/archives/" title="Archives">
+                <a href="https://zainabed.github.io/zainabed-blog/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/blogs/" title="Blogs">
+                <a href="https://zainabed.github.io/zainabed-blog/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/categories/" title="Categories">
+                <a href="https://zainabed.github.io/zainabed-blog/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:8080/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://zainabed.github.io/zainabed-blog/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -209,8 +209,8 @@ Why do we need Logging Logging is an important part of the application since it 
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="http://localhost:8080/2022/05/getting-started-with-log4j.html/image/cover_hu172b67e80752b07e6fcc4d27afb1b675_749753_360x0_resize_box_2.png 360w ,http://localhost:8080/2022/05/getting-started-with-log4j.html/image/cover_hu172b67e80752b07e6fcc4d27afb1b675_749753_480x0_resize_box_2.png 480w ,http://localhost:8080/2022/05/getting-started-with-log4j.html/image/cover_hu172b67e80752b07e6fcc4d27afb1b675_749753_720x0_resize_box_2.png 720w ,http://localhost:8080/2022/05/getting-started-with-log4j.html/image/cover_hu172b67e80752b07e6fcc4d27afb1b675_749753_1080x0_resize_box_2.png 1080w ,http://localhost:8080/2022/05/getting-started-with-log4j.html/image/cover_hu172b67e80752b07e6fcc4d27afb1b675_749753_1500x0_resize_box_2.png 1500w ,http://localhost:8080/2022/05/getting-started-with-log4j.html/image/cover.png 1920w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:8080/2022/05/getting-started-with-log4j.html/image/cover.png" alt="Getting Started With Log4j" 
+        <img loading="lazy" srcset="https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/image/cover_hu172b67e80752b07e6fcc4d27afb1b675_749753_360x0_resize_box_2.png 360w ,https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/image/cover_hu172b67e80752b07e6fcc4d27afb1b675_749753_480x0_resize_box_2.png 480w ,https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/image/cover_hu172b67e80752b07e6fcc4d27afb1b675_749753_720x0_resize_box_2.png 720w ,https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/image/cover_hu172b67e80752b07e6fcc4d27afb1b675_749753_1080x0_resize_box_2.png 1080w ,https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/image/cover_hu172b67e80752b07e6fcc4d27afb1b675_749753_1500x0_resize_box_2.png 1500w ,https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/image/cover.png 1920w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.github.io/zainabed-blog/2022/05/getting-started-with-log4j.html/image/cover.png" alt="Getting Started With Log4j" 
             width="1920" height="1277">
         
 </figure>
@@ -312,7 +312,7 @@ Log4j is a widely adopted tool to provide such a facility.</p>
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="http://localhost:8080/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://zainabed.github.io/zainabed-blog/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -377,7 +377,7 @@ Log4j is a widely adopted tool to provide such a facility.</p>
             <div class="card-left">
                 
                     <div class="card card-overlay">
-    <div class="card-content card-content-wrapper" style="background-image: url(/2022/06/log4j-how-to-log-message-to-console.html/image/cover.jpg); background-size: cover;">
+    <div class="card-content card-content-wrapper" style="background-image: url(/zainabed-blog/2022/06/log4j-how-to-log-message-to-console.html/image/cover.jpg); background-size: cover;">
         <div class="card-content-overlay">
             
                     <span>Java</span>
@@ -387,7 +387,7 @@ Log4j is a widely adopted tool to provide such a facility.</p>
                 
                     <span class="card-author">Zainul</span>
                 
-            <h4><a href="/2022/06/log4j-how-to-log-message-to-console.html/">Log4j How to Log Message to Console</a></h4>
+            <h4><a href="/zainabed-blog/2022/06/log4j-how-to-log-message-to-console.html/">Log4j How to Log Message to Console</a></h4>
         </div>
     </div>
 </div>
@@ -400,13 +400,13 @@ Log4j is a widely adopted tool to provide such a facility.</p>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover.jpg); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover.jpg); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Java</label>
             
         
-        <h4><a href="/2022/05/maven-create-jacoco-code-coverage-report.html/">Maven Create Jacoco Code Coverage Report</a></h4>
+        <h4><a href="/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/">Maven Create Jacoco Code Coverage Report</a></h4>
         <div class="card-date">May 26, 2022 </div>
             
                 <div class="card-author">Zainul</div>
@@ -416,13 +416,13 @@ Log4j is a widely adopted tool to provide such a facility.</p>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover.jpg); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover.jpg); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Java</label>
             
         
-        <h4><a href="/2022/04/spring-boot-resttemplate-guide-with-example.html/">Spring Boot Resttemplate Guide With Example</a></h4>
+        <h4><a href="/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/">Spring Boot Resttemplate Guide With Example</a></h4>
         <div class="card-date">April 22, 2022 </div>
             
                 <div class="card-author">Zainul</div>
@@ -432,13 +432,13 @@ Log4j is a widely adopted tool to provide such a facility.</p>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/image/cover.jpg); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/zainabed-blog/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/image/cover.jpg); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Spring Boot</label>
             
         
-        <h4><a href="/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/">How to Enable Sql Logs in Spring Boot Application</a></h4>
+        <h4><a href="/zainabed-blog/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/">How to Enable Sql Logs in Spring Boot Application</a></h4>
         <div class="card-date">April 8, 2022 </div>
             
                 <div class="card-author">Zainul</div>
@@ -496,7 +496,7 @@ Log4j is a widely adopted tool to provide such a facility.</p>
 
         </div>
         <div class=" center">
-          &copy; 2022 Copyright | <a href="http://localhost:8080/">ZAINABED</a> . All rights reserved
+          &copy; 2022 Copyright | <a href="https://zainabed.github.io/zainabed-blog/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
     </div>
