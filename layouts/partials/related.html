@@ -1,0 +1,28 @@
+
+{{ $related := .Site.RegularPages.Related . | first 4 }}
+{{ with $related }}
+<div class="related">
+    <h3>See Relted <span class="border-highlight">Blogs</span></h3>
+    <p>Check out our latest and innovative blog post,</p>
+    <p>analysis, examples, and more</p>
+
+    <div class="card-container">
+        {{ $first_related := $related | first 1}}
+        {{ with $first_related}}
+            <div class="card-left">
+                {{ range $index, $element := . }}
+                    {{ partial "related_prominant" .}}
+                {{ end }}
+            </div>
+        {{ end }}
+        {{ $last_related := $related | last 3}}
+        {{ with $last_related}}
+            <div class="card-right">
+                {{ range $index, $element := . }}
+                    {{ partial "related_card" .}}
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

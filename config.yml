@@ -1,0 +1,91 @@
+baseURL: 'http://localhost:8080/'
+languageCode: en-us
+title: ZAINABED
+description: >-
+  Zainabed.com is a website that contains programming tutorials. These tutorials
+  primarily cover programming technologies like Java, Spring Boot, AngularJS,
+  Web Design, MongoDB, Microservices, and MySQL.
+theme: PaperMod
+
+custom_css:
+  - css/custom.css
+  - css/home.css
+
+menu:
+  main:
+    - identifier: Search
+      name: Search
+      pre: <i class='fa fa-heart'></i>
+      url: /search/
+      weight: -110
+      params:
+        class: highlight-menu-item
+    - identifier: Blogs
+      name: Blogs
+      pre: <i class='fa fa-heart'></i>
+      url: /blogs/
+      weight: -110
+      params:
+        class: highlight-menu-item
+    - identifier: Categories
+      name: Categories
+      pre: <i class='fa fa-heart'></i>
+      url: /categories/
+      weight: -110
+      params:
+        class: highlight-menu-item
+    - identifier: Archives
+      name: Archives
+      pre: <i class='fa fa-heart'></i>
+      url: /archives/
+      weight: -110
+      params:
+        class: highlight-menu-item
+permalinks:
+  blogs: '/:year/:month/:title.html'
+taxonomies:
+  author: authors
+  tag: tags
+  category: categories
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+params:
+  label:
+    icon: /images/logo/logo-black.png
+  socialIcons:
+  - name: github
+    url: 'https://github.com/zainabed/tutorials'
+  
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+
+related:
+  includeNewer: true
+  threshold: 80
+  toLower: false
+  indices:
+    - name: title
+      weight: 30
+    - name: categories
+      weight: 30
+    - name: tags
+      weight: 30
+    - name: date
+      weight: 10
+
+headers:
+  - for: /css/*
+    values:
+      Cache-Control: 'public, max-age=31536000'
+  - for: /js/*
+    values:
+      Cache-Control: 'public, max-age=31536000'

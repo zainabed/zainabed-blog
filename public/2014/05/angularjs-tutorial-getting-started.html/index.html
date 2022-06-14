@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Angularjs Tutorial Getting Started | ZAINABED</title>
+<meta name="keywords" content="">
+<meta name="description" content="Introduction This tutorial will help you to create a dynamic web application using power of AngularJs.
+What is AngularJs AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.
+AngularJs follows MVC pattern to separate out model from view and manage it by controller.
+See this image
+Goal of using AngularJs is to convert static HTML template to dynamic (Angular) template.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://localhost:8080/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:8080/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:8080/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Angularjs Tutorial Getting Started" />
+<meta property="og:description" content="Introduction This tutorial will help you to create a dynamic web application using power of AngularJs.
+What is AngularJs AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.
+AngularJs follows MVC pattern to separate out model from view and manage it by controller.
+See this image
+Goal of using AngularJs is to convert static HTML template to dynamic (Angular) template." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/" />
+<meta property="og:image" content="http://localhost:8080/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2014-05-22T05:22:13-04:00" />
+<meta property="article:modified_time" content="2014-05-22T05:22:13-04:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:8080/image/cover.png" />
+<meta name="twitter:title" content="Angularjs Tutorial Getting Started"/>
+<meta name="twitter:description" content="Introduction This tutorial will help you to create a dynamic web application using power of AngularJs.
+What is AngularJs AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.
+AngularJs follows MVC pattern to separate out model from view and manage it by controller.
+See this image
+Goal of using AngularJs is to convert static HTML template to dynamic (Angular) template."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "http://localhost:8080/blogs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Angularjs Tutorial Getting Started",
+      "item": "http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Angularjs Tutorial Getting Started",
+  "name": "Angularjs Tutorial Getting Started",
+  "description": "Introduction This tutorial will help you to create a dynamic web application using power of AngularJs.\nWhat is AngularJs AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.\nAngularJs follows MVC pattern to separate out model from view and manage it by controller.\nSee this image\nGoal of using AngularJs is to convert static HTML template to dynamic (Angular) template.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Introduction This tutorial will help you to create a dynamic web application using power of AngularJs.\nWhat is AngularJs AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.\nAngularJs follows MVC pattern to separate out model from view and manage it by controller.\nSee this image\nGoal of using AngularJs is to convert static HTML template to dynamic (Angular) template.\nHow to convert static template to dynamic (Angular) Template Now consider the following static HTML template which contain list of movies title.\nh1Upcoming Moviesh1 ul li spanGodzillaspan li li spanBatman vs Supermanspan li li spanStar Wars Episode VIIspan li ul Now lets convert above static HTML template into AngularJs Template by injecting Model-View-Controller by using following steps.\n Create AngularJS module object in javascript which will be the root scope of the AngularJs template. Using above module object create controller function which will hold the model resource (like JSON objects). Within this controller create or access model object (JSON object) using $scope variable. Now Inject module and controller Angularjs tags into view (static HTML template) and access the model object (JSON object) inside view.  Following is blueprint of steps which we are going to perform inside static template.\n NOTE:\n ng-repeat AngularJS tag is used to iterate JSON array {{}} AngularJS tag is used to output content inside HTML   Now let’s create JavaScript code for AngularJs module and controller. We will create a JavaScript file named app.js\n// create module var firstApp = angular.module(\"firstApp\",[]); // create controller firstApp.controller(\"mainController\", function($scope){ // create model object  $scope.movies = [{title: \"Godzilla\"},{title: \"Batman vs Superman\"},{title: \"Star Wars Episode VII\"}]; }); Now just include this JavaScript file and angular.js file in static HTML template And run the application.\nyou will see the following result\nSource Code You can find source code used in this tutorial on Github page.\n",
+  "wordCount" : "323",
+  "inLanguage": "en",
+  "image":"http://localhost:8080/image/cover.png","datePublished": "2014-05-22T05:22:13-04:00",
+  "dateModified": "2014-05-22T05:22:13-04:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ZAINABED",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:8080/favicon.ico"
+    }
+  }
+}
+</script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/css/custom.css" />
+    
+</head>
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:8080/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="http://localhost:8080/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:8080/archives/" title="Archives">
+                    <span><i class='fa fa-heart'></i>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/blogs/" title="Blogs">
+                    <span><i class='fa fa-heart'></i>Blogs</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/categories/" title="Categories">
+                    <span><i class='fa fa-heart'></i>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span><i class='fa fa-heart'></i>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+   
+    <main class="main">
+
+<article class="post-single left-side">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Angularjs Tutorial Getting Started
+    </h1>
+    <div class="post-meta"><span title='2014-05-22 05:22:13 -0400 EDT'>May 22, 2014</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/image/cover_hu8bd4c980fdc3ba6eb7254588099abf95_270536_360x0_resize_box_2.png 360w ,http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/image/cover_hu8bd4c980fdc3ba6eb7254588099abf95_270536_480x0_resize_box_2.png 480w ,http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/image/cover_hu8bd4c980fdc3ba6eb7254588099abf95_270536_720x0_resize_box_2.png 720w ,http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/image/cover.png 900w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:8080/2014/05/angularjs-tutorial-getting-started.html/image/cover.png" alt="Angularjs Tutorial Getting Started" 
+            width="900" height="450">
+        
+</figure>
+  <aside>
+    <h2>Table Content</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#what-is-angularjs">What is AngularJs</a></li>
+    <li><a href="#how-to-convert-static-template-to-dynamic-angular-template">How to convert static template to dynamic (Angular) Template</a></li>
+    <li><a href="#source-code">Source Code</a></li>
+  </ul>
+</nav>
+  </aside>
+  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>This tutorial will help you to create a dynamic web application using power of AngularJs.</p>
+<h2 id="what-is-angularjs">What is AngularJs<a hidden class="anchor" aria-hidden="true" href="#what-is-angularjs">#</a></h2>
+<p>AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.</p>
+<p>AngularJs follows MVC pattern to separate out model from view and manage it by controller.</p>
+<p>See this image</p>
+<p><img loading="lazy" src="image/angularjs-module-overview.png" alt="angularjs module overview"  />
+</p>
+<p>Goal of using AngularJs is to convert static HTML template to dynamic (Angular) template.</p>
+<h2 id="how-to-convert-static-template-to-dynamic-angular-template">How to convert static template to dynamic (Angular) Template<a hidden class="anchor" aria-hidden="true" href="#how-to-convert-static-template-to-dynamic-angular-template">#</a></h2>
+<p>Now consider the following static HTML template which contain list of movies title.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt;Upcoming Movies&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">ul</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">span</span>&gt;Godzilla&lt;/<span style="color:#f92672">span</span>&gt;
+    &lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">span</span>&gt;Batman vs Superman&lt;/<span style="color:#f92672">span</span>&gt;
+    &lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">span</span>&gt;Star Wars Episode VII&lt;/<span style="color:#f92672">span</span>&gt;
+    &lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><p>Now lets convert above static HTML template into AngularJs Template by injecting Model-View-Controller by using following steps.</p>
+<ol>
+<li>Create AngularJS module object in javascript which will be the root scope of the AngularJs template.</li>
+<li>Using above module object create controller function which will hold the model resource (like JSON objects).</li>
+<li>Within this controller create or access model object (JSON object) using $scope variable.</li>
+<li>Now Inject module and controller Angularjs tags into view (static HTML template) and access the model object (JSON object) inside view.</li>
+</ol>
+<p>Following is blueprint of steps which we are going to perform inside static template.</p>
+<p><img loading="lazy" src="image/angularjs-mvc-pattern.png" alt="angularjs mvc pattern"  />
+</p>
+<blockquote>
+<p><strong>NOTE</strong>:</p>
+<ol>
+<li>ng-repeat AngularJS tag is used to iterate JSON array</li>
+<li><code>{{}}</code> AngularJS tag is used to output content inside HTML</li>
+</ol>
+</blockquote>
+<p>Now let’s create JavaScript code for AngularJs module and controller.
+We will create a JavaScript file named <code>app.js</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// create module
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">firstApp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">angular</span>.<span style="color:#a6e22e">module</span>(<span style="color:#e6db74">&#34;firstApp&#34;</span>,[]);
+
+<span style="color:#75715e">// create controller
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">firstApp</span>.<span style="color:#a6e22e">controller</span>(<span style="color:#e6db74">&#34;mainController&#34;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">$scope</span>){
+
+  <span style="color:#75715e">// create model object
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">$scope</span>.<span style="color:#a6e22e">movies</span> <span style="color:#f92672">=</span> [{<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Godzilla&#34;</span>},{<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Batman vs Superman&#34;</span>},{<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Star Wars Episode VII&#34;</span>}];
+
+});
+</code></pre></div><p>Now just include this JavaScript file and <code>angular.js</code> file in static HTML template
+And run the application.</p>
+<p>you will see the following result</p>
+<p><img loading="lazy" src="image/angular-js-tutorial-output.png" alt="angular js tutorial output"  />
+</p>
+<h2 id="source-code">Source Code<a hidden class="anchor" aria-hidden="true" href="#source-code">#</a></h2>
+<p>You can find source code used in this tutorial on <a href="https://github.com/zainabed/tutorials/tree/master/angularjs/getting_started">Github</a> page.</p>
+
+
+  </div>
+  
+  
+    <figure class="author">
+      <img src="" alt="" class="author-img"/>
+
+      <figcaption class="author-summary">
+          <div class="quote">“</div>
+          <span></span>  
+          <h3 class="author-title"><a href="http://localhost:8080/authors/zainu/" class="author-title"></a></h3>
+      </figcaption>
+    </figure>
+    
+  
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    <section class="side-section">
+        
+
+<div id="mc_embed_signup">
+  <form action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd"
+    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+    novalidate>
+    <div id="mc_embed_signup_scroll">
+      <h2>Newsletter</h2>
+      <div class="indicates-required">Subscribe for latest blogs and tutorials</div>
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+        </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+      </div>
+      <div id="mce-responses" class="clear foot">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+      
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+          name="b_b73e39b6311715d589d67af85_ffb528a5dd" tabindex="-1" value=""></div>
+      <div class="optionalParent">
+        <div class="clear foot">
+          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+          
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+    </section>
+   </div>
+   <section class="related-post">
+     
+
+
+
+<div class="related">
+    <h3>See Relted <span class="border-highlight">Blogs</span></h3>
+    <p>Check out our latest and innovative blog post,</p>
+    <p>analysis, examples, and more</p>
+
+    <div class="card-container">
+        
+        
+            <div class="card-left">
+                
+                    <div class="card card-overlay">
+    <div class="card-content card-content-wrapper" style="background-image: url(/2015/03/angularjs-tutorials-bootstrap.html/image/cover.png); background-size: cover;">
+        <div class="card-content-overlay">
+            
+                    <span>Angular</span>
+                
+            
+            <span class="card-date">March 4, 2015 </span>
+                
+                    <span class="card-author">Zainul</span>
+                
+            <h4><a href="/2015/03/angularjs-tutorials-bootstrap.html/">Angularjs Tutorials Bootstrap</a></h4>
+        </div>
+    </div>
+</div>
+                
+            </div>
+        
+        
+        
+            <div class="card-right">
+                
+                    <div class="card">
+    
+    <div class="card-image" style="background-image: url(/2015/03/angularjs-tutorials-bootstrap.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-content">
+        
+                <label>Angular</label>
+            
+        
+        <h4><a href="/2015/03/angularjs-tutorials-bootstrap.html/">Angularjs Tutorials Bootstrap</a></h4>
+        <div class="card-date">March 4, 2015 </div>
+            
+                <div class="card-author">Zainul</div>
+            
+        </div>
+</div>
+                
+            </div>
+        
+    </div>
+</div>
+
+
+   </section>
+    
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <ul>
+                
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="footer-center">
+            <form action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h2>Get In Touch</h2>
+            
+                    <p>Enter your email to get inspiration, trending solution and latest blogs and articles.</p>
+                    
+                <input type="email" value="" name="EMAIL" class="required email" placeholder="Email Address">
+                <input type="submit" value="Subscribe" name="subscribe"  class="button button--accent ">
+            
+                
+            </form>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="/sitemap.xml">Sitemap</a></li>
+               
+            </ul>
+        </div>
+    </div>
+    <div class=" footer-copyright" >
+        <div class="left">
+            <div class="social-icons">
+    <a href="https://github.com/zainabed/tutorials" target="_blank" rel="noopener noreferrer me" title="Github">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+    </a>
+</div>
+
+        </div>
+        <div class=" center">
+          &copy; 2022 Copyright | <a href="http://localhost:8080/">ZAINABED</a> . All rights reserved
+        </div>
+        <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
+    </div>
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+</html>

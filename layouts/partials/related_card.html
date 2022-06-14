@@ -1,0 +1,15 @@
+<div class="card">
+    <!-- <img src="{{ .RelPermalink }}{{ .Params.cover.image }}" /> -->
+    <div class="card-image" style="background-image: url({{ .RelPermalink }}{{ .Params.cover.image }}); background-size: cover;"></div>
+    <div class="card-content">
+        {{ range first 1 .Params.categories}}
+                <label>{{ . }}</label>
+            {{ end }}
+        
+        <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+        <div class="card-date">{{ (.Params.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)) }} </div>
+            {{ range first 1 .Params.authors}}
+                <div class="card-author">{{ . }}</div>
+            {{ end }}
+        </div>
+</div>

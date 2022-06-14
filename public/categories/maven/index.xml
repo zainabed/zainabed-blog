@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Maven on ZAINABED</title>
+    <link>http://localhost:8080/categories/maven/</link>
+    <description>Recent content in Maven on ZAINABED</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 May 2022 08:42:58 -0400</lastBuildDate><atom:link href="http://localhost:8080/categories/maven/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maven Create Jacoco Code Coverage Report</title>
+      <link>http://localhost:8080/2022/05/maven-create-jacoco-code-coverage-report.html/</link>
+      <pubDate>Thu, 26 May 2022 08:42:58 -0400</pubDate>
+      
+      <guid>http://localhost:8080/2022/05/maven-create-jacoco-code-coverage-report.html/</guid>
+      <description>Introduction In this tutorial we will see how to setup the JaCoCo plugin to generate a code coverage report for a Maven project.
+In order to generate a unit test coverage report, we should have sufficient unit test cases in our application. For this tutorial, I am referring to a Maven project which has a string manipulation method.
+You can find this project at this GitHub location.
+There are a few steps that need to be taken to produce the report.</description>
+    </item>
+    
+  </channel>
+</rss>

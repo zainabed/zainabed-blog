@@ -1,0 +1,15 @@
+<div class="card card-overlay">
+    <div class="card-content card-content-wrapper" style="background-image: url({{ .RelPermalink }}{{ .Params.cover.image }}); background-size: cover;">
+        <div class="card-content-overlay">
+            {{ range first 1 .Params.categories}}
+                    <span>{{ . }}</span>
+                {{ end }}
+            
+            <span class="card-date">{{ (.Params.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)) }} </span>
+                {{ range first 1 .Params.authors}}
+                    <span class="card-author">{{ . }}</span>
+                {{ end }}
+            <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+        </div>
+    </div>
+</div>

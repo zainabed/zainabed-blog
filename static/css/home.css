@@ -1,0 +1,95 @@
+
+.homepage{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section{
+    margin: var(--gap) auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    justify-content: center;
+    position: relative;
+}
+
+section h2{
+    font-size: 72px;
+    width: 75%;
+    text-align: center;
+}
+
+section p{
+    font-size: 24px;
+    width: 55%;
+    text-align: center;
+    
+    letter-spacing: 0.5px;
+    margin: calc(var(--gap) *2) 0;
+}
+
+.authors{
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+
+}
+
+.author{
+    margin: 0;
+    border: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+figcaption{
+    flex: 0 0 100%;
+    margin-top: var(--gap);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.related{
+    justify-content: center;
+}
+
+.related p{
+    flex: 0 0 55%;
+}
+
+.container{
+    margin: 0 auto calc(var(--gap) * 3) auto;
+}
+
+.category{
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    backdrop-filter: brightness(0.3);
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.category i{
+    font-size: 72px;
+    margin: var(--gap);
+    display: block;
+    color: var(--accent);
+    
+
+}
+
+@media screen and (min-width: 340px) and (max-width: 900px) {
+    section h2{
+        font-size: 42px;
+    }
+
+    .category{
+        flex-wrap: wrap;
+    }
+
+    .category i{
+        font-size: 36px;
+    }
+}

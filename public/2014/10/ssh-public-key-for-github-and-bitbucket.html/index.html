@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Ssh Public Key for Github and Bitbucket | ZAINABED</title>
+<meta name="keywords" content="">
+<meta name="description" content="Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.
+But first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://localhost:8080/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:8080/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:8080/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Ssh Public Key for Github and Bitbucket" />
+<meta property="og:description" content="Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.
+But first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/" />
+<meta property="og:image" content="http://localhost:8080/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2014-10-14T08:31:40-04:00" />
+<meta property="article:modified_time" content="2014-10-14T08:31:40-04:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:8080/image/cover.png" />
+<meta name="twitter:title" content="Ssh Public Key for Github and Bitbucket"/>
+<meta name="twitter:description" content="Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.
+But first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "http://localhost:8080/blogs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Ssh Public Key for Github and Bitbucket",
+      "item": "http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Ssh Public Key for Github and Bitbucket",
+  "name": "Ssh Public Key for Github and Bitbucket",
+  "description": "Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.\nBut first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.\nBut first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual.\nHowever, each time you operate, you are prompted to enter your username and password.\nIt appears simple at first, but it quickly becomes a source of frustration.\nTo overcome the above problem, we can use the SSH protocol. SSH connections allow us to authenticate using public and private keys that we generate only once. after that, we don’t need to authenticate because SSH will do so on our behalf.\nBut how does it work SSH authenticates you using an identity, and this identity is made up of a combination of private and public keys.\nA private key is stored on your local machine, while a public key is stored on your GitHub or Bitbucket account. When you perform any operation on a Git repository that requires your authentication, SSH combines these two keys.\nTo use SSH, you must first install it. Please follow the steps given in the following link. http://www.openssh.com\nGenerate private-public keys Follow the steps below to generate a private and public key. Open a terminal and enter the following command.\nssh-keygen It will request the location of key files. To select the default location, press Enter.\nIt will then request a passphrase (password). You can omit it, but it is preferable to include one.\nAfter that, it will prompt you to reenter your password for confirmation.\nAfter that, keys will be generated and saved in the specified location.\nHere’s an example of the ssh-keygen operation’s output.\nNext, add your key to the ssh-agent.\nssh-add ~/.ssh/id_rsa Later, you need to add the public key to your GitHub and Bitbucket accounts. To do so, we need to get content of the public key. This resides inside ~/.ssh path.\ncat ~/.ssh/id_rsa.pub Copy this key and go to GitHub or Bitbucket to add it to your account.\nGitHub Log in to your GitHub account in a browser.\n Select the setting icon from the menu bar’s top right corner. Then select SSH keys from the left side panel. Now add the new public key by selecting the Add SSH key button. It will open a panel to enter a public key. Add a label for the public key and then add the copied public key inside the key area. Now finish this process by clicking the Add key button.  That’s it. The configuration for GitHub is done.\nBitbucket Open a browser and log into your Bitbucket account.\n Select Avatar-Manage Account from the application menu. Under Security section Click SSH keys. Then click Add key button. It will prompt a dialog to add public key. Add label for public key and then add copied public key inside key area. Now finish this process by clicking Add key button.  This will complete the configuration for Bitbucket.\nConclusion If you want your repository to run smoothly, use SSH with public and private key configuration.\n",
+  "wordCount" : "557",
+  "inLanguage": "en",
+  "image":"http://localhost:8080/image/cover.png","datePublished": "2014-10-14T08:31:40-04:00",
+  "dateModified": "2014-10-14T08:31:40-04:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ZAINABED",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:8080/favicon.ico"
+    }
+  }
+}
+</script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/css/custom.css" />
+    
+</head>
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:8080/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="http://localhost:8080/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:8080/archives/" title="Archives">
+                    <span><i class='fa fa-heart'></i>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/blogs/" title="Blogs">
+                    <span><i class='fa fa-heart'></i>Blogs</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/categories/" title="Categories">
+                    <span><i class='fa fa-heart'></i>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span><i class='fa fa-heart'></i>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+   
+    <main class="main">
+
+<article class="post-single left-side">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Ssh Public Key for Github and Bitbucket
+    </h1>
+    <div class="post-meta"><span title='2014-10-14 08:31:40 -0400 EDT'>October 14, 2014</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover_hu284d939a3cc125d20c5fd77c3e290803_85369_360x0_resize_box_2.png 360w ,http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover_hu284d939a3cc125d20c5fd77c3e290803_85369_480x0_resize_box_2.png 480w ,http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover.png 640w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:8080/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover.png" alt="Ssh Public Key for Github and Bitbucket" 
+            width="640" height="480">
+        
+</figure>
+  <aside>
+    <h2>Table Content</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#but-first-why-do-we-require-this-ssh-public-key">But first, why do we require this SSH public key</a></li>
+    <li><a href="#but-how-does-it-work">But how does it work</a></li>
+    <li><a href="#generate-private-public-keys">Generate private-public keys</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#bitbucket">Bitbucket</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </aside>
+  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.</p>
+<h2 id="but-first-why-do-we-require-this-ssh-public-key">But first, why do we require this SSH public key<a hidden class="anchor" aria-hidden="true" href="#but-first-why-do-we-require-this-ssh-public-key">#</a></h2>
+<p>If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual.</p>
+<p>However, each time you operate, you are prompted to enter your username and password.</p>
+<p>It appears simple at first, but it quickly becomes a source of frustration.</p>
+<p>To overcome the above problem, we can use the SSH protocol. SSH connections allow us to authenticate using public and private keys that we generate only once. after that, we don&rsquo;t need to authenticate because SSH will do so on our behalf.</p>
+<h2 id="but-how-does-it-work">But how does it work<a hidden class="anchor" aria-hidden="true" href="#but-how-does-it-work">#</a></h2>
+<p>SSH authenticates you using an identity, and this identity is made up of a combination of private and public keys.</p>
+<p>A private key is stored on your local machine, while a public key is stored on your GitHub or Bitbucket account.
+When you perform any operation on a Git repository that requires your authentication, SSH combines these two keys.</p>
+<p>To use SSH, you must first install it. Please follow the steps given in the following link.
+<a href="http://www.openssh.com">http://www.openssh.com</a></p>
+<h2 id="generate-private-public-keys">Generate private-public keys<a hidden class="anchor" aria-hidden="true" href="#generate-private-public-keys">#</a></h2>
+<p>Follow the steps below to generate a private and public key.
+Open a terminal and enter the following command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen            
+</code></pre></div><p>It will request the location of key files. To select the default location, press Enter.</p>
+<p>It will then request a <code>passphrase</code> (password). You can omit it, but it is preferable to include one.</p>
+<p>After that, it will prompt you to reenter your password for confirmation.</p>
+<p>After that, keys will be generated and saved in the specified location.</p>
+<p>Here&rsquo;s an example of the ssh-keygen operation&rsquo;s output.</p>
+<p><img loading="lazy" src="image/ssh-keygen-outout.png" alt="ssh keygen outout "  />
+</p>
+<p>Next, add your key to the ssh-agent.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add ~/.ssh/id_rsa    
+</code></pre></div><p>Later, you need to add the public key to your GitHub and Bitbucket accounts. To do so, we need to get content of the public key. This resides inside ~/.ssh path.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat ~/.ssh/id_rsa.pub     
+</code></pre></div><p>Copy this key and go to GitHub or Bitbucket to add it to your account.</p>
+<h2 id="github">GitHub<a hidden class="anchor" aria-hidden="true" href="#github">#</a></h2>
+<p>Log in to your GitHub account in a browser.</p>
+<ul>
+<li>Select the setting icon from the menu bar&rsquo;s top right corner.</li>
+<li>Then select <code>SSH keys</code> from the left side panel.</li>
+<li>Now add the new public key by selecting the <code>Add SSH key</code> button. It will open a panel to enter a public key.</li>
+<li>Add a label for the public key and then add the copied public key inside the key area.</li>
+<li>Now finish this process by clicking the <code>Add key</code> button.</li>
+</ul>
+<p>That’s it. The configuration for GitHub is done.</p>
+<h2 id="bitbucket">Bitbucket<a hidden class="anchor" aria-hidden="true" href="#bitbucket">#</a></h2>
+<p>Open a browser and log into your Bitbucket account.</p>
+<ul>
+<li>Select <code>Avatar-&gt;Manage</code> Account from the application menu.</li>
+<li>Under <code>Security</code> section Click SSH keys.</li>
+<li>Then click <code>Add key</code> button. It will prompt a dialog to add public key.</li>
+<li>Add label for public key and then add copied public key inside key area.</li>
+<li>Now finish this process by clicking <code>Add key</code> button.</li>
+</ul>
+<p>This will complete the configuration for Bitbucket.</p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>If you want your repository to run smoothly, use SSH with public and private key configuration.</p>
+
+
+  </div>
+  
+  
+    <figure class="author">
+      <img src="/images/authors/zainul/avatar.png" alt="" class="author-img"/>
+
+      <figcaption class="author-summary">
+          <div class="quote">“</div>
+          <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
+          <h3 class="author-title"><a href="http://localhost:8080/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+      </figcaption>
+    </figure>
+    
+  
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    <section class="side-section">
+        
+
+<div id="mc_embed_signup">
+  <form action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd"
+    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+    novalidate>
+    <div id="mc_embed_signup_scroll">
+      <h2>Newsletter</h2>
+      <div class="indicates-required">Subscribe for latest blogs and tutorials</div>
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+        </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+      </div>
+      <div id="mce-responses" class="clear foot">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+      
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+          name="b_b73e39b6311715d589d67af85_ffb528a5dd" tabindex="-1" value=""></div>
+      <div class="optionalParent">
+        <div class="clear foot">
+          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+          
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+    </section>
+   </div>
+   <section class="related-post">
+     
+
+
+
+
+   </section>
+    
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <ul>
+                
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="footer-center">
+            <form action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h2>Get In Touch</h2>
+            
+                    <p>Enter your email to get inspiration, trending solution and latest blogs and articles.</p>
+                    
+                <input type="email" value="" name="EMAIL" class="required email" placeholder="Email Address">
+                <input type="submit" value="Subscribe" name="subscribe"  class="button button--accent ">
+            
+                
+            </form>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="/sitemap.xml">Sitemap</a></li>
+               
+            </ul>
+        </div>
+    </div>
+    <div class=" footer-copyright" >
+        <div class="left">
+            <div class="social-icons">
+    <a href="https://github.com/zainabed/tutorials" target="_blank" rel="noopener noreferrer me" title="Github">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+    </a>
+</div>
+
+        </div>
+        <div class=" center">
+          &copy; 2022 Copyright | <a href="http://localhost:8080/">ZAINABED</a> . All rights reserved
+        </div>
+        <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
+    </div>
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+</html>

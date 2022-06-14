@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Authors on ZAINABED</title>
+    <link>http://localhost:8080/authors/</link>
+    <description>Recent content in Authors on ZAINABED</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jun 2022 13:01:43 -0400</lastBuildDate><atom:link href="http://localhost:8080/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:8080/authors/zainul/</link>
+      <pubDate>Fri, 10 Jun 2022 13:01:43 -0400</pubDate>
+      
+      <guid>http://localhost:8080/authors/zainul/</guid>
+      <description>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</description>
+    </item>
+    
+    <item>
+      <title>Zainu</title>
+      <link>http://localhost:8080/authors/zainu/</link>
+      <pubDate>Thu, 22 May 2014 05:22:13 -0400</pubDate>
+      
+      <guid>http://localhost:8080/authors/zainu/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

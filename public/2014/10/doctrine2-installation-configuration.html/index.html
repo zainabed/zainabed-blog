@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Doctrine2 Installation Configuration | ZAINABED</title>
+<meta name="keywords" content="">
+<meta name="description" content="Introduction In this tutorial, we will look at how to install Doctrine2 in your PHP project.
+This post will make use of Doctrine2&rsquo;s Composer tool.
+Installation First, create a directory for your project.
+mkdir zainabed cd zainabed Now, create a composer.json file.
+vi composer.json Then, add the following repository information to it.
+{ &#34;require&#34;: { &#34;doctrine/orm&#34;: &#34;*&#34; } } You are now ready to use Composer to install Doctrine, but first you must install Composer on your machine.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:8080/2014/10/doctrine2-installation-configuration.html/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://localhost:8080/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:8080/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:8080/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Doctrine2 Installation Configuration" />
+<meta property="og:description" content="Introduction In this tutorial, we will look at how to install Doctrine2 in your PHP project.
+This post will make use of Doctrine2&rsquo;s Composer tool.
+Installation First, create a directory for your project.
+mkdir zainabed cd zainabed Now, create a composer.json file.
+vi composer.json Then, add the following repository information to it.
+{ &#34;require&#34;: { &#34;doctrine/orm&#34;: &#34;*&#34; } } You are now ready to use Composer to install Doctrine, but first you must install Composer on your machine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/2014/10/doctrine2-installation-configuration.html/" />
+<meta property="og:image" content="http://localhost:8080/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2014-10-23T05:31:23-04:00" />
+<meta property="article:modified_time" content="2014-10-23T05:31:23-04:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:8080/image/cover.png" />
+<meta name="twitter:title" content="Doctrine2 Installation Configuration"/>
+<meta name="twitter:description" content="Introduction In this tutorial, we will look at how to install Doctrine2 in your PHP project.
+This post will make use of Doctrine2&rsquo;s Composer tool.
+Installation First, create a directory for your project.
+mkdir zainabed cd zainabed Now, create a composer.json file.
+vi composer.json Then, add the following repository information to it.
+{ &#34;require&#34;: { &#34;doctrine/orm&#34;: &#34;*&#34; } } You are now ready to use Composer to install Doctrine, but first you must install Composer on your machine."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "http://localhost:8080/blogs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Doctrine2 Installation Configuration",
+      "item": "http://localhost:8080/2014/10/doctrine2-installation-configuration.html/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Doctrine2 Installation Configuration",
+  "name": "Doctrine2 Installation Configuration",
+  "description": "Introduction In this tutorial, we will look at how to install Doctrine2 in your PHP project.\nThis post will make use of Doctrine2\u0026rsquo;s Composer tool.\nInstallation First, create a directory for your project.\nmkdir zainabed cd zainabed Now, create a composer.json file.\nvi composer.json Then, add the following repository information to it.\n{ \u0026#34;require\u0026#34;: { \u0026#34;doctrine/orm\u0026#34;: \u0026#34;*\u0026#34; } } You are now ready to use Composer to install Doctrine, but first you must install Composer on your machine.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Introduction In this tutorial, we will look at how to install Doctrine2 in your PHP project.\nThis post will make use of Doctrine2’s Composer tool.\nInstallation First, create a directory for your project.\nmkdir zainabed cd zainabed Now, create a composer.json file.\nvi composer.json Then, add the following repository information to it.\n{ \"require\": { \"doctrine/orm\": \"*\" } } You are now ready to use Composer to install Doctrine, but first you must install Composer on your machine.\ncurl -sS https://getcomposer.org/installer | php To install Doctrine2, run the following command.\nphp composer.phar install  Note: Composer generates a “autoload.php” file to help in the autoloading of all PHP classes in the Doctrine2 ORM project.\n Configuration First, create a configuration file, configuration.php for Doctrine2 and include autoload.php inside it.\nphp // configuration.php  // Include Composer Autoload require_once \"vendor/autoload.php\"; Then, create the database configuration details, like database name, username and password. // database configuration  $databaseParams = array( 'driver' = 'pdo_mysql', 'user' = 'root', 'password' = '', 'dbname' = 'zainabed', ); Now, specify the entity path where you want all ORM entities to be stored.\n//entity path $entityPath = array(\"src/Entity\"); Create an Entity Manager ORM’s fundamental source is the Entity Manager, which manages interactions between entities and databases.\n//annotation configuration $config = Setup::createAnnotationMetadataConfiguration($entityPath, false); //entity manager object $entityManager = EntityManager::create($databaseParams, $config); Finally, you are ready to use Doctrine2 within your PHP project.\nThe following is a complete configuration example that includes XML and YAML configuration.\nphp // configuration.php  // Include Composer Autoload require_once \"vendor/autoload.php\"; use Doctrine\\ORM\\Tools\\Setup; use Doctrine\\ORM\\EntityManager; // database configuration $databaseParams = array( 'driver' = 'pdo_mysql', 'user' = 'root', 'password' = '', 'dbname' = 'zainabed', ); //entity path $entityPath = array(\"src/Entity\"); //annotation configuration $config = Setup::createAnnotationMetadataConfiguration($entityPath, false); //entity manager object $entityManager = EntityManager::create($databaseParams, $config); //xml configuration //$xmlEntituPath = array(\"/path/to/xml-mappings\"); //$config = Setup::createXMLMetadataConfiguration($xmlEntituPath, false); //$entityManager = EntityManager::create($databaseParams, $config);  //yml configuration //$ymlEntityPath = array(\"/path/to/yml-mappings\"); //$config = Setup::createYAMLMetadataConfiguration($ymlEntityPath, false); //$entityManager = EntityManager::create($databaseParams, $config); Doctrine 2 is now configured and ready to use.\n",
+  "wordCount" : "326",
+  "inLanguage": "en",
+  "image":"http://localhost:8080/image/cover.png","datePublished": "2014-10-23T05:31:23-04:00",
+  "dateModified": "2014-10-23T05:31:23-04:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:8080/2014/10/doctrine2-installation-configuration.html/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ZAINABED",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:8080/favicon.ico"
+    }
+  }
+}
+</script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/css/custom.css" />
+    
+</head>
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:8080/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="http://localhost:8080/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:8080/archives/" title="Archives">
+                    <span><i class='fa fa-heart'></i>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/blogs/" title="Blogs">
+                    <span><i class='fa fa-heart'></i>Blogs</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/categories/" title="Categories">
+                    <span><i class='fa fa-heart'></i>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span><i class='fa fa-heart'></i>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+   
+    <main class="main">
+
+<article class="post-single left-side">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Doctrine2 Installation Configuration
+    </h1>
+    <div class="post-meta"><span title='2014-10-23 05:31:23 -0400 EDT'>October 23, 2014</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="http://localhost:8080/2014/10/doctrine2-installation-configuration.html/image/cover_hu9c98498527a211e107ee14682511274e_106829_360x0_resize_box_2.png 360w ,http://localhost:8080/2014/10/doctrine2-installation-configuration.html/image/cover_hu9c98498527a211e107ee14682511274e_106829_480x0_resize_box_2.png 480w ,http://localhost:8080/2014/10/doctrine2-installation-configuration.html/image/cover_hu9c98498527a211e107ee14682511274e_106829_720x0_resize_box_2.png 720w ,http://localhost:8080/2014/10/doctrine2-installation-configuration.html/image/cover.png 900w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="http://localhost:8080/2014/10/doctrine2-installation-configuration.html/image/cover.png" alt="Doctrine2 Installation Configuration" 
+            width="900" height="450">
+        
+</figure>
+  <aside>
+    <h2>Table Content</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#configuration">Configuration</a></li>
+    <li><a href="#create-an-entity-manager">Create an Entity Manager</a></li>
+  </ul>
+</nav>
+  </aside>
+  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>In this tutorial, we will look at how to install Doctrine2 in your PHP project.</p>
+<p>This post will make use of Doctrine2&rsquo;s Composer tool.</p>
+<h2 id="installation">Installation<a hidden class="anchor" aria-hidden="true" href="#installation">#</a></h2>
+<p>First, create a directory for your project.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir zainabed   
+
+cd zainabed
+</code></pre></div><p>Now, create a composer.json file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi composer.json
+</code></pre></div><p>Then, add the following repository information to it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;require&#34;</span>: {
+        <span style="color:#f92672">&#34;doctrine/orm&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
+    }
+}
+</code></pre></div><p>You are now ready to use Composer to install Doctrine, but first you must install Composer on your machine.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -sS https://getcomposer.org/installer | php
+</code></pre></div><p>To install Doctrine2, run the following command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">php composer.phar install
+</code></pre></div><blockquote>
+<p>Note: Composer generates a &ldquo;autoload.php&rdquo; file to help in the autoloading of all PHP classes in the Doctrine2 ORM project.</p>
+</blockquote>
+<h2 id="configuration">Configuration<a hidden class="anchor" aria-hidden="true" href="#configuration">#</a></h2>
+<p>First, create a configuration file, configuration.php for Doctrine2 and include autoload.php inside it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+
+<span style="color:#75715e">// configuration.php
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// Include Composer Autoload 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">require_once</span> <span style="color:#e6db74">&#34;vendor/autoload.php&#34;</span>;
+
+
+
+<span style="color:#a6e22e">Then</span>, <span style="color:#a6e22e">create</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">database</span> <span style="color:#a6e22e">configuration</span> <span style="color:#a6e22e">details</span>, <span style="color:#a6e22e">like</span> <span style="color:#a6e22e">database</span> <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">username</span> <span style="color:#66d9ef">and</span> <span style="color:#a6e22e">password</span><span style="color:#f92672">.</span>
+
+<span style="color:#75715e">// database configuration
+</span><span style="color:#75715e"></span>
+$databaseParams <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
+    <span style="color:#e6db74">&#39;driver&#39;</span>   <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;pdo_mysql&#39;</span>,
+    <span style="color:#e6db74">&#39;user&#39;</span>     <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;root&#39;</span>,
+    <span style="color:#e6db74">&#39;password&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#e6db74">&#39;dbname&#39;</span>   <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;zainabed&#39;</span>,
+);
+</code></pre></div><p>Now, specify the entity path where you want all ORM entities to be stored.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">//entity path
+</span><span style="color:#75715e"></span>$entityPath <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(<span style="color:#e6db74">&#34;src/Entity&#34;</span>);
+</code></pre></div><h2 id="create-an-entity-manager">Create an Entity Manager<a hidden class="anchor" aria-hidden="true" href="#create-an-entity-manager">#</a></h2>
+<p>ORM&rsquo;s fundamental source is the Entity Manager, which manages interactions between entities and databases.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">//annotation configuration
+</span><span style="color:#75715e"></span>$config <span style="color:#f92672">=</span> <span style="color:#a6e22e">Setup</span><span style="color:#f92672">::</span><span style="color:#a6e22e">createAnnotationMetadataConfiguration</span>($entityPath, <span style="color:#66d9ef">false</span>);
+
+<span style="color:#75715e">//entity manager object
+</span><span style="color:#75715e"></span>$entityManager <span style="color:#f92672">=</span> <span style="color:#a6e22e">EntityManager</span><span style="color:#f92672">::</span><span style="color:#a6e22e">create</span>($databaseParams, $config);
+</code></pre></div><p>Finally, you are ready to use Doctrine2 within your PHP project.</p>
+<p>The following is a complete configuration example that includes XML and YAML configuration.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+
+<span style="color:#75715e">// configuration.php
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// Include Composer Autoload 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">require_once</span> <span style="color:#e6db74">&#34;vendor/autoload.php&#34;</span>;
+
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Doctrine\ORM\Tools\Setup</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Doctrine\ORM\EntityManager</span>;
+
+<span style="color:#75715e">// database configuration
+</span><span style="color:#75715e"></span>$databaseParams <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
+    <span style="color:#e6db74">&#39;driver&#39;</span>   <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;pdo_mysql&#39;</span>,
+    <span style="color:#e6db74">&#39;user&#39;</span>     <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;root&#39;</span>,
+    <span style="color:#e6db74">&#39;password&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#e6db74">&#39;dbname&#39;</span>   <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;zainabed&#39;</span>,
+);
+
+<span style="color:#75715e">//entity path
+</span><span style="color:#75715e"></span>$entityPath <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(<span style="color:#e6db74">&#34;src/Entity&#34;</span>);
+
+
+<span style="color:#75715e">//annotation configuration
+</span><span style="color:#75715e"></span>$config <span style="color:#f92672">=</span> <span style="color:#a6e22e">Setup</span><span style="color:#f92672">::</span><span style="color:#a6e22e">createAnnotationMetadataConfiguration</span>($entityPath, <span style="color:#66d9ef">false</span>);
+
+<span style="color:#75715e">//entity manager object
+</span><span style="color:#75715e"></span>$entityManager <span style="color:#f92672">=</span> <span style="color:#a6e22e">EntityManager</span><span style="color:#f92672">::</span><span style="color:#a6e22e">create</span>($databaseParams, $config);
+
+<span style="color:#75715e">//xml configuration
+</span><span style="color:#75715e">//$xmlEntituPath = array(&#34;/path/to/xml-mappings&#34;);
+</span><span style="color:#75715e">//$config = Setup::createXMLMetadataConfiguration($xmlEntituPath, false);
+</span><span style="color:#75715e">//$entityManager = EntityManager::create($databaseParams, $config);
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//yml configuration
+</span><span style="color:#75715e">//$ymlEntityPath = array(&#34;/path/to/yml-mappings&#34;);
+</span><span style="color:#75715e">//$config = Setup::createYAMLMetadataConfiguration($ymlEntityPath, false);
+</span><span style="color:#75715e">//$entityManager = EntityManager::create($databaseParams, $config);
+</span></code></pre></div><p>Doctrine 2 is now configured and ready to use.</p>
+
+
+  </div>
+  
+  
+    <figure class="author">
+      <img src="/images/authors/zainul/avatar.png" alt="" class="author-img"/>
+
+      <figcaption class="author-summary">
+          <div class="quote">“</div>
+          <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
+          <h3 class="author-title"><a href="http://localhost:8080/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+      </figcaption>
+    </figure>
+    
+  
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    <section class="side-section">
+        
+
+<div id="mc_embed_signup">
+  <form action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd"
+    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+    novalidate>
+    <div id="mc_embed_signup_scroll">
+      <h2>Newsletter</h2>
+      <div class="indicates-required">Subscribe for latest blogs and tutorials</div>
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+        </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+      </div>
+      <div id="mce-responses" class="clear foot">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+      
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+          name="b_b73e39b6311715d589d67af85_ffb528a5dd" tabindex="-1" value=""></div>
+      <div class="optionalParent">
+        <div class="clear foot">
+          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+          
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+    </section>
+   </div>
+   <section class="related-post">
+     
+
+
+
+<div class="related">
+    <h3>See Relted <span class="border-highlight">Blogs</span></h3>
+    <p>Check out our latest and innovative blog post,</p>
+    <p>analysis, examples, and more</p>
+
+    <div class="card-container">
+        
+        
+            <div class="card-left">
+                
+                    <div class="card card-overlay">
+    <div class="card-content card-content-wrapper" style="background-image: url(/2014/11/php-tutorials-autoload-php-classes.html/image/cover.png); background-size: cover;">
+        <div class="card-content-overlay">
+            
+                    <span>PHP</span>
+                
+            
+            <span class="card-date">November 2, 2014 </span>
+                
+                    <span class="card-author">Zainul</span>
+                
+            <h4><a href="/2014/11/php-tutorials-autoload-php-classes.html/">Php Tutorials Autoload Php Classes</a></h4>
+        </div>
+    </div>
+</div>
+                
+            </div>
+        
+        
+        
+            <div class="card-right">
+                
+                    <div class="card">
+    
+    <div class="card-image" style="background-image: url(/2014/10/twig-tutorials-install-and-configure.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-content">
+        
+                <label>PHP</label>
+            
+        
+        <h4><a href="/2014/10/twig-tutorials-install-and-configure.html/">Twig Tutorials Install and Configure</a></h4>
+        <div class="card-date">October 16, 2014 </div>
+            
+                <div class="card-author">Zainul</div>
+            
+        </div>
+</div>
+                
+                    <div class="card">
+    
+    <div class="card-image" style="background-image: url(/2014/10/symfony-tutorials-event-dispatcher.html/image/cover.jpg); background-size: cover;"></div>
+    <div class="card-content">
+        
+                <label>PHP</label>
+            
+        
+        <h4><a href="/2014/10/symfony-tutorials-event-dispatcher.html/">Symfony Tutorials Event Dispatcher</a></h4>
+        <div class="card-date">October 3, 2014 </div>
+            
+                <div class="card-author">Zainul</div>
+            
+        </div>
+</div>
+                
+                    <div class="card">
+    
+    <div class="card-image" style="background-image: url(/2014/09/drupal-8-tutorials-custom-module.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-content">
+        
+                <label>PHP</label>
+            
+        
+        <h4><a href="/2014/09/drupal-8-tutorials-custom-module.html/">Drupal 8 Tutorials Custom Module</a></h4>
+        <div class="card-date">September 19, 2014 </div>
+            
+                <div class="card-author">Zainul</div>
+            
+        </div>
+</div>
+                
+            </div>
+        
+    </div>
+</div>
+
+
+   </section>
+    
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <ul>
+                
+                <li><a href="/blogs">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="footer-center">
+            <form action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h2>Get In Touch</h2>
+            
+                    <p>Enter your email to get inspiration, trending solution and latest blogs and articles.</p>
+                    
+                <input type="email" value="" name="EMAIL" class="required email" placeholder="Email Address">
+                <input type="submit" value="Subscribe" name="subscribe"  class="button button--accent ">
+            
+                
+            </form>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="/sitemap.xml">Sitemap</a></li>
+               
+            </ul>
+        </div>
+    </div>
+    <div class=" footer-copyright" >
+        <div class="left">
+            <div class="social-icons">
+    <a href="https://github.com/zainabed/tutorials" target="_blank" rel="noopener noreferrer me" title="Github">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+    </a>
+</div>
+
+        </div>
+        <div class=" center">
+          &copy; 2022 Copyright | <a href="http://localhost:8080/">ZAINABED</a> . All rights reserved
+        </div>
+        <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
+    </div>
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+</html>
