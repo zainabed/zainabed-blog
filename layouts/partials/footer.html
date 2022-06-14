@@ -1,43 +1,50 @@
-
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-left">
             <ul>
-                {{/*  <li><a href="/about">About</a></li>  */}}
-                <li><a href="/blogs">Blogs</a></li>
+                {{/* <li><a href="/about">About</a></li> */}}
+                <li><a href='{{  "blogs"  | relURL }}'>Blogs</a></li>
             </ul>
         </div>
         <div class="footer-center">
-            <form action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <h2>Get In Touch</h2>
-            
-                    <p>Enter your email to get inspiration, trending solution and latest blogs and articles.</p>
-                    
+            <form
+                action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate>
+                <h2>Get In Touch</h2>
+
+                <p>Enter your email to get inspiration, trending solution and latest blogs and articles.</p>
+
                 <input type="email" value="" name="EMAIL" class="required email" placeholder="Email Address">
-                <input type="submit" value="Subscribe" name="subscribe"  class="button button--accent ">
-            
-                
+                <input type="submit" value="Subscribe" name="subscribe" class="button button--accent ">
+
+
             </form>
         </div>
         <div class="footer-right">
             <ul>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
-               {{/*  <li><a href="/privacy">Privacy and Policy</a></li>
-                <li><a href="/terms">Terms and Condition</a></li>  */}}
+                <li><a href='{{  "sitemap.xml"  | relURL }}'>Sitemap</a></li>
+                {{/* <li><a href="/privacy">Privacy and Policy</a></li>
+                <li><a href="/terms">Terms and Condition</a></li> */}}
             </ul>
         </div>
     </div>
-    <div class=" footer-copyright" >
+    <div class=" footer-copyright">
         <div class="left">
             {{ partial "social_icons.html" site.Params.socialIcons }}
         </div>
         <div class=" center">
-          &copy; {{ now.Year }} Copyright | <a href="{{ "" | absLangURL }}">{{ site.Title }}</a> . All rights reserved
+            &copy; {{ now.Year }} Copyright | <a href="{{ "" | absLangURL }}">{{ site.Title }}</a> . All rights reserved
         </div>
-        <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
+        <div class="right">
+            {{- $footer_img := resources.Get "images/logo/zainabed_logo_wc.png" }}
+            {{- if $footer_img }}
+            <img src="{{ $footer_img.Permalink }}" alt="footer-logo" />
+            {{ end }}
+        </div>
     </div>
-    
+
 </footer>
 {{- end }}
 

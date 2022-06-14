@@ -59,7 +59,7 @@ markup:
       unsafe: true
 params:
   label:
-    icon: /images/logo/logo-black.png
+    icon: images/logo/logo-black.png
   socialIcons:
   - name: github
     url: 'https://github.com/zainabed/tutorials'
