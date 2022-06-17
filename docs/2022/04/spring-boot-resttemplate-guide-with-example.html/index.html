@@ -11,15 +11,15 @@ RestTemplate is one of the HTTP libraries available on the market.
 The Spring Boot team designed and maintains it.
 As previously said, it is a client library, which means it may be utilised in our application as a stand-alone dependency. To utilise it, you don&rsquo;t require a complete Spring boot application.">
 <meta name="author" content="">
-<link rel="canonical" href="https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/">
-<link crossorigin="anonymous" href="/zainabed-blog/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/zainabed-blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link rel="canonical" href="https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://zainabed.github.io/zainabed-blog/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.github.io/zainabed-blog/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.github.io/zainabed-blog/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://zainabed.github.io/zainabed-blog/apple-touch-icon.png">
-<link rel="mask-icon" href="https://zainabed.github.io/zainabed-blog/safari-pinned-tab.svg">
+<link rel="icon" href="https://zainabed.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zainabed.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zainabed.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -64,13 +64,13 @@ RestTemplate is one of the HTTP libraries available on the market.
 The Spring Boot team designed and maintains it.
 As previously said, it is a client library, which means it may be utilised in our application as a stand-alone dependency. To utilise it, you don&rsquo;t require a complete Spring boot application." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/" />
-<meta property="og:image" content="https://zainabed.github.io/zainabed-blog/image/cover.jpg" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/" />
+<meta property="og:image" content="https://zainabed.com/image/cover.jpg" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2022-04-22T09:42:03-04:00" />
 <meta property="article:modified_time" content="2022-04-22T09:42:03-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://zainabed.github.io/zainabed-blog/image/cover.jpg" />
+<meta name="twitter:image" content="https://zainabed.com/image/cover.jpg" />
 <meta name="twitter:title" content="Spring Boot Resttemplate Guide With Example"/>
 <meta name="twitter:description" content="What is RestTemplet? RestTemplate is a HTTP Client library that provides basic APIs for executing different HTTP type requests.
 RestTemplate is one of the HTTP libraries available on the market.
@@ -87,13 +87,13 @@ As previously said, it is a client library, which means it may be utilised in ou
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "https://zainabed.github.io/zainabed-blog/blogs/"
+      "item": "https://zainabed.com/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Spring Boot Resttemplate Guide With Example",
-      "item": "https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/"
+      "item": "https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/"
     }
   ]
 }
@@ -111,23 +111,23 @@ As previously said, it is a client library, which means it may be utilised in ou
   "articleBody": "What is RestTemplet? RestTemplate is a HTTP Client library that provides basic APIs for executing different HTTP type requests.\nRestTemplate is one of the HTTP libraries available on the market.\nThe Spring Boot team designed and maintains it.\nAs previously said, it is a client library, which means it may be utilised in our application as a stand-alone dependency. To utilise it, you don’t require a complete Spring boot application.\nIt’s suitable for use in simple Java applications as well as other frameworks such as Micronaut, Play and others.\nSetup Add RestTemplate dependency to project, for this tutorial I am creating a simple java application to consume HTTP request and a node application to provide HTTP service.\nFor Gradle build tool Add the following dependency in the build.gradle file.\n// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.6.3' This will provide classes to create instance of RestTemplate.\nRestTemplate restTemplate = new RestTemplate(); REST APIs Node.js has a useful library that converts a json file to a RESTful service.\nInstall the npm library as\nnpm install json-server --save-dev Now define the JSON structure for the HTTP service.\ncreate db.json file and add following snippet\n{ \"projects\": [ { \"id\" : 1, \"name\" : \"RestTemplate\", \"description\" : \"Project to demonstrate workflow of RestTemplate\" }] } Now, run server as\nnode_modules/.bin/json-server db.json  Note: Use following command to find location of node_module executable npm bin\n Model Define any POJO class which is use to exchange the request and response.\npublic class ProjectModel { private Integer id; private String name; private String description; public Integer getId() { return id; } public void setId(Integer id) { this.id = id; } public String getName() { return name; } public void setName(String name) { this.name = name; } public String getDescription() { return description; } public void setDescription(String description) { this.description = description; } @Override public String toString() { return \"{id: \" + id + \", name: \" + name + \", description: \" + description + \"}\"; } } HTTP Get Request Use following snippet to get single records.\n// Instantiate RestTemplate RestTemplate restTemplate = new RestTemplate(); String apiEndpoint = \"http://localhost:3000/projects\"; // HTTP GET single record ResponseEntityProjectModel entity = restTemplate.getForEntity(apiEndpoint + \"/1\", ProjectModel.class); ProjectModel record = entity.getBody(); System.out.println(\"Fetch single records\"); System.out.println(record); First we defined restTemplate instance and endpoint to establish HTTP communication. getForEntity method will fetch the resource and convert it into an appropriate Java class. Here, it is a ProjectModel class.\nUse following snippet to fetch all records.\n// HTTP GET all records System.out.println(\"Fetch all records\"); ResponseEntityList records = restTemplate.getForEntity(apiEndpoint, List.class); records.getBody().forEach(System.out::println); This will create a list of Java objects. One thing to notice here is that the result is a list of Java objects. It is necessary to iterate the list and cast each object in order to convert it into a project model.\nThe Spring framework provides a handy technique to cast a list of objects to avoid this complexity.\n// HTTP GET all with casting of entity ParameterizedTypeReferenceListProjectModel typeReference = new ParameterizedTypeReferenceListProjectModel() { }; ResponseEntityListProjectModel responseEntity = restTemplate.exchange(apiEndpoint, HttpMethod.GET, null, typeReference); ListProjectModel projectModels = responseEntity.getBody(); projectModels.forEach(System.out::println); HTTP POST Request //HTTP POST Request ProjectModel projectModel = new ProjectModel(); projectModel.setName(\"Blogger App\"); projectModel.setDescription(\"Blog application to publish blogpost\"); ResponseEntityProjectModel response = restTemplate.postForEntity(apiEndpoint, projectModel, ProjectModel.class); System.out.println(response.getBody()); The postForEntity function takes three arguments, API endpoint, the other payload and its class type.\nHere we have not set the id of the ProjectModel. It should be created by the server and you should get it from the response object.\nHTTP PUT Request //HTTP PUT request projectModel = response.getBody(); projectModel.setName(\"Blog post app\"); HttpHeaders httpHeaders = new HttpHeaders(); httpHeaders.setContentType(MediaType.APPLICATION_JSON); httpHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_JSON)); HttpEntityProjectModel requestEntity = new HttpEntityProjectModel(projectModel, httpHeaders); response = restTemplate.exchange(apiEndpoint + \"/\" + projectModel.getId(), HttpMethod.PUT, requestEntity, ProjectModel.class); System.out.println(\"PUT response\"); System.out.println(response.getBody()); The above example shows another way to communicate with an API server.\nThe exchange method requires HttpEntity to pass request information to the server, and it also includes HTTP header information.\nHTTP Delete Request // HTTP Delete request restTemplate.delete(apiEndpoint + \"/\" + projectModel.getId()); There is no return type for this method, and even if you use the exchange method to perform an HTTP DELETE, you will get an empty response object.\nConclusion We went over the basic HTTP Verbs in this post and used RestTemplate to compose requests using all of them.\nAll of these examples and code snippets were implemented and can be found on GitHub .\n",
   "wordCount" : "725",
   "inLanguage": "en",
-  "image":"https://zainabed.github.io/zainabed-blog/image/cover.jpg","datePublished": "2022-04-22T09:42:03-04:00",
+  "image":"https://zainabed.com/image/cover.jpg","datePublished": "2022-04-22T09:42:03-04:00",
   "dateModified": "2022-04-22T09:42:03-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/"
+    "@id": "https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://zainabed.github.io/zainabed-blog/favicon.ico"
+      "url": "https://zainabed.com/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="https://zainabed.github.io/zainabed-blog/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://zainabed.com/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -145,8 +145,8 @@ As previously said, it is a client library, which means it may be utilised in ou
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://zainabed.github.io/zainabed-blog/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="https://zainabed.github.io/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://zainabed.com/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://zainabed.com/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -172,22 +172,22 @@ As previously said, it is a client library, which means it may be utilised in ou
         </div>
         <ul id="menu">
             <li>
-                <a href="https://zainabed.github.io/zainabed-blog/archives/" title="Archives">
+                <a href="https://zainabed.com/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.github.io/zainabed-blog/blogs/" title="Blogs">
+                <a href="https://zainabed.com/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.github.io/zainabed-blog/categories/" title="Categories">
+                <a href="https://zainabed.com/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.github.io/zainabed-blog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://zainabed.com/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -209,8 +209,8 @@ As previously said, it is a client library, which means it may be utilised in ou
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover_hu84076a638414931060d25d214c06adee_196727_360x0_resize_q75_box.jpg 360w ,https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover_hu84076a638414931060d25d214c06adee_196727_480x0_resize_q75_box.jpg 480w ,https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover_hu84076a638414931060d25d214c06adee_196727_720x0_resize_q75_box.jpg 720w ,https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover_hu84076a638414931060d25d214c06adee_196727_1080x0_resize_q75_box.jpg 1080w ,https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover_hu84076a638414931060d25d214c06adee_196727_1500x0_resize_q75_box.jpg 1500w ,https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover.jpg 1920w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.github.io/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover.jpg" alt="Spring Boot Resttemplate Guide With Example" 
+        <img loading="lazy" srcset="https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover_hu84076a638414931060d25d214c06adee_196727_360x0_resize_q75_box.jpg 360w ,https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover_hu84076a638414931060d25d214c06adee_196727_480x0_resize_q75_box.jpg 480w ,https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover_hu84076a638414931060d25d214c06adee_196727_720x0_resize_q75_box.jpg 720w ,https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover_hu84076a638414931060d25d214c06adee_196727_1080x0_resize_q75_box.jpg 1080w ,https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover_hu84076a638414931060d25d214c06adee_196727_1500x0_resize_q75_box.jpg 1500w ,https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover.jpg 1920w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover.jpg" alt="Spring Boot Resttemplate Guide With Example" 
             width="1920" height="1280">
         
 </figure>
@@ -374,7 +374,7 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="https://zainabed.github.io/zainabed-blog/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://zainabed.com/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -439,7 +439,7 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
             <div class="card-left">
                 
                     <div class="card card-overlay">
-    <div class="card-content card-content-wrapper" style="background-image: url(/zainabed-blog/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/image/cover.jpg); background-size: cover;">
+    <div class="card-content card-content-wrapper" style="background-image: url(/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/image/cover.jpg); background-size: cover;">
         <div class="card-content-overlay">
             
                     <span>Spring Boot</span>
@@ -449,7 +449,7 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
                 
                     <span class="card-author">Zainul</span>
                 
-            <h4><a href="/zainabed-blog/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/">How to Enable Sql Logs in Spring Boot Application</a></h4>
+            <h4><a href="/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/">How to Enable Sql Logs in Spring Boot Application</a></h4>
         </div>
     </div>
 </div>
@@ -462,13 +462,13 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/zainabed-blog/2022/06/log4j-how-to-log-message-to-console.html/image/cover.jpg); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/2022/06/log4j-how-to-log-message-to-console.html/image/cover.jpg); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Java</label>
             
         
-        <h4><a href="/zainabed-blog/2022/06/log4j-how-to-log-message-to-console.html/">Log4j How to Log Message to Console</a></h4>
+        <h4><a href="/2022/06/log4j-how-to-log-message-to-console.html/">Log4j How to Log Message to Console</a></h4>
         <div class="card-date">June 1, 2022 </div>
             
                 <div class="card-author">Zainul</div>
@@ -478,13 +478,13 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/zainabed-blog/2022/05/getting-started-with-log4j.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/2022/05/getting-started-with-log4j.html/image/cover.png); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Java</label>
             
         
-        <h4><a href="/zainabed-blog/2022/05/getting-started-with-log4j.html/">Getting Started With Log4j</a></h4>
+        <h4><a href="/2022/05/getting-started-with-log4j.html/">Getting Started With Log4j</a></h4>
         <div class="card-date">May 30, 2022 </div>
             
                 <div class="card-author">Zainul</div>
@@ -494,13 +494,13 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover.jpg); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover.jpg); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Java</label>
             
         
-        <h4><a href="/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/">Maven Create Jacoco Code Coverage Report</a></h4>
+        <h4><a href="/2022/05/maven-create-jacoco-code-coverage-report.html/">Maven Create Jacoco Code Coverage Report</a></h4>
         <div class="card-date">May 26, 2022 </div>
             
                 <div class="card-author">Zainul</div>
@@ -521,29 +521,32 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
         <div class="footer-left">
             <ul>
                 
-                <li><a href="/blogs">Blogs</a></li>
+                <li><a href='/blogs'>Blogs</a></li>
             </ul>
         </div>
         <div class="footer-center">
-            <form action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <h2>Get In Touch</h2>
-            
-                    <p>Enter your email to get inspiration, trending solution and latest blogs and articles.</p>
-                    
+            <form
+                action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate>
+                <h2>Get In Touch</h2>
+
+                <p>Enter your email to get inspiration, trending solution and latest blogs and articles.</p>
+
                 <input type="email" value="" name="EMAIL" class="required email" placeholder="Email Address">
-                <input type="submit" value="Subscribe" name="subscribe"  class="button button--accent ">
-            
-                
+                <input type="submit" value="Subscribe" name="subscribe" class="button button--accent ">
+
+
             </form>
         </div>
         <div class="footer-right">
             <ul>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
-               
+                <li><a href='/sitemap.xml'>Sitemap</a></li>
+                
             </ul>
         </div>
     </div>
-    <div class=" footer-copyright" >
+    <div class=" footer-copyright">
         <div class="left">
             <div class="social-icons">
     <a href="https://github.com/zainabed/tutorials" target="_blank" rel="noopener noreferrer me" title="Github">
@@ -558,11 +561,12 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
 
         </div>
         <div class=" center">
-          &copy; 2022 Copyright | <a href="https://zainabed.github.io/zainabed-blog/">ZAINABED</a> . All rights reserved
+            &copy; 2022 Copyright | <a href="https://zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
-        <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
+        <div class="right">
+        </div>
     </div>
-    
+
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -623,6 +627,5 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
         }
     })
 
-</script>
-</body>
+</script></body>
 </html>

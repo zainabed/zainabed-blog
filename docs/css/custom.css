@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: "Sans";
-    src: url('/font/sans/SourceSansPro-Regular.ttf') format("truetype");
+    src: url('../font/sans/SourceSansPro-Regular.ttf') format("truetype");
     font-display: swap;
 }
 
