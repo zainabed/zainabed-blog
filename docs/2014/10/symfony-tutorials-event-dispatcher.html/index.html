@@ -12,15 +12,15 @@ suppose you want to purchase a mobile from online shopping website , but unfortu
 Then you subscribe into online shopping website for this mobile availability.
 When mobile comes in stock, online shopping website notifies you about mobile phone’s availability via email.">
 <meta name="author" content="">
-<link rel="canonical" href="https://zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/">
+<link rel="canonical" href="https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://zainabed.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://zainabed.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://zainabed.com/safari-pinned-tab.svg">
+<link rel="icon" href="https://www.zainabed.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.zainabed.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.zainabed.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.zainabed.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -66,13 +66,13 @@ suppose you want to purchase a mobile from online shopping website , but unfortu
 Then you subscribe into online shopping website for this mobile availability.
 When mobile comes in stock, online shopping website notifies you about mobile phone’s availability via email." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/" />
-<meta property="og:image" content="https://zainabed.com/image/cover.jpg" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/" />
+<meta property="og:image" content="https://www.zainabed.com/image/cover.jpg" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2014-10-03T05:28:55-04:00" />
 <meta property="article:modified_time" content="2014-10-03T05:28:55-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://zainabed.com/image/cover.jpg" />
+<meta name="twitter:image" content="https://www.zainabed.com/image/cover.jpg" />
 <meta name="twitter:title" content="Symfony Tutorials Event Dispatcher"/>
 <meta name="twitter:description" content="Introduction Symfony EventDispatcher is object which interacts with different set of objects when certain event happens.
 To illustrate Event Dispatcher definition let’s consider the online shopping website example.
@@ -90,13 +90,13 @@ When mobile comes in stock, online shopping website notifies you about mobile ph
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "https://zainabed.com/blogs/"
+      "item": "https://www.zainabed.com/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Symfony Tutorials Event Dispatcher",
-      "item": "https://zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/"
+      "item": "https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/"
     }
   ]
 }
@@ -114,23 +114,23 @@ When mobile comes in stock, online shopping website notifies you about mobile ph
   "articleBody": "Introduction Symfony EventDispatcher is object which interacts with different set of objects when certain event happens.\nTo illustrate Event Dispatcher definition let’s consider the online shopping website example.\nsuppose you want to purchase a mobile from online shopping website , but unfortunately that mobile is out of stock.\nThen you subscribe into online shopping website for this mobile availability.\nWhen mobile comes in stock, online shopping website notifies you about mobile phone’s availability via email.\nIn above scenario\n you are the Event Listener / Event Subscriber mobile availability is Event online shopping website is Event Dispatcher.  Symfony EventDispatcher works in same manner.for example, whenever there is HTTP request, Kernel creates a request object and it dispatches an event kernel.request.\nWhoever subscribes to kernel.request event gets notified.\nSo here you might be having few questions in my mind.\nWhat is Event Event object describe what event is and add some additional information so that its listener or subscriber can get enough information about event.\nWhat is EventDispatcher EventDispatcher is central object which dispatches the event to all its listener or subscriber. EventDispatcher maintains the list of all listeners of a particular Event.\nuse Symfony\\Component\\EventDispatcher\\EventDispatcher; $dispatcher =new EventDispatcher(); What is Event Listener Listener is a object which performs a task whenever a associated event happens. But first we need to attach listener to Event Dispatcher for a particular event.\n$listener=new MobileAvailabilityListener(); $dispatcher-addListener('store.mobile.available',array($listener,'sendEmailToUsers')); Considering Online Shopping Store example let’s create a custom event and dispatch this event.\nHere we want to create mobile availability event which get dispatched whenever mobile is available.\nFirst we create static event class which holds event name and its instance information\nStatic Event Class\nfinal class MobileEvents { /** * The store.mobile.available event is thrown each time when mobile * is available in store * * The event listener receives an * Acme\\StoreBundle\\Event\\MobileAvailableEvent instance. * * @var string */ const MOBILE_AVAILABLE = 'store.mobile.available'; } Later, create actual event object.\nSymfony uses Symfony\\Component\\EventDispatcher\\Event class.\nThis class wont give us enough information about mobile availability therefor we need to subclass it and add additional information.\nnamespace Acme\\StoreBundle\\Event; use Symfony\\Component\\EventDispatcher\\Event; use Acme\\StoreBundle\\Mobile; class MobileAvailableEvent { protected $mobile; public function__construct(Mobile $mobile) { $this-mobile=$mobile; } public function getMobile() { return $this-mobile; } } Later, create event listener, which sends emails to user regarding availability of the mobile phone.\nuse Acme\\StoreBundle\\Event\\MobileAvailableEvent; class MobileAvailabilityListener { // ...  public function sendEmailToUsers(MobileAvailableEvent $event) { // ... send email to users  } } Now all is set, let’s attach this listener to the dispatcher. And dispatch the event.\nuse Symfony\\Component\\EventDispatcher\\EventDispatcher; use Acme\\StoreBundle\\Event\\MobileAvailableEvent; use Acme\\StoreBundle\\Event\\MobileAvailabilityListener; use Acme\\StoreBundle\\Entity\\Mobile; $dispatcher = new EventDispatcher(); // attach listener $listener = new MobileAvailabilityListener(); $dispatcher-addListener(MobileEvents::MOBILE_AVAILABLE, array($listener, 'sendEmailToUsers')); //if mobile is available then dispatch the event $mobile = new Mobile(); $event = new MobileAvailableEvent($mobile); $dispatcher-dispatch(MobileEvents::MOBILE_AVAILABLE, $event); Conclusion This is a every basic example, you can create event for user registration process and can send confirmation email via event listener or can do many things using Symfony Event Dispatcher.\n",
   "wordCount" : "492",
   "inLanguage": "en",
-  "image":"https://zainabed.com/image/cover.jpg","datePublished": "2014-10-03T05:28:55-04:00",
+  "image":"https://www.zainabed.com/image/cover.jpg","datePublished": "2014-10-03T05:28:55-04:00",
   "dateModified": "2014-10-03T05:28:55-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/"
+    "@id": "https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://zainabed.com/favicon.ico"
+      "url": "https://www.zainabed.com/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="https://zainabed.com/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.zainabed.com/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -148,8 +148,8 @@ When mobile comes in stock, online shopping website notifies you about mobile ph
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://zainabed.com/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="https://zainabed.com/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://www.zainabed.com/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://www.zainabed.com/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -175,22 +175,22 @@ When mobile comes in stock, online shopping website notifies you about mobile ph
         </div>
         <ul id="menu">
             <li>
-                <a href="https://zainabed.com/archives/" title="Archives">
+                <a href="https://www.zainabed.com/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/blogs/" title="Blogs">
+                <a href="https://www.zainabed.com/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/categories/" title="Categories">
+                <a href="https://www.zainabed.com/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://www.zainabed.com/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -212,8 +212,8 @@ When mobile comes in stock, online shopping website notifies you about mobile ph
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="https://zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/image/cover_huf15348875dd6b9ceca716acd33a7b513_34407_360x0_resize_q75_box.jpg 360w ,https://zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/image/cover_huf15348875dd6b9ceca716acd33a7b513_34407_480x0_resize_q75_box.jpg 480w ,https://zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/image/cover_huf15348875dd6b9ceca716acd33a7b513_34407_720x0_resize_q75_box.jpg 720w ,https://zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/image/cover.jpg 900w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/image/cover.jpg" alt="Symfony Tutorials Event Dispatcher" 
+        <img loading="lazy" srcset="https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/image/cover_huf15348875dd6b9ceca716acd33a7b513_34407_360x0_resize_q75_box.jpg 360w ,https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/image/cover_huf15348875dd6b9ceca716acd33a7b513_34407_480x0_resize_q75_box.jpg 480w ,https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/image/cover_huf15348875dd6b9ceca716acd33a7b513_34407_720x0_resize_q75_box.jpg 720w ,https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/image/cover.jpg 900w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/image/cover.jpg" alt="Symfony Tutorials Event Dispatcher" 
             width="900" height="450">
         
 </figure>
@@ -338,7 +338,7 @@ $dispatcher<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">d
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="https://zainabed.com/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://www.zainabed.com/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -525,7 +525,7 @@ $dispatcher<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">d
 
         </div>
         <div class=" center">
-            &copy; 2022 Copyright | <a href="https://zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2022 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>

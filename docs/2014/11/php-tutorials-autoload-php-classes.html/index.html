@@ -10,15 +10,15 @@
 What is Autoloading in PHP PHP autoload&rsquo;s primary function is to load PHP files into the application context. The import statement is the default method to include PHP file into context.
 However, we may avoid the issue by using the PHP autoload capability to autoload essential PHP files, which keeps your code clean and composable.">
 <meta name="author" content="">
-<link rel="canonical" href="https://zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/">
+<link rel="canonical" href="https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://zainabed.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://zainabed.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://zainabed.com/safari-pinned-tab.svg">
+<link rel="icon" href="https://www.zainabed.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.zainabed.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.zainabed.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.zainabed.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -62,13 +62,13 @@ However, we may avoid the issue by using the PHP autoload capability to autoload
 What is Autoloading in PHP PHP autoload&rsquo;s primary function is to load PHP files into the application context. The import statement is the default method to include PHP file into context.
 However, we may avoid the issue by using the PHP autoload capability to autoload essential PHP files, which keeps your code clean and composable." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/" />
-<meta property="og:image" content="https://zainabed.com/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/" />
+<meta property="og:image" content="https://www.zainabed.com/image/cover.png" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2014-11-02T05:33:18-04:00" />
 <meta property="article:modified_time" content="2014-11-02T05:33:18-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://zainabed.com/image/cover.png" />
+<meta name="twitter:image" content="https://www.zainabed.com/image/cover.png" />
 <meta name="twitter:title" content="Php Tutorials Autoload Php Classes"/>
 <meta name="twitter:description" content="Introduction With some examples, this tutorial post will teach the PHP autoloader and namespace concepts.
 What is Autoloading in PHP PHP autoload&rsquo;s primary function is to load PHP files into the application context. The import statement is the default method to include PHP file into context.
@@ -84,13 +84,13 @@ However, we may avoid the issue by using the PHP autoload capability to autoload
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "https://zainabed.com/blogs/"
+      "item": "https://www.zainabed.com/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Php Tutorials Autoload Php Classes",
-      "item": "https://zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/"
+      "item": "https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/"
     }
   ]
 }
@@ -108,23 +108,23 @@ However, we may avoid the issue by using the PHP autoload capability to autoload
   "articleBody": "Introduction With some examples, this tutorial post will teach the PHP autoloader and namespace concepts.\nWhat is Autoloading in PHP PHP autoload’s primary function is to load PHP files into the application context. The import statement is the default method to include PHP file into context.\nHowever, we may avoid the issue by using the PHP autoload capability to autoload essential PHP files, which keeps your code clean and composable.\nWhy do we need auto loading When creating object-oriented applications, many developers create one PHP source file per class declaration. One of the major inconveniences is having to start each script with a huge list of required includes.\nAutloading allows us to include an arbitrary number of PHP files in the application context if they aren’t already included by other include statements.\nPHP Autoloading Methods PHP uses two functions; one is the magic method spl_autoload_register and the other is __autoload.\n NOTE: Although __autoload has been DEPRECATED as of PHP 7.2.0, and REMOVED as of PHP 8.0.0, relying on this function is highly discouraged.\n Whenever PHP encounters an instantiation of a class, it triggers the autoloading function by providing it as a parameter.\nYou can also define the path of the class and include it in context within the atoloading method.\nWhat is difference between __autoload and sp_autload_resgister function Because the _autoload method is a magic method, you can only declare it once. As a result, you’d just need one logic to incorporate PHP class files.\nspl_autoload_register, on the other hand, takes a function as a parameter, which we can use to create the specific logic for including the PHP file.\nWith the help of spl_autoload_register, we can have multiple implementations of the inclusion of PHP files.\nExample php /** * autoload method */ function __autoload($class) { require $class.'.php'; } //spl_autoload_register  /** * autoload method one */ function autoloadOne($class) { require \"/dir-one/\".$class.\".php\"; } /** * autoload method two */ function autoloadTwo($class) { require \"/dir-two/\".$class.\".php\"; } //register auto loader spl_autoload_register(\"autoloadOne\"); spl_autoload_register(\"autoloadTwo\"); What exactly is namespace In most cases, PHP won’t let you have two classes with the same name. However, in version 5.3, the idea of namespace was added, which created class ownership, allowing two classes with the same name but distinct ownership to exist.\nWhat is the importance of namespace in autloading Namespaces were created to solve the problem of name clashes and to allow extra-long class names to be shortened.\nNamespaces are a technique of encapsulating objects in the broadest sense.\nNamespaces in PHP allow you to organise related classes, interfaces, methods, and constants together.\nFor example\nphp namespace Module\\User\\Controller; namespace Module\\User\\Entity; namespace Module\\User\\Form; namespace Module\\User\\Validator; If we autoload the above class, we will get the whole namespace of that class along with the class name.\nnamespace_autoload.php php spl_autoload_register(function ($class_name) { echo \"class path = \".$class; die ; } new \\Module\\User\\Controller(); // it will print // class path = Module\\User\\Controller With the help of this information, we can organize classes according to our project directory structure.\nLet’s say you have the following project structure.\nproject |__Module |__User |__Controller |__Entity |__Form | |__autoload.php Then you can create PHP classes with a namespace as\n project |__Module |__User |__Controller \\\\ class : IndexController , namespace Module\\User\\Controller |__Entity \\\\ class : User , namespace Module\\User\\Entity |__Form \\\\ class : UserForm , namespace Module\\User\\Form | |__autoload.php file: autoload.php php //include namespace  use Module\\User\\Controller\\IndexController; use Module\\User\\Entity\\User; use Module\\User\\Form\\UserForm; /** * Autload project files */ spl_autoload_register(function ($class_name) { echo $class; require $class; } // instantiate classes $controller = new IndexController(); //(it will print) Module\\User\\Controller\\IndexController and load this class  $user = new User(); //(it will print) Module\\User\\Entity\\User and load this class  $userForm = new UserForm(); //(it will print) Module\\User\\Form\\UserForm and load this class As you can see, namespaces aid in the organisation of the project structure and the autoloading of classes.\nWhat is the difference between the following two sets of statements?    Namespace autloading Direct include files     use Module\\User\\Controller\\IndexController; require “Module\\User\\Controller\\IndexController”;   use Module\\User\\Entity\\User; require “Module\\User\\Entity\\User”;   use Module\\User\\Form\\UserForm; require “Module\\User\\Form\\UserForm”;    The main difference is that the require statement accepts the full directory path, whereas with namespace we can set logic to autoload PHP files with different directory structures and minimise the namespace length.\nLet’s see the following example. Suppose you have the following directory for your project library files.\nproject | |__vendor | |__lib | |__src | |__components | |__HTTP //Request, Response classes | |__Controller //BaseController classes | |__Form //BaseForm classes ..... many more files You write the following code to use the require statement.\nphp require \"/vendor/lib/src/components/HTTP/Request\"; require \"/vendor/lib/src/components/HTTP/Response\"; require \"/vendor/lib/src/components/Controller/BaseController\"; require \"/vendor/lib/src/components/Form/BaseForm\"; We can reduce the above class path and organize the structure much more properly with the help of autoload and namespace as follows.\nphp define(\"LIB_PATH\", \"/vendor/lib/src/components\"); use HTTP\\Request; use HTTP\\Response; use Controller\\BaseController; use Form\\BaseForm; /** * autoload lib class files */ spl_autoload_register(function ($class_name) { // set class path  $class_path = LIB_PATH.$class; //include class file  echo $class_path; require $class_path; } $request = new Request; // (it will print) /vendor/lib/src/components/HTTP/Request  $controller = new BaseController; // (it will print) /vendor/lib/src/components/Controller/BaseController Conclusion  An autoload helps load all the PHP classes of a PHP project. The combination of autoload and namespace standardises the organisation and loading of PHP projects. Namespace helps organise your PHP classes.  ",
   "wordCount" : "865",
   "inLanguage": "en",
-  "image":"https://zainabed.com/image/cover.png","datePublished": "2014-11-02T05:33:18-04:00",
+  "image":"https://www.zainabed.com/image/cover.png","datePublished": "2014-11-02T05:33:18-04:00",
   "dateModified": "2014-11-02T05:33:18-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/"
+    "@id": "https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://zainabed.com/favicon.ico"
+      "url": "https://www.zainabed.com/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="https://zainabed.com/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.zainabed.com/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -142,8 +142,8 @@ However, we may avoid the issue by using the PHP autoload capability to autoload
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://zainabed.com/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="https://zainabed.com/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://www.zainabed.com/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://www.zainabed.com/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -169,22 +169,22 @@ However, we may avoid the issue by using the PHP autoload capability to autoload
         </div>
         <ul id="menu">
             <li>
-                <a href="https://zainabed.com/archives/" title="Archives">
+                <a href="https://www.zainabed.com/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/blogs/" title="Blogs">
+                <a href="https://www.zainabed.com/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/categories/" title="Categories">
+                <a href="https://www.zainabed.com/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://www.zainabed.com/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -206,8 +206,8 @@ However, we may avoid the issue by using the PHP autoload capability to autoload
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="https://zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/image/cover_hub6eefbdccfe6af35c6aa285680428e4f_268656_360x0_resize_box_2.png 360w ,https://zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/image/cover_hub6eefbdccfe6af35c6aa285680428e4f_268656_480x0_resize_box_2.png 480w ,https://zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/image/cover_hub6eefbdccfe6af35c6aa285680428e4f_268656_720x0_resize_box_2.png 720w ,https://zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/image/cover.png 900w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/image/cover.png" alt="Php Tutorials Autoload Php Classes" 
+        <img loading="lazy" srcset="https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/image/cover_hub6eefbdccfe6af35c6aa285680428e4f_268656_360x0_resize_box_2.png 360w ,https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/image/cover_hub6eefbdccfe6af35c6aa285680428e4f_268656_480x0_resize_box_2.png 480w ,https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/image/cover_hub6eefbdccfe6af35c6aa285680428e4f_268656_720x0_resize_box_2.png 720w ,https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/image/cover.png 900w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/image/cover.png" alt="Php Tutorials Autoload Php Classes" 
             width="900" height="450">
         
 </figure>
@@ -450,7 +450,7 @@ $controller <span style="color:#f92672">=</span> <span style="color:#66d9ef">new
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="https://zainabed.com/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://www.zainabed.com/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -637,7 +637,7 @@ $controller <span style="color:#f92672">=</span> <span style="color:#66d9ef">new
 
         </div>
         <div class=" center">
-            &copy; 2022 Copyright | <a href="https://zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2022 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>
