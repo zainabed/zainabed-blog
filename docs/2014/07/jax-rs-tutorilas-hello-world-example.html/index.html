@@ -10,15 +10,15 @@
  JDK Eclipse Tomcat Maven Jersey 1.8  Create Maven Web Project Create a Maven web project and name it &ldquo;helloworld&rdquo; .
  File -&gt; New -&gt; Other -&gt; Maven Project -&gt; Next Select maven-archetype-webapp Select Next Type Group Id, Artifact Id and Package name And select Finish  Add Project Dependencies Add Jersey repository using Maven.">
 <meta name="author" content="">
-<link rel="canonical" href="https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/">
+<link rel="canonical" href="https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://zainabed.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://zainabed.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://zainabed.com/safari-pinned-tab.svg">
+<link rel="icon" href="https://www.zainabed.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.zainabed.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.zainabed.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.zainabed.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -62,13 +62,13 @@
  JDK Eclipse Tomcat Maven Jersey 1.8  Create Maven Web Project Create a Maven web project and name it &ldquo;helloworld&rdquo; .
  File -&gt; New -&gt; Other -&gt; Maven Project -&gt; Next Select maven-archetype-webapp Select Next Type Group Id, Artifact Id and Package name And select Finish  Add Project Dependencies Add Jersey repository using Maven." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/" />
-<meta property="og:image" content="https://zainabed.com/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/" />
+<meta property="og:image" content="https://www.zainabed.com/image/cover.png" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2014-07-29T05:27:17-04:00" />
 <meta property="article:modified_time" content="2014-07-29T05:27:17-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://zainabed.com/image/cover.png" />
+<meta name="twitter:image" content="https://www.zainabed.com/image/cover.png" />
 <meta name="twitter:title" content="Jax Rs Tutorilas Hello World Example"/>
 <meta name="twitter:description" content="Introduction Following is simple JAX-RS tutorial, which sends “Hello World” text as response string using JAX-RS API and Jersey implementation. Technologies and Tools used in this article:
  JDK Eclipse Tomcat Maven Jersey 1.8  Create Maven Web Project Create a Maven web project and name it &ldquo;helloworld&rdquo; .
@@ -84,13 +84,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "https://zainabed.com/blogs/"
+      "item": "https://www.zainabed.com/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Jax Rs Tutorilas Hello World Example",
-      "item": "https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/"
+      "item": "https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/"
     }
   ]
 }
@@ -108,23 +108,23 @@
   "articleBody": "Introduction Following is simple JAX-RS tutorial, which sends “Hello World” text as response string using JAX-RS API and Jersey implementation. Technologies and Tools used in this article:\n JDK Eclipse Tomcat Maven Jersey 1.8  Create Maven Web Project Create a Maven web project and name it “helloworld” .\n File - New - Other - Maven Project - Next Select maven-archetype-webapp Select Next Type Group Id, Artifact Id and Package name And select Finish  Add Project Dependencies Add Jersey repository using Maven. Use Maven URL to get appropriate repository.\nNow update pom.xml file by adding following dependency.\nFile : pom.xml  com.sun.jersey jersey-server 1.8  Create REST Service Now it is time to create a class which serves as REST service. Create class named RestService and a public method getMessage\npackage com.zain.restapi; import javax.ws.rs.core.Response; import javax.ws.rs.GET; import javax.ws.rs.Path; @Path(\"/message\") public class RestService { @GET public Response getMessage() { String message = \"Hello World!\"; return Response.status(200).entity(message).type(\"text/plain\").build(); } }  Note: @Path annotation act as routing which map incoming URI to appropriate Class Update web.xml for Jersey configuration In web.xml, add servlet with class com.sun.jersey.spi.container.servlet.ServletContainer\n File : web.xml  version=\"2.4\" xmlns=\"http://java.sun.com/xml/ns/j2ee\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd\"  jersey-serlvet  com.sun.jersey.spi.container.servlet.ServletContainer   com.sun.jersey.config.property.packages com.zain.restapi  1   jersey-serlvet /rest/*   Directory Structure Final project directory structure\nDemo To execute this application you need to type following URL\nhttp://localhost:8080/{project name}/{jersey servlet name}/{@path param value} here is actual URL for this tutorial.\nhttp://localhost:8080/helloworld/rest/message Source Code Download source code from this Github\nReferences  Jersey Official Website Jersey hello world example RESTful Web Services  ",
   "wordCount" : "255",
   "inLanguage": "en",
-  "image":"https://zainabed.com/image/cover.png","datePublished": "2014-07-29T05:27:17-04:00",
+  "image":"https://www.zainabed.com/image/cover.png","datePublished": "2014-07-29T05:27:17-04:00",
   "dateModified": "2014-07-29T05:27:17-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/"
+    "@id": "https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://zainabed.com/favicon.ico"
+      "url": "https://www.zainabed.com/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="https://zainabed.com/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.zainabed.com/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -142,8 +142,8 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://zainabed.com/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="https://zainabed.com/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://www.zainabed.com/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://www.zainabed.com/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -169,22 +169,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://zainabed.com/archives/" title="Archives">
+                <a href="https://www.zainabed.com/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/blogs/" title="Blogs">
+                <a href="https://www.zainabed.com/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/categories/" title="Categories">
+                <a href="https://www.zainabed.com/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://www.zainabed.com/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -206,8 +206,8 @@
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover_hueb9cd0a7fdb2a14485a5de885a5e4435_107149_360x0_resize_box_2.png 360w ,https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover_hueb9cd0a7fdb2a14485a5de885a5e4435_107149_480x0_resize_box_2.png 480w ,https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover_hueb9cd0a7fdb2a14485a5de885a5e4435_107149_720x0_resize_box_2.png 720w ,https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover.png 900w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover.png" alt="Jax Rs Tutorilas Hello World Example" 
+        <img loading="lazy" srcset="https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover_hueb9cd0a7fdb2a14485a5de885a5e4435_107149_360x0_resize_box_2.png 360w ,https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover_hueb9cd0a7fdb2a14485a5de885a5e4435_107149_480x0_resize_box_2.png 480w ,https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover_hueb9cd0a7fdb2a14485a5de885a5e4435_107149_720x0_resize_box_2.png 720w ,https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover.png 900w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/image/cover.png" alt="Jax Rs Tutorilas Hello World Example" 
             width="900" height="450">
         
 </figure>
@@ -343,7 +343,7 @@ In web.xml, add servlet with class <code>com.sun.jersey.spi.container.servlet.Se
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="https://zainabed.com/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://www.zainabed.com/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -530,7 +530,7 @@ In web.xml, add servlet with class <code>com.sun.jersey.spi.container.servlet.Se
 
         </div>
         <div class=" center">
-            &copy; 2022 Copyright | <a href="https://zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2022 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>

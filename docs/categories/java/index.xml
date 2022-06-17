@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Java on ZAINABED</title>
-    <link>https://zainabed.com/categories/java/</link>
+    <link>https://www.zainabed.com/categories/java/</link>
     <description>Recent content in Java on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jun 2022 00:57:18 -0400</lastBuildDate><atom:link href="https://zainabed.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 00:57:18 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Log4j How to Log Message to Console</title>
-      <link>https://zainabed.com/2022/06/log4j-how-to-log-message-to-console.html/</link>
+      <link>https://www.zainabed.com/2022/06/log4j-how-to-log-message-to-console.html/</link>
       <pubDate>Wed, 01 Jun 2022 00:57:18 -0400</pubDate>
       
-      <guid>https://zainabed.com/2022/06/log4j-how-to-log-message-to-console.html/</guid>
+      <guid>https://www.zainabed.com/2022/06/log4j-how-to-log-message-to-console.html/</guid>
       <description>Introduction This tutorial will help you to log all level messages into console using Log4j plugin.
 In previous tutorial we have seen how to setup the log4j plugin in Maven and simple logging application. If you need to understand the basic of Log4J the visit previous tutorial.
 What we will do in this tutorial We saw in the previous tutorial that Log4J&amp;rsquo;s default configuration set the logging level to Error, causing it to log only errors and fatal messages to the console.</description>
@@ -20,10 +20,10 @@ What we will do in this tutorial We saw in the previous tutorial that Log4J&amp;
     
     <item>
       <title>Getting Started With Log4j</title>
-      <link>https://zainabed.com/2022/05/getting-started-with-log4j.html/</link>
+      <link>https://www.zainabed.com/2022/05/getting-started-with-log4j.html/</link>
       <pubDate>Mon, 30 May 2022 09:30:34 -0400</pubDate>
       
-      <guid>https://zainabed.com/2022/05/getting-started-with-log4j.html/</guid>
+      <guid>https://www.zainabed.com/2022/05/getting-started-with-log4j.html/</guid>
       <description>Introduction For Java applications, Log4j is a commonly used and trusted logging tool. When an application is deployed to an application server, logging is a must-have feature.
 In this tutorial, we&amp;rsquo;ll see how to set up Log4j for a simple Java application.
 You can find all code related to this tutorial inside GitHub project.
@@ -32,10 +32,10 @@ Why do we need Logging Logging is an important part of the application since it 
     
     <item>
       <title>Maven Create Jacoco Code Coverage Report</title>
-      <link>https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/</link>
+      <link>https://www.zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/</link>
       <pubDate>Thu, 26 May 2022 08:42:58 -0400</pubDate>
       
-      <guid>https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/</guid>
+      <guid>https://www.zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/</guid>
       <description>Introduction In this tutorial we will see how to setup the JaCoCo plugin to generate a code coverage report for a Maven project.
 In order to generate a unit test coverage report, we should have sufficient unit test cases in our application. For this tutorial, I am referring to a Maven project which has a string manipulation method.
 You can find this project at this GitHub location.
@@ -44,10 +44,10 @@ There are a few steps that need to be taken to produce the report.</description>
     
     <item>
       <title>Spring Boot Resttemplate Guide With Example</title>
-      <link>https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/</link>
+      <link>https://www.zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/</link>
       <pubDate>Fri, 22 Apr 2022 09:42:03 -0400</pubDate>
       
-      <guid>https://zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/</guid>
+      <guid>https://www.zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/</guid>
       <description>What is RestTemplet? RestTemplate is a HTTP Client library that provides basic APIs for executing different HTTP type requests.
 RestTemplate is one of the HTTP libraries available on the market.
 The Spring Boot team designed and maintains it.
@@ -56,10 +56,10 @@ As previously said, it is a client library, which means it may be utilised in ou
     
     <item>
       <title>How to Enable Sql Logs in Spring Boot Application</title>
-      <link>https://zainabed.com/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/</link>
+      <link>https://www.zainabed.com/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/</link>
       <pubDate>Fri, 08 Apr 2022 10:49:12 -0400</pubDate>
       
-      <guid>https://zainabed.com/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/</guid>
+      <guid>https://www.zainabed.com/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/</guid>
       <description>Introduction This tutorial will demonstrate how to enable and disable SQL log statements in a Spring Boot application in order to debug SQL flow.
 Problem You will frequently need to debug the SQL statement while developing a Spring Boot application with a SQL database.
 SQL debug logs can assist you figure out what&amp;rsquo;s wrong with JPA statements and whether or not there&amp;rsquo;s a problem with database connectivity.
@@ -68,10 +68,10 @@ Example If you&amp;rsquo;ve built custom Spring data JPA methods and need to kno
     
     <item>
       <title>Cucumber Setup Using Gradle</title>
-      <link>https://zainabed.com/2022/04/cucumber-setup-using-gradle.html/</link>
+      <link>https://www.zainabed.com/2022/04/cucumber-setup-using-gradle.html/</link>
       <pubDate>Tue, 05 Apr 2022 09:56:50 -0400</pubDate>
       
-      <guid>https://zainabed.com/2022/04/cucumber-setup-using-gradle.html/</guid>
+      <guid>https://www.zainabed.com/2022/04/cucumber-setup-using-gradle.html/</guid>
       <description>Introduction This tutorial will help you configure Cucumber into a Java project using the Gradle build tool.
 Cucumber is a test automation tool that supports Behavior-Driven Development (BDD). It is written in plain English text called &amp;ldquo;Gherkin.&amp;rdquo; Cucumber enables you to write test cases that anyone can easily understand, regardless of their technical knowledge.
 Setup First, create a Gradle project using the gradle init command.
@@ -80,10 +80,10 @@ gradle init Complete the Gradle wizard to create a project.</description>
     
     <item>
       <title>Getting Started With Micronaut Using Gradle</title>
-      <link>https://zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/</link>
+      <link>https://www.zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/</link>
       <pubDate>Tue, 15 Mar 2022 10:54:51 -0400</pubDate>
       
-      <guid>https://zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/</guid>
+      <guid>https://www.zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/</guid>
       <description>Introduction In this tutorial, we will create a Micronaut application using Gradle.
 What you will need  Java installed on your machine Gradle installed on your machine Text Editor  Steps First create your project folder, we will make a folder called &amp;ldquo;micronaut-project&amp;rdquo; for this tutorial.
 The second step is to add the build.gradle file inside the project folder.
@@ -93,10 +93,10 @@ Now update the build.</description>
     
     <item>
       <title>Jax Rs Tutorilas Hello World Example</title>
-      <link>https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</link>
+      <link>https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</link>
       <pubDate>Tue, 29 Jul 2014 05:27:17 -0400</pubDate>
       
-      <guid>https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</guid>
+      <guid>https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</guid>
       <description>Introduction Following is simple JAX-RS tutorial, which sends “Hello World” text as response string using JAX-RS API and Jersey implementation. Technologies and Tools used in this article:
  JDK Eclipse Tomcat Maven Jersey 1.8  Create Maven Web Project Create a Maven web project and name it &amp;ldquo;helloworld&amp;rdquo; .
  File -&amp;gt; New -&amp;gt; Other -&amp;gt; Maven Project -&amp;gt; Next Select maven-archetype-webapp Select Next Type Group Id, Artifact Id and Package name And select Finish  Add Project Dependencies Add Jersey repository using Maven.</description>
@@ -104,10 +104,10 @@ Now update the build.</description>
     
     <item>
       <title>Jax Rs Tutorial Rest Api Using Java</title>
-      <link>https://zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</link>
+      <link>https://www.zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</link>
       <pubDate>Thu, 24 Jul 2014 05:25:34 -0400</pubDate>
       
-      <guid>https://zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</guid>
+      <guid>https://www.zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</guid>
       <description>Introdcution JAX-RS is API specification for RESTful web services using Java. RESTful web services is implementation of REST (Representational State Transfer) which is architectural design for distributed system or in general we can say JAX-RS is a set of APIs to develop REST service.
 This is a brief introduction about REST and JAX-RS. You can find more information on REST on Wiki and JAX-RS Official Site.
 What is REST  Representational state transfer is an abstraction of the architecture of the World Wide Web.</description>
@@ -115,10 +115,10 @@ What is REST  Representational state transfer is an abstraction of the architect
     
     <item>
       <title>Mongodb Crud Operations Using Java</title>
-      <link>https://zainabed.com/2014/06/mongodb-crud-operations-using-java.html/</link>
+      <link>https://www.zainabed.com/2014/06/mongodb-crud-operations-using-java.html/</link>
       <pubDate>Tue, 03 Jun 2014 05:24:31 -0400</pubDate>
       
-      <guid>https://zainabed.com/2014/06/mongodb-crud-operations-using-java.html/</guid>
+      <guid>https://www.zainabed.com/2014/06/mongodb-crud-operations-using-java.html/</guid>
       <description>Introduction This article will show you how to use Java to perform CRUD operations on MongoDB records.
 If you&amp;rsquo;re new to MongoDB, we recommend starting with the Getting Started With MongoDB tutorial.
 To begin, we&amp;rsquo;ll establish a Person and Person Images table (a collection in MongoDB) to make CRUD operations in MongoDB easier.

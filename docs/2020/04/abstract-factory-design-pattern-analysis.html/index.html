@@ -10,15 +10,15 @@
  “Provide an interface for creating families of related or dependent objects without specifying their concrete classes”  It&rsquo;s a bit of a complicated definition, so we&rsquo;ll need to break it down into meaningful chunks to understand it.
 1. &ldquo;Provide an interface&rdquo; When we discuss the Abstract Factory, we are referring to interfaces rather than abstract classes.">
 <meta name="author" content="">
-<link rel="canonical" href="https://zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/">
+<link rel="canonical" href="https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://zainabed.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://zainabed.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://zainabed.com/safari-pinned-tab.svg">
+<link rel="icon" href="https://www.zainabed.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.zainabed.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.zainabed.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.zainabed.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -62,13 +62,13 @@
  “Provide an interface for creating families of related or dependent objects without specifying their concrete classes”  It&rsquo;s a bit of a complicated definition, so we&rsquo;ll need to break it down into meaningful chunks to understand it.
 1. &ldquo;Provide an interface&rdquo; When we discuss the Abstract Factory, we are referring to interfaces rather than abstract classes." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/" />
-<meta property="og:image" content="https://zainabed.com/image/cover.png" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/" />
+<meta property="og:image" content="https://www.zainabed.com/image/cover.png" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2020-04-24T11:01:00-04:00" />
 <meta property="article:modified_time" content="2020-04-24T11:01:00-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://zainabed.com/image/cover.png" />
+<meta name="twitter:image" content="https://www.zainabed.com/image/cover.png" />
 <meta name="twitter:title" content="Abstract Factory Design Pattern Analysis"/>
 <meta name="twitter:description" content="What is the Abstract Factory design pattern? The intent or definition of Abstract Factory is
  “Provide an interface for creating families of related or dependent objects without specifying their concrete classes”  It&rsquo;s a bit of a complicated definition, so we&rsquo;ll need to break it down into meaningful chunks to understand it.
@@ -84,13 +84,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "https://zainabed.com/blogs/"
+      "item": "https://www.zainabed.com/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Abstract Factory Design Pattern Analysis",
-      "item": "https://zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/"
+      "item": "https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/"
     }
   ]
 }
@@ -108,23 +108,23 @@
   "articleBody": "What is the Abstract Factory design pattern? The intent or definition of Abstract Factory is\n “Provide an interface for creating families of related or dependent objects without specifying their concrete classes”  It’s a bit of a complicated definition, so we’ll need to break it down into meaningful chunks to understand it.\n1. “Provide an interface” When we discuss the Abstract Factory, we are referring to interfaces rather than abstract classes. Essentially, this design pattern provides us with an interface, similar to those found in Java, C#, or Typescript (abstract class).\nWhy interface? Whenever we talk about any design pattern, we focus on how we will use it rather than how we will implement it.\nBecause a concrete class creates tight coupling, whereas an interface isolates it from the rest of the system, an interface is always the better choice. We can get different solutions at runtime without having to update our code.\nFor example\ninterface SecurityFactory { AuthenticationManager getAuthenticationManager(); AuthorizationManager getAuthorizationManager(); } Here we have an abstract factory which defines the behaviour of creating objects related to application security, like authentication and authorization.\nHere we can have different authentication schemes like Basic, Bearer, or Digest, and authorizations like simple or JWT.\nOur client code is unconcerned about which implementation we use, it just uses Abstract Factory interfaces to perform security-related actions.\n2. “for creating families of related or dependent objects” The second part states that the Abstract Factory, aka Interface, creates objects. Interfaces contain methods, and each method should return an object.\nAuthenticationManager getAuthenticationManager(); AuthorizationManager getAuthorizationManager(); When we call these methods, we get instances of security objects that are related to a context. Here, the context is security.\n3. “without specifying their concrete classes” The last part of the definition states that the return type of each abstract method is an interface, not a concrete class.\nIt makes sense because the Abstract Factory is an interface in and of itself, therefore the return type of each of its methods should also be an interface. Clients can now obtain many types of objects from the Abstract Factory without having to make any changes on their end.\nFor example, when I use SecurityFactory like this,\npublic TestApp(SecurityFactory securityFactory ) { AuthorizationManager authorizationManager = securityFactory.getAuthorizationManager(); if(authorizationManager.isLoggedIn()){ // allow user to access resource  }else{ // notify unauthorized user  } } Here, the object authorizationManager can represent any kind of authorization model, like basic authorization, JWT, or session based authorization.\nTo have different authorization behaviors, we don’t need to change anything on the client side. Instead, we add a different securityFactory dependency at runtime.\nAnother example would be as follow.\nvoid AuthenticateUser(String username, String password){ AuthenticationManager authManager = securityFactory.getAuthenticationManager(); if (authManager.authenticate(username, password) == true){ // User is authenticated  }else { // Invalid User  } } The authentication model in this situation could range from basic authentication to custom authentication.\nThis implementation will not impact the client code, it only knows about the interface, not its implementation.\nThe concrete implementations of SecurityFactory will be the only thing that changes inside your application, this can be done using dependency injection.\nBenefits Every application requires the construction of a number of objects, each with its own set of creation procedures.\nTo instantiate objects, some developers prefer new keywords, while others prefer dependency injection, such as singleton. The first technique leads to tight coupling, which is difficult to verify, and the second way is difficult to maintain and can lead to a verbose constructor definition.\nWhen we group all related objects of an application together, we get only a few abstract factories that are easy to manage and maintain throughout the entire application.\nAbstractFactory is easy to test. We can create mock objects and test application behaviour easily.\nAbstractFactory follows the Open/Close principle. We can change the behaviour of an application without updating any client code.\nExample Security Abstract Factory Github link.\nSecurity Abstract Factory Implementation Github link\nConclusion It is a creational pattern to create a set of related objects. Rather than creating objects with new keywords, which is difficult to maintain and verify, we should encapsulate them within creational patterns. The Abstract Factory is a great pattern to create such related items.\nPlease let me know what you think of this pattern and how you’ve implemented it in your app.\n",
   "wordCount" : "713",
   "inLanguage": "en",
-  "image":"https://zainabed.com/image/cover.png","datePublished": "2020-04-24T11:01:00-04:00",
+  "image":"https://www.zainabed.com/image/cover.png","datePublished": "2020-04-24T11:01:00-04:00",
   "dateModified": "2020-04-24T11:01:00-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/"
+    "@id": "https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://zainabed.com/favicon.ico"
+      "url": "https://www.zainabed.com/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="https://zainabed.com/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.zainabed.com/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -142,8 +142,8 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://zainabed.com/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="https://zainabed.com/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://www.zainabed.com/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://www.zainabed.com/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -169,22 +169,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://zainabed.com/archives/" title="Archives">
+                <a href="https://www.zainabed.com/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/blogs/" title="Blogs">
+                <a href="https://www.zainabed.com/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/categories/" title="Categories">
+                <a href="https://www.zainabed.com/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://www.zainabed.com/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -206,8 +206,8 @@
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="https://zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/image/cover_hu3ede5ee2ba27312d35e5c3b1ff446cf7_237136_360x0_resize_box_2.png 360w ,https://zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/image/cover_hu3ede5ee2ba27312d35e5c3b1ff446cf7_237136_480x0_resize_box_2.png 480w ,https://zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/image/cover.png 640w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/image/cover.png" alt="Abstract Factory" 
+        <img loading="lazy" srcset="https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/image/cover_hu3ede5ee2ba27312d35e5c3b1ff446cf7_237136_360x0_resize_box_2.png 360w ,https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/image/cover_hu3ede5ee2ba27312d35e5c3b1ff446cf7_237136_480x0_resize_box_2.png 480w ,https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/image/cover.png 640w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/image/cover.png" alt="Abstract Factory" 
             width="640" height="480">
         
 </figure>
@@ -312,7 +312,7 @@ Rather than creating objects with new keywords, which is difficult to maintain a
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="https://zainabed.com/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://www.zainabed.com/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -414,7 +414,7 @@ Rather than creating objects with new keywords, which is difficult to maintain a
 
         </div>
         <div class=" center">
-            &copy; 2022 Copyright | <a href="https://zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2022 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>

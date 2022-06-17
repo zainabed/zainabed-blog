@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Zainu on ZAINABED</title>
-    <link>https://zainabed.com/authors/zainu/</link>
+    <link>https://www.zainabed.com/authors/zainu/</link>
     <description>Recent content in Zainu on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 May 2014 05:22:13 -0400</lastBuildDate><atom:link href="https://zainabed.com/authors/zainu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 May 2014 05:22:13 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/authors/zainu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angularjs Tutorial Getting Started</title>
-      <link>https://zainabed.com/2014/05/angularjs-tutorial-getting-started.html/</link>
+      <link>https://www.zainabed.com/2014/05/angularjs-tutorial-getting-started.html/</link>
       <pubDate>Thu, 22 May 2014 05:22:13 -0400</pubDate>
       
-      <guid>https://zainabed.com/2014/05/angularjs-tutorial-getting-started.html/</guid>
+      <guid>https://www.zainabed.com/2014/05/angularjs-tutorial-getting-started.html/</guid>
       <description>Introduction This tutorial will help you to create a dynamic web application using power of AngularJs.
 What is AngularJs AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.
 AngularJs follows MVC pattern to separate out model from view and manage it by controller.
