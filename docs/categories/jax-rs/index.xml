@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Jax-Rs on ZAINABED</title>
-    <link>https://zainabed.github.io/zainabed-blog/categories/jax-rs/</link>
+    <link>https://zainabed.com/categories/jax-rs/</link>
     <description>Recent content in Jax-Rs on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Jul 2014 05:27:17 -0400</lastBuildDate><atom:link href="https://zainabed.github.io/zainabed-blog/categories/jax-rs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Jul 2014 05:27:17 -0400</lastBuildDate><atom:link href="https://zainabed.com/categories/jax-rs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jax Rs Tutorilas Hello World Example</title>
-      <link>https://zainabed.github.io/zainabed-blog/2014/07/jax-rs-tutorilas-hello-world-example.html/</link>
+      <link>https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</link>
       <pubDate>Tue, 29 Jul 2014 05:27:17 -0400</pubDate>
       
-      <guid>https://zainabed.github.io/zainabed-blog/2014/07/jax-rs-tutorilas-hello-world-example.html/</guid>
+      <guid>https://zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</guid>
       <description>Introduction Following is simple JAX-RS tutorial, which sends “Hello World” text as response string using JAX-RS API and Jersey implementation. Technologies and Tools used in this article:
  JDK Eclipse Tomcat Maven Jersey 1.8  Create Maven Web Project Create a Maven web project and name it &amp;ldquo;helloworld&amp;rdquo; .
  File -&amp;gt; New -&amp;gt; Other -&amp;gt; Maven Project -&amp;gt; Next Select maven-archetype-webapp Select Next Type Group Id, Artifact Id and Package name And select Finish  Add Project Dependencies Add Jersey repository using Maven.</description>
@@ -20,10 +20,10 @@
     
     <item>
       <title>Jax Rs Tutorial Rest Api Using Java</title>
-      <link>https://zainabed.github.io/zainabed-blog/2014/07/jax-rs-tutorial-rest-api-using-java.html/</link>
+      <link>https://zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</link>
       <pubDate>Thu, 24 Jul 2014 05:25:34 -0400</pubDate>
       
-      <guid>https://zainabed.github.io/zainabed-blog/2014/07/jax-rs-tutorial-rest-api-using-java.html/</guid>
+      <guid>https://zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</guid>
       <description>Introdcution JAX-RS is API specification for RESTful web services using Java. RESTful web services is implementation of REST (Representational State Transfer) which is architectural design for distributed system or in general we can say JAX-RS is a set of APIs to develop REST service.
 This is a brief introduction about REST and JAX-RS. You can find more information on REST on Wiki and JAX-RS Official Site.
 What is REST  Representational state transfer is an abstraction of the architecture of the World Wide Web.</description>

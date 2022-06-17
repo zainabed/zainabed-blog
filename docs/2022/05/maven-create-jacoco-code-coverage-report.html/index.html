@@ -11,15 +11,15 @@ In order to generate a unit test coverage report, we should have sufficient unit
 You can find this project at this GitHub location.
 There are a few steps that need to be taken to produce the report.">
 <meta name="author" content="">
-<link rel="canonical" href="https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/">
-<link crossorigin="anonymous" href="/zainabed-blog/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/zainabed-blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link rel="canonical" href="https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://zainabed.github.io/zainabed-blog/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.github.io/zainabed-blog/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.github.io/zainabed-blog/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://zainabed.github.io/zainabed-blog/apple-touch-icon.png">
-<link rel="mask-icon" href="https://zainabed.github.io/zainabed-blog/safari-pinned-tab.svg">
+<link rel="icon" href="https://zainabed.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zainabed.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zainabed.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zainabed.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zainabed.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -64,13 +64,13 @@ In order to generate a unit test coverage report, we should have sufficient unit
 You can find this project at this GitHub location.
 There are a few steps that need to be taken to produce the report." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/" />
-<meta property="og:image" content="https://zainabed.github.io/zainabed-blog/image/cover.jpg" /><meta property="article:section" content="blogs" />
+<meta property="og:url" content="https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/" />
+<meta property="og:image" content="https://zainabed.com/image/cover.jpg" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2022-05-26T08:42:58-04:00" />
 <meta property="article:modified_time" content="2022-05-26T08:42:58-04:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://zainabed.github.io/zainabed-blog/image/cover.jpg" />
+<meta name="twitter:image" content="https://zainabed.com/image/cover.jpg" />
 <meta name="twitter:title" content="Maven Create Jacoco Code Coverage Report"/>
 <meta name="twitter:description" content="Introduction In this tutorial we will see how to setup the JaCoCo plugin to generate a code coverage report for a Maven project.
 In order to generate a unit test coverage report, we should have sufficient unit test cases in our application. For this tutorial, I am referring to a Maven project which has a string manipulation method.
@@ -87,13 +87,13 @@ There are a few steps that need to be taken to produce the report."/>
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blogs",
-      "item": "https://zainabed.github.io/zainabed-blog/blogs/"
+      "item": "https://zainabed.com/blogs/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Maven Create Jacoco Code Coverage Report",
-      "item": "https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/"
+      "item": "https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/"
     }
   ]
 }
@@ -111,23 +111,23 @@ There are a few steps that need to be taken to produce the report."/>
   "articleBody": "Introduction In this tutorial we will see how to setup the JaCoCo plugin to generate a code coverage report for a Maven project.\nIn order to generate a unit test coverage report, we should have sufficient unit test cases in our application. For this tutorial, I am referring to a Maven project which has a string manipulation method.\nYou can find this project at this GitHub location.\nThere are a few steps that need to be taken to produce the report.\nInstall the Maven JaCoCo plugin. Insert the following code into pom.xml.\n org.jacoco jacoco-maven-plugin 0.8.2    prepare-agent    report test  report     Add a Unit Test Create a class as StringUtil.java and add following snippet.\npackage com.zainabed.tutorials; public class StringUtil { public int findIntegerCount(String input) { if (input == null) { return 0; } int count = 0; for (int index = 0; index  input.length(); index++) { char character = input.charAt(index); if (character = 48 \u0026\u0026 character  57) { count++; } } return count; } } Next, create a unit test class for above class as StringUtilTest.java.\npackage com.zainabed.tutorials; import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.assertEquals; class StringUtilTest { @Test void should_return_count_of_numeric_value() { StringUtil stringUtil = new StringUtil(); String input = \"1name34sample;\"; assertEquals(3, stringUtil.findIntegerCount(input)); input = \"namesample\"; assertEquals(0, stringUtil.findIntegerCount(input)); } } Now execute the maven build. It will generate the code coverage report.\nmvn clean install Build will generate following code coverage result\nYou can configure different goals of the JaCoCo plugin, such as restricting code coverage percentage.\nOur application has 75% branch coverage so far. Let’s use the following snippet to configure the coverage limit by setting the execution configuration of the JaCoCo plugin and setting the value to 80%.\n coverage-check test  check     CLASS   BRANCH COVEREDRATIO 80%       Now with this configuration build will fail.\nWe can make the build pass by improving the branch code coverage. Let us update the unit test as follows.\n@Test void should_return_zero_for_empty_string() { StringUtil stringUtil = new StringUtil(); assertEquals(0, stringUtil.findIntegerCount(null)); } Build the application again.\nmvn clean install Build will result the success as shown in following diagram\nAnd the new report will include the code coverage above 80%.\nConclusion Code coverage is a useful asset to improve unit testing of applications and JaCoCo facilitates it efficiently.\n",
   "wordCount" : "396",
   "inLanguage": "en",
-  "image":"https://zainabed.github.io/zainabed-blog/image/cover.jpg","datePublished": "2022-05-26T08:42:58-04:00",
+  "image":"https://zainabed.com/image/cover.jpg","datePublished": "2022-05-26T08:42:58-04:00",
   "dateModified": "2022-05-26T08:42:58-04:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/"
+    "@id": "https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "ZAINABED",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://zainabed.github.io/zainabed-blog/favicon.ico"
+      "url": "https://zainabed.com/favicon.ico"
     }
   }
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="https://zainabed.github.io/zainabed-blog/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://zainabed.com/css/custom.css" />
     
 </head>
 <body class="" id="top">
@@ -145,8 +145,8 @@ There are a few steps that need to be taken to produce the report."/>
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://zainabed.github.io/zainabed-blog/" accesskey="h" title="ZAINABED (Alt + H)">
-                <img src="https://zainabed.github.io/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
+            <a href="https://zainabed.com/" accesskey="h" title="ZAINABED (Alt + H)">
+                <img src="https://zainabed.com/images/logo/logo-black.png" alt="logo" aria-label="logo"/></a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -172,22 +172,22 @@ There are a few steps that need to be taken to produce the report."/>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://zainabed.github.io/zainabed-blog/archives/" title="Archives">
+                <a href="https://zainabed.com/archives/" title="Archives">
                     <span><i class='fa fa-heart'></i>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.github.io/zainabed-blog/blogs/" title="Blogs">
+                <a href="https://zainabed.com/blogs/" title="Blogs">
                     <span><i class='fa fa-heart'></i>Blogs</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.github.io/zainabed-blog/categories/" title="Categories">
+                <a href="https://zainabed.com/categories/" title="Categories">
                     <span><i class='fa fa-heart'></i>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://zainabed.github.io/zainabed-blog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://zainabed.com/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span><i class='fa fa-heart'></i>Search</span>
                 </a>
             </li>
@@ -209,8 +209,8 @@ There are a few steps that need to be taken to produce the report."/>
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover_hu1a0bdba17ae16a9496756bbea68c5d53_247907_360x0_resize_q75_box.jpg 360w ,https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover_hu1a0bdba17ae16a9496756bbea68c5d53_247907_480x0_resize_q75_box.jpg 480w ,https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover_hu1a0bdba17ae16a9496756bbea68c5d53_247907_720x0_resize_q75_box.jpg 720w ,https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover_hu1a0bdba17ae16a9496756bbea68c5d53_247907_1080x0_resize_q75_box.jpg 1080w ,https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover_hu1a0bdba17ae16a9496756bbea68c5d53_247907_1500x0_resize_q75_box.jpg 1500w ,https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover.jpg 1920w" 
-            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.github.io/zainabed-blog/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover.jpg" alt="Maven Create Jacoco Code Coverage Report" 
+        <img loading="lazy" srcset="https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover_hu1a0bdba17ae16a9496756bbea68c5d53_247907_360x0_resize_q75_box.jpg 360w ,https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover_hu1a0bdba17ae16a9496756bbea68c5d53_247907_480x0_resize_q75_box.jpg 480w ,https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover_hu1a0bdba17ae16a9496756bbea68c5d53_247907_720x0_resize_q75_box.jpg 720w ,https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover_hu1a0bdba17ae16a9496756bbea68c5d53_247907_1080x0_resize_q75_box.jpg 1080w ,https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover_hu1a0bdba17ae16a9496756bbea68c5d53_247907_1500x0_resize_q75_box.jpg 1500w ,https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover.jpg 1920w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/image/cover.jpg" alt="Maven Create Jacoco Code Coverage Report" 
             width="1920" height="1280">
         
 </figure>
@@ -352,7 +352,7 @@ There are a few steps that need to be taken to produce the report."/>
       <figcaption class="author-summary">
           <div class="quote">“</div>
           <span>I am the author of the zainabed blog. I am a software developer who enjoys Java, Angular, and open source projects.</span>  
-          <h3 class="author-title"><a href="https://zainabed.github.io/zainabed-blog/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
+          <h3 class="author-title"><a href="https://zainabed.com/authors/zainul/" class="author-title">Zainul Abdin</a></h3>
       </figcaption>
     </figure>
     
@@ -417,7 +417,7 @@ There are a few steps that need to be taken to produce the report."/>
             <div class="card-left">
                 
                     <div class="card card-overlay">
-    <div class="card-content card-content-wrapper" style="background-image: url(/zainabed-blog/2022/06/log4j-how-to-log-message-to-console.html/image/cover.jpg); background-size: cover;">
+    <div class="card-content card-content-wrapper" style="background-image: url(/2022/06/log4j-how-to-log-message-to-console.html/image/cover.jpg); background-size: cover;">
         <div class="card-content-overlay">
             
                     <span>Java</span>
@@ -427,7 +427,7 @@ There are a few steps that need to be taken to produce the report."/>
                 
                     <span class="card-author">Zainul</span>
                 
-            <h4><a href="/zainabed-blog/2022/06/log4j-how-to-log-message-to-console.html/">Log4j How to Log Message to Console</a></h4>
+            <h4><a href="/2022/06/log4j-how-to-log-message-to-console.html/">Log4j How to Log Message to Console</a></h4>
         </div>
     </div>
 </div>
@@ -440,13 +440,13 @@ There are a few steps that need to be taken to produce the report."/>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/zainabed-blog/2022/05/getting-started-with-log4j.html/image/cover.png); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/2022/05/getting-started-with-log4j.html/image/cover.png); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Java</label>
             
         
-        <h4><a href="/zainabed-blog/2022/05/getting-started-with-log4j.html/">Getting Started With Log4j</a></h4>
+        <h4><a href="/2022/05/getting-started-with-log4j.html/">Getting Started With Log4j</a></h4>
         <div class="card-date">May 30, 2022 </div>
             
                 <div class="card-author">Zainul</div>
@@ -456,13 +456,13 @@ There are a few steps that need to be taken to produce the report."/>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover.jpg); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/2022/04/spring-boot-resttemplate-guide-with-example.html/image/cover.jpg); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Java</label>
             
         
-        <h4><a href="/zainabed-blog/2022/04/spring-boot-resttemplate-guide-with-example.html/">Spring Boot Resttemplate Guide With Example</a></h4>
+        <h4><a href="/2022/04/spring-boot-resttemplate-guide-with-example.html/">Spring Boot Resttemplate Guide With Example</a></h4>
         <div class="card-date">April 22, 2022 </div>
             
                 <div class="card-author">Zainul</div>
@@ -472,13 +472,13 @@ There are a few steps that need to be taken to produce the report."/>
                 
                     <div class="card">
     
-    <div class="card-image" style="background-image: url(/zainabed-blog/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/image/cover.jpg); background-size: cover;"></div>
+    <div class="card-image" style="background-image: url(/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/image/cover.jpg); background-size: cover;"></div>
     <div class="card-content">
         
                 <label>Spring Boot</label>
             
         
-        <h4><a href="/zainabed-blog/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/">How to Enable Sql Logs in Spring Boot Application</a></h4>
+        <h4><a href="/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/">How to Enable Sql Logs in Spring Boot Application</a></h4>
         <div class="card-date">April 8, 2022 </div>
             
                 <div class="card-author">Zainul</div>
@@ -499,29 +499,32 @@ There are a few steps that need to be taken to produce the report."/>
         <div class="footer-left">
             <ul>
                 
-                <li><a href="/blogs">Blogs</a></li>
+                <li><a href='/blogs'>Blogs</a></li>
             </ul>
         </div>
         <div class="footer-center">
-            <form action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <h2>Get In Touch</h2>
-            
-                    <p>Enter your email to get inspiration, trending solution and latest blogs and articles.</p>
-                    
+            <form
+                action="https://zainabed.us8.list-manage.com/subscribe/post?u=b73e39b6311715d589d67af85&amp;id=ffb528a5dd"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate>
+                <h2>Get In Touch</h2>
+
+                <p>Enter your email to get inspiration, trending solution and latest blogs and articles.</p>
+
                 <input type="email" value="" name="EMAIL" class="required email" placeholder="Email Address">
-                <input type="submit" value="Subscribe" name="subscribe"  class="button button--accent ">
-            
-                
+                <input type="submit" value="Subscribe" name="subscribe" class="button button--accent ">
+
+
             </form>
         </div>
         <div class="footer-right">
             <ul>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
-               
+                <li><a href='/sitemap.xml'>Sitemap</a></li>
+                
             </ul>
         </div>
     </div>
-    <div class=" footer-copyright" >
+    <div class=" footer-copyright">
         <div class="left">
             <div class="social-icons">
     <a href="https://github.com/zainabed/tutorials" target="_blank" rel="noopener noreferrer me" title="Github">
@@ -536,11 +539,12 @@ There are a few steps that need to be taken to produce the report."/>
 
         </div>
         <div class=" center">
-          &copy; 2022 Copyright | <a href="https://zainabed.github.io/zainabed-blog/">ZAINABED</a> . All rights reserved
+            &copy; 2022 Copyright | <a href="https://zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
-        <div class="right"><img src="/images/logo/zainabed_logo_wc.png" alt="footer-logo"/></div>
+        <div class="right">
+        </div>
     </div>
-    
+
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -601,6 +605,5 @@ There are a few steps that need to be taken to produce the report."/>
         }
     })
 
-</script>
-</body>
+</script></body>
 </html>
