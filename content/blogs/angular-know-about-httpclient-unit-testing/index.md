@@ -13,6 +13,19 @@ categories:
 
 ## Introduction
 
+This tutorial will help you understanding the basic of unit testing for HttpClient.
+HttpClient enables the HTTP communication between client which is Angular application in this context and API server which could be Nodejs server or JAVA server application, etc.
+
+Developers are under impression that they need the working API server to test their Angular application, but it is half true rather they need to verify the HTTP client contract which could be server by the stub server.
+
+To facilitate such stub server Angular testing framework provides the ``HttpClientTestingModule`` module which incorprate with unit test and le you test the HTTP communications.
+
+## Setup
+
+To begin writing such unit test cases first we need to create the Angular service which uses HTTPClient to get the blog content from server.
+
+Use following Angular cli commands to generate service.
+
 #### Generate a module
 
 ```bash
