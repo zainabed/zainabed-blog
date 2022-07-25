@@ -7,5 +7,9 @@ authors:
 cover:
   image: "image/cover.png"
   alt: "{{ replace .Name "-" " " | title }}"
+categories: 
+  - "Blog"
+  
 ---
+
 
