@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Spring Boot on ZAINABED</title>
+    <link>https://www.zainabed.com/categories/spring-boot/</link>
+    <description>Recent content in Spring Boot on ZAINABED</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Apr 2022 09:42:03 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/categories/spring-boot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot Resttemplate Guide With Example</title>
+      <link>https://www.zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/</link>
+      <pubDate>Fri, 22 Apr 2022 09:42:03 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/</guid>
+      <description>What is RestTemplet? RestTemplate is a HTTP Client library that provides basic APIs for executing different HTTP type requests.
+RestTemplate is one of the HTTP libraries available on the market.
+The Spring Boot team designed and maintains it.
+As previously said, it is a client library, which means it may be utilised in our application as a stand-alone dependency. To utilise it, you don&amp;rsquo;t require a complete Spring boot application.</description>
+    </item>
+    
+    <item>
+      <title>How to Enable Sql Logs in Spring Boot Application</title>
+      <link>https://www.zainabed.com/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/</link>
+      <pubDate>Fri, 08 Apr 2022 10:49:12 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/</guid>
+      <description>Introduction This tutorial will demonstrate how to enable and disable SQL log statements in a Spring Boot application in order to debug SQL flow.
+Problem You will frequently need to debug the SQL statement while developing a Spring Boot application with a SQL database.
+SQL debug logs can assist you figure out what&amp;rsquo;s wrong with JPA statements and whether or not there&amp;rsquo;s a problem with database connectivity.
+Example If you&amp;rsquo;ve built custom Spring data JPA methods and need to know what SQL statement is being utilized behind them,</description>
+    </item>
+    
+  </channel>
+</rss>

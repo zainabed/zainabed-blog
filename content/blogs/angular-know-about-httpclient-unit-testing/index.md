@@ -1,7 +1,8 @@
 ---
 title: "Angular: Getting Started With Httpclient Unit Testing"
 date: 2022-07-26T01:39:41-04:00
-draft: true
+publishDate: 2022-07-26T01:39:41-04:00
+draft: false
 authors:
   - Zainul
 cover:
@@ -71,7 +72,7 @@ export class BlogService {
 }
 ```
 
-Now we have the basic building blocks of the application and now we can write unit tests to verify HTTP client communication between the Angular application and API server. 
+Now we have the basic building blocks of the application. Next, we can write unit tests to verify HTTP client communication between the Angular application and API server. 
 
 
 ## Write Unit Test Case
@@ -91,7 +92,7 @@ import {
 ### HttpClient Testing Module
 The Angular HTTP testing module provides a class named ``HttpTestingController`` which intercepts any HTTP request initiated by an Angular application. It also provides the stub response or error message to the HTTP request. 
 
-In nutsell, it creates a mock server with the desired response for a particular HTTP request. Next, create an instance of the HTTP testing controller to emulate mock http calls.
+In nutshell, it creates a mock server with the desired response for a particular HTTP request. Next, create an instance of the HTTP testing controller to emulate mock http calls.
 
 ```typescript
   beforeEach(() => {
@@ -238,5 +239,5 @@ describe('BlogService', () => {
 Developers are under the impression that they need a production-ready API server to test their Angular application, but it is a half-truth. Rather, we just need to verify the HTTP client communication, which could be served by the mock server and the Angular HTTP testing module does exactly the same.
 
 ## Source Code
-You can find source code used in this tutorial on [Github](https://github.com/zainabed/tutorials/tree/master/angularjs/getting_started) page.
+You can find source code used in this tutorial on [Github](https://github.com/zainabed/tutorials/tree/master/angular/blog-app) page.
 

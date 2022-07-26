@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Content on ZAINABED</title>
+    <link>https://www.zainabed.com/</link>
+    <description>Recent content in Content on ZAINABED</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jun 2022 13:01:43 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angular: Getting Started With Httpclient Unit Testing</title>
+      <link>https://www.zainabed.com/2022/07/angular-getting-started-with-httpclient-unit-testing.html/</link>
+      <pubDate>Tue, 26 Jul 2022 01:39:41 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/07/angular-getting-started-with-httpclient-unit-testing.html/</guid>
+      <description>Introduction This tutorial will help you understand the basics of unit testing for Angular HttpClient. Angular includes a testing module named HttpClientTestingModule that provides an HTTP mocking service, HttpTestingController to intercept the HTTP request and provide a mock response for it.
+Setup We begin by writing a service to fetch blogs from an application server.
+Use the following Angular cli commands to generate a service.
+Generate a module ng g module blogs Generate a service ng g service blogs/blog Now create the following classes inside the app folder.</description>
+    </item>
+    
+    <item>
+      <title>Log4j How to Log Message to Console</title>
+      <link>https://www.zainabed.com/2022/06/log4j-how-to-log-message-to-console.html/</link>
+      <pubDate>Wed, 01 Jun 2022 00:57:18 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/06/log4j-how-to-log-message-to-console.html/</guid>
+      <description>Introduction This tutorial will help you to log all level messages into console using Log4j plugin.
+In previous tutorial we have seen how to setup the log4j plugin in Maven and simple logging application. If you need to understand the basic of Log4J the visit previous tutorial.
+What we will do in this tutorial We saw in the previous tutorial that Log4J&amp;rsquo;s default configuration set the logging level to Error, causing it to log only errors and fatal messages to the console.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started With Log4j</title>
+      <link>https://www.zainabed.com/2022/05/getting-started-with-log4j.html/</link>
+      <pubDate>Mon, 30 May 2022 09:30:34 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/05/getting-started-with-log4j.html/</guid>
+      <description>Introduction For Java applications, Log4j is a commonly used and trusted logging tool. When an application is deployed to an application server, logging is a must-have feature.
+In this tutorial, we&amp;rsquo;ll see how to set up Log4j for a simple Java application.
+You can find all code related to this tutorial inside GitHub project.
+Why do we need Logging Logging is an important part of the application since it records user actions, input requests and output responses, error messages, and more.</description>
+    </item>
+    
+    <item>
+      <title>Maven Create Jacoco Code Coverage Report</title>
+      <link>https://www.zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/</link>
+      <pubDate>Thu, 26 May 2022 08:42:58 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/</guid>
+      <description>Introduction In this tutorial we will see how to setup the JaCoCo plugin to generate a code coverage report for a Maven project.
+In order to generate a unit test coverage report, we should have sufficient unit test cases in our application. For this tutorial, I am referring to a Maven project which has a string manipulation method.
+You can find this project at this GitHub location.
+There are a few steps that need to be taken to produce the report.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot Resttemplate Guide With Example</title>
+      <link>https://www.zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/</link>
+      <pubDate>Fri, 22 Apr 2022 09:42:03 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/</guid>
+      <description>What is RestTemplet? RestTemplate is a HTTP Client library that provides basic APIs for executing different HTTP type requests.
+RestTemplate is one of the HTTP libraries available on the market.
+The Spring Boot team designed and maintains it.
+As previously said, it is a client library, which means it may be utilised in our application as a stand-alone dependency. To utilise it, you don&amp;rsquo;t require a complete Spring boot application.</description>
+    </item>
+    
+    <item>
+      <title>How to Change a Git Commit Message</title>
+      <link>https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/</link>
+      <pubDate>Tue, 19 Apr 2022 10:30:09 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/</guid>
+      <description>Introdcution In this tutorial, we&amp;rsquo;ll go over how to fix Git commit messages that have been committed to a local or remote Git repository.
+Reason to change commit message? When working with Git, there could be several reasons to update the commit message. Some of the common reasons are as follows
+ Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira.</description>
+    </item>
+    
+    <item>
+      <title>How to Enable Sql Logs in Spring Boot Application</title>
+      <link>https://www.zainabed.com/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/</link>
+      <pubDate>Fri, 08 Apr 2022 10:49:12 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/</guid>
+      <description>Introduction This tutorial will demonstrate how to enable and disable SQL log statements in a Spring Boot application in order to debug SQL flow.
+Problem You will frequently need to debug the SQL statement while developing a Spring Boot application with a SQL database.
+SQL debug logs can assist you figure out what&amp;rsquo;s wrong with JPA statements and whether or not there&amp;rsquo;s a problem with database connectivity.
+Example If you&amp;rsquo;ve built custom Spring data JPA methods and need to know what SQL statement is being utilized behind them,</description>
+    </item>
+    
+    <item>
+      <title>Cucumber Setup Using Gradle</title>
+      <link>https://www.zainabed.com/2022/04/cucumber-setup-using-gradle.html/</link>
+      <pubDate>Tue, 05 Apr 2022 09:56:50 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/04/cucumber-setup-using-gradle.html/</guid>
+      <description>Introduction This tutorial will help you configure Cucumber into a Java project using the Gradle build tool.
+Cucumber is a test automation tool that supports Behavior-Driven Development (BDD). It is written in plain English text called &amp;ldquo;Gherkin.&amp;rdquo; Cucumber enables you to write test cases that anyone can easily understand, regardless of their technical knowledge.
+Setup First, create a Gradle project using the gradle init command.
+gradle init Complete the Gradle wizard to create a project.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started With Micronaut Using Gradle</title>
+      <link>https://www.zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/</link>
+      <pubDate>Tue, 15 Mar 2022 10:54:51 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/</guid>
+      <description>Introduction In this tutorial, we will create a Micronaut application using Gradle.
+What you will need  Java installed on your machine Gradle installed on your machine Text Editor  Steps First create your project folder, we will make a folder called &amp;ldquo;micronaut-project&amp;rdquo; for this tutorial.
+The second step is to add the build.gradle file inside the project folder.
+This will contain a script to build the Micronaut application.
+Now update the build.</description>
+    </item>
+    
+    <item>
+      <title>Abstract Factory Design Pattern Analysis</title>
+      <link>https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/</link>
+      <pubDate>Fri, 24 Apr 2020 11:01:00 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/</guid>
+      <description>What is the Abstract Factory design pattern? The intent or definition of Abstract Factory is
+ “Provide an interface for creating families of related or dependent objects without specifying their concrete classes”  It&amp;rsquo;s a bit of a complicated definition, so we&amp;rsquo;ll need to break it down into meaningful chunks to understand it.
+1. &amp;ldquo;Provide an interface&amp;rdquo; When we discuss the Abstract Factory, we are referring to interfaces rather than abstract classes.</description>
+    </item>
+    
+    <item>
+      <title>Angularjs Tutorials Bootstrap</title>
+      <link>https://www.zainabed.com/2015/03/angularjs-tutorials-bootstrap.html/</link>
+      <pubDate>Wed, 04 Mar 2015 11:17:01 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2015/03/angularjs-tutorials-bootstrap.html/</guid>
+      <description>Introduction Every application starts with bootstrap process which initialize application and wire it other with dependencies and configurations.
+AngularJs is not different from other application. It also starts application with bootstrap process.
+Following operation happens inside AngularJs bootstrap process.
+ Load application module. Create dependency injector and load dependencies. Compile HTML and create scope for application.  All these steps happens inside angular.js scripting file. therefore we need to include it first.</description>
+    </item>
+    
+    <item>
+      <title>Mongodb Tutorials Aggregation Framework</title>
+      <link>https://www.zainabed.com/2014/11/mongodb-tutorials-aggregation-framework.html/</link>
+      <pubDate>Thu, 27 Nov 2014 08:52:24 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/11/mongodb-tutorials-aggregation-framework.html/</guid>
+      <description>Introduction MongoDB Aggregation Framework groups set of documents together and performs certain operation on this grouped documents and returns results in the form of documents. MongoDB aggregation answer to those query which requires grouping of documents.
+Aggregation framework works on three type of model
+ Aggregation pipeline Map Reduce Single Purpose Aggregation Operations  Now let see how MongoDB Aggregation Framework works with simple example.
+Suppose you are MongoDB application developer in a respected company and you have been given a MongoDB database that holds information about human population which is distributed according to cities and their states.</description>
+    </item>
+    
+    <item>
+      <title>Php Tutorials Autoload Php Classes</title>
+      <link>https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/</link>
+      <pubDate>Sun, 02 Nov 2014 05:33:18 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/</guid>
+      <description>Introduction With some examples, this tutorial post will teach the PHP autoloader and namespace concepts.
+What is Autoloading in PHP PHP autoload&amp;rsquo;s primary function is to load PHP files into the application context. The import statement is the default method to include PHP file into context.
+However, we may avoid the issue by using the PHP autoload capability to autoload essential PHP files, which keeps your code clean and composable.</description>
+    </item>
+    
+    <item>
+      <title>Json Tutorials Getting Started</title>
+      <link>https://www.zainabed.com/2014/10/json-tutorials-getting-started.html/</link>
+      <pubDate>Sat, 25 Oct 2014 05:32:31 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/10/json-tutorials-getting-started.html/</guid>
+      <description>Introduction JSON is widely accepted text formatted structured data. JSON stands for &amp;ldquo;JavaScript Object Notation&amp;rdquo;.
+In general JSON can represent
+ Object of database record. Object to represent a list of HTML elements. Result of search query. Response of an Ajax call.  Here you can see JSON is used in many different areas and for many different scenarios. This means it has simple data structure. most of programming languages adopt it and it can flow easily from one connection to another.</description>
+    </item>
+    
+    <item>
+      <title>Doctrine2 Installation Configuration</title>
+      <link>https://www.zainabed.com/2014/10/doctrine2-installation-configuration.html/</link>
+      <pubDate>Thu, 23 Oct 2014 05:31:23 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/10/doctrine2-installation-configuration.html/</guid>
+      <description>Introduction In this tutorial, we will look at how to install Doctrine2 in your PHP project.
+This post will make use of Doctrine2&amp;rsquo;s Composer tool.
+Installation First, create a directory for your project.
+mkdir zainabed cd zainabed Now, create a composer.json file.
+vi composer.json Then, add the following repository information to it.
+{ &amp;#34;require&amp;#34;: { &amp;#34;doctrine/orm&amp;#34;: &amp;#34;*&amp;#34; } } You are now ready to use Composer to install Doctrine, but first you must install Composer on your machine.</description>
+    </item>
+    
+    <item>
+      <title>Twig Tutorials Install and Configure</title>
+      <link>https://www.zainabed.com/2014/10/twig-tutorials-install-and-configure.html/</link>
+      <pubDate>Thu, 16 Oct 2014 05:30:27 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/10/twig-tutorials-install-and-configure.html/</guid>
+      <description>Introdcution In this tutorial, we&amp;rsquo;ll look at how to install Twig within your PHP project and thereafter configure it so that we can create and use a Twig template inside our PHP web application.
+Later on, we&amp;rsquo;ll see a simple Twig template example that displays a Welcome to Twig template message.
+Let&amp;rsquo;s take it one step at a time.
+Installation The Twig template can be installed using Composer, Git, or PEAR.</description>
+    </item>
+    
+    <item>
+      <title>Ssh Public Key for Github and Bitbucket</title>
+      <link>https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/</link>
+      <pubDate>Tue, 14 Oct 2014 08:31:40 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/</guid>
+      <description>Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.
+But first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual.</description>
+    </item>
+    
+    <item>
+      <title>Symfony Tutorials Event Dispatcher</title>
+      <link>https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/</link>
+      <pubDate>Fri, 03 Oct 2014 05:28:55 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/</guid>
+      <description>Introduction Symfony EventDispatcher is object which interacts with different set of objects when certain event happens.
+To illustrate Event Dispatcher definition let’s consider the online shopping website example.
+suppose you want to purchase a mobile from online shopping website , but unfortunately that mobile is out of stock.
+Then you subscribe into online shopping website for this mobile availability.
+When mobile comes in stock, online shopping website notifies you about mobile phone’s availability via email.</description>
+    </item>
+    
+    <item>
+      <title>Drupal 8 Tutorials Custom Module</title>
+      <link>https://www.zainabed.com/2014/09/drupal-8-tutorials-custom-module.html/</link>
+      <pubDate>Fri, 19 Sep 2014 05:28:09 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/09/drupal-8-tutorials-custom-module.html/</guid>
+      <description>Introduction Custom Module development in Drupal 8 is very simple. It may looks very difficult for developer who has Drupal 7 experience or nothing at all.
+This tutorial will show easy steps and helps you to create custom module within few minutes.
+ Note: Content or example of this tutorial may change according to Drupal 8 version and its release.
+ This tutorial is divided into three small sections.
+In first section of this tutorial we will see what directory structure we need to create for a custom module.</description>
+    </item>
+    
+    <item>
+      <title>Jax Rs Tutorilas Hello World Example</title>
+      <link>https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</link>
+      <pubDate>Tue, 29 Jul 2014 05:27:17 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</guid>
+      <description>Introduction Following is simple JAX-RS tutorial, which sends “Hello World” text as response string using JAX-RS API and Jersey implementation. Technologies and Tools used in this article:
+ JDK Eclipse Tomcat Maven Jersey 1.8  Create Maven Web Project Create a Maven web project and name it &amp;ldquo;helloworld&amp;rdquo; .
+ File -&amp;gt; New -&amp;gt; Other -&amp;gt; Maven Project -&amp;gt; Next Select maven-archetype-webapp Select Next Type Group Id, Artifact Id and Package name And select Finish  Add Project Dependencies Add Jersey repository using Maven.</description>
+    </item>
+    
+    <item>
+      <title>Sass Tutorials</title>
+      <link>https://www.zainabed.com/2014/07/sass-tutorials.html/</link>
+      <pubDate>Sun, 27 Jul 2014 05:26:34 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/07/sass-tutorials.html/</guid>
+      <description>Introduction Sass (Syntactically Awesome Stylesheets) is scripting language which produces Cascading Style Sheets (CSS).
+Sass is compatible with all CSS version and has assorted features. It is open source and developed in Ruby.
+What does Sass do In simple terms by using Sass and its features we can create robust and large Style sheet with less effort and in less time.
+How to Install Sass Sass requires Ruby, so if you are using Windows System then you need to install Ruby first.</description>
+    </item>
+    
+    <item>
+      <title>Jax Rs Tutorial Rest Api Using Java</title>
+      <link>https://www.zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</link>
+      <pubDate>Thu, 24 Jul 2014 05:25:34 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</guid>
+      <description>Introdcution JAX-RS is API specification for RESTful web services using Java. RESTful web services is implementation of REST (Representational State Transfer) which is architectural design for distributed system or in general we can say JAX-RS is a set of APIs to develop REST service.
+This is a brief introduction about REST and JAX-RS. You can find more information on REST on Wiki and JAX-RS Official Site.
+What is REST  Representational state transfer is an abstraction of the architecture of the World Wide Web.</description>
+    </item>
+    
+    <item>
+      <title>Mongodb Crud Operations Using Java</title>
+      <link>https://www.zainabed.com/2014/06/mongodb-crud-operations-using-java.html/</link>
+      <pubDate>Tue, 03 Jun 2014 05:24:31 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/06/mongodb-crud-operations-using-java.html/</guid>
+      <description>Introduction This article will show you how to use Java to perform CRUD operations on MongoDB records.
+If you&amp;rsquo;re new to MongoDB, we recommend starting with the Getting Started With MongoDB tutorial.
+To begin, we&amp;rsquo;ll establish a Person and Person Images table (a collection in MongoDB) to make CRUD operations in MongoDB easier.
+Define Data Structure The following is the data structure of the Person and Person Images table (collection in MongoDB).</description>
+    </item>
+    
+    <item>
+      <title>Getting Started With Elasticsearch</title>
+      <link>https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/</link>
+      <pubDate>Thu, 29 May 2014 05:23:12 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/</guid>
+      <description>Introduction Elasticsearch is open source search system based of Apache Lucene. this is a brief introduction, you can find more information on Elasticsearch Official Site or Wiki.
+What are features of Elasticsearch Here are list of features of Elasticsearch.
+ Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source  How to install ElasticSearch Download the latest version from Elastic.</description>
+    </item>
+    
+    <item>
+      <title>Angularjs Tutorial Getting Started</title>
+      <link>https://www.zainabed.com/2014/05/angularjs-tutorial-getting-started.html/</link>
+      <pubDate>Thu, 22 May 2014 05:22:13 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/05/angularjs-tutorial-getting-started.html/</guid>
+      <description>Introduction This tutorial will help you to create a dynamic web application using power of AngularJs.
+What is AngularJs AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.
+AngularJs follows MVC pattern to separate out model from view and manage it by controller.
+See this image
+Goal of using AngularJs is to convert static HTML template to dynamic (Angular) template.</description>
+    </item>
+    
+    <item>
+      <title>MongoDb Getting Started With Crud</title>
+      <link>https://www.zainabed.com/2013/12/mongodb-getting-started-with-crud.html/</link>
+      <pubDate>Sun, 22 Dec 2013 03:10:58 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2013/12/mongodb-getting-started-with-crud.html/</guid>
+      <description>Introduction MongoDB is a No-SQL open source database system that stores information in documents.
+MongoDB was created with excellent performance and accessibility in mind.
+A document is a collection of fields and value pair combinations that are stored in BSON (binary representation of JSON records), which is the native data type in most languages.
+MongoDB uses collections to hold groups of documents.
+Now let’s see the basic operations that can be handled in MongoDB.</description>
+    </item>
+    
+    
+    
+  </channel>
+</rss>

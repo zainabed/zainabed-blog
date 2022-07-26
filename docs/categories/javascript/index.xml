@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JavaScript on ZAINABED</title>
+    <link>https://www.zainabed.com/categories/javascript/</link>
+    <description>Recent content in JavaScript on ZAINABED</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Mar 2015 11:17:01 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angularjs Tutorials Bootstrap</title>
+      <link>https://www.zainabed.com/2015/03/angularjs-tutorials-bootstrap.html/</link>
+      <pubDate>Wed, 04 Mar 2015 11:17:01 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2015/03/angularjs-tutorials-bootstrap.html/</guid>
+      <description>Introduction Every application starts with bootstrap process which initialize application and wire it other with dependencies and configurations.
+AngularJs is not different from other application. It also starts application with bootstrap process.
+Following operation happens inside AngularJs bootstrap process.
+ Load application module. Create dependency injector and load dependencies. Compile HTML and create scope for application.  All these steps happens inside angular.js scripting file. therefore we need to include it first.</description>
+    </item>
+    
+    <item>
+      <title>Angularjs Tutorial Getting Started</title>
+      <link>https://www.zainabed.com/2014/05/angularjs-tutorial-getting-started.html/</link>
+      <pubDate>Thu, 22 May 2014 05:22:13 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2014/05/angularjs-tutorial-getting-started.html/</guid>
+      <description>Introduction This tutorial will help you to create a dynamic web application using power of AngularJs.
+What is AngularJs AngularJs is javascript MVC framework (maintained by Google) which molds static HTML application to dynamic web application. That was a brief introduction, you can find more information on Wiki and AngularJS Site.
+AngularJs follows MVC pattern to separate out model from view and manage it by controller.
+See this image
+Goal of using AngularJs is to convert static HTML template to dynamic (Angular) template.</description>
+    </item>
+    
+  </channel>
+</rss>
