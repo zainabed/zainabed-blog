@@ -1,30 +1,27 @@
 ---
-title: "Angular Know About Httpclient Unit Testing"
-date: 2022-06-21T01:39:41-04:00
+title: "Angular: Getting Started With Httpclient Unit Testing"
+date: 2022-07-26T01:39:41-04:00
 draft: true
 authors:
   - Zainul
 cover:
-  image: "image/cover.png"
-  alt: "Angular Know About Httpclient Unit Testing"
+  image: "image/cover.jpg"
+  alt: "Angular: Getting Started With Httpclient Unit Testing"
 categories: 
   - "Blog"
 ---
 
 ## Introduction
 
-This tutorial will help you understanding the basic of unit testing for HttpClient.
-HttpClient enables the HTTP communication between client which is Angular application in this context and API server which could be Nodejs server or JAVA server application, etc.
+This tutorial will help you understand the basics of unit testing for Angular HttpClient. Angular includes a testing module named ``HttpClientTestingModule`` that provides an HTTP mocking service, ``HttpTestingController`` to intercept the HTTP request and provide a mock response for it.
 
-Developers are under impression that they need the working API server to test their Angular application, but it is half true rather they need to verify the HTTP client contract which could be server by the stub server.
 
-To facilitate such stub server Angular testing framework provides the ``HttpClientTestingModule`` module which incorprate with unit test and le you test the HTTP communications.
 
 ## Setup
 
-To begin writing such unit test cases first we need to create the Angular service which uses HTTPClient to get the blog content from server.
+We begin by writing a service to fetch blogs from an application server.
 
-Use following Angular cli commands to generate service.
+Use the following Angular cli commands to generate a service.
 
 #### Generate a module
 
@@ -38,8 +35,10 @@ ng g module blogs
 ng g service blogs/blog
 ```
 
-## Blog model class
+Now create the following classes inside the app folder.
 
+### Blog model class
+#### blog.ts
 ```typescript
 export class Blog {
     title: string = "";
@@ -48,8 +47,8 @@ export class Blog {
     author: string = "";
 }
 ```
-## Service
-
+### Blog Service
+#### blog.service.ts
 ```typescript
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -72,14 +71,15 @@ export class BlogService {
 }
 ```
 
-
-## HttpClient Testing Module
-Angular HTTp testing module provides a class named ``HttpTestingController`` which intercepts the any HTTP request initiated by Angular application.
-It also provides the stub response or error message to the HTTP request.
-In nutsell it creates a mock server with desired response for a particular HTTP reqeust.
+Now we have the basic building blocks of the application and now we can write unit tests to verify HTTP client communication between the Angular application and API server. 
 
 
-Import the Http testing module and controller as
+## Write Unit Test Case
+
+Create a unit test case file as follows and import the HTTP testing module and its controller.
+
+#### blog.service.spec.ts
+
 
 ```typescript
 import {
@@ -87,9 +87,11 @@ import {
   HttpTestingController} from '@angular/common/http/testing'
 ```
 
-``HttpClientTestingModule`` is HTTP Testing module which injects the ``HttpTestingController`` as a service.
 
-Next, Create instance of Http testing controller to emulate fake http calls.
+### HttpClient Testing Module
+The Angular HTTP testing module provides a class named ``HttpTestingController`` which intercepts any HTTP request initiated by an Angular application. It also provides the stub response or error message to the HTTP request. 
+
+In nutsell, it creates a mock server with the desired response for a particular HTTP request. Next, create an instance of the HTTP testing controller to emulate mock http calls.
 
 ```typescript
   beforeEach(() => {
@@ -101,9 +103,9 @@ Next, Create instance of Http testing controller to emulate fake http calls.
   });
 ```
 
-## Write Service Unit Test Case
 
-First, write test case to execute the service call
+
+## Unit Test For Success Response
 
 ```typescript
 it('Should return blogs from Http Get call.', () => {
@@ -116,22 +118,47 @@ it('Should return blogs from Http Get call.', () => {
       });
 });
 ```
-This will not execute a Http GET request as we have created mock Http Controller.
-All HTTP requests will be respond by this Test Controller.
+The above snippet executes the blog service, then accepts the response and verifies it. 
+As stated earlier, HTTP calls are intercepted by ``HttpTestingController`` and return a successful response with a 200 status code.
 
-In order to return a success response we need to configure the Test controller to return
-200 status response.
+### Create success response
 
-## Success Response
-
-First we need to create a mock Http request handler which will intercept the request iniciated for ``http://localhost:8090/api/blogs`` URL.
+First, we need to create a mock HTTP request handler which will intercept the request originated for ``http://localhost:8090/api/blogs`` URL.
 
 ```typescript
-const mockHttp = httpCtrl.expectOne(BlogService.API_ENDPOINT);
+const mockHttp = httpCtrl.expectOne('http://localhost:8090/api/blogs');
 const httpRequest = mockHttp.request;
 ```
 
+This will acquire the handler for the HTTP request. We can use it to validate the request's method type and send a mock response.
+
+```typescript
+  expect(httpRequest.method).toEqual("GET");
+  mockHttp.flush(BLOG_RESPONSE);
+```
+
 ## Error Response
+
+The unit test case for HTTP error is shown in the snippet below.
+
+```typescript
+it('Should return error message for Blog Http request.', ()=>{
+    service.fetchBlogs()
+    .subscribe({
+        error: (error) => {
+          expect(error).toBeTruthy();
+          expect(error.status).withContext('status').toEqual(401);
+        }
+    });
+
+    const mockHttp = httpCtrl.expectOne(BlogService.API_ENDPOINT);
+    const httpRequest = mockHttp.request;
+
+    mockHttp.flush("error request", { status: 401, statusText: 'Unathorized access' });
+  });
+```
+
+Here we flush the error message with an HTTP 401 status code. And while subscribing, we bind the request to the error block and verify it.
 
 ## Complete Unit Test
 
@@ -188,7 +215,28 @@ describe('BlogService', () => {
 
     mockHttp.flush(BLOG_RESPONSE);
   });
+
+  it('Should return error message for Blog Http request.', () => {
+    service.fetchBlogs()
+    .subscribe({
+        error: (error) => {
+          expect(error).toBeTruthy();
+          expect(error.status).withContext('status').toEqual(401);
+        }
+    });
+
+    const mockHttp = httpCtrl.expectOne(BlogService.API_ENDPOINT);
+    const httpRequest = mockHttp.request;
+
+    mockHttp.flush("error request", { status: 401, statusText: 'Unathorized access' });
+  });
 });
+
 
 ```
 ## Conclusion
+Developers are under the impression that they need a production-ready API server to test their Angular application, but it is a half-truth. Rather, we just need to verify the HTTP client communication, which could be served by the mock server and the Angular HTTP testing module does exactly the same.
+
+## Source Code
+You can find source code used in this tutorial on [Github](https://github.com/zainabed/tutorials/tree/master/angularjs/getting_started) page.
+
