@@ -4,7 +4,56 @@
   
   <url>
     <loc>https://www.zainabed.com/authors/zainul/</loc>
-    <lastmod>2022-07-26T01:39:41-04:00</lastmod>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/angular/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/authors/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/blogs/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/08/how-angular-supports-mutation-testing-with-example.html/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/javascript/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/stryker/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -17,28 +66,7 @@
   </url>
   
   <url>
-    <loc>https://www.zainabed.com/authors/</loc>
-    <lastmod>2022-07-26T01:39:41-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zainabed.com/categories/blog/</loc>
-    <lastmod>2022-07-26T01:39:41-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zainabed.com/blogs/</loc>
-    <lastmod>2022-07-26T01:39:41-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zainabed.com/categories/</loc>
     <lastmod>2022-07-26T01:39:41-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -171,21 +199,7 @@
   </url>
   
   <url>
-    <loc>https://www.zainabed.com/categories/angular/</loc>
-    <lastmod>2015-03-04T11:17:01-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zainabed.com/2015/03/angularjs-tutorials-bootstrap.html/</loc>
-    <lastmod>2015-03-04T11:17:01-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zainabed.com/categories/javascript/</loc>
     <lastmod>2015-03-04T11:17:01-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
