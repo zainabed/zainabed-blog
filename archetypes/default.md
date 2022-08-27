@@ -9,5 +9,10 @@ cover:
   alt: "{{ replace .Name "-" " " | title }}"
 categories: 
   - "Blog"
+<<<<<<< HEAD
+  
+=======
+>>>>>>> d9db13a0ec8e377fbf1190c6d2488f2232e9782e
 ---
+
 
