@@ -6,7 +6,19 @@
     <description>Recent content on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jun 2022 13:01:43 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/authors/zainul/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jul 2022 01:39:41 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/authors/zainul/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angular: Getting Started With Httpclient Unit Testing</title>
+      <link>https://www.zainabed.com/2022/07/angular-getting-started-with-httpclient-unit-testing.html/</link>
+      <pubDate>Tue, 26 Jul 2022 01:39:41 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/2022/07/angular-getting-started-with-httpclient-unit-testing.html/</guid>
+      <description>Introduction This tutorial will help you understand the basics of unit testing for Angular HttpClient. Angular includes a testing module named HttpClientTestingModule that provides an HTTP mocking service, HttpTestingController to intercept the HTTP request and provide a mock response for it.
+Setup We begin by writing a service to fetch blogs from an application server.
+Use the following Angular cli commands to generate a service.
+Generate a module ng g module blogs Generate a service ng g service blogs/blog Now create the following classes inside the app folder.</description>
+    </item>
+    
     <item>
       <title>Content</title>
       <link>https://www.zainabed.com/</link>
