@@ -1,7 +1,7 @@
 ---
 title: "How  Angular Supports Mutation Testing With Example"
 date: 2022-08-26T12:51:07-04:00
-draft: true
+draft: false
 authors:
   - Zainul
 cover:

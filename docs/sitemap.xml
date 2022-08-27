@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.zainabed.com/authors/zainul/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/angular/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/authors/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/blogs/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/08/how-angular-supports-mutation-testing-with-example.html/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/javascript/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/stryker/</loc>
+    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/07/angular-getting-started-with-httpclient-unit-testing.html/</loc>
+    <lastmod>2022-07-26T01:39:41-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/blog/</loc>
+    <lastmod>2022-07-26T01:39:41-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/</loc>
+    <lastmod>2022-06-10T13:01:43-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/java/</loc>
+    <lastmod>2022-06-01T00:57:18-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/06/log4j-how-to-log-message-to-console.html/</loc>
+    <lastmod>2022-06-01T00:57:18-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/05/getting-started-with-log4j.html/</loc>
+    <lastmod>2022-05-30T09:30:34-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/maven/</loc>
+    <lastmod>2022-05-26T08:42:58-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/</loc>
+    <lastmod>2022-05-26T08:42:58-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/spring-boot/</loc>
+    <lastmod>2022-04-22T09:42:03-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/04/spring-boot-resttemplate-guide-with-example.html/</loc>
+    <lastmod>2022-04-22T09:42:03-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/git/</loc>
+    <lastmod>2022-04-19T10:30:09-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/</loc>
+    <lastmod>2022-04-19T10:30:09-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/</loc>
+    <lastmod>2022-04-08T10:49:12-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/cucumber/</loc>
+    <lastmod>2022-04-05T09:56:50-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/04/cucumber-setup-using-gradle.html/</loc>
+    <lastmod>2022-04-05T09:56:50-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/gradle/</loc>
+    <lastmod>2022-04-05T09:56:50-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/</loc>
+    <lastmod>2022-03-15T10:54:51-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/micronaut/</loc>
+    <lastmod>2022-03-15T10:54:51-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/</loc>
+    <lastmod>2020-04-24T11:01:00-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/design-pattern/</loc>
+    <lastmod>2020-04-24T11:01:00-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2015/03/angularjs-tutorials-bootstrap.html/</loc>
+    <lastmod>2015-03-04T11:17:01-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/mongodb/</loc>
+    <lastmod>2014-11-27T08:52:24-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/11/mongodb-tutorials-aggregation-framework.html/</loc>
+    <lastmod>2014-11-27T08:52:24-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/php/</loc>
+    <lastmod>2014-11-02T05:33:18-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/11/php-tutorials-autoload-php-classes.html/</loc>
+    <lastmod>2014-11-02T05:33:18-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/10/json-tutorials-getting-started.html/</loc>
+    <lastmod>2014-10-25T05:32:31-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/10/doctrine2-installation-configuration.html/</loc>
+    <lastmod>2014-10-23T05:31:23-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/10/twig-tutorials-install-and-configure.html/</loc>
+    <lastmod>2014-10-16T05:30:27-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/</loc>
+    <lastmod>2014-10-14T08:31:40-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/10/symfony-tutorials-event-dispatcher.html/</loc>
+    <lastmod>2014-10-03T05:28:55-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/09/drupal-8-tutorials-custom-module.html/</loc>
+    <lastmod>2014-09-19T05:28:09-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</loc>
+    <lastmod>2014-07-29T05:27:17-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/jax-rs/</loc>
+    <lastmod>2014-07-29T05:27:17-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/sass/</loc>
+    <lastmod>2014-07-27T05:26:34-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/07/sass-tutorials.html/</loc>
+    <lastmod>2014-07-27T05:26:34-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</loc>
+    <lastmod>2014-07-24T05:25:34-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/06/mongodb-crud-operations-using-java.html/</loc>
+    <lastmod>2014-06-03T05:24:31-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/</loc>
+    <lastmod>2014-05-29T05:23:12-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2014/05/angularjs-tutorial-getting-started.html/</loc>
+    <lastmod>2014-05-22T05:22:13-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/authors/zainu/</loc>
+    <lastmod>2014-05-22T05:22:13-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/2013/12/mongodb-getting-started-with-crud.html/</loc>
+    <lastmod>2013-12-22T03:10:58-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/archives/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/search/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
