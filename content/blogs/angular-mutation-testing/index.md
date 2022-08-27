@@ -1,24 +1,25 @@
 ---
-title: "Angular Mutation Testing"
-date: 2022-07-17T12:51:07-04:00
+title: "How Angular Supports Mutation Testing"
+date: 2022-08-26T12:51:07-04:00
 draft: true
 authors:
   - Zainul
 cover:
-  image: "image/cover.png"
+  image: "image/angular-mutation-cover.jpg"
   alt: "Angular Mutation Testing"
 categories: 
   - "Angular"
   - "JavaScript"
+  - "Stryker"
 ---
 
 ## Introduction
 
 This blog post is designed to serve as a comprehensive guide for developers looking to apply mutation testing into their `Angular` application.
 
-If you are that developer, you will be able to carry out mutation testing with ease by following the working configurations and examples provided below..
+If you are that developer, you will be able to carry out mutation testing with ease by following the working configurations and examples provided below.
 
-If you just happened onto this tutorial, you will gain a decent understanding of mutation testing. Please see [here] for a definition of the mutation test.
+If you just happened onto this tutorial, you will gain a decent understanding of mutation testing. Please see [here](#what-is-mutation-testing) for a definition of the mutation test.
 
 ##
  
@@ -33,7 +34,7 @@ If you just happened onto this tutorial, you will gain a decent understanding of
 #### Install
 The first step is to install `stryker-cli` to initiate the Stryker project inside the Angular application.
 
-Run te following command to install Stryker-cli.
+Run the following command to install Stryker-cli.
 
 ```bash
 npm install --global stryker-cli
@@ -94,7 +95,7 @@ export function validateName(name: string): boolean {
 }
 ```
 
-and a fully converged unit test for the above method is
+and 100% code coverage unit test for the above method is
 
 #### mutation.example.spec.ts
 ```javascript
@@ -189,7 +190,7 @@ Mutation testing is specialised software that improves unit testing in any progr
 
 If you have a condition statement like `a > b` then it changes it to `a < b`.
 
-Now your unit tests should handle such scenarios. If the test case fails, then it implies that the test case has eliminated the mutation from the code. If it doesn't, then there is a need for improvement in test cases. We will see the examples to understand it more clearly.
+Now your unit tests should handle such scenarios. If the test case fails, then it implies that the test case has eliminated the mutation from the code. If it doesn't, then there is a need for improvement in test cases.
 
 ## Stryker Mutation Framework
 As mentioned earlier, every language has specialised software for mutation testing. For Angular, it is Stryker software.
@@ -199,7 +200,7 @@ For more information, go to its official [website](https://stryker-mutator.io/).
 
 ## Conclusion
 
-Mutation testing can also be supported by a sophisticated framework such as Angular. Though it reduces productivity since mutation test execution is slow, it improves application sustainability, which we need in the long term.
+Mutation testing can also be supported by a sophisticated framework such as Angular. Though it reduces productivity since mutation test execution is slow, but it improves application sustainability, which we need in the long term.
 
 ------
 
@@ -207,8 +208,10 @@ Mutation testing can also be supported by a sophisticated framework such as Angu
 * Angular: 13.2.7
 * Node: 16.14.0
 * Typescript: 4.5.5
-* Stryker: 
+* Stryker: 6.1.2
 
 -------
 
 ## Source Code
+
+You can find source code used in this tutorial on [Github](https://github.com/zainabed/tutorials/tree/master/angular/blog-app) page.
