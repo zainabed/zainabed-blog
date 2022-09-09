@@ -48,7 +48,7 @@ a:hover {
 }
 
 .container {
-    max-width: calc(100vw - var(--gap) * 20);
+    max-width: calc(100vw - var(--gap) * 10);
     display: flex;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     margin: 0 auto;
@@ -76,7 +76,7 @@ a:hover {
     height: 84px;
     display: flex;
     justify-content: center;
-    max-width: calc(100vw - var(--gap) * 20);
+    max-width: calc(100vw - var(--gap) * 10);
     margin: 0 auto 36px auto;
 }
 
