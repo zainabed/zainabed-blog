@@ -18,13 +18,20 @@ menu:
       name: Search
       pre: <i class='fa fa-heart'></i>
       url: /search/
-      weight: -110
+      weight: -10
       params:
         class: highlight-menu-item
     - identifier: Blogs
       name: Blogs
       pre: <i class='fa fa-heart'></i>
       url: /blogs/
+      weight: -120
+      params:
+        class: highlight-menu-item
+    - identifier: Tutorials
+      name: Tutorials
+      pre: <i class='fa fa-heart'></i>
+      url: /tutorials/
       weight: -110
       params:
         class: highlight-menu-item
@@ -32,14 +39,14 @@ menu:
       name: Categories
       pre: <i class='fa fa-heart'></i>
       url: /categories/
-      weight: -110
+      weight: -100
       params:
         class: highlight-menu-item
     - identifier: Archives
       name: Archives
       pre: <i class='fa fa-heart'></i>
       url: /archives/
-      weight: -110
+      weight: -70
       params:
         class: highlight-menu-item
 permalinks:
