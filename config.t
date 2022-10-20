@@ -24,6 +24,14 @@ custom_css = ["css/custom.css"]
   [menu.main.params]
     class = 'highlight-menu-item'
 [[menu.main]]
+  identifier = 'Tutorials'
+  name = 'Tutorials'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/tutorials/'
+  weight = -110
+  [menu.main.params]
+    class = 'highlight-menu-item'
+[[menu.main]]
   identifier = 'Categories'
   name = 'Categories'
   pre = "<i class='fa fa-heart'></i>"
