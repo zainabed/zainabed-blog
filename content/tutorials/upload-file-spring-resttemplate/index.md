@@ -1,37 +1,63 @@
 ---
-title: "Upload MultipartFile with Spring Resttemplate"
+title: "Spring Boot File upload with RestTemplate"
 date: 2022-10-19T06:13:04-04:00
 draft: true
 
   
 ---
 
-# What this tutorial will do
-We will se how to upload a file to server using Spring Boot `RestTemplate`.
-The prericusite for this tutorials is to have a server which accept the multipart file upload request
-and RestTemplate client instance and ofcourse a file to upload.
+## Introduction
+This quick tutorial will show you how to use Spring Boot `RestTemplate` to upload a file to a server.
 
-# How this tutorials will do what it do
+The prerequisites for this tutorial are the following
 
-First we create instatance of RestTemplate as
+* the server that accepts requests for multipart file uploads
+* A `RestTemplate` instance
+* Of course, a text `file` to upload.
+
+---
+
+## What You Need
+#### This tutorial uses following softwares
+* Java: 1.8
+* Spring Boot: 2.7.4
+* Maven: 3.6.3
+
+
+## How to upload a file
+
+First we create an instance of RestTemplate as
 
 ```java
 final RestTemplate restTemplate = new RestTemplate();
 ```
 
-Next, we to instruct restemplate to accept multipart request by addeding required headers to it as
+Next, by including the required headers in the requests, we should inform RestTemplate to accept multipart requests.
 
 ```java
 final HttpHeaders httpHeaders = new HttpHeaders();
 httpHeaders.setContentType(MediaType.MULTIPART_FORM_DATA);
 ```
-We need a file to upload to server, it could be any thing, for this tutorial we are creating a simple text file
+> **Note**: HTTP multipart requests are used to transfer text or binary files to the server.
 
-```bash
-echo "Test file" >>> test.text
+
+#### Create temporary text file 
+To upload a file to the server, we need to create a file, which is what we will do in following snippet.
+
+```java
+private File getFile() {
+    try {
+        Path file = Files.createTempFile("test", ".txt");
+        log.info("file is created with name {}", file.getFileName());
+        return file.toFile();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return null;
+}
 ```
 
-Lets create file system resource out of this file and bind ii to request entity in order to upload it.
+To upload this file, let's make a `FileSystemResource` out of newly created file and connect it to a HttpEntity.
 
 ```java 
 final File uploadFile = getFile();
@@ -40,22 +66,24 @@ final MultiValueMap<String, Object> fileUploadMap = new LinkedMultiValueMap<>();
 fileUploadMap.set("file", fileSystemResource);
 ```
 
-Create a request entity as
+Now, create a `HttpEntity` as
 
 ```java
 HttpEntity<MultiValueMap<String, Object>> httpEntity = new HttpEntity<>(fileUploadMap, httpHeaders);
 ```
 
-Now all things are set we just need to invoke the REST call to upload the file to server.
-To do so add following snippet
+Since everything is in place, all that remains is to make the REST call to upload the file to the server.
+
+To do so, add the following snippet
 
 ```java
 ResponseEntity<String> responseEntity = restTemplate.postForEntity("http://localhost:8090/file-upload", httpEntity, String.class);
 ```
-# Tutotials result
+## Complete Source file 
 
-Here is complete service code 
+Here is the complete service file code. 
 
+#### FileUploadService.java
 ```java 
 @Service
 @Log4j2
@@ -98,18 +126,16 @@ public class FileUploadService {
 }
 
 ```
- In order to test this file upload service you need a REST application to consume the file and save it.
- This tutorial is limited to showcase the client side service of file upload, but you can find completed server-client code on Gituhb project. 
+You need a REST application to save the file in order to test this file upload service. The server-client code is ready on the Gituhb project, however this tutorial only showcases the client-side service.
 
- Please check link in end of this tutorial.
+Please check the Github project link at the tutorial's conclusion.
 
- Once you run the service and connect with server you will get following kind of response
+You will receive the subsequent type of response after starting the service and establishing a connection with the server.
 
  ```bash
  2022-10-19 08:58:03.090  INFO: file is created with name test181876724622311090.txt
  2022-10-19 08:58:03.105  INFO: Saved file with name test181876724622311090.txt
  ```
-# Conclusion
+## Conclusion
 
-Congratulation, you have completed the file upload process using RestTemplate.
-As usual you will find completed source code on [Github]() project.
+Congratulations, you've just finished using RestTemplate to upload a file. As usual, a [Github](https://github.com/zainabed/tutorials/tree/master/maven/file-upload) project will contain the complete source code.
