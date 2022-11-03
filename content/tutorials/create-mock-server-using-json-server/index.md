@@ -12,9 +12,9 @@ categories:
 
 ## Introduction
 
-Mock REST API server will often expidite your testing.
+A mock REST API server will often expedite your testing.
 
-This tutorial will give insight about one of such server and help you to configure and use it by following simple steps.
+This tutorial will give you insight into one such server and help you configure and use it by following simple steps.
 
 ---
 ### Software used in this tutorial
@@ -26,17 +26,17 @@ This tutorial will give insight about one of such server and help you to configu
 ---
 ## Setup
 
-First step is to make sure you have `node` and `npm` instsall on yor workstation then follow next steps
+The first step is to make sure you have `node` and `npm` installed on your workstation, then follow the next steps.
 
 #### json-server installation 
 
-Run following command the install latest version of `json-server`
+Run the following command to install the latest version of `json-server`
 
 ```bash
 npm install -g json-server
 ```
 
-you can also install specific version as
+You can also install a specific version as
 
 ```bash
 npm install -g json-server@0.17.0
@@ -45,10 +45,9 @@ npm install -g json-server@0.17.0
 
 ## Resource Defination
 
-To create a mock server using json-server you need to provide a JSON file which includes the routes for mock server.
-For an example if you want to have REST API for user model such as GET for getting all user's records, POST for registering new user record and DELETE for deleting the existing user record.
+`json-server` requires a JSON file to configure the HTTP routes.
+For example, if we want to create a REST API for a user module, we need to provide the following kind of JSON structure.
 
-Such as 
 
 #### resources.json 
 
@@ -60,7 +59,7 @@ Such as
 }
 ```
 
-Json mock server will convert this data structure to REST API routes as
+The JSON mock server will convert this data structure to REST API routes as
 
 * GET  http://localhost:{port}/user
 * GET  http://localhost:{port}/user/{id}
@@ -70,13 +69,13 @@ Json mock server will convert this data structure to REST API routes as
 
 #### Start the server
 
-Run the following command to start the mock server
+Run the following command to start the mock server.
 
 ```bash
 json-server resources.json
 ```
 
-and server will start by emitting somthing like follwoing output
+And the server will start by emitting something like the following output.
 
 ```bash
   \{^_^}/ hi!
@@ -95,10 +94,10 @@ and server will start by emitting somthing like follwoing output
 ```
 ## Testing
 
-We can use CURL commands to verify the mock server REST API endpoints and their behviour to different HTTP method calls.
+We can use CURL commands to verify the mock server's REST API endpoints and their behaviour with different HTTP method calls.
 
 
-#### GET request
+#### GET Request
 ```bash
 curl --location --request GET 'http://localhost:3000/user/1'
 ```
@@ -113,7 +112,7 @@ curl --location --request GET 'http://localhost:3000/user/1'
 ```
 ---
 
-#### POST request
+#### POST Request
 ```bash
 curl --location --request POST 'http://localhost:3000/user' \
 --header 'Content-Type: application/json' \
@@ -161,7 +160,6 @@ curl --location --request DELETE 'http://localhost:3000/user/1'
 ```
 
 ## Conclusion 
-In Agile world we nee smart tool which keeps feedback loop faster the increase the productivity and decrease the dependency,
-And JSON-Server is the one of that tool.
+In an agile world, we need smart tools that keep the feedback loop faster, increase productivity, and decrease dependency, and JSON-Server is one of those tools.
 
-You can find the source code related to this tutorial on [Github]() page.
+You can find the source code related to this tutorial on the [Github]() page.
