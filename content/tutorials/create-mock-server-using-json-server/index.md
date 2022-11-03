@@ -1,20 +1,20 @@
 ---
-title: "Create Mock Server Using Json Server"
-date: 2022-11-02T05:19:14-04:00
-draft: true
+title: "How To Use json-server To Build Mock REST API Server"
+date: 2022-11-03T05:19:14-04:00
+draft: false
 authors:
   - Zainul
 
 categories: 
   - "Tutorial"
-  
+
 ---
 
 ## Introduction
 
-A mock REST API server will often expedite your testing.
+A mock REST API server will often expedite your integration testing, and this tutorial will give you insight into one such server.
 
-This tutorial will give you insight into one such server and help you configure and use it by following simple steps.
+This tutorial will walk through each step of setting up and using a fake server.
 
 ---
 ### Software used in this tutorial
@@ -26,7 +26,7 @@ This tutorial will give you insight into one such server and help you configure 
 ---
 ## Setup
 
-The first step is to make sure you have `node` and `npm` installed on your workstation, then follow the next steps.
+The first step is to make sure you have `node` and `npm` installed on your workstation, then follow the next commands.
 
 #### json-server installation 
 
@@ -94,7 +94,7 @@ And the server will start by emitting something like the following output.
 ```
 ## Testing
 
-We can use CURL commands to verify the mock server's REST API endpoints and their behaviour with different HTTP method calls.
+We can use `Curl` commands to verify the mock server's REST API endpoints and their behaviour with different HTTP method calls.
 
 
 #### GET Request
@@ -162,4 +162,4 @@ curl --location --request DELETE 'http://localhost:3000/user/1'
 ## Conclusion 
 In an agile world, we need smart tools that keep the feedback loop faster, increase productivity, and decrease dependency, and JSON-Server is one of those tools.
 
-You can find the source code related to this tutorial on the [Github]() page.
+You can find the source code related to this tutorial on the [Github](https://github.com/zainabed/tutorials/tree/master/javascript/mock-server) page.

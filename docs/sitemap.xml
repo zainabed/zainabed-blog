@@ -3,22 +3,50 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.zainabed.com/tutorials/upload-file-spring-resttemplate/</loc>
-    <lastmod>2022-10-19T06:13:04-04:00</lastmod>
+    <loc>https://www.zainabed.com/authors/zainul/</loc>
+    <lastmod>2022-11-03T05:19:14-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/authors/</loc>
+    <lastmod>2022-11-03T05:19:14-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/</loc>
+    <lastmod>2022-11-03T05:19:14-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/tutorials/create-mock-server-using-json-server/</loc>
+    <lastmod>2022-11-03T05:19:14-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/tutorial/</loc>
+    <lastmod>2022-11-03T05:19:14-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.zainabed.com/tutorials/</loc>
-    <lastmod>2022-10-19T06:13:04-04:00</lastmod>
+    <lastmod>2022-11-03T05:19:14-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.zainabed.com/authors/zainul/</loc>
-    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
+    <loc>https://www.zainabed.com/tutorials/upload-file-spring-resttemplate/</loc>
+    <lastmod>2022-10-19T06:13:04-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,21 +59,7 @@
   </url>
   
   <url>
-    <loc>https://www.zainabed.com/authors/</loc>
-    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zainabed.com/blogs/</loc>
-    <lastmod>2022-08-26T12:51:07-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zainabed.com/categories/</loc>
     <lastmod>2022-08-26T12:51:07-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -1,8 +1,15 @@
 
 {{ $related := .Site.RegularPages.Related . | first 4 }}
+{{ $params := .Params }}
 {{ with $related }}
 <div class="related">
-    <h3>See Relted <span class="border-highlight">Blogs</span></h3>
+    <h3>See Relted <span class="border-highlight">
+        {{- if not ( in $params.categories "Tutorial" )  }}
+            Blogs
+        {{- else }}
+            Tutorials
+        {{- end}}
+    </span></h3>
     <p>Check out our latest and innovative blog post,</p>
     <p>analysis, examples, and more</p>
 

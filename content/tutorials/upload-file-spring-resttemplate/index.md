@@ -1,8 +1,12 @@
 ---
-title: "Spring Boot File upload with RestTemplate"
+title: "Spring Boot File Upload With RestTemplate"
 date: 2022-10-19T06:13:04-04:00
 draft: false
+authors:
+  - Zainul
 
+categories: 
+  - "Tutorial"
   
 ---
 

@@ -6,7 +6,29 @@
     <description>Recent content on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Aug 2022 12:51:07 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/authors/zainul/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Nov 2022 05:19:14 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/authors/zainul/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Use json-server To Build Mock REST API Server</title>
+      <link>https://www.zainabed.com/tutorials/create-mock-server-using-json-server/</link>
+      <pubDate>Thu, 03 Nov 2022 05:19:14 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/tutorials/create-mock-server-using-json-server/</guid>
+      <description>Introduction A mock REST API server will often expedite your integration testing, and this tutorial will give you insight into one such server.
+This tutorial will walk through each step of setting up and using a fake server.
+ Software used in this tutorial  NPM : 8.3.1 Node: 16.14.0 Json-Server: 0.17.0   Setup The first step is to make sure you have node and npm installed on your workstation, then follow the next commands.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot File Upload With RestTemplate</title>
+      <link>https://www.zainabed.com/tutorials/upload-file-spring-resttemplate/</link>
+      <pubDate>Wed, 19 Oct 2022 06:13:04 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/tutorials/upload-file-spring-resttemplate/</guid>
+      <description>Introduction This quick tutorial will show you how to use Spring Boot RestTemplate to upload a file to a server.
+The prerequisites for this tutorial are the following
+ the server that accepts requests for multipart file uploads A RestTemplate instance Of course, a text file to upload.   What You Need This tutorial uses following softwares  Java: 1.8 Spring Boot: 2.7.4 Maven: 3.6.3  How to upload a file First we create an instance of RestTemplate as</description>
+    </item>
+    
     <item>
       <title>How  Angular Supports Mutation Testing With Example</title>
       <link>https://www.zainabed.com/2022/08/how-angular-supports-mutation-testing-with-example.html/</link>
