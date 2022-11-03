@@ -12,6 +12,13 @@
       {{ .Description }}
     </div>
     {{- end }}
+    {{- if in .Params.categories "Tutorial" }}
+      {{- range .Params.authors }}
+      {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+       <span ><a href="{{ .Permalink }}" >{{ .Params.name }}</a></span>
+      {{- end }}
+      {{- end }}
+    {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
