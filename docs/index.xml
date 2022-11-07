@@ -8,6 +8,19 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Jun 2022 13:01:43 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>First Step Toward Spring Boot Cloud Gateway </title>
+      <link>https://www.zainabed.com/tutorials/spring-boot-cloud-gateway-introduction/</link>
+      <pubDate>Mon, 07 Nov 2022 10:39:48 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/tutorials/spring-boot-cloud-gateway-introduction/</guid>
+      <description>Introduction This tutorial is a short introduction to Spring Cloud Gateway.
+By following the quick and easy steps provided below, you will be able to start the REST API gateway project.
+Prerequisite  Java Maven Spring Boot  Download the Spring Boot project from Spring Initializr and select Gateway  as dependency.
+Now generate and download the project and use your favourite editor to import it.
+Gateway Configuration You can use a YAML file or Java code to configure routes.</description>
+    </item>
+    
+    <item>
       <title>How To Use json-server To Build Mock REST API Server</title>
       <link>https://www.zainabed.com/tutorials/create-mock-server-using-json-server/</link>
       <pubDate>Thu, 03 Nov 2022 05:19:14 -0400</pubDate>
