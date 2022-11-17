@@ -6,7 +6,20 @@
     <description>Recent content in Tutorial on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Nov 2022 10:39:48 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 02:10:33 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Two Steps To Add Log4j2 To Spring Boot Application</title>
+      <link>https://www.zainabed.com/tutorials/spring-boot-log4j2-setup/</link>
+      <pubDate>Thu, 17 Nov 2022 02:10:33 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/tutorials/spring-boot-log4j2-setup/</guid>
+      <description>Introduction Log4j2 is a comprehensive and modern framework for logging messages in applications.
+And Spring Boot, which is widely used in industry, provides excellent support for Log4j2.
+In this tutorial, we will look at how to configure it using an XML and YAML file.
+Setup Download the Spring Boot application from Spring Boot Starter and extract the zip file.
+POM Configuration Add log4j2 as a dependency to the pom.xml file. pom.</description>
+    </item>
+    
     <item>
       <title>First Step Toward Spring Boot Cloud Gateway </title>
       <link>https://www.zainabed.com/tutorials/spring-boot-cloud-gateway-introduction/</link>
