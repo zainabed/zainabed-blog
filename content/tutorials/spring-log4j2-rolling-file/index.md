@@ -1,7 +1,7 @@
 ---
-title: "Spring Log4j2 Rolling File"
-date: 2022-11-16T01:50:08-05:00
-draft: true
+title: "Easy Steps To Create Log4j2 Rolling File For Spring Boot"
+date: 2022-11-20T01:50:08-05:00
+draft: false
 authors:
   - Zainul
 
@@ -11,22 +11,23 @@ categories:
 ---
 
 ## Introduction
-Your Spring Boot application can log information or errors into a file which is very convenient for develpoment or testing.
+Spring Boot applications can save informative messages or application errors to a file. This functionality allows you to monitor the application's health and take necessary action when problems arise.
 
-But if you apply same strategy for production enviorment then single log file will grow over the time and it is hard to manage it.
+Logging all of this information to a single file, on the other hand, will cause the file to expand in size, which would be a nightmare if the file size rose to MB or GB and you wanted to trace a specific exception throughout the whole log file.
 
-Therefore each logging libarary provide feature to distribute application logs into n-number of files.
-And in this tutorial we will check about such feature of `log4j2` libaray.
+Therefore, each logging library provides a feature to distribute application logs into an n-number of files.
+And in this tutorial, we'll look into a `Log4j2` functionality like that.
 
+This feauture is names as `RollingFile Appender` in Log4j2.
 ## RollingFile Configuration
 
-`RollingFile` configuration of `log4j2` allow you to split the logs based on date & time , size of or both policies.
+Log4j2's `RollingFile` appender setting allows you to separate logs based on date and time, size, or both rules.
 
-Please checkout [Setup log4j in Spring Boot application]() tutorial to start with initial setup from log4j.
+To begin with the initial setup of log4j, please see the [Two Steps To Add Log4j2 To Spring Boot Application](https://www.zainabed.com/tutorials/spring-boot-log4j2-setup/) tutorial.
 
-Now editor `log4j2.xml` file to apply RollingFile configuration
+Now, to apply the RollingFile configuration, modify the `log4j2.xml` file.
 
-
+##### src/main/resources/log4j2-rolling-file.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="ERROR">
@@ -58,23 +59,26 @@ Now editor `log4j2.xml` file to apply RollingFile configuration
 </Configuration>
 ```
 
-Here `<RollingFile \>` configuration will responsible for spliting logs into files.
-It has following properties
+The "RollingFile" setup will be in charge of breaking logs into different log files.
+It has the following characteristics:
 
-* **name** : name of RollingFile configuration which will be used in Logger tag
-* **fileName**:  log file location in system
-* **filePattern**: patternt in which rolling log files is created
+* **name**: the name of the RollingFile configuration to be used in the Logger tag.
+* **fileName**: path to the system log file.
+* **filePattern**: pattern for creating rolling log files.
+
+The policy for splitting files is defined in the preceding code snippet. Here, the policy indicates that logs should be distributed based on a time-based policy.
 
 ```xml
 <Policies>
     <TimeBasedTriggeringPolicy/>
 </Policies>
 ```
-Above code snippet is define the policy to split file, here policy says logs should be distributed according to time based policy and default acrhives old logs according to previous day.
+
+> **Note**: Log4j2 creates files based on `filePattern`, and you can find previous days' logs according to those patterns.
 
 ## Result
 
-When we run application first time the log file is created as 
+You can put everything together and run application.
 
 ```bash
 $ ls logs/
@@ -83,19 +87,20 @@ logging.log
 
 ```
 
-And if you run same application next day then old logs get archived and stored in file which follows the pattern define in RollingFile configuration
+And if you run the same application the next day, old logs are archived and saved in a file that conforms to the pattern specified in the RollingFile setting.
 
 ```bash
 $ ls logs/
 logging-08-11-2022.log  logging.log
 
 ```
-`logging-08-11-2022.log` contains logs of 8/11/2022 and logging.log will contain current day logs.
+`logging-08-11-2022.log` contains logs of 8/11/2022 and `logging.log` will contain current days log.
 
 ## YAML configuration
 
-Same configurations can be established using application.yml file as,
+The same configurations can be established using an application. yml file as,
 
+##### src/main/resources/log4j2-rolling-file.yml
 ```yaml
 Configutation:
   status: warn
@@ -143,4 +148,7 @@ Configutation:
           - ref: CONSOLE
           - ref: APPLICATION
 ```
+
 ## Conclusion
+
+Congratulation! You've learned about Log4j2's RollingFile appender, and as always, the source code for this tutorial can be found on [Github](https://github.com/zainabed/tutorials/tree/master/maven/demo-log4j2).

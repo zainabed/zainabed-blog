@@ -1,6 +1,8 @@
 <div class="card">
     <!-- <img src="{{ .RelPermalink }}{{ .Params.cover.image }}" /> -->
+    {{- if not ( in .Params.categories "Tutorial" )  }}
     <div class="card-image" style="background-image: url({{ .RelPermalink }}{{ .Params.cover.image }}); background-size: cover;"></div>
+    {{ end }}
     <div class="card-content">
         {{ range first 1 .Params.categories}}
                 <label>{{ . }}</label>
