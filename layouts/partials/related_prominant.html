@@ -1,4 +1,8 @@
+{{- if not ( in .Params.categories "Tutorial" )  }}
 <div class="card card-overlay">
+{{- else }} 
+<div class="card">
+{{- end }}   
     <div class="card-content card-content-wrapper" style="background-image: url({{ .RelPermalink }}{{ .Params.cover.image }}); background-size: cover;">
         <div class="card-content-overlay">
             {{ range first 1 .Params.categories}}
