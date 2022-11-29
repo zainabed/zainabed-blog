@@ -71,6 +71,8 @@ params:
   - name: github
     url: 'https://github.com/zainabed/tutorials'
   ShowShareButtons: true
+  assets:
+    favicon: images/favicon.ico
   
 sitemap:
   changefreq: monthly
