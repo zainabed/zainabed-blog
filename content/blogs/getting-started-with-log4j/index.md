@@ -5,7 +5,7 @@ authors:
 - Zainul
 draft: false
 cover:
-  image: "image/cover.png"
+  image: "image/cover.webp"
   alt: "Getting Started With Log4j"
 categories: 
   - "Java"

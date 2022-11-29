@@ -6,7 +6,7 @@ draft: false
 authors:
   - Zainul
 cover:
-  image: "image/cover.jpg"
+  image: "image/cover.webp"
   alt: "Angular: Getting Started With Httpclient Unit Testing"
 categories: 
   - "Blog"
