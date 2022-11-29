@@ -6,13 +6,49 @@
     <description>Recent content in Categories on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Nov 2022 01:50:08 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Nov 2022 09:00:00 +0000</lastBuildDate><atom:link href="https://www.zainabed.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java</title>
+      <link>https://www.zainabed.com/categories/java/</link>
+      <pubDate>Tue, 29 Nov 2022 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.zainabed.com/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>https://www.zainabed.com/categories/maven/</link>
+      <pubDate>Tue, 29 Nov 2022 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.zainabed.com/categories/maven/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Tutorial</title>
       <link>https://www.zainabed.com/categories/tutorial/</link>
-      <pubDate>Sun, 20 Nov 2022 01:50:08 -0500</pubDate>
+      <pubDate>Tue, 29 Nov 2022 09:00:00 +0000</pubDate>
       
       <guid>https://www.zainabed.com/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Log4j2</title>
+      <link>https://www.zainabed.com/categories/log4j2/</link>
+      <pubDate>Sun, 20 Nov 2022 01:50:08 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/categories/log4j2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring Boot</title>
+      <link>https://www.zainabed.com/categories/spring-boot/</link>
+      <pubDate>Sun, 20 Nov 2022 01:50:08 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/categories/spring-boot/</guid>
       <description></description>
     </item>
     
@@ -49,33 +85,6 @@
       <pubDate>Tue, 26 Jul 2022 01:39:41 -0400</pubDate>
       
       <guid>https://www.zainabed.com/categories/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://www.zainabed.com/categories/java/</link>
-      <pubDate>Wed, 01 Jun 2022 00:57:18 -0400</pubDate>
-      
-      <guid>https://www.zainabed.com/categories/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Maven</title>
-      <link>https://www.zainabed.com/categories/maven/</link>
-      <pubDate>Thu, 26 May 2022 08:42:58 -0400</pubDate>
-      
-      <guid>https://www.zainabed.com/categories/maven/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spring Boot</title>
-      <link>https://www.zainabed.com/categories/spring-boot/</link>
-      <pubDate>Fri, 22 Apr 2022 09:42:03 -0400</pubDate>
-      
-      <guid>https://www.zainabed.com/categories/spring-boot/</guid>
       <description></description>
     </item>
     
