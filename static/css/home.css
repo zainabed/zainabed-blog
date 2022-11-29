@@ -14,7 +14,7 @@ section{
 }
 
 section h2{
-    font-size: 72px;
+    font-size: 48px;
     width: 75%;
     text-align: center;
 }
@@ -92,4 +92,12 @@ figcaption{
     .category i{
         font-size: 36px;
     }
+}
+
+.main-title {
+    font-size: 56px;
+    text-align: center;
+    text-transform: capitalize;
+    width: 85%;
+    line-height: 72px;
 }
