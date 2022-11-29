@@ -7,7 +7,9 @@ authors:
 
 categories: 
   - "Tutorial"
-  
+  - "Spring Boot"
+  - "Log4j2"
+  - "Java"
 ---
 
 ## Introduction

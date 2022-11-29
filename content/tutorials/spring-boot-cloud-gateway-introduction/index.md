@@ -6,7 +6,8 @@ authors:
   - Zainul
 categories: 
   - "Tutorial"
-  
+  - "Spring Boot"
+  - "Java"
 ---
 
 

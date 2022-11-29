@@ -6,7 +6,19 @@
     <description>Recent content in Maven on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 May 2022 08:42:58 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/categories/maven/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Nov 2022 09:00:00 +0000</lastBuildDate><atom:link href="https://www.zainabed.com/categories/maven/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Maven Project Through Command Line</title>
+      <link>https://www.zainabed.com/tutorials/maven-create-a-project-command-line/</link>
+      <pubDate>Tue, 29 Nov 2022 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.zainabed.com/tutorials/maven-create-a-project-command-line/</guid>
+      <description>Introduction How often do you create a Maven project from your preferred editor? The response would be frequently or always.
+But have you ever thought about what Maven command your editor used to create the project? Yes, maven projects are built solely with the maven command, exactly as &amp;ldquo;mvn clean install&amp;rdquo; is used to create a project&amp;rsquo;s jar file.
+This tutorial will teach you about such a command.
+Maven Command Open your terminal and navigate to the directory in which you want to create a new Maven project.</description>
+    </item>
+    
     <item>
       <title>Maven Create Jacoco Code Coverage Report</title>
       <link>https://www.zainabed.com/2022/05/maven-create-jacoco-code-coverage-report.html/</link>
