@@ -4,21 +4,42 @@
   
   <url>
     <loc>https://www.zainabed.com/authors/zainul/</loc>
-    <lastmod>2022-11-29T09:00:00+00:00</lastmod>
+    <lastmod>2023-01-05T00:40:20-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.zainabed.com/authors/</loc>
-    <lastmod>2022-11-29T09:00:00+00:00</lastmod>
+    <lastmod>2023-01-05T00:40:20-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/tools/base64/</loc>
+    <lastmod>2023-01-05T00:40:20-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.zainabed.com/categories/</loc>
-    <lastmod>2022-11-29T09:00:00+00:00</lastmod>
+    <lastmod>2023-01-05T00:40:20-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/categories/tools/</loc>
+    <lastmod>2023-01-05T00:40:20-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/tools/</loc>
+    <lastmod>2023-01-05T00:40:20-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
