@@ -28,6 +28,13 @@ menu:
       weight: -120
       params:
         class: highlight-menu-item
+    - identifier: Tools
+      name: Tools
+      pre: <i class='fa fa-heart'></i>
+      url: /tools/
+      weight: -130
+      params:
+        class: highlight-menu-item
     - identifier: Tutorials
       name: Tutorials
       pre: <i class='fa fa-heart'></i>
