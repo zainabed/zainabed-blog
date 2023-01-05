@@ -1,7 +1,7 @@
 ---
 title: "Base64 Online Tool"
 date: 2023-01-05T00:40:20-05:00
-draft: true
+draft: false
 authors:
   - Zainul
 
@@ -10,7 +10,7 @@ categories:
   
 ---
 
-## Base64 Encoder/Decoder Online
+## Base64 Encoder / Decoder Online
 
 Base64 Decode is a simple utility for decoding or encoding base64 data to plain text.
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tools on ZAINABED</title>
+    <link>https://www.zainabed.com/categories/tools/</link>
+    <description>Recent content in Tools on ZAINABED</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Jan 2023 00:40:20 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Base64 Online Tool</title>
+      <link>https://www.zainabed.com/tools/base64/</link>
+      <pubDate>Thu, 05 Jan 2023 00:40:20 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/tools/base64/</guid>
+      <description>Base64 Encoder / Decoder Online Base64 Decode is a simple utility for decoding or encoding base64 data to plain text.
+ Encode Decode   Enter the text for  Clear  
+ Base64   Base64  
+ What exactly is Base64? Base64 is a family of binary-to-text encoding techniques that convert binary data in an ASCII string format into a radix-64 representation.
+Base64 is commonly used to encode binary data in email messages and web pages.</description>
+    </item>
+    
+  </channel>
+</rss>
