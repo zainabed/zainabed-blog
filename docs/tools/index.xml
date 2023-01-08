@@ -6,7 +6,19 @@
     <description>Recent content in Tools on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Jan 2023 00:40:20 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jan 2023 08:48:53 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SHA-256 Online Tool</title>
+      <link>https://www.zainabed.com/tools/sha256/</link>
+      <pubDate>Sat, 07 Jan 2023 08:48:53 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/tools/sha256/</guid>
+      <description>Enter the input Clear  
+ Hash  SHA-256 
+ What is SHA-256? SHA-256 is a cryptographic hash function that accepts a random-sized input and returns a 256-bit fixed-size hash as an output.
+Because of their one-way output, such hashes are extremely powerful. Simply said, you can generate a hash output from any given input, but you cannot reconstruct the original data from the same hash output.</description>
+    </item>
+    
     <item>
       <title>Base64 Online Tool</title>
       <link>https://www.zainabed.com/tools/base64/</link>

@@ -1,7 +1,7 @@
 ---
 title: "SHA-256 Online Tool"
 date: 2023-01-07T08:48:53-05:00
-draft: true
+draft: false
 authors:
   - Zainul
 
