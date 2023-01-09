@@ -8,15 +8,27 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Jun 2022 13:01:43 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>SHA-256 Online Tool</title>
+      <link>https://www.zainabed.com/tools/sha256/</link>
+      <pubDate>Sat, 07 Jan 2023 08:48:53 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/tools/sha256/</guid>
+      <description>Enter the input Clear  
+ Hash  SHA-256 
+ What is SHA-256? SHA-256 is a cryptographic hash function that accepts a random-sized input and returns a 256-bit fixed-size hash as an output.
+Because of their one-way output, such hashes are extremely powerful. Simply said, you can generate a hash output from any given input, but you cannot reconstruct the original data from the same hash output.</description>
+    </item>
+    
+    <item>
       <title>Base64 Online Tool</title>
       <link>https://www.zainabed.com/tools/base64/</link>
       <pubDate>Thu, 05 Jan 2023 00:40:20 -0500</pubDate>
       
       <guid>https://www.zainabed.com/tools/base64/</guid>
-      <description>Base64 Encoder / Decoder Online Base64 Decode is a simple utility for decoding or encoding base64 data to plain text.
- Encode Decode   Enter the text for  Clear  
+      <description>Encode Decode   Enter the text for  Clear  
  Base64   Base64  
- What exactly is Base64? Base64 is a family of binary-to-text encoding techniques that convert binary data in an ASCII string format into a radix-64 representation.
+ Base64 Encoder / Decoder Online Base64 Decode is a simple utility for decoding or encoding base64 data to plain text.
+What exactly is Base64? Base64 is a family of binary-to-text encoding techniques that convert binary data in an ASCII string format into a radix-64 representation.
 Base64 is commonly used to encode binary data in email messages and web pages.</description>
     </item>
     

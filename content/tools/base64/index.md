@@ -10,9 +10,7 @@ categories:
   
 ---
 
-## Base64 Encoder / Decoder Online
 
-Base64 Decode is a simple utility for decoding or encoding base64 data to plain text.
 
 <div>
   <button onclick="changeMode('encode',this)" class="tab tab-active">Encode</button>
@@ -34,7 +32,9 @@ Base64 Decode is a simple utility for decoding or encoding base64 data to plain 
 </fieldset>
 
 
+## Base64 Encoder / Decoder Online
 
+Base64 Decode is a simple utility for decoding or encoding base64 data to plain text.
 
 
 ## What exactly is Base64?
@@ -45,63 +45,4 @@ Base64 is commonly used to encode binary data in email messages and web pages. I
 
 Please see the [Base64 Wikipedia](https://en.wikipedia.org/wiki/Base64) page for further information.
 
-<style>
-  fieldset {
-    display: flex;
-    flex-wrap: wrap;
-    border: none;
-    padding: 32px 0;
-}
-
-label {
-    flex: 0 0 100%;
-    padding-bottom: 16px;
-}
-
-textarea {
-    border: 1px solid #000;
-    flex: 0 0 100%;
-    min-height: 166px;
-    padding: 8px;
-}
-
-.main button {
-    height: 48px;
-    padding: 0 16px;
-    box-sizing: border-box;
-    margin-right: 16px;
-    border: 1px solid #dadce0;
-    font-size: 18px;
-    text-transform: capitalize;
-}
-
-.active {
-    border-bottom: none;
-    background: var(--accent);
-    padding: 8px 16px;
-    font-weight: bold;
-}
-
-.main .tab {
-    background: #fff;
-    border: none;
-}
-
-.main .tab:hover {
-    background: var(--accent);
-}
-
-.main .tab-active {
-    font-weight: bold;
-    background: #fff;
-    border-bottom: 3px solid var(--accent);
-}
-
-#message {
-    color: red;
-}
-
-.right {
-    float: right;
-}
-</style>
+<script type="text/javascript" src="/js/base64.js"></script>

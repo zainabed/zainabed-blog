@@ -1,5 +1,5 @@
 {{- define "main" }}
-
+<link rel="stylesheet" type="text/css" href="/css/tools.css">
 <article class="post-single left-side">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
@@ -86,10 +86,12 @@
     </div>
   </form>
 </div>
-<script defer language="javascript" type="text/javascript"  src="{{ "/js/base64.js" | urlize | relURL }}"></script>
+<script defer language="javascript" type="text/javascript"  src="{{ "/js/main.js" | urlize | relURL }}"></script>
 <!--End mc_embed_signup-->
 {{end}}
 
 {{ define "related" }}
 {{ partial "related.html" .}}
+
+
 {{ end }}
