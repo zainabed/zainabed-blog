@@ -6,11 +6,11 @@
     <description>Recent content in Unit Test on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Dec 2022 09:46:44 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/categories/unit-test/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 09:46:44 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/categories/unit-test/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Spring Boot Controller Test</title>
+      <title>How To Make Spring Boot Controller Unit Test Faster</title>
       <link>https://www.zainabed.com/tutorials/spring-boot-controller-test/</link>
-      <pubDate>Wed, 21 Dec 2022 09:46:44 -0500</pubDate>
+      <pubDate>Tue, 10 Jan 2023 09:46:44 -0500</pubDate>
       
       <guid>https://www.zainabed.com/tutorials/spring-boot-controller-test/</guid>
       <description>Introduction There are several methods for testing Rest controllers in the Spring Boot framework, and this post will demonstrate one of the quickest.
