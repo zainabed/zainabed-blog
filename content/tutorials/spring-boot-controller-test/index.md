@@ -1,6 +1,6 @@
 ---
-title: "Spring Boot Controller Test"
-date: 2022-12-21T09:46:44-05:00
+title: "How To Make Spring Boot Controller Unit Test Faster"
+date: 2023-01-10T09:46:44-05:00
 draft: false
 authors:
   - Zainul
