@@ -6,7 +6,20 @@
     <description>Recent content in Tutorials on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Nov 2022 09:00:00 +0000</lastBuildDate><atom:link href="https://www.zainabed.com/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Dec 2022 09:46:44 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot Controller Test</title>
+      <link>https://www.zainabed.com/tutorials/spring-boot-controller-test/</link>
+      <pubDate>Wed, 21 Dec 2022 09:46:44 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/tutorials/spring-boot-controller-test/</guid>
+      <description>Introduction There are several methods for testing Rest controllers in the Spring Boot framework, and this post will demonstrate one of the quickest.
+Tools  Spring Boot: 2.7.6
+Java : 11
+ Rest Controller Let&amp;rsquo;s create a simple REST API controller with one service to fetch the data from the database.
+UserController.java @RestController public class UserController { private final UserService userService; public UserController(final UserService userService) { this.userService = userService; } @PostMapping(path = &amp;#34;/user&amp;#34;, consumes = MediaType.</description>
+    </item>
+    
     <item>
       <title>Create Maven Project Through Command Line</title>
       <link>https://www.zainabed.com/tutorials/maven-create-a-project-command-line/</link>
