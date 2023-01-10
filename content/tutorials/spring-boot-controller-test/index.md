@@ -1,7 +1,7 @@
 ---
 title: "Spring Boot Controller Test"
 date: 2022-12-21T09:46:44-05:00
-draft: true
+draft: false
 authors:
   - Zainul
 categories: 
@@ -44,6 +44,7 @@ public class UserController {
 
 ```
 The code above is self-explanatory, but we'll go over a few topics.
+* The most crucial sentence in the preceding snippet is `@WebMvcTest(UserController.class)`, which lightens the test suite by removing the Spring Boot application context.
 
 * The `createUser` method takes a `User` object request and passes it to the serice, which saves it in the database and returns the saved User object as a response.
 
@@ -128,4 +129,4 @@ Loading only the REST Controller into the test suite context is a great feature 
 
 But don't make this your default method of writing test cases; remember, this is a unit test for the REST Controller, not an integration test. To make an application behave properly with rest of services, such as business logic, a database, or a third-party library or service, the entire application context must be loaded and the REST controller tested. 
 
-You can find the source code used in this tutorial on the [Github]() page.
+You can find the source code used in this tutorial on the [Github](https://github.com/zainabed/tutorials/tree/master/spring-boot/spring-boot-test) page.

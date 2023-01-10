@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Unit Test on ZAINABED</title>
+    <link>https://www.zainabed.com/categories/unit-test/</link>
+    <description>Recent content in Unit Test on ZAINABED</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Dec 2022 09:46:44 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/categories/unit-test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot Controller Test</title>
+      <link>https://www.zainabed.com/tutorials/spring-boot-controller-test/</link>
+      <pubDate>Wed, 21 Dec 2022 09:46:44 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/tutorials/spring-boot-controller-test/</guid>
+      <description>Introduction There are several methods for testing Rest controllers in the Spring Boot framework, and this post will demonstrate one of the quickest.
+Tools  Spring Boot: 2.7.6
+Java : 11
+ Rest Controller Let&amp;rsquo;s create a simple REST API controller with one service to fetch the data from the database.
+UserController.java @RestController public class UserController { private final UserService userService; public UserController(final UserService userService) { this.userService = userService; } @PostMapping(path = &amp;#34;/user&amp;#34;, consumes = MediaType.</description>
+    </item>
+    
+  </channel>
+</rss>
