@@ -1,0 +1,25 @@
+
+{{ $related := .Site.RegularPages.Related . | first 4 }}
+{{ $params := .Params }}
+{{ with $related }}
+<div class="related">
+    <h3>See other Tools</h3>
+   
+    <div class="tools">
+        {{ $last_related := $related | last 5}}
+        {{ with $last_related}}
+            
+                {{ range $index, $element := . }}
+                {{/*  <div class="tools"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>  */}}
+                <article class="post-entry"> 
+                    <header class="entry-header">
+                      <h2>{{ .Title }}</h2>
+                    </header>
+                    <a class="entry-link" aria-label="{ .Title }}" href="{{ .RelPermalink }}"></a>
+                  </article>
+                {{ end }}
+            
+        {{ end }}
+    </div>
+</div>
+{{ end }}

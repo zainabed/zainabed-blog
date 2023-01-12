@@ -56,3 +56,10 @@ textarea {
 .right {
     float: right;
 }
+.tools {
+    flex: 0 0 100%;
+    padding: 16px;
+    margin: 8px;
+    font-weight: bold;
+    justify-content: center;
+}
