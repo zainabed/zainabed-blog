@@ -6,7 +6,16 @@
     <description>Recent content in Categories on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Jan 2023 09:46:44 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Jan 2023 04:48:06 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tools</title>
+      <link>https://www.zainabed.com/categories/tools/</link>
+      <pubDate>Wed, 11 Jan 2023 04:48:06 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/categories/tools/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Java</title>
       <link>https://www.zainabed.com/categories/java/</link>
@@ -40,15 +49,6 @@
       <pubDate>Tue, 10 Jan 2023 09:46:44 -0500</pubDate>
       
       <guid>https://www.zainabed.com/categories/unit-test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>https://www.zainabed.com/categories/tools/</link>
-      <pubDate>Sat, 07 Jan 2023 08:48:53 -0500</pubDate>
-      
-      <guid>https://www.zainabed.com/categories/tools/</guid>
       <description></description>
     </item>
     

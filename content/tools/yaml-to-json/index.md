@@ -1,7 +1,7 @@
 ---
 title: "Online YAML to JSON Converter"
 date: 2023-01-11T04:48:06-05:00
-draft: true
+draft: false
 authors:
   - Zainul
 categories: 
@@ -25,7 +25,7 @@ Enter your input below and click the `Convert` button. The result will be displa
 </fieldset>
   <button onclick="execute()" class="active">Convert</button>
 <fieldset>
-    <h3><label for="fname">JSON</label></h3>
+    <h3><label for="fname" id="jsonTitle">JSON</label></h3>
     <pre type="text"  name="fname" id="outputBox" >
       <code class="hljs json" id="output" >
       </code>
