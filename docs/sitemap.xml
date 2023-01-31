@@ -3,6 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.zainabed.com/tutorials/how-to-write-angular-service-unit-test/</loc>
+    <lastmod>2023-01-31T08:01:06-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zainabed.com/tutorials/</loc>
+    <lastmod>2023-01-31T08:01:06-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.zainabed.com/authors/zainul/</loc>
     <lastmod>2023-01-11T04:48:06-05:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -67,13 +81,6 @@
   
   <url>
     <loc>https://www.zainabed.com/categories/tutorial/</loc>
-    <lastmod>2023-01-10T09:46:44-05:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zainabed.com/tutorials/</loc>
     <lastmod>2023-01-10T09:46:44-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
