@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Jun 2022 13:01:43 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>How To Write Angular Service Unit Test</title>
+      <link>https://www.zainabed.com/tutorials/how-to-write-angular-service-unit-test/</link>
+      <pubDate>Tue, 31 Jan 2023 08:01:06 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/tutorials/how-to-write-angular-service-unit-test/</guid>
+      <description>Introduction This tutorial will walk you through the process of creating a basic unit test case for an Angular service. Angular services enable you to decompose complex business logic into small, reusable units that can then be injected into components or other services using dependency injection.
+This tutorial is divided into two parts:
+ One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module.</description>
+    </item>
+    
+    <item>
       <title>Online YAML to JSON Converter</title>
       <link>https://www.zainabed.com/tools/yaml-to-json/</link>
       <pubDate>Wed, 11 Jan 2023 04:48:06 -0500</pubDate>
