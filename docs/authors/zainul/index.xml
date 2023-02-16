@@ -6,7 +6,17 @@
     <description>Recent content on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Jan 2023 04:48:06 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/authors/zainul/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Feb 2023 03:08:11 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/authors/zainul/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Use @ConfigurationProperties In Spring Boot </title>
+      <link>https://www.zainabed.com/tutorials/spring-boot-configuration-properties-tutorial/</link>
+      <pubDate>Thu, 09 Feb 2023 03:08:11 -0500</pubDate>
+      
+      <guid>https://www.zainabed.com/tutorials/spring-boot-configuration-properties-tutorial/</guid>
+      <description>Introduction This tutorial will show you how to use @ConfigurationProperties in a Spring Boot application. This annotation is designed to load properties from an application property file into an application context and configure them using a Java object.
+Why do we need @ConfigurationProperties? What about the @Value annotation? The typical method of registering configuration properties to a Java object field in a Spring Boot application is the @Value annotation, but it is only acceptable for single independent configuration.</description>
+    </item>
+    
     <item>
       <title>Online YAML to JSON Converter</title>
       <link>https://www.zainabed.com/tools/yaml-to-json/</link>
