@@ -6,7 +6,18 @@
     <description>Recent content in Java on ZAINABED</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Feb 2023 03:08:11 -0500</lastBuildDate><atom:link href="https://www.zainabed.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2023 06:52:38 -0400</lastBuildDate><atom:link href="https://www.zainabed.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create OpenAPI Specification In Existing SpringBoot Project</title>
+      <link>https://www.zainabed.com/tutorials/how-to-generate-openapi-springboot/</link>
+      <pubDate>Mon, 19 Jun 2023 06:52:38 -0400</pubDate>
+      
+      <guid>https://www.zainabed.com/tutorials/how-to-generate-openapi-springboot/</guid>
+      <description>Introduction The OpenAPI specification is used to design the REST API structure, it is an agreement that clients use to call those REST API services.
+As per industry standard, we design the OpenAPI specification first, then utilise it in applications to generate REST API services. This phase is not helpful for ongoing projects if a REST API has already been developed because it is a new practise.
+We need a clever solution to automatically build OpenAPI specifications for these kinds of projects so that their clients can utilise the specifications to create client applications or conduct testing.</description>
+    </item>
+    
     <item>
       <title>How To Use @ConfigurationProperties In Spring Boot </title>
       <link>https://www.zainabed.com/tutorials/spring-boot-configuration-properties-tutorial/</link>
