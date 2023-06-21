@@ -1,12 +1,13 @@
 ---
 title: "Create OpenAPI Specification In Existing SpringBoot Project"
 date: 2023-06-19T06:52:38-04:00
-draft: true
+draft: false
 authors:
   - Zainul
 categories: 
   - "Tutorial"
-  
+  - "Java"
+  - "Spring Boot"
 ---
 
 ## Introduction
@@ -18,7 +19,7 @@ We need a clever solution to automatically build OpenAPI specifications for thes
 
 In this tutorial we will be talking about such library.
 
-For this tutorial I am using existing Spring Boot project present at [Github]() location.
+For this tutorial I am using existing Spring Boot project present at [Github](https://github.com/zainabed/tutorials/tree/master/spring-boot/spring-boot-test) location.
 
 
 
