@@ -80,6 +80,7 @@ params:
   ShowShareButtons: true
   assets:
     favicon: images/favicon.ico
+    disableFingerprinting: true
   
 sitemap:
   changefreq: monthly
