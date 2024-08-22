@@ -11,8 +11,8 @@ In previous tutorial we have seen how to setup the log4j plugin in Maven and sim
 What we will do in this tutorial We saw in the previous tutorial that Log4J&rsquo;s default configuration set the logging level to Error, causing it to log only errors and fatal messages to the console.">
 <meta name="author" content="">
 <link rel="canonical" href="https://www.zainabed.com/2022/06/log4j-how-to-log-message-to-console.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2e6d835886156948349f5e09bf5edfff819a004809f055d71edc1c07e5a26d1d.css" integrity="sha256-Lm2DWIYVaUg0n14Jv17f/4GaAEgJ8FXXHtwcB&#43;WibR0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.zainabed.com/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
@@ -69,8 +69,7 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script>
-<meta property="og:title" content="Log4j How to Log Message to Console" />
+</script><meta property="og:title" content="Log4j How to Log Message to Console" />
 <meta property="og:description" content="Introduction This tutorial will help you to log all level messages into console using Log4j plugin.
 In previous tutorial we have seen how to setup the log4j plugin in Maven and simple logging application. If you need to understand the basic of Log4J the visit previous tutorial.
 What we will do in this tutorial We saw in the previous tutorial that Log4J&rsquo;s default configuration set the logging level to Error, causing it to log only errors and fatal messages to the console." />
@@ -118,7 +117,7 @@ What we will do in this tutorial We saw in the previous tutorial that Log4J&rsqu
   "keywords": [
     
   ],
-  "articleBody": "Introduction This tutorial will help you to log all level messages into console using Log4j plugin.\nIn previous tutorial we have seen how to setup the log4j plugin in Maven and simple logging application. If you need to understand the basic of Log4J the visit previous tutorial.\nWhat we will do in this tutorial We saw in the previous tutorial that Log4J’s default configuration set the logging level to Error, causing it to log only errors and fatal messages to the console.\nTo overcome this problem, we need to override the default configuration. To do so, we need to write a Log4j configuration file named Log4j2.xml and update the correct logging level.\nLog4j supports YAML, JSON, and XML file formats for its configuration files. For this tutorial we are using Log4j2.xml\nSample Log4j2.xml   status=\"ERROR\"   name=\"Console\" target=\"SYSTEM_OUT\"  pattern=\"%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n\"/    `  level=\"ERROR\"  ref=\"Console\"/     Note : Place the Log4j2.xml file in the classpath, or in the src/resources directory for Maven projects.\n Console Appender The Appender configuration tag tells where to log the messages, it could be console or file.\nThe Console appender sets out a layout to log the message by defining the pattern. The pattern can include date and time, level of message, message itself, etc.\n target : Either SYSTEM_OUT or SYSTEM_ERR. The default is SYSTEM_OUT. pattern : The log messages are formatted using a combination of literals, conversion characters, and format modifiers, according to the pattern.  Sample Code import org.apache.logging.log4j.LogManager; import org.apache.logging.log4j.Logger; public class MainApp { public static void main(String[] args) { Logger logger = LogManager.getLogger(); printLoggingLevels(logger); } private static void printLoggingLevels(Logger logger) { logger.trace(\"logging trace level\"); logger.debug(\"logging debug level\"); logger.info(\"logging info level\"); logger.warn(\"logging warn level\"); logger.error(\"logging error level\"); logger.fatal(\"logging fatal level\"); } } You will get the following output on the console as you run the application.\n02:29:50.976 [main] ERROR com.zainabed.tutorials.logging.MainApp - logging error level 02:29:50.979 [main] FATAL com.zainabed.tutorials.logging.MainApp - logging fatal level Still, we get only Error and Fatal messages even after creating the custom configuration file.\nTo understand the problem, we need to learn the logging level defined for Log4j.\nLogging level filter revisit Log4j has the following filter mechanism.\nAll If the logging level is set to be Debug, then Debug, info, warning, error, and fatal messages will be logged into the console.\nWhen the logging level is set to “Error,” both the Error and Fatal messages are displayed.\nSo we need to update the Root level from Error to Debug.\nUpdated Log4j2.xml   status=\"ERROR\"   name=\"Console\" target=\"SYSTEM_OUT\"  pattern=\"%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n\"/    `  level=\"DEBUG\"  ref=\"Console\"/    Here we have updated the Root level from Error to Debug.\nRerun the application and you will get the following output.\n02:32:27.675 [main] DEBUG com.zainabed.tutorials.logging.MainApp - logging debug level 02:32:27.680 [main] INFO com.zainabed.tutorials.logging.MainApp - logging info level 02:32:27.680 [main] WARN com.zainabed.tutorials.logging.MainApp - logging warn level 02:32:27.680 [main] ERROR com.zainabed.tutorials.logging.MainApp - logging error level 02:32:27.680 [main] FATAL com.zainabed.tutorials.logging.MainApp - logging fatal level Conclusion In this tutorial, we learned the importance of the Log4j2.xml configuration. How to control the logging level and medium of output .\nIn the next tutorial, we will learn how to log the messages into a file.\nYou can find the source code on Github.\n",
+  "articleBody": "Introduction This tutorial will help you to log all level messages into console using Log4j plugin.\nIn previous tutorial we have seen how to setup the log4j plugin in Maven and simple logging application. If you need to understand the basic of Log4J the visit previous tutorial.\nWhat we will do in this tutorial We saw in the previous tutorial that Log4J’s default configuration set the logging level to Error, causing it to log only errors and fatal messages to the console.\nTo overcome this problem, we need to override the default configuration. To do so, we need to write a Log4j configuration file named Log4j2.xml and update the correct logging level.\nLog4j supports YAML, JSON, and XML file formats for its configuration files. For this tutorial we are using Log4j2.xml\nSample Log4j2.xml \u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e ",
   "wordCount" : "571",
   "inLanguage": "en",
   "image":"https://www.zainabed.com/image/cover.jpg","datePublished": "2022-06-01T00:57:18-04:00",
@@ -224,7 +223,7 @@ What we will do in this tutorial We saw in the previous tutorial that Log4J&rsqu
     <h1 class="post-title">
       Log4j How to Log Message to Console
     </h1>
-    <div class="post-meta"><span title='2022-06-01 00:57:18 -0400 EDT'>June 1, 2022</span>
+    <div class="post-meta"><span title='2022-06-01 00:57:18 -0400 -0400'>June 1, 2022</span>
 
 </div>
   </header> 
@@ -258,20 +257,20 @@ If you need to understand the basic of Log4J the visit <a href="https://www.zain
 <p>To overcome this problem, we need to override the default configuration. To do so, we need to write a Log4j configuration file named <code>Log4j2.xml</code> and update the correct logging level.</p>
 <p>Log4j supports YAML, JSON, and XML file formats for its configuration files. For this tutorial we are using Log4j2.xml</p>
 <h2 id="sample-log4j2xml">Sample Log4j2.xml<a hidden class="anchor" aria-hidden="true" href="#sample-log4j2xml">#</a></h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
-<span style="color:#f92672">&lt;Configuration</span> <span style="color:#a6e22e">status=</span><span style="color:#e6db74">&#34;ERROR&#34;</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#f92672">&lt;Appenders&gt;</span>
-        <span style="color:#f92672">&lt;Console</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;Console&#34;</span> <span style="color:#a6e22e">target=</span><span style="color:#e6db74">&#34;SYSTEM_OUT&#34;</span><span style="color:#f92672">&gt;</span>
-            <span style="color:#f92672">&lt;PatternLayout</span> <span style="color:#a6e22e">pattern=</span><span style="color:#e6db74">&#34;%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&#34;</span><span style="color:#f92672">/&gt;</span>
-        <span style="color:#f92672">&lt;/Console&gt;</span>
-    <span style="color:#f92672">&lt;/Appenders&gt;</span>
-    <span style="color:#f92672">&lt;Loggers&gt;</span>
-       ` <span style="color:#f92672">&lt;Root</span> <span style="color:#a6e22e">level=</span><span style="color:#e6db74">&#34;ERROR&#34;</span><span style="color:#f92672">&gt;</span>
-            <span style="color:#f92672">&lt;AppenderRef</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;Console&#34;</span><span style="color:#f92672">/&gt;</span>
-        <span style="color:#f92672">&lt;/Root&gt;</span>
-    <span style="color:#f92672">&lt;/Loggers&gt;</span>
-<span style="color:#f92672">&lt;/Configuration&gt;</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;Configuration</span> <span style="color:#a6e22e">status=</span><span style="color:#e6db74">&#34;ERROR&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;Appenders&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;Console</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;Console&#34;</span> <span style="color:#a6e22e">target=</span><span style="color:#e6db74">&#34;SYSTEM_OUT&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;PatternLayout</span> <span style="color:#a6e22e">pattern=</span><span style="color:#e6db74">&#34;%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/Console&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/Appenders&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;Loggers&gt;</span>
+</span></span><span style="display:flex;"><span>       ` <span style="color:#f92672">&lt;Root</span> <span style="color:#a6e22e">level=</span><span style="color:#e6db74">&#34;ERROR&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;AppenderRef</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;Console&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/Root&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/Loggers&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/Configuration&gt;</span>
+</span></span></code></pre></div><blockquote>
 <p><strong>Note</strong> : Place the Log4j2.xml file in the classpath, or in the <code>src/resources</code> directory for Maven projects.</p>
 </blockquote>
 <p><img loading="lazy" src="image/log4j-source-resource.png" alt="log4j source resource"  />
@@ -284,29 +283,29 @@ If you need to understand the basic of Log4J the visit <a href="https://www.zain
 <li><strong>pattern</strong> : The log messages are formatted using a combination of literals, conversion characters, and format modifiers, according to the pattern.</li>
 </ul>
 <h2 id="sample-code">Sample Code<a hidden class="anchor" aria-hidden="true" href="#sample-code">#</a></h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.apache.logging.log4j.LogManager<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.logging.log4j.Logger<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MainApp</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        Logger logger <span style="color:#f92672">=</span> LogManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getLogger</span><span style="color:#f92672">();</span>
-        printLoggingLevels<span style="color:#f92672">(</span>logger<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printLoggingLevels</span><span style="color:#f92672">(</span>Logger logger<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">trace</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging trace level&#34;</span><span style="color:#f92672">);</span>
-        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">debug</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging debug level&#34;</span><span style="color:#f92672">);</span>
-        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging info level&#34;</span><span style="color:#f92672">);</span>
-        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">warn</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging warn level&#34;</span><span style="color:#f92672">);</span>
-        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging error level&#34;</span><span style="color:#f92672">);</span>
-        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">fatal</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging fatal level&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>You will get the following output on the console as you run the application.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">02:29:50.976 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> ERROR com.zainabed.tutorials.logging.MainApp - logging error level
-02:29:50.979 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> FATAL com.zainabed.tutorials.logging.MainApp - logging fatal level
-</code></pre></div><p>Still, we get only Error and Fatal messages even after creating the custom configuration file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.logging.log4j.LogManager<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.logging.log4j.Logger<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MainApp</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Logger logger <span style="color:#f92672">=</span> LogManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getLogger</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        printLoggingLevels<span style="color:#f92672">(</span>logger<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printLoggingLevels</span><span style="color:#f92672">(</span>Logger logger<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">trace</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging trace level&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">debug</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging debug level&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging info level&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">warn</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging warn level&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging error level&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">fatal</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;logging fatal level&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>You will get the following output on the console as you run the application.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>02:29:50.976 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> ERROR com.zainabed.tutorials.logging.MainApp - logging error level
+</span></span><span style="display:flex;"><span>02:29:50.979 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> FATAL com.zainabed.tutorials.logging.MainApp - logging fatal level
+</span></span></code></pre></div><p>Still, we get only Error and Fatal messages even after creating the custom configuration file.</p>
 <p>To understand the problem, we need to learn the logging level defined for Log4j.</p>
 <h2 id="logging-level-filter-revisit">Logging level filter revisit<a hidden class="anchor" aria-hidden="true" href="#logging-level-filter-revisit">#</a></h2>
 <p>Log4j has the following filter mechanism.</p>
@@ -315,27 +314,27 @@ If you need to understand the basic of Log4J the visit <a href="https://www.zain
 <p>When the logging level is set to &ldquo;Error,&rdquo; both the Error and Fatal messages are displayed.</p>
 <p>So we need to update the Root level from Error to Debug.</p>
 <h2 id="updated-log4j2xml">Updated Log4j2.xml<a hidden class="anchor" aria-hidden="true" href="#updated-log4j2xml">#</a></h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
-<span style="color:#f92672">&lt;Configuration</span> <span style="color:#a6e22e">status=</span><span style="color:#e6db74">&#34;ERROR&#34;</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#f92672">&lt;Appenders&gt;</span>
-        <span style="color:#f92672">&lt;Console</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;Console&#34;</span> <span style="color:#a6e22e">target=</span><span style="color:#e6db74">&#34;SYSTEM_OUT&#34;</span><span style="color:#f92672">&gt;</span>
-            <span style="color:#f92672">&lt;PatternLayout</span> <span style="color:#a6e22e">pattern=</span><span style="color:#e6db74">&#34;%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&#34;</span><span style="color:#f92672">/&gt;</span>
-        <span style="color:#f92672">&lt;/Console&gt;</span>
-    <span style="color:#f92672">&lt;/Appenders&gt;</span>
-    <span style="color:#f92672">&lt;Loggers&gt;</span>
-       ` <span style="color:#f92672">&lt;Root</span> <span style="color:#a6e22e">level=</span><span style="color:#e6db74">&#34;DEBUG&#34;</span><span style="color:#f92672">&gt;</span>
-            <span style="color:#f92672">&lt;AppenderRef</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;Console&#34;</span><span style="color:#f92672">/&gt;</span>
-        <span style="color:#f92672">&lt;/Root&gt;</span>
-    <span style="color:#f92672">&lt;/Loggers&gt;</span>
-<span style="color:#f92672">&lt;/Configuration&gt;</span>
-</code></pre></div><p>Here we have updated the Root level from Error to Debug.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;Configuration</span> <span style="color:#a6e22e">status=</span><span style="color:#e6db74">&#34;ERROR&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;Appenders&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;Console</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;Console&#34;</span> <span style="color:#a6e22e">target=</span><span style="color:#e6db74">&#34;SYSTEM_OUT&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;PatternLayout</span> <span style="color:#a6e22e">pattern=</span><span style="color:#e6db74">&#34;%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/Console&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/Appenders&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;Loggers&gt;</span>
+</span></span><span style="display:flex;"><span>       ` <span style="color:#f92672">&lt;Root</span> <span style="color:#a6e22e">level=</span><span style="color:#e6db74">&#34;DEBUG&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;AppenderRef</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;Console&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/Root&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/Loggers&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/Configuration&gt;</span>
+</span></span></code></pre></div><p>Here we have updated the Root level from Error to Debug.</p>
 <p>Rerun the application and you will get the following output.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">02:32:27.675 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> DEBUG com.zainabed.tutorials.logging.MainApp - logging debug level
-02:32:27.680 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> INFO  com.zainabed.tutorials.logging.MainApp - logging info level
-02:32:27.680 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> WARN  com.zainabed.tutorials.logging.MainApp - logging warn level
-02:32:27.680 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> ERROR com.zainabed.tutorials.logging.MainApp - logging error level
-02:32:27.680 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> FATAL com.zainabed.tutorials.logging.MainApp - logging fatal level
-</code></pre></div><h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>02:32:27.675 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> DEBUG com.zainabed.tutorials.logging.MainApp - logging debug level
+</span></span><span style="display:flex;"><span>02:32:27.680 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> INFO  com.zainabed.tutorials.logging.MainApp - logging info level
+</span></span><span style="display:flex;"><span>02:32:27.680 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> WARN  com.zainabed.tutorials.logging.MainApp - logging warn level
+</span></span><span style="display:flex;"><span>02:32:27.680 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> ERROR com.zainabed.tutorials.logging.MainApp - logging error level
+</span></span><span style="display:flex;"><span>02:32:27.680 <span style="color:#f92672">[</span>main<span style="color:#f92672">]</span> FATAL com.zainabed.tutorials.logging.MainApp - logging fatal level
+</span></span></code></pre></div><h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
 <p>In this tutorial, we learned the importance of the Log4j2.xml configuration. How to control the logging level and medium of output .</p>
 <p>In the next tutorial, we will learn how to log the messages into a file.</p>
 <p>You can find the source code on <a href="https://github.com/zainabed/tutorials/tree/master/maven/log4j-maven">Github</a>.</p>
@@ -596,7 +595,7 @@ If you need to understand the basic of Log4J the visit <a href="https://www.zain
 
         </div>
         <div class=" center">
-            &copy; 2023 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2024 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>

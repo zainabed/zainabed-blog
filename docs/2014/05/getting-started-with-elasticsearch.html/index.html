@@ -8,11 +8,11 @@
 <meta name="keywords" content="">
 <meta name="description" content="Introduction Elasticsearch is open source search system based of Apache Lucene. this is a brief introduction, you can find more information on Elasticsearch Official Site or Wiki.
 What are features of Elasticsearch Here are list of features of Elasticsearch.
- Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source  How to install ElasticSearch Download the latest version from Elastic.">
+Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source How to install ElasticSearch Download the latest version from Elastic.">
 <meta name="author" content="">
 <link rel="canonical" href="https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2e6d835886156948349f5e09bf5edfff819a004809f055d71edc1c07e5a26d1d.css" integrity="sha256-Lm2DWIYVaUg0n14Jv17f/4GaAEgJ8FXXHtwcB&#43;WibR0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.zainabed.com/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
@@ -69,11 +69,10 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script>
-<meta property="og:title" content="Getting Started With Elasticsearch" />
+</script><meta property="og:title" content="Getting Started With Elasticsearch" />
 <meta property="og:description" content="Introduction Elasticsearch is open source search system based of Apache Lucene. this is a brief introduction, you can find more information on Elasticsearch Official Site or Wiki.
 What are features of Elasticsearch Here are list of features of Elasticsearch.
- Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source  How to install ElasticSearch Download the latest version from Elastic." />
+Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source How to install ElasticSearch Download the latest version from Elastic." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/" />
 <meta property="og:image" content="https://www.zainabed.com/image/cover.png" /><meta property="article:section" content="blogs" />
@@ -85,7 +84,7 @@ What are features of Elasticsearch Here are list of features of Elasticsearch.
 <meta name="twitter:title" content="Getting Started With Elasticsearch"/>
 <meta name="twitter:description" content="Introduction Elasticsearch is open source search system based of Apache Lucene. this is a brief introduction, you can find more information on Elasticsearch Official Site or Wiki.
 What are features of Elasticsearch Here are list of features of Elasticsearch.
- Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source  How to install ElasticSearch Download the latest version from Elastic."/>
+Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source How to install ElasticSearch Download the latest version from Elastic."/>
 
 
 <script type="application/ld+json">
@@ -114,11 +113,11 @@ What are features of Elasticsearch Here are list of features of Elasticsearch.
   "@type": "BlogPosting",
   "headline": "Getting Started With Elasticsearch",
   "name": "Getting Started With Elasticsearch",
-  "description": "Introduction Elasticsearch is open source search system based of Apache Lucene. this is a brief introduction, you can find more information on Elasticsearch Official Site or Wiki.\nWhat are features of Elasticsearch Here are list of features of Elasticsearch.\n Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source  How to install ElasticSearch Download the latest version from Elastic.",
+  "description": "Introduction Elasticsearch is open source search system based of Apache Lucene. this is a brief introduction, you can find more information on Elasticsearch Official Site or Wiki.\nWhat are features of Elasticsearch Here are list of features of Elasticsearch.\nReal Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source How to install ElasticSearch Download the latest version from Elastic.",
   "keywords": [
     
   ],
-  "articleBody": "Introduction Elasticsearch is open source search system based of Apache Lucene. this is a brief introduction, you can find more information on Elasticsearch Official Site or Wiki.\nWhat are features of Elasticsearch Here are list of features of Elasticsearch.\n Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source  How to install ElasticSearch Download the latest version from Elastic.\nThen unzip it or use following command in console to download Elasticsearch.\ncurl -L -O http://download.elasticsearch.org/PATH/TO/LATEST/$VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Now move to unzip folder and run following command\n{elasticsearch unzip folder path}/bin/elasticsearch\nIt will start Elasticsearch.\nHow to use ElasticSearch To interactive with data using Elasticsearch we will use head plugin of Elasticsearch.\nTo install head plugin in your system run following command.\n{elasticsearch unzip folder path}/bin/plugin --install mobz/elasticsearch-head After successful installation open your favorite browser and type following URL to use head plugin.\nhttp://localhost:9200/_plugin/head It will open head plugin user interface, now we can manipulate Elasticsearch records.\nTo start with data manipulation, first we need to create Index and Type.\nIndex acts as Database and Type as Table, therefore we can have multiple Type inside single Index.\nFirst create new index, to create new index click button New Index from homepage of head plugin.\nThen type name of index (for this blog we type “database” as Index and use Type as “Table”) and click Ok.\nIt will create new index on Elasticsearch.\nHow to perform CRUD operation on Elasticsearch To perform CRUD operation on Elasticsearch select Any Request Tab It will open user interface as shown below\nThere are several section defined in above image. lets see them one by one\n Index: Index on which you want to perform action, it is located just after localhost:9200/ Type: Type within selected Index, it will come after Index value. Action: which type of action you want to perform like search, mapping, etc. Action Method: it is REST API action methods like POST, GET, PUT, DELETE.  Following is record or document structure that we are going to create.\n{ name : String, description: String, profile_image : String, birthdate : Date, address: String } Create Mapping First new need to define structure of data, by default it would be string for all fields but we can set different data type as date, geo point, etc.\nTo define mapping, select Index and Type, then type _mapping in Action area to perform mapping related tasks, then select Action Method as POST and type following mapping structure and click on Request button.\n{ \"table\": { \"properties\":{ \"name\": {\"type\" : \"string\"}, \"description\": {\"type\" : \"string\"}, \"profile_image\":{\"type\" : \"string\"}, \"birthdate\":{\"type\" : \"date\"}, \"address\":{\"type\" : \"string\"} } } } To ensure mapping is created , just change Action Method to GET and click Request button.\nCreate Record To create record on selected Index and Type, make Action value empty and Action Method as POST after that add following JSON record.\n{ \"name\": \"Zainul\", \"description\" : \"Software Developer\", \"birthdate\": \"1985-03-13T00:00:00\", \"profile_image\" : \"image1.png\" } And click on Request button. It will index the one record.\nRead Indexed Records To fetch indexed records from Elasticsearch, select Index and Type then Action as _search and Action Method as POST , make query body empty then click on Request button. It will fetch 10 records from selected Index and Type.\nUpdate Records To update value of name field, select Index and Type then Action as _update and Action Method as PUT and add following JSON record in query section then click on Request button.\n{ \"script\": \"ctx._source.name=\\\"Zainul Abedin \\\"\" } to check record is updated or not, fire search query.\nDelete Records To delete record from selected Index and Type, make Action value empty and select Action Method as DELETE and click on Request button.\nThis is a brief introduction to CRUD operations. in next blog post you will see how to access Elasticsearch via Java Client.\n",
+  "articleBody": "Introduction Elasticsearch is open source search system based of Apache Lucene. this is a brief introduction, you can find more information on Elasticsearch Official Site or Wiki.\nWhat are features of Elasticsearch Here are list of features of Elasticsearch.\nReal Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source How to install ElasticSearch Download the latest version from Elastic.\nThen unzip it or use following command in console to download Elasticsearch.\ncurl -L -O http://download.elasticsearch.org/PATH/TO/LATEST/$VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Now move to unzip folder and run following command\n{elasticsearch unzip folder path}/bin/elasticsearch\nIt will start Elasticsearch.\nHow to use ElasticSearch To interactive with data using Elasticsearch we will use head plugin of Elasticsearch.\nTo install head plugin in your system run following command.\n{elasticsearch unzip folder path}/bin/plugin --install mobz/elasticsearch-head After successful installation open your favorite browser and type following URL to use head plugin.\nhttp://localhost:9200/_plugin/head It will open head plugin user interface, now we can manipulate Elasticsearch records.\nTo start with data manipulation, first we need to create Index and Type.\nIndex acts as Database and Type as Table, therefore we can have multiple Type inside single Index.\nFirst create new index, to create new index click button New Index from homepage of head plugin.\nThen type name of index (for this blog we type “database” as Index and use Type as “Table”) and click Ok.\nIt will create new index on Elasticsearch.\nHow to perform CRUD operation on Elasticsearch To perform CRUD operation on Elasticsearch select Any Request Tab It will open user interface as shown below\nThere are several section defined in above image. lets see them one by one\nIndex: Index on which you want to perform action, it is located just after localhost:9200/ Type: Type within selected Index, it will come after Index value. Action: which type of action you want to perform like search, mapping, etc. Action Method: it is REST API action methods like POST, GET, PUT, DELETE. Following is record or document structure that we are going to create.\n{ name : String, description: String, profile_image : String, birthdate : Date, address: String } Create Mapping First new need to define structure of data, by default it would be string for all fields but we can set different data type as date, geo point, etc.\nTo define mapping, select Index and Type, then type _mapping in Action area to perform mapping related tasks, then select Action Method as POST and type following mapping structure and click on Request button.\n{ \"table\": { \"properties\":{ \"name\": {\"type\" : \"string\"}, \"description\": {\"type\" : \"string\"}, \"profile_image\":{\"type\" : \"string\"}, \"birthdate\":{\"type\" : \"date\"}, \"address\":{\"type\" : \"string\"} } } } To ensure mapping is created , just change Action Method to GET and click Request button.\nCreate Record To create record on selected Index and Type, make Action value empty and Action Method as POST after that add following JSON record.\n{ \"name\": \"Zainul\", \"description\" : \"Software Developer\", \"birthdate\": \"1985-03-13T00:00:00\", \"profile_image\" : \"image1.png\" } And click on Request button. It will index the one record.\nRead Indexed Records To fetch indexed records from Elasticsearch, select Index and Type then Action as _search and Action Method as POST , make query body empty then click on Request button. It will fetch 10 records from selected Index and Type.\nUpdate Records To update value of name field, select Index and Type then Action as _update and Action Method as PUT and add following JSON record in query section then click on Request button.\n{ \"script\": \"ctx._source.name=\\\"Zainul Abedin \\\"\" } to check record is updated or not, fire search query.\nDelete Records To delete record from selected Index and Type, make Action value empty and select Action Method as DELETE and click on Request button.\nThis is a brief introduction to CRUD operations. in next blog post you will see how to access Elasticsearch via Java Client.\n",
   "wordCount" : "664",
   "inLanguage": "en",
   "image":"https://www.zainabed.com/image/cover.png","datePublished": "2014-05-29T05:23:12-04:00",
@@ -224,12 +223,12 @@ What are features of Elasticsearch Here are list of features of Elasticsearch.
     <h1 class="post-title">
       Getting Started With Elasticsearch
     </h1>
-    <div class="post-meta"><span title='2014-05-29 05:23:12 -0400 EDT'>May 29, 2014</span>
+    <div class="post-meta"><span title='2014-05-29 05:23:12 -0400 -0400'>May 29, 2014</span>
 
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/image/cover_hu519e4c2e1cdeed3e24af35b9df58f939_13240_360x0_resize_box_2.png 360w ,https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/image/cover_hu519e4c2e1cdeed3e24af35b9df58f939_13240_480x0_resize_box_2.png 480w ,https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/image/cover_hu519e4c2e1cdeed3e24af35b9df58f939_13240_720x0_resize_box_2.png 720w ,https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/image/cover.png 900w" 
+        <img loading="lazy" srcset="https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/image/cover_hu519e4c2e1cdeed3e24af35b9df58f939_13240_360x0_resize_box_3.png 360w ,https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/image/cover_hu519e4c2e1cdeed3e24af35b9df58f939_13240_480x0_resize_box_3.png 480w ,https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/image/cover_hu519e4c2e1cdeed3e24af35b9df58f939_13240_720x0_resize_box_3.png 720w ,https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/image/cover.png 900w" 
             sizes="(min-width: 768px) 720px, 100vw" src="https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/image/cover.png" alt="Getting Started With Elasticsearch" 
             width="900" height="450">
         
@@ -270,18 +269,18 @@ What are features of Elasticsearch Here are list of features of Elasticsearch.
 <h2 id="how-to-install-elasticsearch">How to install ElasticSearch<a hidden class="anchor" aria-hidden="true" href="#how-to-install-elasticsearch">#</a></h2>
 <p>Download the latest version from <a href="https://www.elastic.co/">Elastic</a>.</p>
 <p>Then unzip it or use following command in console to download Elasticsearch.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -L -O http://download.elasticsearch.org/PATH/TO/LATEST/$VERSION.zip
-unzip elasticsearch-$VERSION.zip
-cd  elasticsearch-$VERSION
-</code></pre></div><p>Now move to unzip folder and run following command</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -L -O http://download.elasticsearch.org/PATH/TO/LATEST/$VERSION.zip
+</span></span><span style="display:flex;"><span>unzip elasticsearch-$VERSION.zip
+</span></span><span style="display:flex;"><span>cd  elasticsearch-$VERSION
+</span></span></code></pre></div><p>Now move to unzip folder and run following command</p>
 <p><code>{elasticsearch unzip folder path}/bin/elasticsearch</code></p>
 <p>It will start Elasticsearch.</p>
 <h2 id="how-to-use-elasticsearch">How to use ElasticSearch<a hidden class="anchor" aria-hidden="true" href="#how-to-use-elasticsearch">#</a></h2>
 <p>To interactive with data using Elasticsearch we will use <code>head plugin</code> of Elasticsearch.</p>
 <p>To install head plugin in your system run following command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{</span>elasticsearch unzip folder path<span style="color:#f92672">}</span>/bin/plugin --install mobz/elasticsearch-head
-</code></pre></div><p>After successful installation open your favorite browser and  type following URL to use head plugin.</p>
-<pre><code>http://localhost:9200/_plugin/head
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{</span>elasticsearch unzip folder path<span style="color:#f92672">}</span>/bin/plugin --install mobz/elasticsearch-head
+</span></span></code></pre></div><p>After successful installation open your favorite browser and  type following URL to use head plugin.</p>
+<pre tabindex="0"><code>http://localhost:9200/_plugin/head
 </code></pre><p>It will open head plugin user interface, now we can manipulate Elasticsearch records.</p>
 <p>To start with data manipulation, first we need to create <code>Index</code> and <code>Type</code>.</p>
 <p>Index acts as Database and Type as Table, therefore we can have multiple Type inside single Index.</p>
@@ -303,40 +302,40 @@ It will open user interface as shown below</p>
 <li><strong>Action Method</strong>: it is REST API action methods like POST, GET, PUT, DELETE.</li>
 </ul>
 <p>Following is record or document structure that we are going to create.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-   <span style="color:#a6e22e">name</span> <span style="color:#f92672">:</span> String,
-   <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> String,
-   <span style="color:#a6e22e">profile_image</span> <span style="color:#f92672">:</span> String,
-   <span style="color:#a6e22e">birthdate</span> <span style="color:#f92672">:</span> Date,
-   <span style="color:#a6e22e">address</span><span style="color:#f92672">:</span> String
-}
-</code></pre></div><h2 id="create-mapping">Create Mapping<a hidden class="anchor" aria-hidden="true" href="#create-mapping">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">name</span> <span style="color:#f92672">:</span> String,
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> String,
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">profile_image</span> <span style="color:#f92672">:</span> String,
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">birthdate</span> <span style="color:#f92672">:</span> Date,
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">address</span><span style="color:#f92672">:</span> String
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="create-mapping">Create Mapping<a hidden class="anchor" aria-hidden="true" href="#create-mapping">#</a></h2>
 <p>First new need to define structure of data, by default it would be string for all fields but we can set different data type as date, geo point, etc.</p>
 <p>To define mapping, select Index and Type, then type _mapping in Action area to perform mapping related tasks, then select Action Method as POST and type following mapping structure and click on Request button.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;table&#34;</span>: {
-   <span style="color:#f92672">&#34;properties&#34;</span>:{
-      <span style="color:#f92672">&#34;name&#34;</span>: {<span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;string&#34;</span>},
-      <span style="color:#f92672">&#34;description&#34;</span>: {<span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;string&#34;</span>},
-      <span style="color:#f92672">&#34;profile_image&#34;</span>:{<span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;string&#34;</span>},
-      <span style="color:#f92672">&#34;birthdate&#34;</span>:{<span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;date&#34;</span>},
-      <span style="color:#f92672">&#34;address&#34;</span>:{<span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;string&#34;</span>}
-    }
-  }
-}
-</code></pre></div><p><img loading="lazy" src="image/elasticsearch-mapping.png" alt="elasticsearch mapping"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;table&#34;</span>: {
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&#34;properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;name&#34;</span>: {<span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;string&#34;</span>},
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;description&#34;</span>: {<span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;string&#34;</span>},
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;profile_image&#34;</span>:{<span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;string&#34;</span>},
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;birthdate&#34;</span>:{<span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;date&#34;</span>},
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;address&#34;</span>:{<span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;string&#34;</span>}
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img loading="lazy" src="image/elasticsearch-mapping.png" alt="elasticsearch mapping"  />
 </p>
 <p>To ensure mapping is created , just change Action Method to GET and click Request button.</p>
 <h2 id="create-record">Create Record<a hidden class="anchor" aria-hidden="true" href="#create-record">#</a></h2>
 <p>To create record on selected Index and Type, make Action  value empty
 and Action Method as POST after that add following JSON record.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Zainul&#34;</span>,
-  <span style="color:#f92672">&#34;description&#34;</span> : <span style="color:#e6db74">&#34;Software Developer&#34;</span>,
-  <span style="color:#f92672">&#34;birthdate&#34;</span>: <span style="color:#e6db74">&#34;1985-03-13T00:00:00&#34;</span>,
-  <span style="color:#f92672">&#34;profile_image&#34;</span> : <span style="color:#e6db74">&#34;image1.png&#34;</span>
-}
-</code></pre></div><p>And click on <code>Request</code> button. It will index the one record.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Zainul&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;description&#34;</span> : <span style="color:#e6db74">&#34;Software Developer&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;birthdate&#34;</span>: <span style="color:#e6db74">&#34;1985-03-13T00:00:00&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;profile_image&#34;</span> : <span style="color:#e6db74">&#34;image1.png&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And click on <code>Request</code> button. It will index the one record.</p>
 <p><img loading="lazy" src="image/elasticsearch-create-index.png" alt="elasticsearch create index"  />
 </p>
 <h2 id="read-indexed-records">Read Indexed Records<a hidden class="anchor" aria-hidden="true" href="#read-indexed-records">#</a></h2>
@@ -346,10 +345,10 @@ It will fetch 10 records from selected Index and Type.</p>
 </p>
 <h2 id="update-records">Update Records<a hidden class="anchor" aria-hidden="true" href="#update-records">#</a></h2>
 <p>To update value of name field, select Index and Type then Action as _update and Action Method as PUT and add following JSON record in query section then click on Request button.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
- <span style="color:#f92672">&#34;script&#34;</span>: <span style="color:#e6db74">&#34;ctx._source.name=\&#34;Zainul Abedin \&#34;&#34;</span>
-}
-</code></pre></div><p><img loading="lazy" src="image/elasticsearch-update-index.png" alt="elasticsearch update index"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">&#34;script&#34;</span>: <span style="color:#e6db74">&#34;ctx._source.name=\&#34;Zainul Abedin \&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img loading="lazy" src="image/elasticsearch-update-index.png" alt="elasticsearch update index"  />
 </p>
 <p>to check record is updated or not, fire search query.</p>
 <h2 id="delete-records">Delete Records<a hidden class="anchor" aria-hidden="true" href="#delete-records">#</a></h2>
@@ -529,7 +528,7 @@ It will fetch 10 records from selected Index and Type.</p>
 
         </div>
         <div class=" center">
-            &copy; 2023 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2024 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>

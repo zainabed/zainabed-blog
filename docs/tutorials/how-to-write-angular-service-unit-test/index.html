@@ -8,11 +8,11 @@
 <meta name="keywords" content="">
 <meta name="description" content="Introduction This tutorial will walk you through the process of creating a basic unit test case for an Angular service. Angular services enable you to decompose complex business logic into small, reusable units that can then be injected into components or other services using dependency injection.
 This tutorial is divided into two parts:
- One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module.">
+One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module.">
 <meta name="author" content="">
 <link rel="canonical" href="https://www.zainabed.com/tutorials/how-to-write-angular-service-unit-test/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2e6d835886156948349f5e09bf5edfff819a004809f055d71edc1c07e5a26d1d.css" integrity="sha256-Lm2DWIYVaUg0n14Jv17f/4GaAEgJ8FXXHtwcB&#43;WibR0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.zainabed.com/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
@@ -69,11 +69,10 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script>
-<meta property="og:title" content="How To Write Angular Service Unit Test" />
+</script><meta property="og:title" content="How To Write Angular Service Unit Test" />
 <meta property="og:description" content="Introduction This tutorial will walk you through the process of creating a basic unit test case for an Angular service. Angular services enable you to decompose complex business logic into small, reusable units that can then be injected into components or other services using dependency injection.
 This tutorial is divided into two parts:
- One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module." />
+One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.zainabed.com/tutorials/how-to-write-angular-service-unit-test/" /><meta property="article:section" content="tutorials" />
 <meta property="article:published_time" content="2023-01-31T08:01:06-05:00" />
@@ -83,7 +82,7 @@ This tutorial is divided into two parts:
 <meta name="twitter:title" content="How To Write Angular Service Unit Test"/>
 <meta name="twitter:description" content="Introduction This tutorial will walk you through the process of creating a basic unit test case for an Angular service. Angular services enable you to decompose complex business logic into small, reusable units that can then be injected into components or other services using dependency injection.
 This tutorial is divided into two parts:
- One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module."/>
+One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module."/>
 
 
 <script type="application/ld+json">
@@ -112,11 +111,11 @@ This tutorial is divided into two parts:
   "@type": "BlogPosting",
   "headline": "How To Write Angular Service Unit Test",
   "name": "How To Write Angular Service Unit Test",
-  "description": "Introduction This tutorial will walk you through the process of creating a basic unit test case for an Angular service. Angular services enable you to decompose complex business logic into small, reusable units that can then be injected into components or other services using dependency injection.\nThis tutorial is divided into two parts:\n One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module.",
+  "description": "Introduction This tutorial will walk you through the process of creating a basic unit test case for an Angular service. Angular services enable you to decompose complex business logic into small, reusable units that can then be injected into components or other services using dependency injection.\nThis tutorial is divided into two parts:\nOne for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module.",
   "keywords": [
     
   ],
-  "articleBody": "Introduction This tutorial will walk you through the process of creating a basic unit test case for an Angular service. Angular services enable you to decompose complex business logic into small, reusable units that can then be injected into components or other services using dependency injection.\nThis tutorial is divided into two parts:\n One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module.  Service The structure of the Token class is shown in the following snippet. token.ts export class Token { timestamp: number = 0; userId: number = 0; } The Token class contains the token’s expiration timestamp, user id, and token signature.\nThe next step is to validate this token object using an Angular service.\ntoke.service.ts import { Token } from './token'; export class TokenService { isValidToken(token: Token): boolean { let currentTime = Date.now(); let timeDifference: number = token.timestamp - currentTime; if (timeDifference  0) { return false; } else { return true; } } } To validate the token, the service will compute the difference between the current time and the moment it was created. If the current time exceeds the token time or expiry time, the token is considered invalid, and the method returns the appropriate boolean value.\nNow we can test the above method’s behaviour against two scenarios:\n One with an expired token, which should return a false value And one with a non-expired token, which should return a true value.  Unit Test token.service.spec.ts import { Token } from './token'; import { TokenService } from './token.service'; describe('TokenSerrvice test cases', () = { var tokenService: TokenService; var tokenTime: number; beforeEach(() = { tokenService = new TokenService(); }); it('Should return false for expired token', () = { tokenTime = Date.now() - 50; let token: Token = { timestamp: tokenTime, userId: 1212 }; let result: boolean = tokenService.isValidToken(token); expect(result).toBeFalse(); }); it('Should return true for valid token', () = { tokenTime = Date.now() + 5000; let token: Token = { timestamp: tokenTime, userId: 1212 }; let result: boolean = tokenService.isValidToken(token); expect(result).toBeTrue(); }); }); beforeEach will create a new TokenService instance. Another way to obtain an instance of the service is to use the TestBed module, as seen below\nTestBed Configuration beforeEach(() = { TestBed.configureTestingModule({ providers: [TokenService] }) tokenService = TestBed.inject(TokenService); }) TestBed is an Angular-specific utility for unit testing; it allows us to auto-load services and any dependencies associated with them, and it provides a production-ready environment for unit testing.\nNow the question is, which of these should I choose? The answer is dependent on your working style, if you want to control service creation, the first option is preferable, if you prefer Angular to handle service instantiation, the second option is advisable.\nConclusion Angular services are lightweight and independent of UI components. Therefore, you can build the service and verify its behaviour using unit test cases without the need to bootstrap your Angular application and browser.\nYou can find source code on the Github page.\n",
+  "articleBody": "Introduction This tutorial will walk you through the process of creating a basic unit test case for an Angular service. Angular services enable you to decompose complex business logic into small, reusable units that can then be injected into components or other services using dependency injection.\nThis tutorial is divided into two parts:\nOne for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module. Service The structure of the Token class is shown in the following snippet. token.ts export class Token { timestamp: number = 0; userId: number = 0; } The Token class contains the token’s expiration timestamp, user id, and token signature.\nThe next step is to validate this token object using an Angular service.\ntoke.service.ts import { Token } from './token'; export class TokenService { isValidToken(token: Token): boolean { let currentTime = Date.now(); let timeDifference: number = token.timestamp - currentTime; if (timeDifference \u003c 0) { return false; } else { return true; } } } To validate the token, the service will compute the difference between the current time and the moment it was created. If the current time exceeds the token time or expiry time, the token is considered invalid, and the method returns the appropriate boolean value.\nNow we can test the above method’s behaviour against two scenarios:\nOne with an expired token, which should return a false value And one with a non-expired token, which should return a true value. Unit Test token.service.spec.ts import { Token } from './token'; import { TokenService } from './token.service'; describe('TokenSerrvice test cases', () =\u003e { var tokenService: TokenService; var tokenTime: number; beforeEach(() =\u003e { tokenService = new TokenService(); }); it('Should return false for expired token', () =\u003e { tokenTime = Date.now() - 50; let token: Token = { timestamp: tokenTime, userId: 1212 }; let result: boolean = tokenService.isValidToken(token); expect(result).toBeFalse(); }); it('Should return true for valid token', () =\u003e { tokenTime = Date.now() + 5000; let token: Token = { timestamp: tokenTime, userId: 1212 }; let result: boolean = tokenService.isValidToken(token); expect(result).toBeTrue(); }); }); beforeEach will create a new TokenService instance. Another way to obtain an instance of the service is to use the TestBed module, as seen below\nTestBed Configuration beforeEach(() =\u003e { TestBed.configureTestingModule({ providers: [TokenService] }) tokenService = TestBed.inject(TokenService); }) TestBed is an Angular-specific utility for unit testing; it allows us to auto-load services and any dependencies associated with them, and it provides a production-ready environment for unit testing.\nNow the question is, which of these should I choose? The answer is dependent on your working style, if you want to control service creation, the first option is preferable, if you prefer Angular to handle service instantiation, the second option is advisable.\nConclusion Angular services are lightweight and independent of UI components. Therefore, you can build the service and verify its behaviour using unit test cases without the need to bootstrap your Angular application and browser.\nYou can find source code on the Github page.\n",
   "wordCount" : "497",
   "inLanguage": "en",
   "datePublished": "2023-01-31T08:01:06-05:00",
@@ -222,7 +221,7 @@ This tutorial is divided into two parts:
     <h1 class="post-title">
       How To Write Angular Service Unit Test
     </h1>
-    <div class="post-meta"><span title='2023-01-31 08:01:06 -0500 EST'>January 31, 2023</span>
+    <div class="post-meta"><span title='2023-01-31 08:01:06 -0500 -0500'>January 31, 2023</span>
 
 </div>
   </header> 
@@ -256,30 +255,29 @@ This tutorial is divided into two parts:
 <h2 id="service">Service<a hidden class="anchor" aria-hidden="true" href="#service">#</a></h2>
 <p>The structure of the <code>Token</code> class is shown in the following snippet. </p>
 <h4 id="tokents">token.ts<a hidden class="anchor" aria-hidden="true" href="#tokents">#</a></h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Token</span> {
-  <span style="color:#a6e22e">timestamp</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-  <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div><p>The Token class contains the token&rsquo;s expiration timestamp, user id, and token signature.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Token</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">timestamp</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The Token class contains the token&rsquo;s expiration timestamp, user id, and token signature.</p>
 <p>The next step is to validate this token object using an Angular service.</p>
 <h4 id="tokeservicets">toke.service.ts<a hidden class="anchor" aria-hidden="true" href="#tokeservicets">#</a></h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Token</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./token&#39;</span>;
-
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TokenService</span> {
-
-  <span style="color:#a6e22e">isValidToken</span>(<span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Token</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span> {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">currentTime</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>();
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">timeDifference</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">token</span>.<span style="color:#a6e22e">timestamp</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">currentTime</span>;
-    
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">timeDifference</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
-      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-    } <span style="color:#66d9ef">else</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-    }
-  }
-}
-
-</code></pre></div><p>To validate the token, the service will compute the difference between the current time and the moment it was created.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Token</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./token&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TokenService</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">isValidToken</span>(<span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Token</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">currentTime</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">timeDifference</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">token</span>.<span style="color:#a6e22e">timestamp</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">currentTime</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">timeDifference</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>To validate the token, the service will compute the difference between the current time and the moment it was created.
 If the current time exceeds the token time or expiry time, the token is considered invalid, and the method returns the appropriate boolean value.</p>
 <p>Now we can test the above method&rsquo;s behaviour against two scenarios:</p>
 <ul>
@@ -288,41 +286,40 @@ If the current time exceeds the token time or expiry time, the token is consider
 </ul>
 <h2 id="unit-test">Unit Test<a hidden class="anchor" aria-hidden="true" href="#unit-test">#</a></h2>
 <h4 id="tokenservicespects">token.service.spec.ts<a hidden class="anchor" aria-hidden="true" href="#tokenservicespects">#</a></h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Token</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./token&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">TokenService</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./token.service&#39;</span>;
-
-<span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;TokenSerrvice test cases&#39;</span>, () =&gt; {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tokenService</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">TokenService</span>;
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tokenTime</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span>;
-
-  <span style="color:#a6e22e">beforeEach</span>(() =&gt; {
-    <span style="color:#a6e22e">tokenService</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TokenService</span>();
-  });
-
-  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;Should return false for expired token&#39;</span>, () =&gt; {
-    <span style="color:#a6e22e">tokenTime</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>;
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Token</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">timestamp</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tokenTime</span>, <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1212</span> };
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tokenService</span>.<span style="color:#a6e22e">isValidToken</span>(<span style="color:#a6e22e">token</span>);
-    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">result</span>).<span style="color:#a6e22e">toBeFalse</span>();
-  });
-
-  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;Should return true for valid token&#39;</span>, () =&gt; {
-    <span style="color:#a6e22e">tokenTime</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">+</span> <span style="color:#ae81ff">5000</span>;
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Token</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">timestamp</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tokenTime</span>, <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1212</span> };
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tokenService</span>.<span style="color:#a6e22e">isValidToken</span>(<span style="color:#a6e22e">token</span>);
-    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">result</span>).<span style="color:#a6e22e">toBeTrue</span>();
-  });
-});
-
-</code></pre></div><p><code>beforeEach</code> will create a new TokenService instance. Another way to obtain an instance of the service is to use the <code>TestBed</code> module, as seen below</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Token</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./token&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">TokenService</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./token.service&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;TokenSerrvice test cases&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tokenService</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">TokenService</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tokenTime</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">beforeEach</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tokenService</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TokenService</span>();
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;Should return false for expired token&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tokenTime</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Token</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">timestamp</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tokenTime</span>, <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1212</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tokenService</span>.<span style="color:#a6e22e">isValidToken</span>(<span style="color:#a6e22e">token</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">result</span>).<span style="color:#a6e22e">toBeFalse</span>();
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;Should return true for valid token&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tokenTime</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">+</span> <span style="color:#ae81ff">5000</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Token</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">timestamp</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tokenTime</span>, <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1212</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tokenService</span>.<span style="color:#a6e22e">isValidToken</span>(<span style="color:#a6e22e">token</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">result</span>).<span style="color:#a6e22e">toBeTrue</span>();
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p><code>beforeEach</code> will create a new TokenService instance. Another way to obtain an instance of the service is to use the <code>TestBed</code> module, as seen below</p>
 <h2 id="testbed-configuration">TestBed Configuration<a hidden class="anchor" aria-hidden="true" href="#testbed-configuration">#</a></h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">beforeEach</span>(() =&gt; {
-    <span style="color:#a6e22e">TestBed</span>.<span style="color:#a6e22e">configureTestingModule</span>({
-      <span style="color:#a6e22e">providers</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">TokenService</span>]
-    })
-    <span style="color:#a6e22e">tokenService</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">TestBed</span>.<span style="color:#a6e22e">inject</span>(<span style="color:#a6e22e">TokenService</span>);
-})
-</code></pre></div><p>TestBed is an Angular-specific utility for unit testing; it allows us to auto-load services and any dependencies associated with them, and it provides a production-ready environment for unit testing.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">beforeEach</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">TestBed</span>.<span style="color:#a6e22e">configureTestingModule</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">providers</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">TokenService</span>]
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tokenService</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">TestBed</span>.<span style="color:#a6e22e">inject</span>(<span style="color:#a6e22e">TokenService</span>);
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><p>TestBed is an Angular-specific utility for unit testing; it allows us to auto-load services and any dependencies associated with them, and it provides a production-ready environment for unit testing.</p>
 <p>Now the question is, which of these should I choose? The answer is dependent on your working style, if you want to control service creation, the first option is preferable, if you prefer Angular to handle service instantiation, the second option is advisable.</p>
 <h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
 <p>Angular services are lightweight and independent of UI components. Therefore, you can build the service and verify its behaviour using unit test cases without the need to bootstrap your Angular application and browser.</p>
@@ -486,7 +483,7 @@ If the current time exceeds the token time or expiry time, the token is consider
 
         </div>
         <div class=" center">
-            &copy; 2023 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2024 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>

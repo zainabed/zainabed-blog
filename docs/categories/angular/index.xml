@@ -27,7 +27,7 @@ If you just happened onto this tutorial, you will gain a decent understanding of
       <description>Introduction Every application starts with bootstrap process which initialize application and wire it other with dependencies and configurations.
 AngularJs is not different from other application. It also starts application with bootstrap process.
 Following operation happens inside AngularJs bootstrap process.
- Load application module. Create dependency injector and load dependencies. Compile HTML and create scope for application.  All these steps happens inside angular.js scripting file. therefore we need to include it first.</description>
+Load application module. Create dependency injector and load dependencies. Compile HTML and create scope for application. All these steps happens inside angular.js scripting file. therefore we need to include it first. we can include it inside HEAD tag or at end of BODY tag.</description>
     </item>
     
     <item>

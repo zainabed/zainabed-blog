@@ -12,8 +12,8 @@ Setup First, create a Gradle project using the gradle init command.
 gradle init Complete the Gradle wizard to create a project.">
 <meta name="author" content="">
 <link rel="canonical" href="https://www.zainabed.com/2022/04/cucumber-setup-using-gradle.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2e6d835886156948349f5e09bf5edfff819a004809f055d71edc1c07e5a26d1d.css" integrity="sha256-Lm2DWIYVaUg0n14Jv17f/4GaAEgJ8FXXHtwcB&#43;WibR0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.zainabed.com/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
@@ -70,8 +70,7 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script>
-<meta property="og:title" content="Cucumber Setup Using Gradle" />
+</script><meta property="og:title" content="Cucumber Setup Using Gradle" />
 <meta property="og:description" content="Introduction This tutorial will help you configure Cucumber into a Java project using the Gradle build tool.
 Cucumber is a test automation tool that supports Behavior-Driven Development (BDD). It is written in plain English text called &ldquo;Gherkin.&rdquo; Cucumber enables you to write test cases that anyone can easily understand, regardless of their technical knowledge.
 Setup First, create a Gradle project using the gradle init command.
@@ -121,8 +120,8 @@ gradle init Complete the Gradle wizard to create a project."/>
   "keywords": [
     
   ],
-  "articleBody": "Introduction This tutorial will help you configure Cucumber into a Java project using the Gradle build tool.\nCucumber is a test automation tool that supports Behavior-Driven Development (BDD). It is written in plain English text called “Gherkin.” Cucumber enables you to write test cases that anyone can easily understand, regardless of their technical knowledge.\nSetup First, create a Gradle project using the gradle init command.\ngradle init Complete the Gradle wizard to create a project.\nNow update the gradle.build file to add the Gradle Cucumber dependency.\ntestImplementation 'io.cucumber:cucumber-java8:7.0.0' This will add Cucumber implementation to your project.\nTask Configuration Add the following configuration to gradle.build This will enable the Cucumber runtime to execute BDD test cases.\nconfigurations { cucumberRuntime { extendsFrom testImplementation } } Create a new custom task to execute Cucumber\ntask cucumber() { dependsOn assemble, testClasses doLast { javaexec { main = \"io.cucumber.core.cli.Main\" classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output args = [ '--plugin', 'pretty', '--plugin', 'html:target/cucumber-report.html', '--glue', 'com.zainabed.cucumber.bdd', 'src/test/resources'] } } }  NOTE: com.zainabed.cucumber.bdd is reference to a package name, You should put in your project package name..\n Cucumber Options/Args\n glue: Project package name where you define the glue code. plugin: Plugins which you want to add in the project. pretty: Generate a pretty report html: Generate Cucumber HTML report. src/test/resources: Location of feature files.  Feature File Cucumber interprets the Gherkins feature file and executes the glue code associated with it. Therefore, create a features folder inside the test resources section src/test/resources/ and add the Gherkin feature which gets executed by cucumber.\nFeature:User Registration User will initiate registration request to system and system will validate the information and add user to system Scenario:Basic Flow Given User visit registration When User enter his registration details Then System validate the information And User get registered Run the Task Next, run the following command to execute Cucumber test cases.\n./gradlew cucumber It will fail and give you the glue code that you need to add to your project like this.\nTask :app:cucumber FAILED Scenario: Basic Flow # src/test/resources/features/user-registration.feature:5 Given User visit registration When User enter his registration details Then System validate the information And User get registered Undefined scenarios: You can implement missing steps with the snippets below: Given(\"User visit registration\", () - { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); When(\"User enter his registration details\", () - { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); Then(\"System validate the information\", () - { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); Then(\"User get registered\", () - { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); Glue Code In order to fix the cucumber task error, we need to provide glue code, which is nothing but a Java class.\nCreate a new Java file named UserRegistrationBDD.java inside bdd package and add the above code into it.\npackage com.zainabed.cucumber.bdd; import io.cucumber.java8.En; public class UserRegistrationBDD implements En { public UserRegistrationBDD() { Given(\"User visit registration\", () - { // Write code here that turns the phrase above into concrete actions  throw new io.cucumber.java8.PendingException(); }); When(\"User enter his registration details\", () - { // Write code here that turns the phrase above into concrete actions  throw new io.cucumber.java8.PendingException(); }); Then(\"System validate the information\", () - { // Write code here that turns the phrase above into concrete actions  throw new io.cucumber.java8.PendingException(); }); Then(\"User get registered\", () - { // Write code here that turns the phrase above into concrete actions  throw new io.cucumber.java8.PendingException(); }); } } Add some business logic to it, then rerun it.\n Note: Cucumber Java 8 dependency uses constructor and English “En” interface to implement glue code.\n Add your business logic and assertions to execute features.\nRe-Run the Cucumber Task At the end, execute the cucumber tasks.\nTask :app:cucumber Scenario: Basic Flow # src/test/resources/features/user-registration.feature:5 Given User visit registration # com.zainabed.cucumber.bdd.UserRegistrationBDD.(UserRegistrationBDD.java:9) When User enter his registration details # com.zainabed.cucumber.bdd.UserRegistrationBDD.(UserRegistrationBDD.java:13) Then System validate the information # com.zainabed.cucumber.bdd.UserRegistrationBDD.(UserRegistrationBDD.java:17) And User get registered # com.zainabed.cucumber.bdd.UserRegistrationBDD.(UserRegistrationBDD.java:21) 1 Scenarios (1 passed) 4 Steps (4 passed) Conclusion This tutorial demonstrated the setup and configuration of the Cucumber test framework using the Gradle build tool.\nFull source can be found on the Github page.\n",
-  "wordCount" : "717",
+  "articleBody": "Introduction This tutorial will help you configure Cucumber into a Java project using the Gradle build tool.\nCucumber is a test automation tool that supports Behavior-Driven Development (BDD). It is written in plain English text called “Gherkin.” Cucumber enables you to write test cases that anyone can easily understand, regardless of their technical knowledge.\nSetup First, create a Gradle project using the gradle init command.\ngradle init Complete the Gradle wizard to create a project.\nNow update the gradle.build file to add the Gradle Cucumber dependency.\ntestImplementation 'io.cucumber:cucumber-java8:7.0.0' This will add Cucumber implementation to your project.\nTask Configuration Add the following configuration to gradle.build This will enable the Cucumber runtime to execute BDD test cases.\nconfigurations { cucumberRuntime { extendsFrom testImplementation } } Create a new custom task to execute Cucumber\ntask cucumber() { dependsOn assemble, testClasses doLast { javaexec { main = \"io.cucumber.core.cli.Main\" classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output args = [ '--plugin', 'pretty', '--plugin', 'html:target/cucumber-report.html', '--glue', 'com.zainabed.cucumber.bdd', 'src/test/resources'] } } } NOTE: com.zainabed.cucumber.bdd is reference to a package name, You should put in your project package name..\nCucumber Options/Args\nglue: Project package name where you define the glue code. plugin: Plugins which you want to add in the project. pretty: Generate a pretty report html: Generate Cucumber HTML report. src/test/resources: Location of feature files. Feature File Cucumber interprets the Gherkins feature file and executes the glue code associated with it. Therefore, create a features folder inside the test resources section src/test/resources/ and add the Gherkin feature which gets executed by cucumber.\nFeature: User Registration User will initiate registration request to system and system will validate the information and add user to system Scenario: Basic Flow Given User visit registration When User enter his registration details Then System validate the information And User get registered Run the Task Next, run the following command to execute Cucumber test cases.\n./gradlew cucumber It will fail and give you the glue code that you need to add to your project like this.\nTask :app:cucumber FAILED Scenario: Basic Flow # src/test/resources/features/user-registration.feature:5 Given User visit registration When User enter his registration details Then System validate the information And User get registered Undefined scenarios: You can implement missing steps with the snippets below: Given(\"User visit registration\", () -\u003e { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); When(\"User enter his registration details\", () -\u003e { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); Then(\"System validate the information\", () -\u003e { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); Then(\"User get registered\", () -\u003e { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); Glue Code In order to fix the cucumber task error, we need to provide glue code, which is nothing but a Java class.\nCreate a new Java file named UserRegistrationBDD.java inside bdd package and add the above code into it.\npackage com.zainabed.cucumber.bdd; import io.cucumber.java8.En; public class UserRegistrationBDD implements En { public UserRegistrationBDD() { Given(\"User visit registration\", () -\u003e { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); When(\"User enter his registration details\", () -\u003e { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); Then(\"System validate the information\", () -\u003e { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); Then(\"User get registered\", () -\u003e { // Write code here that turns the phrase above into concrete actions throw new io.cucumber.java8.PendingException(); }); } } Add some business logic to it, then rerun it.\nNote: Cucumber Java 8 dependency uses constructor and English “En” interface to implement glue code.\nAdd your business logic and assertions to execute features.\nRe-Run the Cucumber Task At the end, execute the cucumber tasks.\nTask :app:cucumber Scenario: Basic Flow # src/test/resources/features/user-registration.feature:5 Given User visit registration # com.zainabed.cucumber.bdd.UserRegistrationBDD.(UserRegistrationBDD.java:9) When User enter his registration details # com.zainabed.cucumber.bdd.UserRegistrationBDD.(UserRegistrationBDD.java:13) Then System validate the information # com.zainabed.cucumber.bdd.UserRegistrationBDD.(UserRegistrationBDD.java:17) And User get registered # com.zainabed.cucumber.bdd.UserRegistrationBDD.(UserRegistrationBDD.java:21) 1 Scenarios (1 passed) 4 Steps (4 passed) Conclusion This tutorial demonstrated the setup and configuration of the Cucumber test framework using the Gradle build tool.\nFull source can be found on the Github page.\n",
+  "wordCount" : "719",
   "inLanguage": "en",
   "image":"https://www.zainabed.com/image/cover.jpg","datePublished": "2022-04-05T09:56:50-04:00",
   "dateModified": "2022-04-05T09:56:50-04:00",
@@ -227,7 +226,7 @@ gradle init Complete the Gradle wizard to create a project."/>
     <h1 class="post-title">
       Cucumber Setup Using Gradle
     </h1>
-    <div class="post-meta"><span title='2022-04-05 09:56:50 -0400 EDT'>April 5, 2022</span>
+    <div class="post-meta"><span title='2022-04-05 09:56:50 -0400 -0400'>April 5, 2022</span>
 
 </div>
   </header> 
@@ -257,35 +256,35 @@ gradle init Complete the Gradle wizard to create a project."/>
 <p>Cucumber is a test automation tool that supports Behavior-Driven Development (BDD). It is written in plain English text called &ldquo;Gherkin.&rdquo; Cucumber enables you to write test cases that anyone can easily understand, regardless of their technical knowledge.</p>
 <h2 id="setup">Setup<a hidden class="anchor" aria-hidden="true" href="#setup">#</a></h2>
 <p>First, create a Gradle project using the gradle init command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradle init
-</code></pre></div><p>Complete the Gradle wizard to create a project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradle init
+</span></span></code></pre></div><p>Complete the Gradle wizard to create a project.</p>
 <p>Now update the gradle.build file to add the Gradle Cucumber dependency.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">testImplementation <span style="color:#e6db74">&#39;io.cucumber:cucumber-java8:7.0.0&#39;</span>
-</code></pre></div><p>This will add Cucumber implementation to your project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>testImplementation <span style="color:#e6db74">&#39;io.cucumber:cucumber-java8:7.0.0&#39;</span>
+</span></span></code></pre></div><p>This will add Cucumber implementation to your project.</p>
 <h2 id="task-configuration">Task Configuration<a hidden class="anchor" aria-hidden="true" href="#task-configuration">#</a></h2>
 <p>Add the following configuration to gradle.build
 This will enable the Cucumber runtime to execute BDD test cases.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">configurations <span style="color:#f92672">{</span>
-    cucumberRuntime <span style="color:#f92672">{</span>
-        extendsFrom testImplementation
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>Create a new custom task to execute Cucumber</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">task <span style="color:#a6e22e">cucumber</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    dependsOn assemble<span style="color:#f92672">,</span> testClasses
-    doLast <span style="color:#f92672">{</span>
-        javaexec <span style="color:#f92672">{</span>
-            main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;io.cucumber.core.cli.Main&#34;</span>
-            classpath <span style="color:#f92672">=</span> configurations<span style="color:#f92672">.</span><span style="color:#a6e22e">cucumberRuntime</span> <span style="color:#f92672">+</span> sourceSets<span style="color:#f92672">.</span><span style="color:#a6e22e">main</span><span style="color:#f92672">.</span><span style="color:#a6e22e">output</span> <span style="color:#f92672">+</span> sourceSets<span style="color:#f92672">.</span><span style="color:#a6e22e">test</span><span style="color:#f92672">.</span><span style="color:#a6e22e">output</span>
-            args <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>
-                    <span style="color:#e6db74">&#39;--plugin&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;pretty&#39;</span><span style="color:#f92672">,</span>
-                    <span style="color:#e6db74">&#39;--plugin&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;html:target/cucumber-report.html&#39;</span><span style="color:#f92672">,</span>
-                    <span style="color:#e6db74">&#39;--glue&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;com.zainabed.cucumber.bdd&#39;</span><span style="color:#f92672">,</span>
-                    <span style="color:#e6db74">&#39;src/test/resources&#39;</span><span style="color:#f92672">]</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>configurations <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    cucumberRuntime <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        extendsFrom testImplementation
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Create a new custom task to execute Cucumber</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>task <span style="color:#a6e22e">cucumber</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    dependsOn assemble<span style="color:#f92672">,</span> testClasses
+</span></span><span style="display:flex;"><span>    doLast <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        javaexec <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;io.cucumber.core.cli.Main&#34;</span>
+</span></span><span style="display:flex;"><span>            classpath <span style="color:#f92672">=</span> configurations<span style="color:#f92672">.</span><span style="color:#a6e22e">cucumberRuntime</span> <span style="color:#f92672">+</span> sourceSets<span style="color:#f92672">.</span><span style="color:#a6e22e">main</span><span style="color:#f92672">.</span><span style="color:#a6e22e">output</span> <span style="color:#f92672">+</span> sourceSets<span style="color:#f92672">.</span><span style="color:#a6e22e">test</span><span style="color:#f92672">.</span><span style="color:#a6e22e">output</span>
+</span></span><span style="display:flex;"><span>            args <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;--plugin&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;pretty&#39;</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;--plugin&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;html:target/cucumber-report.html&#39;</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;--glue&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;com.zainabed.cucumber.bdd&#39;</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;src/test/resources&#39;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
 <p>NOTE: com.zainabed.cucumber.bdd is reference to a package name, You should put in your project package name..</p>
 </blockquote>
 <p>Cucumber Options/Args</p>
@@ -299,95 +298,95 @@ This will enable the Cucumber runtime to execute BDD test cases.</p>
 <h2 id="feature-file">Feature File<a hidden class="anchor" aria-hidden="true" href="#feature-file">#</a></h2>
 <p>Cucumber interprets the Gherkins feature file and executes the glue code associated with it.
 Therefore, create a features folder inside the test resources section src/test/resources/ and add the Gherkin feature which gets executed by cucumber.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gherkin" data-lang="gherkin"><span style="color:#66d9ef">Feature:</span><span style="color:#a6e22e"> User Registration
-</span><span style="color:#a6e22e">  User will initiate registration request to system and
-</span><span style="color:#a6e22e">  system will validate the information and add user to system
-</span><span style="color:#a6e22e">
-</span><span style="color:#a6e22e">  </span><span style="color:#66d9ef">Scenario:</span><span style="color:#a6e22e"> Basic Flow
-</span><span style="color:#a6e22e"></span><span style="color:#66d9ef">    Given </span><span style="color:#a6e22e">User visit registration
-</span><span style="color:#a6e22e">    </span><span style="color:#66d9ef">When </span><span style="color:#a6e22e">User enter his registration details
-</span><span style="color:#a6e22e">    </span><span style="color:#66d9ef">Then </span><span style="color:#a6e22e">System validate the information
-</span><span style="color:#a6e22e">    </span><span style="color:#66d9ef">And </span><span style="color:#a6e22e">User get registered
-</span></code></pre></div><h2 id="run-the-task">Run the Task<a hidden class="anchor" aria-hidden="true" href="#run-the-task">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gherkin" data-lang="gherkin"><span style="display:flex;"><span><span style="color:#66d9ef">Feature:</span><span style="color:#a6e22e"> User Registration
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">  User will initiate registration request to system and
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">  system will validate the information and add user to system
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">  </span><span style="color:#66d9ef">Scenario:</span><span style="color:#a6e22e"> Basic Flow
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#66d9ef">    Given </span><span style="color:#a6e22e">User visit registration
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">    </span><span style="color:#66d9ef">When </span><span style="color:#a6e22e">User enter his registration details
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">    </span><span style="color:#66d9ef">Then </span><span style="color:#a6e22e">System validate the information
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">    </span><span style="color:#66d9ef">And </span><span style="color:#a6e22e">User get registered
+</span></span></span></code></pre></div><h2 id="run-the-task">Run the Task<a hidden class="anchor" aria-hidden="true" href="#run-the-task">#</a></h2>
 <p>Next, run the following command to execute Cucumber test cases.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./gradlew cucumber
-</code></pre></div><p>It will fail and give you the glue code that you need to add to your project like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Task :app:cucumber FAILED
-
-Scenario: Basic Flow                       <span style="color:#75715e"># src/test/resources/features/user-registration.feature:5</span>
-  Given User visit registration
-  When User enter his registration details
-  Then System validate the information
-  And User get registered
-
-Undefined scenarios:
-You can implement missing steps with the snippets below:
-
-Given<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User visit registration&#34;</span>, <span style="color:#f92672">()</span> -&gt; <span style="color:#f92672">{</span>
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java8.PendingException<span style="color:#f92672">()</span>;
-<span style="color:#f92672">})</span>;
-When<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User enter his registration details&#34;</span>, <span style="color:#f92672">()</span> -&gt; <span style="color:#f92672">{</span>
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java8.PendingException<span style="color:#f92672">()</span>;
-<span style="color:#f92672">})</span>;
-Then<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;System validate the information&#34;</span>, <span style="color:#f92672">()</span> -&gt; <span style="color:#f92672">{</span>
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java8.PendingException<span style="color:#f92672">()</span>;
-<span style="color:#f92672">})</span>;
-Then<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User get registered&#34;</span>, <span style="color:#f92672">()</span> -&gt; <span style="color:#f92672">{</span>
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java8.PendingException<span style="color:#f92672">()</span>;
-<span style="color:#f92672">})</span>;
-</code></pre></div><h2 id="glue-code">Glue Code<a hidden class="anchor" aria-hidden="true" href="#glue-code">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./gradlew cucumber
+</span></span></code></pre></div><p>It will fail and give you the glue code that you need to add to your project like this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Task :app:cucumber FAILED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Scenario: Basic Flow                       <span style="color:#75715e"># src/test/resources/features/user-registration.feature:5</span>
+</span></span><span style="display:flex;"><span>  Given User visit registration
+</span></span><span style="display:flex;"><span>  When User enter his registration details
+</span></span><span style="display:flex;"><span>  Then System validate the information
+</span></span><span style="display:flex;"><span>  And User get registered
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Undefined scenarios:
+</span></span><span style="display:flex;"><span>You can implement missing steps with the snippets below:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Given<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User visit registration&#34;</span>, <span style="color:#f92672">()</span> -&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    // Write code here that turns the phrase above into concrete actions
+</span></span><span style="display:flex;"><span>    throw new io.cucumber.java8.PendingException<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">})</span>;
+</span></span><span style="display:flex;"><span>When<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User enter his registration details&#34;</span>, <span style="color:#f92672">()</span> -&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    // Write code here that turns the phrase above into concrete actions
+</span></span><span style="display:flex;"><span>    throw new io.cucumber.java8.PendingException<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">})</span>;
+</span></span><span style="display:flex;"><span>Then<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;System validate the information&#34;</span>, <span style="color:#f92672">()</span> -&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    // Write code here that turns the phrase above into concrete actions
+</span></span><span style="display:flex;"><span>    throw new io.cucumber.java8.PendingException<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">})</span>;
+</span></span><span style="display:flex;"><span>Then<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User get registered&#34;</span>, <span style="color:#f92672">()</span> -&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    // Write code here that turns the phrase above into concrete actions
+</span></span><span style="display:flex;"><span>    throw new io.cucumber.java8.PendingException<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">})</span>;
+</span></span></code></pre></div><h2 id="glue-code">Glue Code<a hidden class="anchor" aria-hidden="true" href="#glue-code">#</a></h2>
 <p>In order to fix the cucumber task error, we need to provide glue code, which is nothing but a Java class.</p>
 <p>Create a new Java file named UserRegistrationBDD.java inside bdd package and add the above code into it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.zainabed.cucumber.bdd<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> io.cucumber.java8.En<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserRegistrationBDD</span> <span style="color:#66d9ef">implements</span> En <span style="color:#f92672">{</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">UserRegistrationBDD</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-
-        Given<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User visit registration&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// Write code here that turns the phrase above into concrete actions
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> io<span style="color:#f92672">.</span><span style="color:#a6e22e">cucumber</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">PendingException</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">});</span>
-
-        When<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User enter his registration details&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// Write code here that turns the phrase above into concrete actions
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> io<span style="color:#f92672">.</span><span style="color:#a6e22e">cucumber</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">PendingException</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">});</span>
-
-        Then<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;System validate the information&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// Write code here that turns the phrase above into concrete actions
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> io<span style="color:#f92672">.</span><span style="color:#a6e22e">cucumber</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">PendingException</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">});</span>
-
-        Then<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User get registered&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// Write code here that turns the phrase above into concrete actions
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> io<span style="color:#f92672">.</span><span style="color:#a6e22e">cucumber</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">PendingException</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">});</span>
-    <span style="color:#f92672">}</span>
-
-<span style="color:#f92672">}</span>
-</code></pre></div><p>Add some business logic to it, then rerun it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.zainabed.cucumber.bdd<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.cucumber.java8.En<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserRegistrationBDD</span> <span style="color:#66d9ef">implements</span> En <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">UserRegistrationBDD</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Given<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User visit registration&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Write code here that turns the phrase above into concrete actions
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> io<span style="color:#f92672">.</span><span style="color:#a6e22e">cucumber</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">PendingException</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">});</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        When<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User enter his registration details&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Write code here that turns the phrase above into concrete actions
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> io<span style="color:#f92672">.</span><span style="color:#a6e22e">cucumber</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">PendingException</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">});</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Then<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;System validate the information&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Write code here that turns the phrase above into concrete actions
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> io<span style="color:#f92672">.</span><span style="color:#a6e22e">cucumber</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">PendingException</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">});</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Then<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User get registered&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Write code here that turns the phrase above into concrete actions
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> io<span style="color:#f92672">.</span><span style="color:#a6e22e">cucumber</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">PendingException</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">});</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Add some business logic to it, then rerun it.</p>
 <blockquote>
 <p>Note: Cucumber Java 8 dependency uses constructor and English &ldquo;En&rdquo; interface to implement glue code.</p>
 </blockquote>
 <p>Add your business logic and assertions to execute features.</p>
 <h2 id="re-run-the-cucumber-task">Re-Run the Cucumber Task<a hidden class="anchor" aria-hidden="true" href="#re-run-the-cucumber-task">#</a></h2>
 <p>At the end, execute the cucumber tasks.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Task :app:cucumber
-Scenario: Basic Flow                       <span style="color:#75715e"># src/test/resources/features/user-registration.feature:5</span>
-  Given User visit registration            <span style="color:#75715e"># com.zainabed.cucumber.bdd.UserRegistrationBDD.&lt;init&gt;(UserRegistrationBDD.java:9)</span>
-  When User enter his registration details <span style="color:#75715e"># com.zainabed.cucumber.bdd.UserRegistrationBDD.&lt;init&gt;(UserRegistrationBDD.java:13)</span>
-  Then System validate the information     <span style="color:#75715e"># com.zainabed.cucumber.bdd.UserRegistrationBDD.&lt;init&gt;(UserRegistrationBDD.java:17)</span>
-  And User get registered                  <span style="color:#75715e"># com.zainabed.cucumber.bdd.UserRegistrationBDD.&lt;init&gt;(UserRegistrationBDD.java:21)</span>
-<span style="color:#ae81ff">1</span> Scenarios <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> passed<span style="color:#f92672">)</span>
-<span style="color:#ae81ff">4</span> Steps <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> passed<span style="color:#f92672">)</span>
-</code></pre></div><h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Task :app:cucumber
+</span></span><span style="display:flex;"><span>Scenario: Basic Flow                       <span style="color:#75715e"># src/test/resources/features/user-registration.feature:5</span>
+</span></span><span style="display:flex;"><span>  Given User visit registration            <span style="color:#75715e"># com.zainabed.cucumber.bdd.UserRegistrationBDD.&lt;init&gt;(UserRegistrationBDD.java:9)</span>
+</span></span><span style="display:flex;"><span>  When User enter his registration details <span style="color:#75715e"># com.zainabed.cucumber.bdd.UserRegistrationBDD.&lt;init&gt;(UserRegistrationBDD.java:13)</span>
+</span></span><span style="display:flex;"><span>  Then System validate the information     <span style="color:#75715e"># com.zainabed.cucumber.bdd.UserRegistrationBDD.&lt;init&gt;(UserRegistrationBDD.java:17)</span>
+</span></span><span style="display:flex;"><span>  And User get registered                  <span style="color:#75715e"># com.zainabed.cucumber.bdd.UserRegistrationBDD.&lt;init&gt;(UserRegistrationBDD.java:21)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> Scenarios <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> passed<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span> Steps <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> passed<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
 <p>This tutorial demonstrated the setup and configuration of the Cucumber test framework using the Gradle build tool.</p>
 <p>Full source can be found on the Github page.</p>
 
@@ -647,7 +646,7 @@ Scenario: Basic Flow                       <span style="color:#75715e"># src/tes
 
         </div>
         <div class=" center">
-            &copy; 2023 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2024 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>

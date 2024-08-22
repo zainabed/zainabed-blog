@@ -36,7 +36,7 @@ Why do we need @ConfigurationProperties? What about the @Value annotation? The t
       <guid>https://www.zainabed.com/tutorials/how-to-write-angular-service-unit-test/</guid>
       <description>Introduction This tutorial will walk you through the process of creating a basic unit test case for an Angular service. Angular services enable you to decompose complex business logic into small, reusable units that can then be injected into components or other services using dependency injection.
 This tutorial is divided into two parts:
- One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module.</description>
+One for creating a service by instantiating it sing new keyword. And another for injecting it using the Angular TestBed module.</description>
     </item>
     
     <item>
@@ -46,9 +46,9 @@ This tutorial is divided into two parts:
       
       <guid>https://www.zainabed.com/tutorials/spring-boot-controller-test/</guid>
       <description>Introduction There are several methods for testing Rest controllers in the Spring Boot framework, and this post will demonstrate one of the quickest.
-Tools  Spring Boot: 2.7.6
+Tools Spring Boot: 2.7.6
 Java : 11
- Rest Controller Let&amp;rsquo;s create a simple REST API controller with one service to fetch the data from the database.
+Rest Controller Let&amp;rsquo;s create a simple REST API controller with one service to fetch the data from the database.
 UserController.java @RestController public class UserController { private final UserService userService; public UserController(final UserService userService) { this.userService = userService; } @PostMapping(path = &amp;#34;/user&amp;#34;, consumes = MediaType.</description>
     </item>
     
@@ -95,7 +95,7 @@ POM Configuration Add log4j2 as a dependency to the pom.xml file. pom.</descrip
       <guid>https://www.zainabed.com/tutorials/spring-boot-cloud-gateway-introduction/</guid>
       <description>Introduction This tutorial is a short introduction to Spring Cloud Gateway.
 By following the quick and easy steps provided below, you will be able to start the REST API gateway project.
-Prerequisite  Java Maven Spring Boot  Download the Spring Boot project from Spring Initializr and select Gateway  as dependency.
+Prerequisite Java Maven Spring Boot Download the Spring Boot project from Spring Initializr and select Gateway as dependency.
 Now generate and download the project and use your favourite editor to import it.
 Gateway Configuration You can use a YAML file or Java code to configure routes.</description>
     </item>
@@ -108,7 +108,7 @@ Gateway Configuration You can use a YAML file or Java code to configure routes.<
       <guid>https://www.zainabed.com/tutorials/create-mock-server-using-json-server/</guid>
       <description>Introduction A mock REST API server will often expedite your integration testing, and this tutorial will give you insight into one such server.
 This tutorial will walk through each step of setting up and using a fake server.
- Software used in this tutorial  NPM : 8.3.1 Node: 16.14.0 Json-Server: 0.17.0   Setup The first step is to make sure you have node and npm installed on your workstation, then follow the next commands.</description>
+Software used in this tutorial NPM : 8.3.1 Node: 16.14.0 Json-Server: 0.17.0 Setup The first step is to make sure you have node and npm installed on your workstation, then follow the next commands.</description>
     </item>
     
     <item>
@@ -119,7 +119,7 @@ This tutorial will walk through each step of setting up and using a fake server.
       <guid>https://www.zainabed.com/tutorials/upload-file-spring-resttemplate/</guid>
       <description>Introduction This quick tutorial will show you how to use Spring Boot RestTemplate to upload a file to a server.
 The prerequisites for this tutorial are the following
- the server that accepts requests for multipart file uploads A RestTemplate instance Of course, a text file to upload.   What You Need This tutorial uses following softwares  Java: 1.8 Spring Boot: 2.7.4 Maven: 3.6.3  How to upload a file First we create an instance of RestTemplate as</description>
+the server that accepts requests for multipart file uploads A RestTemplate instance Of course, a text file to upload. What You Need This tutorial uses following softwares Java: 1.8 Spring Boot: 2.7.4 Maven: 3.6.3 How to upload a file First we create an instance of RestTemplate as</description>
     </item>
     
   </channel>

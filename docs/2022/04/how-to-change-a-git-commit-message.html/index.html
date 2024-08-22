@@ -8,11 +8,11 @@
 <meta name="keywords" content="">
 <meta name="description" content="Introdcution In this tutorial, we&rsquo;ll go over how to fix Git commit messages that have been committed to a local or remote Git repository.
 Reason to change commit message? When working with Git, there could be several reasons to update the commit message. Some of the common reasons are as follows
- Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira.">
+Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira.">
 <meta name="author" content="">
 <link rel="canonical" href="https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2e6d835886156948349f5e09bf5edfff819a004809f055d71edc1c07e5a26d1d.css" integrity="sha256-Lm2DWIYVaUg0n14Jv17f/4GaAEgJ8FXXHtwcB&#43;WibR0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.zainabed.com/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
@@ -69,11 +69,10 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script>
-<meta property="og:title" content="How to Change a Git Commit Message" />
+</script><meta property="og:title" content="How to Change a Git Commit Message" />
 <meta property="og:description" content="Introdcution In this tutorial, we&rsquo;ll go over how to fix Git commit messages that have been committed to a local or remote Git repository.
 Reason to change commit message? When working with Git, there could be several reasons to update the commit message. Some of the common reasons are as follows
- Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira." />
+Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/" />
 <meta property="og:image" content="https://www.zainabed.com/image/cover.png" /><meta property="article:section" content="blogs" />
@@ -85,7 +84,7 @@ Reason to change commit message? When working with Git, there could be several r
 <meta name="twitter:title" content="How to Change a Git Commit Message"/>
 <meta name="twitter:description" content="Introdcution In this tutorial, we&rsquo;ll go over how to fix Git commit messages that have been committed to a local or remote Git repository.
 Reason to change commit message? When working with Git, there could be several reasons to update the commit message. Some of the common reasons are as follows
- Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira."/>
+Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira."/>
 
 
 <script type="application/ld+json">
@@ -114,11 +113,11 @@ Reason to change commit message? When working with Git, there could be several r
   "@type": "BlogPosting",
   "headline": "How to Change a Git Commit Message",
   "name": "How to Change a Git Commit Message",
-  "description": "Introdcution In this tutorial, we\u0026rsquo;ll go over how to fix Git commit messages that have been committed to a local or remote Git repository.\nReason to change commit message? When working with Git, there could be several reasons to update the commit message. Some of the common reasons are as follows\n Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira.",
+  "description": "Introdcution In this tutorial, we\u0026rsquo;ll go over how to fix Git commit messages that have been committed to a local or remote Git repository.\nReason to change commit message? When working with Git, there could be several reasons to update the commit message. Some of the common reasons are as follows\nMessage contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira.",
   "keywords": [
     
   ],
-  "articleBody": "Introdcution In this tutorial, we’ll go over how to fix Git commit messages that have been committed to a local or remote Git repository.\nReason to change commit message? When working with Git, there could be several reasons to update the commit message. Some of the common reasons are as follows\n Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira.  Solution The reason could be anything, but you should be aware of the command to update the commit message at any point in the development of your application.\nLet’s take a look at the solution for a single commit message.\nLocal commit Assume you perform the following Git operation.\n$ git add -A $ git commit -m \"[PROJECT-99] - Added user profile module.\" And after you realise that the issue number for the current commit is incorrect and needs to be corrected. That’s the story of Project 100.\nYou can correct it using the method outlined below.\n$ git commit --amend -m \"[PROJECT-100] - Added user profile module.\" If you look at git log then updated message will reflect in it.\ncommit 75c82d058b32b82b5724618c816684c5aaa59022 (HEAD - master) Author: User Date: Tue Apr 19 01:08:53 2022 -0400 [PROJECT-100] - Added user profile module. Remote commit The following approach can be used to correct the latest pushed commit.\n$ git commit --amend -m \"[PROJECT-101] - Added user profile module.\" And git log history will show the latest updated message as\ncommit 7e2937ff912a5c512036c9c1e4befb8a4512a9a3 (HEAD - master) Author: User Date: Tue Apr 19 01:08:53 2022 -0400 [PROJECT-101] - Added user profile module. However, because this change occurs in your current working directory, you must run the command below to update the remote repository.\n$ git push --force origin master When you look at the remote repository, you’ll notice that the most recent message has been added to it.\nChanging an Older or Multiple Commits If you ever need to change multiple commits for some reason, use Git interactive rebase.\nGit rebase rewrites the history, and it is strongly advised not to use rebase unless there is a compelling reason to use it.\nUse the command git rebase -i HEAD~N, where N represents the number of commits to update. As an example,\n$ git rebase -i HEAD~3 It will launch an editor and allow you to choose three commits from the history.\npick 6bfbd01 Added Cucumber + Gradle project pick 603981a Added Spring Boot SQL Logging project. pick 7e2937f [PROJECT-101] - Added user profile module. # Rebase 0d7b04f..7e2937f onto 0d7b04f (3 commands) Navigate to the line you want to change and replace the pick word with the reword.\npick 6bfbd01 Added Cucumber + Gradle project reword 603981a Added Spring Boot SQL Logging project. reword 7e2937f [PROJECT-101] - Added user profile module. Save and exit the editor now. For each reword commit, Git will launch a new editor.\n[Project-99] Added Spring Boot SQL Logging project. Save and exit the editor after updating the commit message.\nThis will bring your local git history up to date. Use the following command to update remote Git history.\n$ git push --force origin master It will update remote Git history as.\nConclusion Use the git commit --amend command to change the most recent commit message. Use git rebase -i HEAD~N to change older or multiple commit messages.\nDon’t change remote commits using rebase because it could cause a lot of problems for your colleagues.\n",
+  "articleBody": "Introdcution In this tutorial, we’ll go over how to fix Git commit messages that have been committed to a local or remote Git repository.\nReason to change commit message? When working with Git, there could be several reasons to update the commit message. Some of the common reasons are as follows\nMessage contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira. Solution The reason could be anything, but you should be aware of the command to update the commit message at any point in the development of your application.\nLet’s take a look at the solution for a single commit message.\nLocal commit Assume you perform the following Git operation.\n$ git add -A $ git commit -m \"[PROJECT-99] - Added user profile module.\" And after you realise that the issue number for the current commit is incorrect and needs to be corrected. That’s the story of Project 100.\nYou can correct it using the method outlined below.\n$ git commit --amend -m \"[PROJECT-100] - Added user profile module.\" If you look at git log then updated message will reflect in it.\ncommit 75c82d058b32b82b5724618c816684c5aaa59022 (HEAD -\u003e master) Author: User Date: Tue Apr 19 01:08:53 2022 -0400 [PROJECT-100] - Added user profile module. Remote commit The following approach can be used to correct the latest pushed commit.\n$ git commit --amend -m \"[PROJECT-101] - Added user profile module.\" And git log history will show the latest updated message as\ncommit 7e2937ff912a5c512036c9c1e4befb8a4512a9a3 (HEAD -\u003e master) Author: User Date: Tue Apr 19 01:08:53 2022 -0400 [PROJECT-101] - Added user profile module. However, because this change occurs in your current working directory, you must run the command below to update the remote repository.\n$ git push --force origin master When you look at the remote repository, you’ll notice that the most recent message has been added to it.\nChanging an Older or Multiple Commits If you ever need to change multiple commits for some reason, use Git interactive rebase.\nGit rebase rewrites the history, and it is strongly advised not to use rebase unless there is a compelling reason to use it.\nUse the command git rebase -i HEAD~N, where N represents the number of commits to update. As an example,\n$ git rebase -i HEAD~3 It will launch an editor and allow you to choose three commits from the history.\npick 6bfbd01 Added Cucumber + Gradle project pick 603981a Added Spring Boot SQL Logging project. pick 7e2937f [PROJECT-101] - Added user profile module. # Rebase 0d7b04f..7e2937f onto 0d7b04f (3 commands) Navigate to the line you want to change and replace the pick word with the reword.\npick 6bfbd01 Added Cucumber + Gradle project reword 603981a Added Spring Boot SQL Logging project. reword 7e2937f [PROJECT-101] - Added user profile module. Save and exit the editor now. For each reword commit, Git will launch a new editor.\n[Project-99] Added Spring Boot SQL Logging project. Save and exit the editor after updating the commit message.\nThis will bring your local git history up to date. Use the following command to update remote Git history.\n$ git push --force origin master It will update remote Git history as.\nConclusion Use the git commit --amend command to change the most recent commit message. Use git rebase -i HEAD~N to change older or multiple commit messages.\nDon’t change remote commits using rebase because it could cause a lot of problems for your colleagues.\n",
   "wordCount" : "579",
   "inLanguage": "en",
   "image":"https://www.zainabed.com/image/cover.png","datePublished": "2022-04-19T10:30:09-04:00",
@@ -224,12 +223,12 @@ Reason to change commit message? When working with Git, there could be several r
     <h1 class="post-title">
       How to Change a Git Commit Message
     </h1>
-    <div class="post-meta"><span title='2022-04-19 10:30:09 -0400 EDT'>April 19, 2022</span>
+    <div class="post-meta"><span title='2022-04-19 10:30:09 -0400 -0400'>April 19, 2022</span>
 
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/image/cover_hu4225b761ac00ce4ac0d1e225a920d112_319212_360x0_resize_box_2.png 360w ,https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/image/cover_hu4225b761ac00ce4ac0d1e225a920d112_319212_480x0_resize_box_2.png 480w ,https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/image/cover_hu4225b761ac00ce4ac0d1e225a920d112_319212_720x0_resize_box_2.png 720w ,https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/image/cover.png 1018w" 
+        <img loading="lazy" srcset="https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/image/cover_hu4225b761ac00ce4ac0d1e225a920d112_319212_360x0_resize_box_3.png 360w ,https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/image/cover_hu4225b761ac00ce4ac0d1e225a920d112_319212_480x0_resize_box_3.png 480w ,https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/image/cover_hu4225b761ac00ce4ac0d1e225a920d112_319212_720x0_resize_box_3.png 720w ,https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/image/cover.png 1018w" 
             sizes="(min-width: 768px) 720px, 100vw" src="https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/image/cover.png" alt="How to Change a Git Commit Message" 
             width="1018" height="411">
         
@@ -264,29 +263,29 @@ Some of the common reasons are as follows</p>
 <p>Let&rsquo;s take a look at the solution for a single commit message.</p>
 <h2 id="local-commit">Local commit<a hidden class="anchor" aria-hidden="true" href="#local-commit">#</a></h2>
 <p>Assume you perform the following Git operation.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add -A
-$ git commit -m <span style="color:#e6db74">&#34;[PROJECT-99] - Added user profile module.&#34;</span>
-</code></pre></div><p>And after you realise that the issue number for the current commit is incorrect and needs to be corrected. That&rsquo;s the story of Project 100.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git add -A
+</span></span><span style="display:flex;"><span>$ git commit -m <span style="color:#e6db74">&#34;[PROJECT-99] - Added user profile module.&#34;</span>
+</span></span></code></pre></div><p>And after you realise that the issue number for the current commit is incorrect and needs to be corrected. That&rsquo;s the story of Project 100.</p>
 <p>You can correct it using the method outlined below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git commit --amend -m <span style="color:#e6db74">&#34;[PROJECT-100] - Added user profile module.&#34;</span>
-</code></pre></div><p>If you look at git log then updated message will reflect in it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">commit 75c82d058b32b82b5724618c816684c5aaa59022 <span style="color:#f92672">(</span>HEAD -&gt; master<span style="color:#f92672">)</span>
-Author: User
-Date:   Tue Apr <span style="color:#ae81ff">19</span> 01:08:53 <span style="color:#ae81ff">2022</span> -0400
-
-    <span style="color:#f92672">[</span>PROJECT-100<span style="color:#f92672">]</span> - Added user profile module.
-</code></pre></div><h2 id="remote-commit">Remote commit<a hidden class="anchor" aria-hidden="true" href="#remote-commit">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git commit --amend -m <span style="color:#e6db74">&#34;[PROJECT-100] - Added user profile module.&#34;</span>
+</span></span></code></pre></div><p>If you look at git log then updated message will reflect in it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>commit 75c82d058b32b82b5724618c816684c5aaa59022 <span style="color:#f92672">(</span>HEAD -&gt; master<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Author: User
+</span></span><span style="display:flex;"><span>Date:   Tue Apr <span style="color:#ae81ff">19</span> 01:08:53 <span style="color:#ae81ff">2022</span> -0400
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">[</span>PROJECT-100<span style="color:#f92672">]</span> - Added user profile module.
+</span></span></code></pre></div><h2 id="remote-commit">Remote commit<a hidden class="anchor" aria-hidden="true" href="#remote-commit">#</a></h2>
 <p>The following approach can be used to correct the latest pushed commit.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git commit --amend -m <span style="color:#e6db74">&#34;[PROJECT-101] - Added user profile module.&#34;</span>
-</code></pre></div><p>And git log history will show the latest updated message as</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">commit 7e2937ff912a5c512036c9c1e4befb8a4512a9a3 <span style="color:#f92672">(</span>HEAD -&gt; master<span style="color:#f92672">)</span>
-Author: User
-Date:   Tue Apr <span style="color:#ae81ff">19</span> 01:08:53 <span style="color:#ae81ff">2022</span> -0400
-
-    <span style="color:#f92672">[</span>PROJECT-101<span style="color:#f92672">]</span> - Added user profile module.
-</code></pre></div><p>However, because this change occurs in your current working directory, you must run the command below to update the remote repository.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git push --force origin master
-</code></pre></div><p>When you look at the remote repository, you&rsquo;ll notice that the most recent message has been added to it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git commit --amend -m <span style="color:#e6db74">&#34;[PROJECT-101] - Added user profile module.&#34;</span>
+</span></span></code></pre></div><p>And git log history will show the latest updated message as</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>commit 7e2937ff912a5c512036c9c1e4befb8a4512a9a3 <span style="color:#f92672">(</span>HEAD -&gt; master<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Author: User
+</span></span><span style="display:flex;"><span>Date:   Tue Apr <span style="color:#ae81ff">19</span> 01:08:53 <span style="color:#ae81ff">2022</span> -0400
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">[</span>PROJECT-101<span style="color:#f92672">]</span> - Added user profile module.
+</span></span></code></pre></div><p>However, because this change occurs in your current working directory, you must run the command below to update the remote repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git push --force origin master
+</span></span></code></pre></div><p>When you look at the remote repository, you&rsquo;ll notice that the most recent message has been added to it.</p>
 <p><img loading="lazy" src="image/git_history_page.png" alt=" GIT history page"  />
 </p>
 <h2 id="changing-an-older-or-multiple-commits">Changing an Older or Multiple Commits<a hidden class="anchor" aria-hidden="true" href="#changing-an-older-or-multiple-commits">#</a></h2>
@@ -294,23 +293,23 @@ Date:   Tue Apr <span style="color:#ae81ff">19</span> 01:08:53 <span style="colo
 <p>Git rebase rewrites the history, and it is strongly advised not to use rebase unless there is a compelling reason to use it.</p>
 <p>Use the command <code>git rebase -i HEAD~N</code>, where N represents the number of commits to update.
 As an example,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git rebase -i HEAD~3
-</code></pre></div><p>It will launch an editor and allow you to choose three commits from the history.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pick 6bfbd01 Added Cucumber + Gradle project
-pick 603981a Added Spring Boot SQL Logging project.
-pick 7e2937f <span style="color:#f92672">[</span>PROJECT-101<span style="color:#f92672">]</span> - Added user profile module.
-
-<span style="color:#75715e"># Rebase 0d7b04f..7e2937f onto 0d7b04f (3 commands)</span>
-</code></pre></div><p>Navigate to the line you want to change and replace the pick word with the reword.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pick 6bfbd01 Added Cucumber + Gradle project
-reword 603981a Added Spring Boot SQL Logging project.
-reword 7e2937f <span style="color:#f92672">[</span>PROJECT-101<span style="color:#f92672">]</span> - Added user profile module.
-</code></pre></div><p>Save and exit the editor now. For each reword commit, Git will launch a new editor.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>Project-99<span style="color:#f92672">]</span> Added Spring Boot SQL Logging project.
-</code></pre></div><p>Save and exit the editor after updating the commit message.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git rebase -i HEAD~3
+</span></span></code></pre></div><p>It will launch an editor and allow you to choose three commits from the history.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pick 6bfbd01 Added Cucumber + Gradle project
+</span></span><span style="display:flex;"><span>pick 603981a Added Spring Boot SQL Logging project.
+</span></span><span style="display:flex;"><span>pick 7e2937f <span style="color:#f92672">[</span>PROJECT-101<span style="color:#f92672">]</span> - Added user profile module.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Rebase 0d7b04f..7e2937f onto 0d7b04f (3 commands)</span>
+</span></span></code></pre></div><p>Navigate to the line you want to change and replace the pick word with the reword.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pick 6bfbd01 Added Cucumber + Gradle project
+</span></span><span style="display:flex;"><span>reword 603981a Added Spring Boot SQL Logging project.
+</span></span><span style="display:flex;"><span>reword 7e2937f <span style="color:#f92672">[</span>PROJECT-101<span style="color:#f92672">]</span> - Added user profile module.
+</span></span></code></pre></div><p>Save and exit the editor now. For each reword commit, Git will launch a new editor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>Project-99<span style="color:#f92672">]</span> Added Spring Boot SQL Logging project.
+</span></span></code></pre></div><p>Save and exit the editor after updating the commit message.</p>
 <p>This will bring your local git history up to date. Use the following command to update remote Git history.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git push --force origin master
-</code></pre></div><p>It will update remote Git history as.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git push --force origin master
+</span></span></code></pre></div><p>It will update remote Git history as.</p>
 <p><img loading="lazy" src="image/git_history_commit_page.png" alt="git history commits"  />
 </p>
 <h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
@@ -488,7 +487,7 @@ reword 7e2937f <span style="color:#f92672">[</span>PROJECT-101<span style="color
 
         </div>
         <div class=" center">
-            &copy; 2023 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2024 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>

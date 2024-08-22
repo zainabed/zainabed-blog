@@ -12,8 +12,8 @@ SQL debug logs can assist you figure out what&rsquo;s wrong with JPA statements 
 Example If you&rsquo;ve built custom Spring data JPA methods and need to know what SQL statement is being utilized behind them,">
 <meta name="author" content="">
 <link rel="canonical" href="https://www.zainabed.com/2022/04/how-to-enable-sql-logs-in-spring-boot-application.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2e6d835886156948349f5e09bf5edfff819a004809f055d71edc1c07e5a26d1d.css" integrity="sha256-Lm2DWIYVaUg0n14Jv17f/4GaAEgJ8FXXHtwcB&#43;WibR0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.zainabed.com/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
@@ -70,8 +70,7 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script>
-<meta property="og:title" content="How to Enable Sql Logs in Spring Boot Application" />
+</script><meta property="og:title" content="How to Enable Sql Logs in Spring Boot Application" />
 <meta property="og:description" content="Introduction This tutorial will demonstrate how to enable and disable SQL log statements in a Spring Boot application in order to debug SQL flow.
 Problem You will frequently need to debug the SQL statement while developing a Spring Boot application with a SQL database.
 SQL debug logs can assist you figure out what&rsquo;s wrong with JPA statements and whether or not there&rsquo;s a problem with database connectivity.
@@ -121,7 +120,7 @@ Example If you&rsquo;ve built custom Spring data JPA methods and need to know wh
   "keywords": [
     
   ],
-  "articleBody": "Introduction This tutorial will demonstrate how to enable and disable SQL log statements in a Spring Boot application in order to debug SQL flow.\nProblem You will frequently need to debug the SQL statement while developing a Spring Boot application with a SQL database.\nSQL debug logs can assist you figure out what’s wrong with JPA statements and whether or not there’s a problem with database connectivity.\nExample If you’ve built custom Spring data JPA methods and need to know what SQL statement is being utilized behind them,\nreturn repository.findByUsernameIn(usernames); Then you can enable Hibernet debug mode to log SQL statements.\nSolution Update the application.yml file with the Hibernet configuration as\nlogging: level: org: hibernate: DEBUG or application.properties as\nlogging.level.org.hibernate=DEBUG The SQL statement will appear in the application logs after modifying the configuration file and restarting the application.\n2022-04-07 08:41:45.118 DEBUG 14561 --- [nio-8080-exec-1] org.hibernate.SQL : select user0_.id as id1_0_, user0_.password as password2_0_, user0_.username as username3_0_ from user user0_ where user0_.username in (?) Spring Boot Profiles This setup is great for debugging and testing your application while you are building or improving its features, but it’s not appropriate for staging or production situations.\nTo turn off the debugging logs in the production environment, you should prefer to use Spring boot profiles.\n application.properties : Local machine application-dev.properties: Development environment. application-stage.properties: Stage/Test environment application-prod.properties: Production environment  Inside application-prod.properties, specifically turn off SQL debug logs, like\nlogging.level.org.hibernate=OFF  Note: It is not a rule to name your application properties file as mentioned in this tutorial. You are free to give it whatever name you like.\n Conclusion SQL debugging can be activated or deactivated by application configuration. The production environment should explicitly disable this configuration.\nYou can access tutorial code from Github page.\n",
+  "articleBody": "Introduction This tutorial will demonstrate how to enable and disable SQL log statements in a Spring Boot application in order to debug SQL flow.\nProblem You will frequently need to debug the SQL statement while developing a Spring Boot application with a SQL database.\nSQL debug logs can assist you figure out what’s wrong with JPA statements and whether or not there’s a problem with database connectivity.\nExample If you’ve built custom Spring data JPA methods and need to know what SQL statement is being utilized behind them,\nreturn repository.findByUsernameIn(usernames); Then you can enable Hibernet debug mode to log SQL statements.\nSolution Update the application.yml file with the Hibernet configuration as\nlogging: level: org: hibernate: DEBUG or application.properties as\nlogging.level.org.hibernate=DEBUG The SQL statement will appear in the application logs after modifying the configuration file and restarting the application.\n2022-04-07 08:41:45.118 DEBUG 14561 --- [nio-8080-exec-1] org.hibernate.SQL : select user0_.id as id1_0_, user0_.password as password2_0_, user0_.username as username3_0_ from user user0_ where user0_.username in (?) Spring Boot Profiles This setup is great for debugging and testing your application while you are building or improving its features, but it’s not appropriate for staging or production situations.\nTo turn off the debugging logs in the production environment, you should prefer to use Spring boot profiles.\napplication.properties : Local machine application-dev.properties: Development environment. application-stage.properties: Stage/Test environment application-prod.properties: Production environment Inside application-prod.properties, specifically turn off SQL debug logs, like\nlogging.level.org.hibernate=OFF Note: It is not a rule to name your application properties file as mentioned in this tutorial. You are free to give it whatever name you like.\nConclusion SQL debugging can be activated or deactivated by application configuration. The production environment should explicitly disable this configuration.\nYou can access tutorial code from Github page.\n",
   "wordCount" : "288",
   "inLanguage": "en",
   "image":"https://www.zainabed.com/image/cover.jpg","datePublished": "2022-04-08T10:49:12-04:00",
@@ -227,7 +226,7 @@ Example If you&rsquo;ve built custom Spring data JPA methods and need to know wh
     <h1 class="post-title">
       How to Enable Sql Logs in Spring Boot Application
     </h1>
-    <div class="post-meta"><span title='2022-04-08 10:49:12 -0400 EDT'>April 8, 2022</span>
+    <div class="post-meta"><span title='2022-04-08 10:49:12 -0400 -0400'>April 8, 2022</span>
 
 </div>
   </header> 
@@ -257,20 +256,20 @@ Example If you&rsquo;ve built custom Spring data JPA methods and need to know wh
 <p>SQL debug logs can assist you figure out what&rsquo;s wrong with JPA statements and whether or not there&rsquo;s a problem with database connectivity.</p>
 <h2 id="example">Example<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h2>
 <p>If you&rsquo;ve built custom Spring data JPA methods and need to know what SQL statement is being utilized behind them,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">return</span> repository<span style="color:#f92672">.</span><span style="color:#a6e22e">findByUsernameIn</span><span style="color:#f92672">(</span>usernames<span style="color:#f92672">);</span>
-</code></pre></div><p>Then you can enable Hibernet debug mode to log SQL statements.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">return</span> repository<span style="color:#f92672">.</span><span style="color:#a6e22e">findByUsernameIn</span><span style="color:#f92672">(</span>usernames<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>Then you can enable Hibernet debug mode to log SQL statements.</p>
 <h2 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h2>
 <p>Update the application.yml file with the Hibernet configuration as</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">logging</span>:
-  <span style="color:#f92672">level</span>:
-    <span style="color:#f92672">org</span>:
-      <span style="color:#f92672">hibernate</span>: <span style="color:#ae81ff">DEBUG</span>
-</code></pre></div><p>or application.properties as</p>
-<pre><code class="language-property" data-lang="property">logging.level.org.hibernate=DEBUG
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">logging</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">level</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">org</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">hibernate</span>: <span style="color:#ae81ff">DEBUG</span>
+</span></span></code></pre></div><p>or application.properties as</p>
+<pre tabindex="0"><code class="language-property" data-lang="property">logging.level.org.hibernate=DEBUG
 </code></pre><p>The SQL statement will appear in the application logs after modifying the configuration file and restarting the application.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">2022-04-07 08:41:45.118 DEBUG <span style="color:#ae81ff">14561</span> --- <span style="color:#f92672">[</span>nio-8080-exec-1<span style="color:#f92672">]</span> org.hibernate.SQL                        : 
-<span style="color:#66d9ef">select</span> user0_.id as id1_0_, user0_.password as password2_0_, user0_.username as username3_0_ from user user0_ where user0_.username in <span style="color:#f92672">(</span>?<span style="color:#f92672">)</span>
-</code></pre></div><h2 id="spring-boot-profiles">Spring Boot Profiles<a hidden class="anchor" aria-hidden="true" href="#spring-boot-profiles">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>2022-04-07 08:41:45.118 DEBUG <span style="color:#ae81ff">14561</span> --- <span style="color:#f92672">[</span>nio-8080-exec-1<span style="color:#f92672">]</span> org.hibernate.SQL                        : 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">select</span> user0_.id as id1_0_, user0_.password as password2_0_, user0_.username as username3_0_ from user user0_ where user0_.username in <span style="color:#f92672">(</span>?<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="spring-boot-profiles">Spring Boot Profiles<a hidden class="anchor" aria-hidden="true" href="#spring-boot-profiles">#</a></h2>
 <p>This setup is great for debugging and testing your application while you are building or improving its features, but it&rsquo;s not appropriate for staging or production situations.</p>
 <p>To turn off the debugging logs in the production environment, you should prefer to use Spring boot profiles.</p>
 <ul>
@@ -280,7 +279,7 @@ Example If you&rsquo;ve built custom Spring data JPA methods and need to know wh
 <li>application-prod.properties:    Production environment</li>
 </ul>
 <p>Inside <strong>application-prod.properties</strong>, specifically turn off SQL debug logs, like</p>
-<pre><code class="language-property" data-lang="property">logging.level.org.hibernate=OFF
+<pre tabindex="0"><code class="language-property" data-lang="property">logging.level.org.hibernate=OFF
 </code></pre><blockquote>
 <p>Note: It is not a rule to name your application properties file as mentioned in this tutorial. You are free to give it whatever name you like.</p>
 </blockquote>
@@ -546,7 +545,7 @@ Example If you&rsquo;ve built custom Spring data JPA methods and need to know wh
 
         </div>
         <div class=" center">
-            &copy; 2023 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2024 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>
