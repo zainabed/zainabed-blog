@@ -35,9 +35,9 @@ Why do we need @ConfigurationProperties? What about the @Value annotation? The t
       
       <guid>https://www.zainabed.com/tutorials/spring-boot-controller-test/</guid>
       <description>Introduction There are several methods for testing Rest controllers in the Spring Boot framework, and this post will demonstrate one of the quickest.
-Tools  Spring Boot: 2.7.6
+Tools Spring Boot: 2.7.6
 Java : 11
- Rest Controller Let&amp;rsquo;s create a simple REST API controller with one service to fetch the data from the database.
+Rest Controller Let&amp;rsquo;s create a simple REST API controller with one service to fetch the data from the database.
 UserController.java @RestController public class UserController { private final UserService userService; public UserController(final UserService userService) { this.userService = userService; } @PostMapping(path = &amp;#34;/user&amp;#34;, consumes = MediaType.</description>
     </item>
     
@@ -84,7 +84,7 @@ POM Configuration Add log4j2 as a dependency to the pom.xml file. pom.</descrip
       <guid>https://www.zainabed.com/tutorials/spring-boot-cloud-gateway-introduction/</guid>
       <description>Introduction This tutorial is a short introduction to Spring Cloud Gateway.
 By following the quick and easy steps provided below, you will be able to start the REST API gateway project.
-Prerequisite  Java Maven Spring Boot  Download the Spring Boot project from Spring Initializr and select Gateway  as dependency.
+Prerequisite Java Maven Spring Boot Download the Spring Boot project from Spring Initializr and select Gateway as dependency.
 Now generate and download the project and use your favourite editor to import it.
 Gateway Configuration You can use a YAML file or Java code to configure routes.</description>
     </item>
@@ -167,7 +167,7 @@ gradle init Complete the Gradle wizard to create a project.</description>
       
       <guid>https://www.zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/</guid>
       <description>Introduction In this tutorial, we will create a Micronaut application using Gradle.
-What you will need  Java installed on your machine Gradle installed on your machine Text Editor  Steps First create your project folder, we will make a folder called &amp;ldquo;micronaut-project&amp;rdquo; for this tutorial.
+What you will need Java installed on your machine Gradle installed on your machine Text Editor Steps First create your project folder, we will make a folder called &amp;ldquo;micronaut-project&amp;rdquo; for this tutorial.
 The second step is to add the build.gradle file inside the project folder.
 This will contain a script to build the Micronaut application.
 Now update the build.</description>
@@ -180,8 +180,8 @@ Now update the build.</description>
       
       <guid>https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</guid>
       <description>Introduction Following is simple JAX-RS tutorial, which sends “Hello World” text as response string using JAX-RS API and Jersey implementation. Technologies and Tools used in this article:
- JDK Eclipse Tomcat Maven Jersey 1.8  Create Maven Web Project Create a Maven web project and name it &amp;ldquo;helloworld&amp;rdquo; .
- File -&amp;gt; New -&amp;gt; Other -&amp;gt; Maven Project -&amp;gt; Next Select maven-archetype-webapp Select Next Type Group Id, Artifact Id and Package name And select Finish  Add Project Dependencies Add Jersey repository using Maven.</description>
+JDK Eclipse Tomcat Maven Jersey 1.8 Create Maven Web Project Create a Maven web project and name it &amp;ldquo;helloworld&amp;rdquo; .
+File -&amp;gt; New -&amp;gt; Other -&amp;gt; Maven Project -&amp;gt; Next Select maven-archetype-webapp Select Next Type Group Id, Artifact Id and Package name And select Finish Add Project Dependencies Add Jersey repository using Maven.</description>
     </item>
     
     <item>
@@ -192,7 +192,7 @@ Now update the build.</description>
       <guid>https://www.zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</guid>
       <description>Introdcution JAX-RS is API specification for RESTful web services using Java. RESTful web services is implementation of REST (Representational State Transfer) which is architectural design for distributed system or in general we can say JAX-RS is a set of APIs to develop REST service.
 This is a brief introduction about REST and JAX-RS. You can find more information on REST on Wiki and JAX-RS Official Site.
-What is REST  Representational state transfer is an abstraction of the architecture of the World Wide Web.</description>
+What is REST Representational state transfer is an abstraction of the architecture of the World Wide Web.</description>
     </item>
     
     <item>

@@ -14,8 +14,8 @@
       
       <guid>https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/</guid>
       <description>What is the Abstract Factory design pattern? The intent or definition of Abstract Factory is
- “Provide an interface for creating families of related or dependent objects without specifying their concrete classes”  It&amp;rsquo;s a bit of a complicated definition, so we&amp;rsquo;ll need to break it down into meaningful chunks to understand it.
-1. &amp;ldquo;Provide an interface&amp;rdquo; When we discuss the Abstract Factory, we are referring to interfaces rather than abstract classes.</description>
+“Provide an interface for creating families of related or dependent objects without specifying their concrete classes” It&amp;rsquo;s a bit of a complicated definition, so we&amp;rsquo;ll need to break it down into meaningful chunks to understand it.
+1. &amp;ldquo;Provide an interface&amp;rdquo; When we discuss the Abstract Factory, we are referring to interfaces rather than abstract classes. Essentially, this design pattern provides us with an interface, similar to those found in Java, C#, or Typescript (abstract class).</description>
     </item>
     
   </channel>

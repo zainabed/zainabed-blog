@@ -15,7 +15,7 @@
       <guid>https://www.zainabed.com/2014/11/mongodb-tutorials-aggregation-framework.html/</guid>
       <description>Introduction MongoDB Aggregation Framework groups set of documents together and performs certain operation on this grouped documents and returns results in the form of documents. MongoDB aggregation answer to those query which requires grouping of documents.
 Aggregation framework works on three type of model
- Aggregation pipeline Map Reduce Single Purpose Aggregation Operations  Now let see how MongoDB Aggregation Framework works with simple example.
+Aggregation pipeline Map Reduce Single Purpose Aggregation Operations Now let see how MongoDB Aggregation Framework works with simple example.
 Suppose you are MongoDB application developer in a respected company and you have been given a MongoDB database that holds information about human population which is distributed according to cities and their states.</description>
     </item>
     

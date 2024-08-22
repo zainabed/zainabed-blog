@@ -14,7 +14,7 @@
       
       <guid>https://www.zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/</guid>
       <description>Introduction In this tutorial, we will create a Micronaut application using Gradle.
-What you will need  Java installed on your machine Gradle installed on your machine Text Editor  Steps First create your project folder, we will make a folder called &amp;ldquo;micronaut-project&amp;rdquo; for this tutorial.
+What you will need Java installed on your machine Gradle installed on your machine Text Editor Steps First create your project folder, we will make a folder called &amp;ldquo;micronaut-project&amp;rdquo; for this tutorial.
 The second step is to add the build.gradle file inside the project folder.
 This will contain a script to build the Micronaut application.
 Now update the build.</description>

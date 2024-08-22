@@ -1,4 +1,4 @@
-{{if not ( in .Params.categories "Tutorial" )  }}
+{{if not ( or ( in .Params.categories "Tutorial"   ) ( in .Params.categories "App"   ))  }}
 {{- range .Params.authors }}
   {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
    

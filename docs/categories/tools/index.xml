@@ -15,8 +15,8 @@
       <guid>https://www.zainabed.com/tools/yaml-to-json/</guid>
       <description>What is YAML to JSON converter tool Convert YAML to JSON for free, quickly, and conveniently in your browser.
 Enter your input below and click the Convert button. The result will be displayed below the Convert button.
- Enter the YAML Clear  
- Convert  JSON    What is YAML YAML is a human-readable data-serialization language. It is frequently used in configuration files as well as programmes that store or transport data.</description>
+Enter the YAMLClearConvertJSONWhat is YAML YAML is a human-readable data-serialization language. It is frequently used in configuration files as well as programmes that store or transport data.
+YAML is typically used to build application configuration and system specifications.</description>
     </item>
     
     <item>
@@ -25,9 +25,7 @@ Enter your input below and click the Convert button. The result will be displaye
       <pubDate>Sat, 07 Jan 2023 08:48:53 -0500</pubDate>
       
       <guid>https://www.zainabed.com/tools/sha256/</guid>
-      <description>Enter the input Clear  
- Hash  SHA-256 
- What is SHA-256? SHA-256 is a cryptographic hash function that accepts a random-sized input and returns a 256-bit fixed-size hash as an output.
+      <description>Enter the inputClearHashSHA-256What is SHA-256? SHA-256 is a cryptographic hash function that accepts a random-sized input and returns a 256-bit fixed-size hash as an output.
 Because of their one-way output, such hashes are extremely powerful. Simply said, you can generate a hash output from any given input, but you cannot reconstruct the original data from the same hash output.</description>
     </item>
     
@@ -37,11 +35,9 @@ Because of their one-way output, such hashes are extremely powerful. Simply said
       <pubDate>Thu, 05 Jan 2023 00:40:20 -0500</pubDate>
       
       <guid>https://www.zainabed.com/tools/base64/</guid>
-      <description>Encode Decode   Enter the text for  Clear  
- Base64   Base64  
- Base64 Encoder / Decoder Online Base64 Decode is a simple utility for decoding or encoding base64 data to plain text.
+      <description>EncodeDecodeEnter the text for ClearBase64 Base64 Base64 Encoder / Decoder Online Base64 Decode is a simple utility for decoding or encoding base64 data to plain text.
 What exactly is Base64? Base64 is a family of binary-to-text encoding techniques that convert binary data in an ASCII string format into a radix-64 representation.
-Base64 is commonly used to encode binary data in email messages and web pages.</description>
+Base64 is commonly used to encode binary data in email messages and web pages. It is also used to send binary files over channels that are not 8-bit clean or where byte order is not an issue.</description>
     </item>
     
   </channel>

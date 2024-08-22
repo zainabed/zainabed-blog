@@ -14,9 +14,9 @@
       
       <guid>https://www.zainabed.com/tutorials/spring-boot-controller-test/</guid>
       <description>Introduction There are several methods for testing Rest controllers in the Spring Boot framework, and this post will demonstrate one of the quickest.
-Tools  Spring Boot: 2.7.6
+Tools Spring Boot: 2.7.6
 Java : 11
- Rest Controller Let&amp;rsquo;s create a simple REST API controller with one service to fetch the data from the database.
+Rest Controller Let&amp;rsquo;s create a simple REST API controller with one service to fetch the data from the database.
 UserController.java @RestController public class UserController { private final UserService userService; public UserController(final UserService userService) { this.userService = userService; } @PostMapping(path = &amp;#34;/user&amp;#34;, consumes = MediaType.</description>
     </item>
     

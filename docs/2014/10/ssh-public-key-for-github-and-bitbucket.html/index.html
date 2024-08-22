@@ -10,8 +10,8 @@
 But first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual.">
 <meta name="author" content="">
 <link rel="canonical" href="https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2e6d835886156948349f5e09bf5edfff819a004809f055d71edc1c07e5a26d1d.css" integrity="sha256-Lm2DWIYVaUg0n14Jv17f/4GaAEgJ8FXXHtwcB&#43;WibR0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.zainabed.com/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
@@ -68,8 +68,7 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script>
-<meta property="og:title" content="Ssh Public Key for Github and Bitbucket" />
+</script><meta property="og:title" content="Ssh Public Key for Github and Bitbucket" />
 <meta property="og:description" content="Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.
 But first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual." />
 <meta property="og:type" content="article" />
@@ -115,7 +114,7 @@ But first, why do we require this SSH public key If you want to do any work on a
   "keywords": [
     
   ],
-  "articleBody": "Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.\nBut first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual.\nHowever, each time you operate, you are prompted to enter your username and password.\nIt appears simple at first, but it quickly becomes a source of frustration.\nTo overcome the above problem, we can use the SSH protocol. SSH connections allow us to authenticate using public and private keys that we generate only once. after that, we don’t need to authenticate because SSH will do so on our behalf.\nBut how does it work SSH authenticates you using an identity, and this identity is made up of a combination of private and public keys.\nA private key is stored on your local machine, while a public key is stored on your GitHub or Bitbucket account. When you perform any operation on a Git repository that requires your authentication, SSH combines these two keys.\nTo use SSH, you must first install it. Please follow the steps given in the following link. http://www.openssh.com\nGenerate private-public keys Follow the steps below to generate a private and public key. Open a terminal and enter the following command.\nssh-keygen It will request the location of key files. To select the default location, press Enter.\nIt will then request a passphrase (password). You can omit it, but it is preferable to include one.\nAfter that, it will prompt you to reenter your password for confirmation.\nAfter that, keys will be generated and saved in the specified location.\nHere’s an example of the ssh-keygen operation’s output.\nNext, add your key to the ssh-agent.\nssh-add ~/.ssh/id_rsa Later, you need to add the public key to your GitHub and Bitbucket accounts. To do so, we need to get content of the public key. This resides inside ~/.ssh path.\ncat ~/.ssh/id_rsa.pub Copy this key and go to GitHub or Bitbucket to add it to your account.\nGitHub Log in to your GitHub account in a browser.\n Select the setting icon from the menu bar’s top right corner. Then select SSH keys from the left side panel. Now add the new public key by selecting the Add SSH key button. It will open a panel to enter a public key. Add a label for the public key and then add the copied public key inside the key area. Now finish this process by clicking the Add key button.  That’s it. The configuration for GitHub is done.\nBitbucket Open a browser and log into your Bitbucket account.\n Select Avatar-Manage Account from the application menu. Under Security section Click SSH keys. Then click Add key button. It will prompt a dialog to add public key. Add label for public key and then add copied public key inside key area. Now finish this process by clicking Add key button.  This will complete the configuration for Bitbucket.\nConclusion If you want your repository to run smoothly, use SSH with public and private key configuration.\n",
+  "articleBody": "Introduction This post will show you how to generate SSH private and public keys step by step, as well as how to add public keys to your GitHub and Bitbucket accounts.\nBut first, why do we require this SSH public key If you want to do any work on a secure GIT repository, such as cloning or pushing your latest changes, you will need to provide your credentials to help GIT authenticate you and approve those operations, whether you are working in a team or as an individual.\nHowever, each time you operate, you are prompted to enter your username and password.\nIt appears simple at first, but it quickly becomes a source of frustration.\nTo overcome the above problem, we can use the SSH protocol. SSH connections allow us to authenticate using public and private keys that we generate only once. after that, we don’t need to authenticate because SSH will do so on our behalf.\nBut how does it work SSH authenticates you using an identity, and this identity is made up of a combination of private and public keys.\nA private key is stored on your local machine, while a public key is stored on your GitHub or Bitbucket account. When you perform any operation on a Git repository that requires your authentication, SSH combines these two keys.\nTo use SSH, you must first install it. Please follow the steps given in the following link. http://www.openssh.com\nGenerate private-public keys Follow the steps below to generate a private and public key. Open a terminal and enter the following command.\nssh-keygen It will request the location of key files. To select the default location, press Enter.\nIt will then request a passphrase (password). You can omit it, but it is preferable to include one.\nAfter that, it will prompt you to reenter your password for confirmation.\nAfter that, keys will be generated and saved in the specified location.\nHere’s an example of the ssh-keygen operation’s output.\nNext, add your key to the ssh-agent.\nssh-add ~/.ssh/id_rsa Later, you need to add the public key to your GitHub and Bitbucket accounts. To do so, we need to get content of the public key. This resides inside ~/.ssh path.\ncat ~/.ssh/id_rsa.pub Copy this key and go to GitHub or Bitbucket to add it to your account.\nGitHub Log in to your GitHub account in a browser.\nSelect the setting icon from the menu bar’s top right corner. Then select SSH keys from the left side panel. Now add the new public key by selecting the Add SSH key button. It will open a panel to enter a public key. Add a label for the public key and then add the copied public key inside the key area. Now finish this process by clicking the Add key button. That’s it. The configuration for GitHub is done.\nBitbucket Open a browser and log into your Bitbucket account.\nSelect Avatar-\u003eManage Account from the application menu. Under Security section Click SSH keys. Then click Add key button. It will prompt a dialog to add public key. Add label for public key and then add copied public key inside key area. Now finish this process by clicking Add key button. This will complete the configuration for Bitbucket.\nConclusion If you want your repository to run smoothly, use SSH with public and private key configuration.\n",
   "wordCount" : "557",
   "inLanguage": "en",
   "image":"https://www.zainabed.com/image/cover.png","datePublished": "2014-10-14T08:31:40-04:00",
@@ -221,12 +220,12 @@ But first, why do we require this SSH public key If you want to do any work on a
     <h1 class="post-title">
       Ssh Public Key for Github and Bitbucket
     </h1>
-    <div class="post-meta"><span title='2014-10-14 08:31:40 -0400 EDT'>October 14, 2014</span>
+    <div class="post-meta"><span title='2014-10-14 08:31:40 -0400 -0400'>October 14, 2014</span>
 
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="lazy" srcset="https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover_hu284d939a3cc125d20c5fd77c3e290803_85369_360x0_resize_box_2.png 360w ,https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover_hu284d939a3cc125d20c5fd77c3e290803_85369_480x0_resize_box_2.png 480w ,https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover.png 640w" 
+        <img loading="lazy" srcset="https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover_hu284d939a3cc125d20c5fd77c3e290803_85369_360x0_resize_box_3.png 360w ,https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover_hu284d939a3cc125d20c5fd77c3e290803_85369_480x0_resize_box_3.png 480w ,https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover.png 640w" 
             sizes="(min-width: 768px) 720px, 100vw" src="https://www.zainabed.com/2014/10/ssh-public-key-for-github-and-bitbucket.html/image/cover.png" alt="Ssh Public Key for Github and Bitbucket" 
             width="640" height="480">
         
@@ -261,8 +260,8 @@ When you perform any operation on a Git repository that requires your authentica
 <h2 id="generate-private-public-keys">Generate private-public keys<a hidden class="anchor" aria-hidden="true" href="#generate-private-public-keys">#</a></h2>
 <p>Follow the steps below to generate a private and public key.
 Open a terminal and enter the following command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen            
-</code></pre></div><p>It will request the location of key files. To select the default location, press Enter.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen            
+</span></span></code></pre></div><p>It will request the location of key files. To select the default location, press Enter.</p>
 <p>It will then request a <code>passphrase</code> (password). You can omit it, but it is preferable to include one.</p>
 <p>After that, it will prompt you to reenter your password for confirmation.</p>
 <p>After that, keys will be generated and saved in the specified location.</p>
@@ -270,10 +269,10 @@ Open a terminal and enter the following command.</p>
 <p><img loading="lazy" src="image/ssh-keygen-outout.png" alt="ssh keygen outout "  />
 </p>
 <p>Next, add your key to the ssh-agent.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add ~/.ssh/id_rsa    
-</code></pre></div><p>Later, you need to add the public key to your GitHub and Bitbucket accounts. To do so, we need to get content of the public key. This resides inside ~/.ssh path.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat ~/.ssh/id_rsa.pub     
-</code></pre></div><p>Copy this key and go to GitHub or Bitbucket to add it to your account.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add ~/.ssh/id_rsa    
+</span></span></code></pre></div><p>Later, you need to add the public key to your GitHub and Bitbucket accounts. To do so, we need to get content of the public key. This resides inside ~/.ssh path.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.ssh/id_rsa.pub     
+</span></span></code></pre></div><p>Copy this key and go to GitHub or Bitbucket to add it to your account.</p>
 <h2 id="github">GitHub<a hidden class="anchor" aria-hidden="true" href="#github">#</a></h2>
 <p>Log in to your GitHub account in a browser.</p>
 <ul>
@@ -468,7 +467,7 @@ Open a terminal and enter the following command.</p>
 
         </div>
         <div class=" center">
-            &copy; 2023 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2024 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>

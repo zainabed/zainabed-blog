@@ -85,7 +85,7 @@ As previously said, it is a client library, which means it may be utilised in ou
       <guid>https://www.zainabed.com/2022/04/how-to-change-a-git-commit-message.html/</guid>
       <description>Introdcution In this tutorial, we&amp;rsquo;ll go over how to fix Git commit messages that have been committed to a local or remote Git repository.
 Reason to change commit message? When working with Git, there could be several reasons to update the commit message. Some of the common reasons are as follows
- Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira.</description>
+Message contains a typo. Missing intent of commit. Remove any confidential information. Correct issue ticket number to connect to an issue tracker such as Jira.</description>
     </item>
     
     <item>
@@ -119,7 +119,7 @@ gradle init Complete the Gradle wizard to create a project.</description>
       
       <guid>https://www.zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/</guid>
       <description>Introduction In this tutorial, we will create a Micronaut application using Gradle.
-What you will need  Java installed on your machine Gradle installed on your machine Text Editor  Steps First create your project folder, we will make a folder called &amp;ldquo;micronaut-project&amp;rdquo; for this tutorial.
+What you will need Java installed on your machine Gradle installed on your machine Text Editor Steps First create your project folder, we will make a folder called &amp;ldquo;micronaut-project&amp;rdquo; for this tutorial.
 The second step is to add the build.gradle file inside the project folder.
 This will contain a script to build the Micronaut application.
 Now update the build.</description>
@@ -132,8 +132,8 @@ Now update the build.</description>
       
       <guid>https://www.zainabed.com/2020/04/abstract-factory-design-pattern-analysis.html/</guid>
       <description>What is the Abstract Factory design pattern? The intent or definition of Abstract Factory is
- “Provide an interface for creating families of related or dependent objects without specifying their concrete classes”  It&amp;rsquo;s a bit of a complicated definition, so we&amp;rsquo;ll need to break it down into meaningful chunks to understand it.
-1. &amp;ldquo;Provide an interface&amp;rdquo; When we discuss the Abstract Factory, we are referring to interfaces rather than abstract classes.</description>
+“Provide an interface for creating families of related or dependent objects without specifying their concrete classes” It&amp;rsquo;s a bit of a complicated definition, so we&amp;rsquo;ll need to break it down into meaningful chunks to understand it.
+1. &amp;ldquo;Provide an interface&amp;rdquo; When we discuss the Abstract Factory, we are referring to interfaces rather than abstract classes. Essentially, this design pattern provides us with an interface, similar to those found in Java, C#, or Typescript (abstract class).</description>
     </item>
     
     <item>
@@ -145,7 +145,7 @@ Now update the build.</description>
       <description>Introduction Every application starts with bootstrap process which initialize application and wire it other with dependencies and configurations.
 AngularJs is not different from other application. It also starts application with bootstrap process.
 Following operation happens inside AngularJs bootstrap process.
- Load application module. Create dependency injector and load dependencies. Compile HTML and create scope for application.  All these steps happens inside angular.js scripting file. therefore we need to include it first.</description>
+Load application module. Create dependency injector and load dependencies. Compile HTML and create scope for application. All these steps happens inside angular.js scripting file. therefore we need to include it first. we can include it inside HEAD tag or at end of BODY tag.</description>
     </item>
     
     <item>
@@ -156,7 +156,7 @@ Following operation happens inside AngularJs bootstrap process.
       <guid>https://www.zainabed.com/2014/11/mongodb-tutorials-aggregation-framework.html/</guid>
       <description>Introduction MongoDB Aggregation Framework groups set of documents together and performs certain operation on this grouped documents and returns results in the form of documents. MongoDB aggregation answer to those query which requires grouping of documents.
 Aggregation framework works on three type of model
- Aggregation pipeline Map Reduce Single Purpose Aggregation Operations  Now let see how MongoDB Aggregation Framework works with simple example.
+Aggregation pipeline Map Reduce Single Purpose Aggregation Operations Now let see how MongoDB Aggregation Framework works with simple example.
 Suppose you are MongoDB application developer in a respected company and you have been given a MongoDB database that holds information about human population which is distributed according to cities and their states.</description>
     </item>
     
@@ -179,7 +179,7 @@ However, we may avoid the issue by using the PHP autoload capability to autoload
       <guid>https://www.zainabed.com/2014/10/json-tutorials-getting-started.html/</guid>
       <description>Introduction JSON is widely accepted text formatted structured data. JSON stands for &amp;ldquo;JavaScript Object Notation&amp;rdquo;.
 In general JSON can represent
- Object of database record. Object to represent a list of HTML elements. Result of search query. Response of an Ajax call.  Here you can see JSON is used in many different areas and for many different scenarios. This means it has simple data structure. most of programming languages adopt it and it can flow easily from one connection to another.</description>
+Object of database record. Object to represent a list of HTML elements. Result of search query. Response of an Ajax call. Here you can see JSON is used in many different areas and for many different scenarios. This means it has simple data structure. most of programming languages adopt it and it can flow easily from one connection to another.</description>
     </item>
     
     <item>
@@ -239,8 +239,8 @@ When mobile comes in stock, online shopping website notifies you about mobile ph
       <guid>https://www.zainabed.com/2014/09/drupal-8-tutorials-custom-module.html/</guid>
       <description>Introduction Custom Module development in Drupal 8 is very simple. It may looks very difficult for developer who has Drupal 7 experience or nothing at all.
 This tutorial will show easy steps and helps you to create custom module within few minutes.
- Note: Content or example of this tutorial may change according to Drupal 8 version and its release.
- This tutorial is divided into three small sections.
+Note: Content or example of this tutorial may change according to Drupal 8 version and its release.
+This tutorial is divided into three small sections.
 In first section of this tutorial we will see what directory structure we need to create for a custom module.</description>
     </item>
     
@@ -251,8 +251,8 @@ In first section of this tutorial we will see what directory structure we need t
       
       <guid>https://www.zainabed.com/2014/07/jax-rs-tutorilas-hello-world-example.html/</guid>
       <description>Introduction Following is simple JAX-RS tutorial, which sends “Hello World” text as response string using JAX-RS API and Jersey implementation. Technologies and Tools used in this article:
- JDK Eclipse Tomcat Maven Jersey 1.8  Create Maven Web Project Create a Maven web project and name it &amp;ldquo;helloworld&amp;rdquo; .
- File -&amp;gt; New -&amp;gt; Other -&amp;gt; Maven Project -&amp;gt; Next Select maven-archetype-webapp Select Next Type Group Id, Artifact Id and Package name And select Finish  Add Project Dependencies Add Jersey repository using Maven.</description>
+JDK Eclipse Tomcat Maven Jersey 1.8 Create Maven Web Project Create a Maven web project and name it &amp;ldquo;helloworld&amp;rdquo; .
+File -&amp;gt; New -&amp;gt; Other -&amp;gt; Maven Project -&amp;gt; Next Select maven-archetype-webapp Select Next Type Group Id, Artifact Id and Package name And select Finish Add Project Dependencies Add Jersey repository using Maven.</description>
     </item>
     
     <item>
@@ -275,7 +275,7 @@ How to Install Sass Sass requires Ruby, so if you are using Windows System then 
       <guid>https://www.zainabed.com/2014/07/jax-rs-tutorial-rest-api-using-java.html/</guid>
       <description>Introdcution JAX-RS is API specification for RESTful web services using Java. RESTful web services is implementation of REST (Representational State Transfer) which is architectural design for distributed system or in general we can say JAX-RS is a set of APIs to develop REST service.
 This is a brief introduction about REST and JAX-RS. You can find more information on REST on Wiki and JAX-RS Official Site.
-What is REST  Representational state transfer is an abstraction of the architecture of the World Wide Web.</description>
+What is REST Representational state transfer is an abstraction of the architecture of the World Wide Web.</description>
     </item>
     
     <item>
@@ -298,7 +298,7 @@ Define Data Structure The following is the data structure of the Person and Pers
       <guid>https://www.zainabed.com/2014/05/getting-started-with-elasticsearch.html/</guid>
       <description>Introduction Elasticsearch is open source search system based of Apache Lucene. this is a brief introduction, you can find more information on Elasticsearch Official Site or Wiki.
 What are features of Elasticsearch Here are list of features of Elasticsearch.
- Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source  How to install ElasticSearch Download the latest version from Elastic.</description>
+Real Time Search and Analytic. Distributed Data (Scales Horizontally) Based on Apache Lucene High Availability Full Text Search JSON Based Documents RESTful API Multi Facets Geo Location Search Open Source How to install ElasticSearch Download the latest version from Elastic.</description>
     </item>
     
     <item>

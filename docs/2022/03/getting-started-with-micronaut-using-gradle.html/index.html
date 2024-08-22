@@ -7,14 +7,14 @@
 <title>Getting Started With Micronaut Using Gradle | ZAINABED</title>
 <meta name="keywords" content="">
 <meta name="description" content="Introduction In this tutorial, we will create a Micronaut application using Gradle.
-What you will need  Java installed on your machine Gradle installed on your machine Text Editor  Steps First create your project folder, we will make a folder called &ldquo;micronaut-project&rdquo; for this tutorial.
+What you will need Java installed on your machine Gradle installed on your machine Text Editor Steps First create your project folder, we will make a folder called &ldquo;micronaut-project&rdquo; for this tutorial.
 The second step is to add the build.gradle file inside the project folder.
 This will contain a script to build the Micronaut application.
 Now update the build.">
 <meta name="author" content="">
 <link rel="canonical" href="https://www.zainabed.com/2022/03/getting-started-with-micronaut-using-gradle.html/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a7ca501583d3433cabd3c0073866a9122b29e7bb9914d79651d27a6d6e62248f.css" integrity="sha256-p8pQFYPTQzyr08AHOGapEisp57uZFNeWUdJ6bW5iJI8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2e6d835886156948349f5e09bf5edfff819a004809f055d71edc1c07e5a26d1d.css" integrity="sha256-Lm2DWIYVaUg0n14Jv17f/4GaAEgJ8FXXHtwcB&#43;WibR0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.zainabed.com/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.zainabed.com/favicon-16x16.png">
@@ -71,10 +71,9 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script>
-<meta property="og:title" content="Getting Started With Micronaut Using Gradle" />
+</script><meta property="og:title" content="Getting Started With Micronaut Using Gradle" />
 <meta property="og:description" content="Introduction In this tutorial, we will create a Micronaut application using Gradle.
-What you will need  Java installed on your machine Gradle installed on your machine Text Editor  Steps First create your project folder, we will make a folder called &ldquo;micronaut-project&rdquo; for this tutorial.
+What you will need Java installed on your machine Gradle installed on your machine Text Editor Steps First create your project folder, we will make a folder called &ldquo;micronaut-project&rdquo; for this tutorial.
 The second step is to add the build.gradle file inside the project folder.
 This will contain a script to build the Micronaut application.
 Now update the build." />
@@ -88,7 +87,7 @@ Now update the build." />
 <meta name="twitter:image" content="https://www.zainabed.com/image/cover.jpg" />
 <meta name="twitter:title" content="Getting Started With Micronaut Using Gradle"/>
 <meta name="twitter:description" content="Introduction In this tutorial, we will create a Micronaut application using Gradle.
-What you will need  Java installed on your machine Gradle installed on your machine Text Editor  Steps First create your project folder, we will make a folder called &ldquo;micronaut-project&rdquo; for this tutorial.
+What you will need Java installed on your machine Gradle installed on your machine Text Editor Steps First create your project folder, we will make a folder called &ldquo;micronaut-project&rdquo; for this tutorial.
 The second step is to add the build.gradle file inside the project folder.
 This will contain a script to build the Micronaut application.
 Now update the build."/>
@@ -120,11 +119,11 @@ Now update the build."/>
   "@type": "BlogPosting",
   "headline": "Getting Started With Micronaut Using Gradle",
   "name": "Getting Started With Micronaut Using Gradle",
-  "description": "Introduction In this tutorial, we will create a Micronaut application using Gradle.\nWhat you will need  Java installed on your machine Gradle installed on your machine Text Editor  Steps First create your project folder, we will make a folder called \u0026ldquo;micronaut-project\u0026rdquo; for this tutorial.\nThe second step is to add the build.gradle file inside the project folder.\nThis will contain a script to build the Micronaut application.\nNow update the build.",
+  "description": "Introduction In this tutorial, we will create a Micronaut application using Gradle.\nWhat you will need Java installed on your machine Gradle installed on your machine Text Editor Steps First create your project folder, we will make a folder called \u0026ldquo;micronaut-project\u0026rdquo; for this tutorial.\nThe second step is to add the build.gradle file inside the project folder.\nThis will contain a script to build the Micronaut application.\nNow update the build.",
   "keywords": [
     
   ],
-  "articleBody": "Introduction In this tutorial, we will create a Micronaut application using Gradle.\nWhat you will need  Java installed on your machine Gradle installed on your machine Text Editor  Steps First create your project folder, we will make a folder called “micronaut-project” for this tutorial.\nThe second step is to add the build.gradle file inside the project folder.\nThis will contain a script to build the Micronaut application.\nNow update the build.gradle file.\nAdd following plugin\nplugins { id(\"com.github.johnrengelman.shadow\") version \"7.1.1\" id(\"io.micronaut.application\") version \"3.2.0\" } This will help to build application executable jars.\nNext, add dependencies.\ndependencies { annotationProcessor(\"io.micronaut:micronaut-http-validation\") implementation(\"io.micronaut:micronaut-http-client\") implementation(\"io.micronaut:micronaut-jackson-databind\") implementation(\"io.micronaut:micronaut-runtime\") implementation(\"jakarta.annotation:jakarta.annotation-api\") runtimeOnly(\"ch.qos.logback:logback-classic\") implementation(\"io.micronaut:micronaut-validation\") implementation(\"io.micronaut:micronaut-http-server-netty\") } To download and install these dependencies, you need to configure the repository.\nrepositories { mavenCentral() } Include a micronaut task to configure the application’s runtime and Micronaut annotations.\nmicronaut { runtime(\"netty\") processing { incremental(true) annotations(\"com.tutorial.project.*\") } }  NOTE: com.tutorial.project is the project package name. Replace it with your project package name.\n To enable the Micornaut application starter, add the following configuration:\napplication { mainClass.set(\"com.tutorial.project.Application\") }  NOTE: com.tutorial.project is the project package name. Replace it with your project package name.\n Now create Application class and add following code\npackage com.tutorial.project; import io.micronaut.runtime.Micronaut; public class Application { public static void main(String[] args) { Micronaut.run(Application.class, args); } }  NOTE: location of this file should be in micronaut-project/src/main/java/com/tutorial/project\n The last step is to create a gradle.properties file and add the following configuration.\nmicronautVersion=3.3.0 Now run the following command to build the application and create executable jars.\ngradle build It will create application jars in build/lib folder.\nUse the following command to launch the application\njava -jar build/libs/micronaut-project-all.jar You can access the source code of this tutorial on Github.\n",
+  "articleBody": "Introduction In this tutorial, we will create a Micronaut application using Gradle.\nWhat you will need Java installed on your machine Gradle installed on your machine Text Editor Steps First create your project folder, we will make a folder called “micronaut-project” for this tutorial.\nThe second step is to add the build.gradle file inside the project folder.\nThis will contain a script to build the Micronaut application.\nNow update the build.gradle file.\nAdd following plugin\nplugins { id(\"com.github.johnrengelman.shadow\") version \"7.1.1\" id(\"io.micronaut.application\") version \"3.2.0\" } This will help to build application executable jars.\nNext, add dependencies.\ndependencies { annotationProcessor(\"io.micronaut:micronaut-http-validation\") implementation(\"io.micronaut:micronaut-http-client\") implementation(\"io.micronaut:micronaut-jackson-databind\") implementation(\"io.micronaut:micronaut-runtime\") implementation(\"jakarta.annotation:jakarta.annotation-api\") runtimeOnly(\"ch.qos.logback:logback-classic\") implementation(\"io.micronaut:micronaut-validation\") implementation(\"io.micronaut:micronaut-http-server-netty\") } To download and install these dependencies, you need to configure the repository.\nrepositories { mavenCentral() } Include a micronaut task to configure the application’s runtime and Micronaut annotations.\nmicronaut { runtime(\"netty\") processing { incremental(true) annotations(\"com.tutorial.project.*\") } } NOTE: com.tutorial.project is the project package name. Replace it with your project package name.\nTo enable the Micornaut application starter, add the following configuration:\napplication { mainClass.set(\"com.tutorial.project.Application\") } NOTE: com.tutorial.project is the project package name. Replace it with your project package name.\nNow create Application class and add following code\npackage com.tutorial.project; import io.micronaut.runtime.Micronaut; public class Application { public static void main(String[] args) { Micronaut.run(Application.class, args); } } NOTE: location of this file should be in micronaut-project/src/main/java/com/tutorial/project\nThe last step is to create a gradle.properties file and add the following configuration.\nmicronautVersion=3.3.0 Now run the following command to build the application and create executable jars.\ngradle build It will create application jars in build/lib folder.\nUse the following command to launch the application\njava -jar build/libs/micronaut-project-all.jar You can access the source code of this tutorial on Github.\n",
   "wordCount" : "280",
   "inLanguage": "en",
   "image":"https://www.zainabed.com/image/cover.jpg","datePublished": "2022-03-15T10:54:51-04:00",
@@ -230,7 +229,7 @@ Now update the build."/>
     <h1 class="post-title">
       Getting Started With Micronaut Using Gradle
     </h1>
-    <div class="post-meta"><span title='2022-03-15 10:54:51 -0400 EDT'>March 15, 2022</span>
+    <div class="post-meta"><span title='2022-03-15 10:54:51 -0400 -0400'>March 15, 2022</span>
 
 </div>
   </header> 
@@ -264,69 +263,67 @@ Now update the build."/>
 <p>This will contain a script to build the Micronaut application.</p>
 <p>Now update the build.gradle file.</p>
 <p>Add following plugin</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
-    id<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.github.johnrengelman.shadow&#34;</span><span style="color:#f92672">)</span> version <span style="color:#e6db74">&#34;7.1.1&#34;</span>
-    id<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut.application&#34;</span><span style="color:#f92672">)</span> version <span style="color:#e6db74">&#34;3.2.0&#34;</span>
-
-<span style="color:#f92672">}</span>
-</code></pre></div><p>This will help to build application executable jars.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    id<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.github.johnrengelman.shadow&#34;</span><span style="color:#f92672">)</span> version <span style="color:#e6db74">&#34;7.1.1&#34;</span>
+</span></span><span style="display:flex;"><span>    id<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut.application&#34;</span><span style="color:#f92672">)</span> version <span style="color:#e6db74">&#34;3.2.0&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>This will help to build application executable jars.</p>
 <p>Next, add dependencies.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">dependencies <span style="color:#f92672">{</span>
-   annotationProcessor<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-http-validation&#34;</span><span style="color:#f92672">)</span>
-    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-http-client&#34;</span><span style="color:#f92672">)</span>
-    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-jackson-databind&#34;</span><span style="color:#f92672">)</span>
-    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-runtime&#34;</span><span style="color:#f92672">)</span>
-    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;jakarta.annotation:jakarta.annotation-api&#34;</span><span style="color:#f92672">)</span>
-    runtimeOnly<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ch.qos.logback:logback-classic&#34;</span><span style="color:#f92672">)</span>
-    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-validation&#34;</span><span style="color:#f92672">)</span>
-    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-http-server-netty&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#f92672">}</span>
-
-</code></pre></div><p>To download and install these dependencies, you need to configure the repository.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">repositories <span style="color:#f92672">{</span>
-    mavenCentral<span style="color:#f92672">()</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>Include a micronaut task to configure the application&rsquo;s runtime and Micronaut annotations.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">micronaut <span style="color:#f92672">{</span>
-    runtime<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;netty&#34;</span><span style="color:#f92672">)</span>
-
-    processing <span style="color:#f92672">{</span>
-        incremental<span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
-        annotations<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.tutorial.project.*&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>dependencies <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>   annotationProcessor<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-http-validation&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-http-client&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-jackson-databind&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-runtime&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;jakarta.annotation:jakarta.annotation-api&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    runtimeOnly<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ch.qos.logback:logback-classic&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-validation&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    implementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;io.micronaut:micronaut-http-server-netty&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>To download and install these dependencies, you need to configure the repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>repositories <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    mavenCentral<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Include a micronaut task to configure the application&rsquo;s runtime and Micronaut annotations.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>micronaut <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    runtime<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;netty&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    processing <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        incremental<span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        annotations<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.tutorial.project.*&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
 <p>NOTE: com.tutorial.project is the project package name. Replace it with your project package name.</p>
 </blockquote>
 <p>To enable the Micornaut application starter, add the following configuration:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">application <span style="color:#f92672">{</span>
-    mainClass<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.tutorial.project.Application&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>application <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    mainClass<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.tutorial.project.Application&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
 <p>NOTE: com.tutorial.project is the project package name. Replace it with your project package name.</p>
 </blockquote>
 <p>Now create Application class and add following code</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.tutorial.project<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> io.micronaut.runtime.Micronaut<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Application</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        Micronaut<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>Application<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> args<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.tutorial.project<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.micronaut.runtime.Micronaut<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Application</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Micronaut<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>Application<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> args<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
 <p>NOTE: location of this file should be in <code>micronaut-project/src/main/java/com/tutorial/project</code></p>
 </blockquote>
 <p>The last step is to create a gradle.properties file and add the following configuration.</p>
-<pre><code class="language-property" data-lang="property">micronautVersion=3.3.0
+<pre tabindex="0"><code class="language-property" data-lang="property">micronautVersion=3.3.0
 </code></pre><p>Now run the following command to build the application and create executable jars.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradle build
-</code></pre></div><p>It will create application jars in build/lib folder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradle build
+</span></span></code></pre></div><p>It will create application jars in build/lib folder.</p>
 <p>Use the following command to launch the application</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar build/libs/micronaut-project-all.jar 
-</code></pre></div><p>You can access the source code of this tutorial on <a href="https://github.com/zainabed/tutorials/tree/master/gradle/getting-started-with-micronaut/micronaut-project">Github</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar build/libs/micronaut-project-all.jar 
+</span></span></code></pre></div><p>You can access the source code of this tutorial on <a href="https://github.com/zainabed/tutorials/tree/master/gradle/getting-started-with-micronaut/micronaut-project">Github</a>.</p>
 
 
   </div>
@@ -584,7 +581,7 @@ Now update the build."/>
 
         </div>
         <div class=" center">
-            &copy; 2023 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
+            &copy; 2024 Copyright | <a href="https://www.zainabed.com/">ZAINABED</a> . All rights reserved
         </div>
         <div class="right">
         </div>
